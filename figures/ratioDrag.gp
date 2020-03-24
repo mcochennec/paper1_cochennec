@@ -22,17 +22,17 @@ set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
 set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
 
 # Legend
-set key at 1,0.1
+set key at 1,0.18
 # Axes label 
 set xlabel '$1/h^*$'
-set ylabel '$M_{wo}^x/M_{p+ws}^x$' 
+set ylabel '$T_{int}^x/T_{s}^x$' 
 
 
 #set log y
 set log x
 # Axis ranges
 set xrange[0.1:30]
-#set yrange[0.05:0.3]
+set yrange[0.0:0.6]
 #set format y "%2.1t{*10^{%L}}"
 #set ytics add ('0' 0)
 
@@ -40,7 +40,7 @@ set xrange[0.1:30]
 #set tics scale 0.5
 
 # Plot
-plot 'ratioDrag.txt' u 1:2 w lp ls 1 t '$Ca=1.00$', \
+plot 'ratioDrag.txt' u 1:2 w lp ls 1 t '$Ca=1.0 \times 10^{0}$', \
 'ratioDrag.txt' u 1:3 w lp ls 2 t '$Ca=2.0 \times 10^{-1}$', \
 'ratioDrag.txt' u 1:4 w lp ls 3 t '$Ca=5.0 \times 10^{-2}$', \
 'ratioDrag.txt' u 1:5 w lp ls 4 t '$Ca=1.0 \times 10^{-2}$', \

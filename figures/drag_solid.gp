@@ -21,10 +21,10 @@ set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2 ps 1.2# green
 set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
 set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
 # Legend
-set key at 1.5,8e5
+set key at 1.5,8e5 spacing 1.5
 # Axes label 
 set xlabel '$1/h^*$'
-set ylabel '$M_{ws+p}^x$' 
+set ylabel '$T_{cyl+pl}^x$' 
 
 
 set log y
@@ -37,9 +37,15 @@ set ytics add ('1' 1)
 
 # Axis labels
 #set tics scale 0.5
-
+# Slope 
+X1 = 10
+Y1 = 40
+X2 = 20
+Y2 = 10**(2.0*log10(X2/X1)+log10(Y1))
+set object 1 poly from X1,Y1 to X2,Y1 to X2,Y2 to X1,Y1 fs empty border 0
+set label '$2$' at 11,24
 # Plot
-plot 'drag_solid.csv' u 1:2 w lp ls 1 t '$Ca=1.00$', \
+plot 'drag_solid.csv' u 1:2 w lp ls 1 t '$Ca=1.0 \times 10^{0}$', \
 'drag_solid.csv' u 1:3 w lp ls 2 t '$Ca=2.0 \times 10^{-1}$', \
 'drag_solid.csv' u 1:4 w lp ls 3 t '$Ca=5.0 \times 10^{-2}$', \
 'drag_solid.csv' u 1:5 w lp ls 4 t '$Ca=1.0 \times 10^{-2}$', \

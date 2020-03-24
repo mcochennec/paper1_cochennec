@@ -21,7 +21,7 @@ set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2 ps 1.2# green
 set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
 set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
 # Legend
-set key at 20,0.8
+set key at 20,0.8 spacing 1.5
 # Axes label 
 set xlabel '$1/h^*$'
 set ylabel '$S_w$' 
@@ -39,7 +39,7 @@ set ytic 0.1
 #set tics scale 0.5
 
 # Plot
-plot 'saturation.txt' u 1:2 w lp ls 1 t '$Ca=1.0$', \
+plot 'saturation.txt' u 1:2 w lp ls 1 t '$Ca=1.0 \times 10^{0}$', \
 'saturation.txt' u 1:3 w lp ls 2 t '$Ca=2.0 \times 10^{-1}$', \
 'saturation.txt' u 1:4 w lp ls 3 t '$Ca=5.0 \times 10^{-2}$', \
 'saturation.txt' u 1:5 w lp ls 4 t '$Ca=1.0 \times 10^{-2}$', \
