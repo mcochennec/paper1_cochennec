@@ -15,13 +15,13 @@ set style line 22 lc rgb '#808080' lt 0 lw 1
 
 # Line styles
 #set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 2 pt 5 lw 2 ps 1.2 # blue
-set style line 2 lc rgb '#dd181f' lt 3 pt 7 lw 2 ps 1.2 # red
-set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2 ps 1.2# green
+set style line 1 lc rgb '#0060ad' lt 2 pt 5 lw 2 ps 0.7 #blue
+set style line 2 lc rgb '#dd181f' lt 3 pt 7 lw 2 ps 0.7 # red
+set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2 ps 0.7# green
 set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
-set style line 11 lc rgb '#0060ad' lt 2 pt 4 lw 2 dt 3 ps 1.2 # blue
-set style line 12 lc rgb '#dd181f' lt 3 pt 6 lw 2 dt 3 ps 1.2 # red
-set style line 13 lc rgb '#5e9c36' lt 4 pt 8 lw 2 dt 3 ps 1.2# green
+set style line 11 lc rgb '#0060ad' lt 2 pt 4 lw 2 dt 4 ps 1.2 # blue
+set style line 12 lc rgb '#dd181f' lt 3 pt 6 lw 2 dt 4 ps 1.2 # red
+set style line 13 lc rgb '#5e9c36' lt 4 pt 8 lw 2 dt 4 ps 1.2# green
 set style line 14 lc rgb '#d95319' lt 1 pt 10 lw 2 dt 3 ps 1.2# orange
 # Legend
 set key at 2,9e4 spacing 1.5

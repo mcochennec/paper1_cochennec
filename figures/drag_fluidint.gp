@@ -25,7 +25,7 @@ set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
 set key at 1.5,9e4 spacing 1.5
 # Axes label 
 set xlabel '$1/h^*$'
-set ylabel '$T_{ow}^x\:(\mathrm{N/m^3})$' 
+set ylabel '$T_{int}^x\:(\mathrm{N/m^3})$' 
 
 
 set log y

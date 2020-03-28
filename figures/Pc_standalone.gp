@@ -47,7 +47,7 @@ Y1 = 0.005
 X2 = 3
 Y2 = 10**(1*log10(3)+log10(0.005))
 set object 1 poly from X1,Y1 to X2,Y1 to X2,Y2 to X1,Y1 fs empty border 0
-set label '$1$' at 1.7,0.011
+set label '$1^{\mathrm{st}}\:\mathrm{order}$' at 3.2,0.008
 # Plot
 plot 'Pc.csv' u 1:2 w lp ls 1 t '$Ca=1.0 \times 10^{0}$', \
 'Pc.csv' u 1:5 w lp ls 2 t '$Ca=7.5 \times 10^{-3}$', \

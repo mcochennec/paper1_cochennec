@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.12)  23 MAR 2020 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.12)  27 MAR 2020 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -96,8 +96,7 @@ Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)))
-No file Pc.aux.
+))) (./Pc.aux)
 \openout1 = `Pc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -112,6 +111,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count86
@@ -215,9 +215,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 172.
 Package epstopdf Info: Source file: <Pc-inc.eps>
-(epstopdf)                    date: 2020-03-23 10:02:36
+(epstopdf)                    date: 2020-03-27 18:34:06
 (epstopdf)                    size: 8605 bytes
 (epstopdf)             Output file: <Pc-inc-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-03-27 18:33:56
+(epstopdf)                    size: 3594 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pc-inc-eps-converted-to.pd
 f Pc-inc.eps>
 (epstopdf)             \includegraphics on input line 173.
@@ -225,7 +227,7 @@ runsystem(repstopdf --outfile=Pc-inc-eps-converted-to.pdf Pc-inc.eps)...execute
 d safely (allowed).
 
 Package epstopdf Info: Result file: <Pc-inc-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-03-23 10:02:44
+(epstopdf)                    date: 2020-03-27 18:34:22
 (epstopdf)                    size: 3594 bytes.
 <Pc-inc-eps-converted-to.pdf, id=1, 361.35pt x 216.81pt>
 File: Pc-inc-eps-converted-to.pdf Graphic file (type pdf)
@@ -235,8 +237,8 @@ Package pdftex.def Info: Pc-inc-eps-converted-to.pdf  used on input line 173.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Pc-inc-eps-converted-t
 o.pdf>] (./Pc.aux) ) 
 Here is how much of TeX's memory you used:
- 2157 strings out of 492609
- 30692 string characters out of 6131462
+ 2159 strings out of 492609
+ 30706 string characters out of 6131462
  97518 words of memory out of 5000000
  6046 multiletter control sequences out of 15000+600000
  7148 words of font info for 24 fonts, out of 8000000 for 9000
@@ -248,7 +250,7 @@ i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Pc.pdf (1 page, 50789 bytes).
+Output written on Pc.pdf (1 page, 52493 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
