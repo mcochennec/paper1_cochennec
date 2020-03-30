@@ -39,7 +39,7 @@ An accurate description of two-phase flow in high-permeability porous media is o
 Due to the larger pore size, two-phase flow in high-permeability porous media (hereafter, high-permeability porous media refers to media for which the characteristic particle diameter is about one millimeter and above) results in a complex interaction between capillary, gravity and viscous forces [@davit2018one]. For low-permeability porous media, the flow is usually dominated by surface tension force, i.e. the capillary number is low (usually inferior to $10^{-3}$), and the fluid repartition pattern is well described as two independent flow streams separate by a multitude of stable meniscus at steady state, as illustrated in +@fig:fluidPatterns (a) [@dullien2012porous]. This regime is characterized by the small extent of the fluid-fluid interface, as the fluid phases are segregated, with the wetting phase flowing into the larger pores while the wetting phase occupies the smaller pores. In contrast, for high permeability porous media, the flow is no longer capillary-dominated and the viscous forces become significant (also gravity and inertial effects may become important if Bond and Reynolds numbers are high, respectively). Thus the fluids repartition patterns can take two forms, either the non-wetting phase is continuous, see as an example +@fig:fluidPatterns (b), or is flowing as droplets or ganglia, as in +@fig:fluidPatterns (c). For these two options, the wetting phase is flowing as a film in contact with the solid and the non-wetting phase flows at the center of the pores surrounded by the wetting phase. One can note that these flow regimes are analogous to those observed in gas-liquid flows in a tube (annular flow, bubbly flow, etc.) [@taitel1976model]. Strictly speaking, these different regimes must be considered when attempting to describe two-phase flows with continuous macroscopic equations. Indeed, it has been shown several times that the overall flow properties depend on the flow regimes [@Avraam1995a; @armstrong2016beyond]. 
 At first glance, one would consider that the exchange terms between the fluids, through their common surfaces, as negligible compared to their counterpart between the fluid phases and the solid phase for surface-tension dominated flow since the extent of the fluid-fluid interface is small. On the other hand, and this is what we are interested in here, this is not necessarily the case for regimes specific to flow in high-permeability porous media for which the extent of the fluid-fluid interface is large. This is important because, as discussed in the next section, these exchange terms between phases are the basis of any attempt to establish continuous relationships on a macroscopic scale starting from the pore scale.
 
-![Illustration of possible fluids dispatching in a 2D porous network with solid phase in black, fluid 1, that stands for the non-wetting phase (gray) and the wetting fluid (white), (a) the two fluids are flowing in different channels separate by numerous meniscus (b) wetting and non-wetting fluid are flowing together in most of the pores as two continuous streams and (c) both fluids are flowing together in most of the pores and the non-wetting phase is discontinuous - Adapted from [@dullien2012porous]](figures/emf/dessin.emf){#fig:fluidPatterns}
+![Illustration of possible fluids dispatching in a 2D porous network with solid phase in black, fluid 1, that stands for the non-wetting phase (gray) and the wetting fluid (white), (a) the two fluids are flowing in different channels separate by numerous meniscus (b) wetting and non-wetting fluid are flowing together in most of the pores as two continuous streams and (c) both fluids are flowing together in most of the pores and the non-wetting phase is discontinuous - Adapted from [@dullien2012porous]](figures/pdf/dessin.pdf){#fig:fluidPatterns}
 
 ## Continuous model
 
@@ -169,7 +169,7 @@ where $\mathbf{n}_{ij}$ is the normal vector at the interface and pointing towar
 
 Two-phase flow between two parallel plates under study here is illustrated in +@fig:modelStudy. This represents a cocurrent flow of two fluids inside a Hele-Shaw cell parallel to the $x-y$ plane, with the $z$-axis perpendicular to the plates, and for which $h$ is the aperture between the plates. A solid obstacle of circular cross-section is sandwiched between the two plates. Tangential (cell plane) stress, as well as stress arising from the perpendicular confinement, need to be taking into account to properly describe the flow. The important parameter here are the aspect ratio $h/l$ where $l$ is some characteristic transverse length (hereafter $l$ is the cell width as shown in +@fig:modelStudy) and the capillary number. 
 
-![Illustation of confined cocurrent two-phase flow between two parallel plates and around cylinder obstacles.](figures/emf/dessin_courbure.emf){#fig:modelStudy}
+![Illustation of confined cocurrent two-phase flow between two parallel plates and around cylinder obstacles.](figures/pdf/dessin_courbure.pdf){#fig:modelStudy}
 
 To compute the traction exerted by the fluids upon the cell plates we need to consider that the velocity profile in the $z$-direction is well described by the Poiseuille flow profile, 
 
@@ -288,7 +288,7 @@ the viscosity ratio and the capillary number, respectively, which add up to the 
 
 We study a model system consisting of an array of cylinders in a thin square cuboid, resembling a Hele-Shaw-cell with obstacles, as shown in +@fig:model. The two fluids are injected from the left at a constant normal velocity. The outlet boundary condition for the flow is a constant pressure. Initially the wetting fluid occupy the entire model as depicted in +@fig:model. The different boundary conditions are listed in +@tbl:BC.
 
-![The geometry used is an array of 5 cylinders in a thin square cuboid, resembling a Hele-Shaw-cell where both fluids are injecting from left to right, initially the square cuboïd are saturated with wetting fluid (in blue), the length of one Unit-Cell (UC) is one millimetre.](figures/emf/model.emf){#fig:model}
+![The geometry used is an array of 5 cylinders in a thin square cuboid, resembling a Hele-Shaw-cell where both fluids are injecting from left to right, initially the square cuboïd are saturated with wetting fluid (in blue), the length of one Unit-Cell (UC) is one millimetre.](figures/pdf/model.pdf){#fig:model}
 
 
 Boundary | u 						| p   |$\phi$
@@ -323,7 +323,7 @@ $l/h$ | $h^2/12$ (darcy) 	| $k$ Simulation (darcy)
 
 Table: Equivalence between the value of the cell plates aperture and the intrinsic permeability of the model obtained either from the intrinsic permeability for flow between two plates or from single-phase simulation.  {#tbl:permeability}
 
-![Intrinsic permeability of the Hele-Shaw cell normalized by the intrinsic permeability obtained from pure 2D simulation.](figures/emf/permeability.emf){#fig:permeability}
+![Intrinsic permeability of the Hele-Shaw cell normalized by the intrinsic permeability obtained from pure 2D simulation.](figures/pdf/permeability.pdf){#fig:permeability}
 
 
 
@@ -333,44 +333,45 @@ Before we turn to the study of traction terms it is worth invesigate the effect 
 
 The wetting fluid saturation non-linearly decreases with $h^*$ and stays at moderate values, between 0.6 and 0.3. A smaller capillary number tends to slightly increase the wetting fluid saturation at steady-state. 
 
-![Saturation in wetting fluid as a function of the dimensionless aperture $h^{*}=h/l$ and for different values of the capillary number (UC3) at steady-state.](figures/emf/saturation.emf){#fig:saturation}
+![Saturation in wetting fluid as a function of the dimensionless aperture $h^{*}=h/l$ and for different values of the capillary number (UC3) at steady-state.](figures/pdf/saturation.pdf){#fig:saturation}
 
 Let us take a closer look at the interface position for different values of $h^*$ for $Ca=1$ and $Ca=0.05$ in +@fig:interfaceCa1 and +@fig:interfaceCa005, respectively. The interface for small capillary number and large aperture is significantly flatter than for high capillary number and/or small aperture. One also noted that the interface is symmetrical when the capillary number is large whereas it loses this property for a smaller capillary number and for larger aperture between the plates. On the same plots we show the position of the interface in a purely 2D case, and one can see that it is very close to the solution for $1/h^*=0.2$. The fluid-fluid interface moves closer to the cylinder for decreasing aperture (i.e. intrinsic permeability), this has an impact on the velocity fields, as shown in +@fig:UvelocityCa1LH2 and +@fig:UvelocityCa1LH20, which represent the dimensionless $x$-component of the velocity for $Ca=1.0$ and $1/h^*=2$ and $1/h^*=20$, respectively. Clearly, what is happening here is that the velocity profile is close to the Poiseuille profile as long as the interface is not too close from the solid. To verify this, we plot in +@fig:uprofileCa1 the dimensionless $x$-component of the velocity
  along the line shown in +@fig:UvelocityCa1LH20. The profile for the pure 2D solution ($h\rightarrow\infty$) resembles a Poiseuille profile while for decreasing aperture the maximum velocity is observed between the solid and the fluid-fluid interface.
 
-![Interface position at steady-state in UC3 for $Ca=5\times10^{-2}$.](figures/emf/interfaceCa1.emf){#fig:interfaceCa1}
+![Interface position at steady-state in UC3 for $Ca=5\times10^{-2}$.](figures/pdf/interfaceCa1.pdf){#fig:interfaceCa1}
 
-![Interface position at steady-state in UC3 for $Ca=5\times10^{-2}$.](figures/emf/interfaceCa005.emf){#fig:interfaceCa005}
+![Interface position at steady-state in UC3 for $Ca=5\times10^{-2}$.](figures/pdf/interfaceCa005.pdf){#fig:interfaceCa005}
 
 ![Dimensionless $x$-component of the velocity in UC3 for $Ca=1$ and $1/h^*=2$.](figures/png/Uvelocity_Ca1LH2.png){#fig:UvelocityCa1LH2}
 
 ![Dimensionless $x$-component of the velocity in UC3 for $Ca=1$ and $1/h^*=20$.](figures/png/Uvelocity_Ca1LH20.png){#fig:UvelocityCa1LH20}
 
-![Dimensionless $x$-velocity profile in UC3 for $Ca=1$ and different values of the intrinsic permeability.](figures/emf/uprofileCa1.emf){#fig:uprofileCa1}
+![Dimensionless $x$-velocity profile in UC3 for $Ca=1$ and different values of the intrinsic permeability.](figures/pdf/uprofileCa1.pdf){#fig:uprofileCa1}
 
 ## Dynamic capillary pressure scale linearly with the gap between Hele-Shaw plates regardless of the capillary number
 
 We now consider the dynamic capillary pressure as defined in +@eq:darcyPc as a function of $h^*$. As can be seen on +@fig:Pc, $P_c$ perfectly scales linearly with $h^*$, regardless of the capillary number. One can find on the same plot the theoretical pressure jump across the fluid-fluid interface due to the out-of-plane meniscus. This pressure jump closely matches the computed dynamic capillary pressure and to this point, we can conclude that even for the largest aperture the difference of mean intrinsic pressure is given by the meniscus between the two plates. Seeing this, it is worthwhile to contrast the pressure jump across the interface with the pressure gradient across the cell. We plot the pressure field and pressure contour in the third unit-cell (UC3) for $Ca=1$ and $1/h^*=2$ on +@fig:pFieldCa1 (a) and $1/h^*=20$ on +@fig:pFieldCa1 (b). One can note that, although the pressure jump is greater in absolute terms, it is almost unobservable for the smallest aperture because of the large pressure gradient.
 
-![Dynamic capillary pressure in UC3 as a function of $h^*$ for different capillary numbers and pressure drop across the fluid-fluid based on the out-of-plane meniscus at steady-state](figures/emf/Pc.emf){#fig:Pc}
+![Dynamic capillary pressure in UC3 as a function of $h^*$ for different capillary numbers and pressure drop across the fluid-fluid based on the out-of-plane meniscus at steady-state](figures/pdf/Pc.pdf){#fig:Pc}
 
-![Pressure field in UC3 for $Ca=1$ and (a) $1/h^*=2$ and (b) $1/h^*=20$ and interface position as the iso-$\phi$=0.5 contour](figures/emf/pFieldCa1.emf){#fig:pFieldCa1}
+![Pressure field in UC3 for $Ca=1$ and (a) $1/h^*=2$ and (b) $1/h^*=20$ and interface position as the iso-$\phi$=0.5 contour](figures/pdf/pFieldCa1.pdf){#fig:pFieldCa1}
 
-![Pressure field in UC3 for $Ca=1 \times 10^{-2}$ and (a) $1/h^*=2$ and (b) $1/h^*=20$  and interface position as the iso-$\phi$=0.5 contour](figures/emf/pFieldCa001.emf){#fig:pFieldCa001}
+![Pressure field in UC3 for $Ca=1 \times 10^{-2}$ and (a) $1/h^*=2$ and (b) $1/h^*=20$  and interface position as the iso-$\phi$=0.5 contour](figures/pdf/pFieldCa001.pdf){#fig:pFieldCa001}
 
 ## Fluid-fluid traction increases faster compared to solid-fluid traction when permeability is decreasing 
 
 Here we plot traction terms as a function of the aperture between the Hele-Shaw plates. We first plot on +@fig:drag_plates traction exerted on the Hele-Shaw plates by each fluid, remember that this term is computed as described in the theoretical background section. Logically, the traction exerted by the non-wetting fluid on the cell plates becomes more important for smaller aperture since, as discussed above, the surface wetted by this fluid becomes larger as the aperture decreases. 
 
-![$x$-component of the traction on Hele-Shaw cell plates by each fluid in UC3, as a function of the dimensionless gap and for different capillary numbers at steady-state.](figures/emf/drag_plates.emf){#fig:drag_plates}
+![$x$-component of the traction on Hele-Shaw cell plates by each fluid in UC3, as a function of the dimensionless gap and for different capillary numbers at steady-state.](figures/pdf/dragPlates.pdf){#fig:drag_plates}
 
 In +@fig:drag_solid we plot the sum of traction ($x$-component) exerted on all solid-fluid boundaries as a function of the dimensionless aperture between the plates  and for different capillary numbers. For $1/h^*$ greater than 2, the traction scale a bit slower than $1/h^2$. Logically, the greater the capillary number, the greater the traction term.
 
-![$x$-component of the traction exerted on the solid-fluid boundaries in UC3 as a function of the dimensionless aperture and for different capillary numbers at steady-state.](figures/emf/dragSolid.emf){#fig:drag_solid}
+![$x$-component of the traction exerted on the solid-fluid boundaries in UC3 as a function of the dimensionless aperture and for different capillary numbers at steady-state.](figures/pdf/dragSolid.pdf){#fig:drag_solid}
 
-We compute the fluid-fluid traction $T_{ij}$ in two steps. The first step concerns the viscous part of the stress tensor, which is calculated directly from the velocity gradients available on the interface contour. The second step concerns the pressure part, which is obtained by applying the divergence theorem on each phase into UC3. In +@fig:drag_fluidint we plot the traction on the fluid-fluid interface $T_{ow}$ as a function of $h^*$. From $1/h^*=2$ the traction scale a bit faster than $1/h^2$.
+We compute the fluid-fluid traction $T_{ij}$ in two steps. The first step concerns the viscous part of the stress tensor, which is calculated directly from the velocity gradients available on the interface contour. The second step concerns the pressure part, which is obtained by applying the divergence theorem on each phase into UC3. In +@fig:drag_fluidint we plot the traction on the fluid-fluid
+ interface $T_{ow}$ as a function of $h^*$. From $1/h^*=2$ the traction scale a bit faster than $1/h^2$.
 
-![$x$-component of the traction exerted on the fluid-fluid interface in UC3 as a function of the dimensionless aperture and for different capillary numbers at steady-state.](figures/emf/dragFluid.emf){#fig:drag_fluidint}
+![$x$-component of the traction exerted on the fluid-fluid interface in UC3 as a function of the dimensionless aperture and for different capillary numbers at steady-state.](figures/pdf/dragFluid.pdf){#fig:drag_fluidint}
 
 
 ## Decreasing the intrinsic permeability does not imply that the share of the fluid-fluid traction is negligible in the total traction
@@ -380,7 +381,7 @@ Let us now sum up all the traction terms and answer the question of the share of
 Variations with aperture between plates are amplified as the capillary number decreases. Thus, it is for the lowest capillary number tested that we obtain both the maximum and minimu
 m values of the ratio $T_{int}^x/T_{s}^x$. 
  
-![Ratio of traction ($x$-component) on fluid-fluid interface over traction on solid-fluid interfaces in UC3 as a function of the dimensionless aperture between the Hele-Shaw plates and for different capillary numbers at steady-state.](figures/emf/ratioDrag.emf){#fig:ratioDrag}
+![Ratio of traction ($x$-component) on fluid-fluid interface over traction on solid-fluid interfaces in UC3 as a function of the dimensionless aperture between the Hele-Shaw plates and for different capillary numbers at steady-state.](figures/pdf/ratioDrag.pdf){#fig:ratioDrag}
 
 
 # Conclusion
@@ -397,6 +398,6 @@ The code is validated by comparison with a Boundary-Element Method, which relies
 
 The test case resembles the study case as it consists of the injection of a fluid into a Hele-Shaw initially fully saturated with a flowing fluid. The dynamic viscosity of the fluids is equal and the model is illustrated in +@fig:testCase.
 
-![The test case consists in the injection of fluid 1 into a Hele Shaw cell initially fully saturated with a flowing fluid 2, inlet boundary conditions are constant velocity along the $x$-axis, the outlet boundary condition is ](figures/emf/TestCase_validation.emf){#fig:testCase}
+![The test case consists in the injection of fluid 1 into a Hele Shaw cell initially fully saturated with a flowing fluid 2, inlet boundary conditions are constant velocity along the $x$-axis, the outlet boundary condition is ](figures/pdf/TestCase_validation.pdf){#fig:testCase}
 
 # References

@@ -1,63 +1,4 @@
 % GNUPLOT: LaTeX picture with Postscript
-\documentclass{minimal}
-% Set font size
-\makeatletter
-\def\@ptsize{1}
-\InputIfFileExists{size11.clo}{}{%
-   \GenericError{(gnuplot) \space\space\space\@spaces}{%
-      Gnuplot Error: File `size11.clo' not found! Could not set font size%
-   }{See the gnuplot documentation for explanation.%
-   }{For using a font size a file `size<fontsize>.clo' has to exist.
-        Falling back ^^Jto default fontsize 10pt.}%
-  \def\@ptsize{0}
-  \input{size10.clo}%
-}%
-\makeatother
-% Load packages
-\usepackage{calc}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{transparent}
-\makeatletter
-% Select an appropriate default driver (from TeXLive graphics.cfg)
-\begingroup
-  \chardef\x=0 %
-  % check pdfTeX
-  \@ifundefined{pdfoutput}{}{%
-    \ifcase\pdfoutput
-    \else
-      \chardef\x=1 %
-    \fi
-  }%
-  % check VTeX
-  \@ifundefined{OpMode}{}{%
-    \chardef\x=2 %
-  }%
-\expandafter\endgroup
-\ifcase\x
-  % default case
-  \PassOptionsToPackage{dvips}{geometry}
-\or
-  % pdfTeX is running in pdf mode
-  \PassOptionsToPackage{pdftex}{geometry}
-\else
-  % VTeX is running
-  \PassOptionsToPackage{vtex}{geometry}
-\fi
-\makeatother
-% Set papersize
-\usepackage[papersize={360.00bp,216.00bp},text={360.00bp,216.00bp}]{geometry}
-% No page numbers and no paragraph indentation
-\pagestyle{empty}
-\setlength{\parindent}{0bp}%
-% Load configuration file
-\InputIfFileExists{gnuplot.cfg}{%
-  \typeout{Using configuration file gnuplot.cfg}%
-}{%
- \typeout{No configuration file gnuplot.cfg found.}%
-}%
-%
-\begin{document}
 \begingroup
   \makeatletter
   \providecommand\color[2][]{%
@@ -141,47 +82,36 @@
 \begin{picture}(7200.00,4320.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(645,595){\makebox(0,0)[r]{\strut{}$0.5$}}%
+      \put(2000,4133){\makebox(0,0)[r]{\strut{}1}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(645,1303){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(2000,595){\makebox(0,0)[r]{\strut{}$0.01$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(645,2010){\makebox(0,0)[r]{\strut{}$0.7$}}%
+      \put(2000,2364){\makebox(0,0)[r]{\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(645,2718){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(3338,409){\makebox(0,0){\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(645,3425){\makebox(0,0)[r]{\strut{}$0.9$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(645,4133){\makebox(0,0)[r]{\strut{}$1$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(747,409){\makebox(0,0){\strut{}$0$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(1976,409){\makebox(0,0){\strut{}$0.5$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(3205,409){\makebox(0,0){\strut{}$1$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(4435,409){\makebox(0,0){\strut{}$1.5$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(5664,409){\makebox(0,0){\strut{}$2$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(6893,409){\makebox(0,0){\strut{}$2.5$}}%
+      \put(5107,409){\makebox(0,0){\strut{}$10$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(153,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$y*$}}}%
+      \put(1406,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$K_{\mathrm{eff}}/K_0$}}}%
       \csname LTb\endcsname%%
-      \put(3820,130){\makebox(0,0){\strut{}$U_x^*$}}%
+      \put(3871,130){\makebox(0,0){\strut{}$1/h^*$}}%
       \csname LTb\endcsname%%
-      \put(2037,3781){\makebox(0,0)[r]{\strut{}$1/h^*=0$}}%
+      \put(4954,3165){\makebox(0,0)[r]{\strut{}$Ca=1.0 \times 10^{0},w$}}%
       \csname LTb\endcsname%%
-      \put(2037,3502){\makebox(0,0)[r]{\strut{}$1/h^*=2$}}%
+      \put(4954,2933){\makebox(0,0)[r]{\strut{}$-,o$}}%
       \csname LTb\endcsname%%
-      \put(2037,3223){\makebox(0,0)[r]{\strut{}$1/h^*=8$}}%
+      \put(4954,2701){\makebox(0,0)[r]{\strut{}$Ca=5.0 \times 10^{-2},w$}}%
       \csname LTb\endcsname%%
-      \put(2037,2944){\makebox(0,0)[r]{\strut{}$1/h^*=20$}}%
+      \put(4954,2469){\makebox(0,0)[r]{\strut{}$-,o$}}%
+      \csname LTb\endcsname%%
+      \put(4954,2237){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3},w$}}%
+      \csname LTb\endcsname%%
+      \put(4954,2005){\makebox(0,0)[r]{\strut{}$-,o$}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{uprofileCa1-inc}}%
+    \put(0,0){\includegraphics{ratioKeffKo}}%
     \gplfronttext
   \end{picture}%
 \endgroup
-\end{document}

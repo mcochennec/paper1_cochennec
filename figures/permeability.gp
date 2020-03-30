@@ -1,5 +1,5 @@
-set terminal cairolatex standalone pdf dashed
-
+set terminal cairolatex eps dashed
+set size square
 
 set output 'permeability.tex'
 
@@ -15,12 +15,8 @@ set grid back ls 22
 
 # Line styles
 set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 2 pt 5 lw 2.5 ps 1.2 # blue
-set style line 2 lc rgb '#dd181f' lt 3 pt 7 lw 2.5 ps 1.2 # red
-set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2.5 ps 1.2# green
-set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
-set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
-set style line 6 lc rgb '#7e2f8e' lt 1 pt 13 lw 2.5 dt 4 ps 1.2 # purple
+set style line 1 lc rgb '#01665e' pt 5 lw 2.5 ps 1.2 
+set style line 2 lc rgb '#dd181f' dt 4 pt 7 lw 2.5 ps 1.2
 # Legend
 set key at 2e-4,50 samplen 1.5 spacing 1.5
 # Axes label 
@@ -42,5 +38,5 @@ set ytic 0.1
 #set tics scale 0.5
 
 # Plot
-plot 'permeability.txt' u 1:2 w lp ls 1 t '$k=h^2/12$', \
-'permeability.txt' u 1:3 w lp ls 6 t '$\mathrm{our\:model}$'
+plot 'permeability.txt' u 1:2 w lp ls 2 t '$k=h^2/12$', \
+'permeability.txt' u 1:3 w lp ls 1 t '$\mathrm{our\:model}$'

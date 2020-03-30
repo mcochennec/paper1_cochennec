@@ -1,5 +1,5 @@
-set terminal cairolatex standalone pdf dashed
-
+set terminal cairolatex eps dashed
+set size square
 
 set output 'uprofileCa1.tex'
 
@@ -15,14 +15,12 @@ set style line 22 lc rgb '#808080' lt 0 lw 1
 
 # Line styles
 #set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 2 pt 5 lw 2.5 ps 1.2 # blue
-set style line 2 lc rgb '#dd181f' lt 3 pt 7 lw 2.5 ps 1.2 # red
-set style line 3 lc rgb '#5e9c36' lt 4 pt 9 lw 2.5 ps 1.2# green
-set style line 4 lc rgb '#d95319' lt 1 pt 11 lw 2 ps 1.2# orange
-set style line 5 lc rgb '#7e2f8e' lt 1 pt 13 lw 2 ps 1.2 # purple
-set style line 6 lc rgb '#7e2f8e' lt 1 pt 13 lw 2.5 dt 4 ps 1.2 # purple
+set style line 1 lc rgb '#8c510a' lt 2 pt 5 lw 5.0 ps 1.2 
+set style line 2 lc rgb '#d8b365' lt 3 pt 7 lw 5.0 ps 1.2 
+set style line 3 lc rgb '#f6e8c3' lt 4 pt 15 lw 5.0 ps 1.2
+set style line 6 lc rgb '#dd181f' lt 1 pt 13 lw 5.0 dt 4 ps 1.2 
 # Legend
-set key at 0.7,0.97 samplen 1.5 spacing 1.5
+set key at 1.0,0.97 samplen 1.5 spacing 1.5
 # Axes label 
 set ylabel '$y*$'
 set xlabel '$U_x^*$' 

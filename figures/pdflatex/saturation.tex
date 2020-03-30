@@ -1,63 +1,4 @@
 % GNUPLOT: LaTeX picture with Postscript
-\documentclass{minimal}
-% Set font size
-\makeatletter
-\def\@ptsize{1}
-\InputIfFileExists{size11.clo}{}{%
-   \GenericError{(gnuplot) \space\space\space\@spaces}{%
-      Gnuplot Error: File `size11.clo' not found! Could not set font size%
-   }{See the gnuplot documentation for explanation.%
-   }{For using a font size a file `size<fontsize>.clo' has to exist.
-        Falling back ^^Jto default fontsize 10pt.}%
-  \def\@ptsize{0}
-  \input{size10.clo}%
-}%
-\makeatother
-% Load packages
-\usepackage{calc}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{transparent}
-\makeatletter
-% Select an appropriate default driver (from TeXLive graphics.cfg)
-\begingroup
-  \chardef\x=0 %
-  % check pdfTeX
-  \@ifundefined{pdfoutput}{}{%
-    \ifcase\pdfoutput
-    \else
-      \chardef\x=1 %
-    \fi
-  }%
-  % check VTeX
-  \@ifundefined{OpMode}{}{%
-    \chardef\x=2 %
-  }%
-\expandafter\endgroup
-\ifcase\x
-  % default case
-  \PassOptionsToPackage{dvips}{geometry}
-\or
-  % pdfTeX is running in pdf mode
-  \PassOptionsToPackage{pdftex}{geometry}
-\else
-  % VTeX is running
-  \PassOptionsToPackage{vtex}{geometry}
-\fi
-\makeatother
-% Set papersize
-\usepackage[papersize={360.00bp,216.00bp},text={360.00bp,216.00bp}]{geometry}
-% No page numbers and no paragraph indentation
-\pagestyle{empty}
-\setlength{\parindent}{0bp}%
-% Load configuration file
-\InputIfFileExists{gnuplot.cfg}{%
-  \typeout{Using configuration file gnuplot.cfg}%
-}{%
- \typeout{No configuration file gnuplot.cfg found.}%
-}%
-%
-\begin{document}
 \begingroup
   \makeatletter
   \providecommand\color[2][]{%
@@ -141,35 +82,38 @@
 \begin{picture}(7200.00,4320.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,595){\makebox(0,0)[r]{\strut{}$0.001$}}%
+      \put(1949,595){\makebox(0,0)[r]{\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,1303){\makebox(0,0)[r]{\strut{}$0.01$}}%
+      \put(1949,1303){\makebox(0,0)[r]{\strut{}$0.2$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,2010){\makebox(0,0)[r]{\strut{}$0.1$}}%
+      \put(1949,2010){\makebox(0,0)[r]{\strut{}$0.4$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,2718){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(1949,2718){\makebox(0,0)[r]{\strut{}$0.6$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,3425){\makebox(0,0)[r]{\strut{}$10$}}%
+      \put(1949,3425){\makebox(0,0)[r]{\strut{}$0.8$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,4133){\makebox(0,0)[r]{\strut{}$100$}}%
+      \put(1949,4133){\makebox(0,0)[r]{\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2740,409){\makebox(0,0){\strut{}\(1.0 \times 10^{-4}\)}}%
+      \put(2051,409){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5711,409){\makebox(0,0){\strut{}\(1.0 \times 10^{-3}\)}}%
+      \put(3526,409){\makebox(0,0){\strut{}$1$}}%
+      \colorrgb{0.50,0.50,0.50}%%
+      \put(5002,409){\makebox(0,0){\strut{}$10$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(153,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$k/k^{2D}$}}}%
+      \put(1457,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$S_w$}}}%
       \csname LTb\endcsname%%
-      \put(3922,130){\makebox(0,0){\strut{}$h$ $(\mathrm{m})$}}%
+      \put(3820,130){\makebox(0,0){\strut{}$1/h^*$}}%
       \csname LTb\endcsname%%
-      \put(3203,3780){\makebox(0,0)[r]{\strut{}$k=h^2/12$}}%
+      \put(4801,3919){\makebox(0,0)[r]{\strut{}$Ca=1.0 \times 10^{0}$}}%
       \csname LTb\endcsname%%
-      \put(3203,3501){\makebox(0,0)[r]{\strut{}$\mathrm{our\:model}$}}%
+      \put(4801,3640){\makebox(0,0)[r]{\strut{}$Ca=5.0 \times 10^{-2}$}}%
+      \csname LTb\endcsname%%
+      \put(4801,3361){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{permeability-inc}}%
+    \put(0,0){\includegraphics{saturation}}%
     \gplfronttext
   \end{picture}%
 \endgroup
-\end{document}
