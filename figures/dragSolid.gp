@@ -1,4 +1,4 @@
-set terminal cairolatex eps dashed
+set terminal cairolatex standalone pdf dashed
 
 
 set output 'dragSolid.tex'
@@ -23,7 +23,7 @@ set style line 11 lc rgb '#8c510a' lt 2 pt 5 lw 5.0 ps 1.2
 set style line 12 lc rgb '#d8b365' lt 3 pt 7 lw 5.0 ps 1.2 
 set style line 13 lc rgb '#f6e8c3' lt 4 pt 15 lw 5.0 ps 1.2
 # Legend
-set key at 2,9e5 spacing 1.5
+set key at 2,9e5 spacing 1.25
 #set key Left
 # Axes label 
 set xlabel '$1/h^*$'
@@ -49,9 +49,9 @@ set object 1 poly from X1,Y1 to X2,Y1 to X2,Y2 to X1,Y1 fs empty border 0
 set label '$2^{\mathrm{nd}}\:\mathrm{order}$' at 11,4
 
 # Plot
-plot 'dragSolid.txt' u 1:3 w lp ls 1 t '$Ca=1.0 \times 10^{0},w$', \
+plot 'dragSolid.txt' u 1:3 w lp ls 1 t '$Ca=1 \times 10^{0},w$', \
 'dragSolid.txt' u 1:2 w lp ls 11 t '$Ca=-,o$', \
-'dragSolid.txt' u 1:5 w lp ls 2 t '$Ca=5.0 \times 10^{-2},w$', \
+'dragSolid.txt' u 1:5 w lp ls 2 t '$Ca=5 \times 10^{-2},w$', \
 'dragSolid.txt' u 1:4 w lp ls 12 t '$Ca=-,o$', \
 'dragSolid.txt' u 1:7 w lp ls 3 t '$Ca=7.5 \times 10^{-3},w$', \
 'dragSolid.txt' u 1:6 w lp ls 13 t '$Ca=-,o$'

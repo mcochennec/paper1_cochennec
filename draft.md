@@ -1,5 +1,5 @@
 ---
-title: Numerical investigation of two-phase flow in high-permeability porous media Effect of permeability variation on traction terms
+title: Numerical investigation of two-phase flow in high-permeability porous media Effect of permeability variation on the surface force between phases
 author:
  - Maxime Cochennec¹ 
  - Hossein Davarzani¹* (h.davarzani@brgm.fr)
@@ -28,7 +28,8 @@ link-citations: true
 
 # Abstract
 
-In this paper we study the effects of varying permeability on traction terms exerted at the different boundaries for two-phase flow in Hele-Shaw cell. The traction terms, or surface force, are. surface integrals that are necessary to close the continuous macroscopic momentum balance equations for two-phase flow in porous media. These terms are usually modeled from experimental results or obtained by solving a closure problem (a set of boundary value problems to solve on a representative periodic unit-cell). Here these terms are calculated directly by means of direct numerical simulations, and the value of these terms on each interface is studied as a function of the varying permeability and capillary number. We focus on two-phase displacement in high-permeability porous media for which the characteristic flow regimes implies a non-negligible extent of the fluid-fluid interface and thus;  
+The macroscopic description of two-phase flow in porous media requires modeling the force of interaction between the phases, i.e. the two fluids and the solid phase. The flow regimes specific to high permeability porous media are characterized by a non-negligible extent of the interface between the two fluids, compared to the fluid-solid interface. This argues for the systematic introduction of the fluid-fluid interaction terms, the traction, in the macroscopic momentum equations. However, we do not know whether these terms are always non-negligible for this type of flow regime, for example in cases where the friction with the solid becomes very large. Here we show that the share of the traction between the fluids in the overall pressure drop increases when the flow is more confined, and thus the friction with the solid phase increases. The idea of solving modified 2D-Stokes equations with a supplementary Darcy term allowed us to modify the intrinsic permeability of the structure without having to modify the geometry per se. Our results demonstrate that the absolute permeability of the structure does not prejudge the importance of the traction between fluids in the total pressure drop as long as the flow regime is characteristic of flow in high permeability porous media.
+
 
 # Introduction
 
@@ -108,10 +109,12 @@ $$
 F_{lg} = A_{lg} U_r + B_{lg} U_r^2,
 $$
 
-where the relative velocity is given by $U_r=U_g-\frac{S_g}{S_l}U_l$ and $A_{lg}$ and $B_{lg}$ are coefficients that depend on the volume fraction of the gas phase and the medium properties. The subscripts $g$ and $l$ denote the gas phase and the liquid phase, respectively. This type of model with explicit account of interaction between fluids, see also [@tung1988hydrodynamic;iliuta2005modelling], gives good results when compared with experimental results [@wang2013modelling]. 
+where the relative velocity is given by $U_r=U_g-\frac{S_g}{S_l}U_l$ and $A_{lg}$ and $B_{lg}$ are coefficients that depend on the volume fraction of the gas phase and the medium properties. The subscripts $g$ and $l$ denote the gas phase and the liquid phase, respectively. This type of model with explicit account of interaction between fluids, see also [@tung1988hydrodynamic;@iliuta2005modelling], gives good results when compared with experimental results [@wang2013modelling]. 
  
+
 ## Outline of the study
 
+Up to this point we have seen that the macroscopic momentum equations need the modeling of the force of interaction terms between phases. The interaction between fluids is neglected in the traditional model used for the study of subsurface two-phase flow, while it has been experimentally observed that these terms are important when studying two-phase flow in high permeability porous media. However, it is not known whether these terms are always important when the extent of the interface between the fluids is important. For example, do they become negligible when friction with the solid phase increases?  To what extent? To answer this question, we performed direct numerical simulations of two-phase flow in a Hele-Shaw cell as a model high permeability porous medium. We solved a coupled Level-Set and Stokes equations with an additional Darcy-term in the momentum equation that pertain for the absolute permeability of the flow between two plates. Thus, the friction due to the solid walls is increased by decreasing the aperture between the cell plates. This paper discusses the value of the interaction terms as a function of the aperture between the plates, i.e. the absolute permeability of the medium, and the capillary number. 
 
 
 # Theoretical background
@@ -147,7 +150,7 @@ $$ {#eq:darcyPc}
 
 ## Traction terms
 
-As said, an essential step in order to derive some macroscopic law at macroscale from the microscale is to use averaged quantities to express the boundary intergals terms that arising because of the averaging theorem application [@Whitaker2013]. Remember that these closure relations are not presented here but rather we leave intact the surface integrals, the averaged momentum balance equations +@eq:VAmomentum for two fluids $w$ and $o$, are recast as
+As said, an essential step in order to derive some macroscopic law at macroscale from the microscale is to use averaged quantities to express the boundary integrals terms that arising because of the averaging theorem application [@Whitaker2013]. Remember that these closure relations are not presented here but rather we leave intact the surface integrals, the averaged momentum balance equations +@eq:VAmomentum for two fluids $w$ and $o$, are recast as
 
 $$
 0=-\varepsilon_{w}\nabla P_{w}+\mathbf{T}_{wo}+\mathbf{T}_{ws}, 
@@ -174,7 +177,7 @@ Two-phase flow between two parallel plates under study here is illustrated in +@
 To compute the traction exerted by the fluids upon the cell plates we need to consider that the velocity profile in the $z$-direction is well described by the Poiseuille flow profile, 
 
 $$
-u=-\frac{1}{2\mu}\frac{dp}{dx}z(z-h).
+w=-\frac{1}{2\mu}\frac{dp}{dx}z(z-h).
 $$ {#eq:poiseuilleProfile}
 
 Then the friction force exerted on the bottom plate is given by
@@ -342,6 +345,7 @@ Let us take a closer look at the interface position for different values of $h^*
 
 ![Interface position at steady-state in UC3 for $Ca=5\times10^{-2}$.](figures/pdf/interfaceCa005.pdf){#fig:interfaceCa005}
 
+
 ![Dimensionless $x$-component of the velocity in UC3 for $Ca=1$ and $1/h^*=2$.](figures/png/Uvelocity_Ca1LH2.png){#fig:UvelocityCa1LH2}
 
 ![Dimensionless $x$-component of the velocity in UC3 for $Ca=1$ and $1/h^*=20$.](figures/png/Uvelocity_Ca1LH20.png){#fig:UvelocityCa1LH20}
@@ -376,17 +380,18 @@ We compute the fluid-fluid traction $T_{ij}$ in two steps. The first step concer
 
 ## Decreasing the intrinsic permeability does not imply that the share of the fluid-fluid traction is negligible in the total traction
 
-Let us now sum up all the traction terms and answer the question of the share of traction exerted on the fluid-fluid boundaries in total traction. The ratio $T_{int}^x/T_{s}^x$ is given as a function of the dimensionless aperture between the Hele-Shaw plates in +@fig:ratioDrag. The traction exerted on the fluid-fluid boundary reaches between 10 and 50% of the traction exerted on the solid-fluid boundaries. Interestingly, the ratio varies non-monotonically with $h^*$, the minimum is reached for the smallest capillary numbers and a medium range of the aperture values.  
+Let us now sum up all the traction terms and answer the question of the share of traction exerted on the fluid-fluid boundary in total traction. The traction exerted on the fluid-fluid boundary reaches between 10 and 50% of the traction exerted on the solid-fluid boundaries, as can be seen in +@fig:ratioDrag, on which we plot the ratio $T_int^x/T_s^x$ as a function of the dimensionless aperture between the cell plates. Interestingly, the ratio varies non-monotonically with $h^*$, the minimum is reached for the smallest tested capillary numbers and a medium range of the aperture values. Logically the traction at the interface between the fluids is important when the aperture between the plates is maximum (the solution tends towards the 2D solution). For a moderate aperture, the proportion of traction at the fluid-fluid interface decreases then rises again as the opening and thus the absolute permeability of the cell decreases. 
 
-Variations with aperture between plates are amplified as the capillary number decreases. Thus, it is for the lowest capillary number tested that we obtain both the maximum and minimu
-m values of the ratio $T_{int}^x/T_{s}^x$. 
+The variation of the ratio strongly depends on the capillary number and that the smaller the capillary number, the smaller the traction at the fluid interface. This is clearly visible in +@fig:ratioDragCa on which we plot the ratio $T_int^x/T_s^x$ as a function of the capillary number for different values of the opening between the plates.
  
 ![Ratio of traction ($x$-component) on fluid-fluid interface over traction on solid-fluid interfaces in UC3 as a function of the dimensionless aperture between the Hele-Shaw plates and for different capillary numbers at steady-state.](figures/pdf/ratioDrag.pdf){#fig:ratioDrag}
+
+![Ratio of traction ($x$-component) on fluid-fluid interface over traction on solid-fluid interfaces in UC3 as a function of the capillary number and for different apertures at steady-state.](figures/pdf/ratioDragCa.pdf){#fig:ratioDragCa}
 
 
 # Conclusion
 
-In this work, we investigated the effect of varied permeability on cocurrent two-phase flow in a Hele-Shaw cell. We focused on the value of the traction terms, that are necessary to close the macroscopic flow equations. The idea of solving modified 2D-Stokes equations with a supplementary Darcy term allowed us to modify the intrinsic permeability of the structure without having to modify the geometry per se. The range of intrinsic permeability values investigated is typical of high-permeability porous media, for which it is known that the flow regimes are characterized by the large extent of the fluid-fluid interface (e.g. film flow). With direct numerical simulations we found that 
+We investigated the effect of varied permeability on cocurrent two-phase flow in a Hele-Shaw cell. We focused on the value of the traction terms, that are necessary to close the macroscopic flow equations. The idea of solving modified 2D-Stokes equations with a supplementary Darcy term allowed us to modify the intrinsic permeability of the structure without having to modify the geometry per se. The range of intrinsic permeability values investigated is typical of high-permeability porous media, for which it is known that the flow regimes are characterized by the large extent of the fluid-fluid interface (e.g. film flow). With direct numerical simulations we found that 
 
 
 
@@ -394,7 +399,7 @@ In this work, we investigated the effect of varied permeability on cocurrent two
 
 ## Validiation against explicit tracking interface method
 
-The code is validated by comparison with a Boundary-Element Method, which relies on a surface discretization of the interface and a pseudo-analytical formulation in the bulk of the phases. This allows us to precisely locate the interface, even in the case of very thin film flow, and to carefully analyze the choice of parameters in Eq. [eq:advecPhi].
+The code is validated by comparison with a Boundary-Element Method, which relies on a surface discretization of the interface and a pseudo-analytical formulation in the bulk of the phases. This allows us to precisely locate the interface, even in the case of very thin film flow, and to carefully analyze the choice of parameters in the transport equation.
 
 The test case resembles the study case as it consists of the injection of a fluid into a Hele-Shaw initially fully saturated with a flowing fluid. The dynamic viscosity of the fluids is equal and the model is illustrated in +@fig:testCase.
 

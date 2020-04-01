@@ -35,4 +35,4 @@ draft.tex: draft.md biblio.bib
 
 .PHONY: clean
 clean:
-	${RM} paper.pdf paper.docx
+	${RM} draft.pdf draft.docx

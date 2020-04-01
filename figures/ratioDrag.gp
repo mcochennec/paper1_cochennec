@@ -1,4 +1,4 @@
-set terminal cairolatex standalone pdf dashed
+set terminal cairolatex eps dashed
 set size square
 
 set output 'ratioDrag.tex'

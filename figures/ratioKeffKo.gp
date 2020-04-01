@@ -1,4 +1,4 @@
-set terminal cairolatex eps dashed
+set terminal cairolatex standalone pdf dashed
 set size square
 
 set output 'ratioKeffKo.tex'
@@ -25,8 +25,8 @@ set style line 13 lc rgb '#f6e8c3' lt 4 pt 15 lw 5.0 ps 1.2
 set key at 20,0.33 spacing 1.25
 #set key Left
 # Axes label 
-set xlabel '$1/h^*$'
-set ylabel '$K_{\mathrm{eff}}/K_0$' 
+set xlabel '$1/h^*$' font ",20"
+set ylabel '$k_{ri}/k_0$' font ",20"
 
 
 set log y
@@ -41,9 +41,9 @@ set ytics add ('1' 1)
 #set tics scale 0.5
 
 # Plot
-plot 'ratioKeffKo.txt' u 1:3 w lp ls 1 t '$Ca=1.0 \times 10^{0},w$', \
+plot 'ratioKeffKo.txt' u 1:3 w lp ls 1 t '$Ca=1 \times 10^{0},w$', \
 'ratioKeffKo.txt' u 1:2 w lp ls 11 t '$-,o$', \
-'ratioKeffKo.txt' u 1:5 w lp ls 2 t '$Ca=5.0 \times 10^{-2},w$', \
+'ratioKeffKo.txt' u 1:5 w lp ls 2 t '$Ca=5 \times 10^{-2},w$', \
 'ratioKeffKo.txt' u 1:4 w lp ls 12 t '$-,o$', \
 'ratioKeffKo.txt' u 1:7 w lp ls 3 t '$Ca=7.5 \times 10^{-3},w$', \
 'ratioKeffKo.txt' u 1:6 w lp ls 13 t '$-,o$'
