@@ -1,5 +1,9 @@
 % GNUPLOT: LaTeX picture with Postscript
 \begingroup
+  % Encoding inside the plot.  In the header of your document, this encoding
+  % should to defined, e.g., by using
+  % \usepackage[cp1252,<other encodings>]{inputenc}
+
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -79,42 +83,42 @@
     \fi%
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
-\begin{picture}(7200.00,4320.00)%
+\begin{picture}(7180.00,4300.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,595){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(655,700){\makebox(0,0)[r]{\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,1303){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(655,1376){\makebox(0,0)[r]{\strut{}$0.2$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,2010){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(655,2052){\makebox(0,0)[r]{\strut{}$0.4$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,2718){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(655,2728){\makebox(0,0)[r]{\strut{}$0.6$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,3425){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(655,3404){\makebox(0,0)[r]{\strut{}$0.8$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,4133){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(655,4080){\makebox(0,0)[r]{\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2460,409){\makebox(0,0){\strut{}$0.01$}}%
+      \put(1462,481){\makebox(0,0){\strut{}$0.01$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3820,409){\makebox(0,0){\strut{}$0.1$}}%
+      \put(3820,481){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5180,409){\makebox(0,0){\strut{}$1$}}%
+      \put(6178,481){\makebox(0,0){\strut{}$1$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(1457,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$T_{int}^x/T_{s}^x$}}}%
+      \put(182,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$T_{f}^x/T_{s}^x$}}}%
       \csname LTb\endcsname%%
-      \put(3820,130){\makebox(0,0){\strut{}$Ca$}}%
+      \put(3820,153){\makebox(0,0){\strut{}$Ca$}}%
       \csname LTb\endcsname%%
-      \put(3134,4017){\makebox(0,0)[r]{\strut{}$1/h^*=0.2$}}%
+      \put(6122,3856){\makebox(0,0)[r]{\strut{}$h^*=5$}}%
       \csname LTb\endcsname%%
-      \put(3134,3785){\makebox(0,0)[r]{\strut{}$1/h^*=2$}}%
+      \put(6122,3583){\makebox(0,0)[r]{\strut{}$h^*=0.500$}}%
       \csname LTb\endcsname%%
-      \put(3134,3553){\makebox(0,0)[r]{\strut{}$1/h^*=4$}}%
+      \put(6122,3310){\makebox(0,0)[r]{\strut{}$h^*=0.250$}}%
       \csname LTb\endcsname%%
-      \put(3134,3321){\makebox(0,0)[r]{\strut{}$1/h^*=8$}}%
+      \put(6122,3037){\makebox(0,0)[r]{\strut{}$h^*=0.125$}}%
       \csname LTb\endcsname%%
-      \put(3134,3089){\makebox(0,0)[r]{\strut{}$1/h^*=20$}}%
+      \put(6122,2764){\makebox(0,0)[r]{\strut{}$h^*=0.050$}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{ratioDragCa}}%

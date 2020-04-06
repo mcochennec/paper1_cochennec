@@ -1,5 +1,4 @@
 set terminal cairolatex eps dashed
-set size square
 
 set output 'permeability.tex'
 
@@ -15,7 +14,7 @@ set grid back ls 22
 
 # Line styles
 set border linewidth 1.5
-set style line 1 lc rgb '#01665e' pt 5 lw 2.5 ps 1.2 
+set style line 1 lc rgb '#053061' pt 5 lw 2.5 ps 1.2 
 set style line 2 lc rgb '#dd181f' dt 4 pt 7 lw 2.5 ps 1.2
 # Legend
 set key at 2e-4,50 samplen 1.5 spacing 1.5

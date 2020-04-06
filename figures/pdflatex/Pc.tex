@@ -1,5 +1,8 @@
 % GNUPLOT: LaTeX picture with Postscript
 \begingroup
+  % Encoding inside the plot.  In the header of your document, this encoding
+  % should to defined, e.g., by using
+  % \usepackage[cp1252,<other encodings>]{inputenc}
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -79,36 +82,34 @@
     \fi%
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
-\begin{picture}(7200.00,4320.00)%
+\begin{picture}(7180.00,4300.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2051,595){\makebox(0,0)[r]{\strut{}$0.001$}}%
+      \put(849,700){\makebox(0,0)[r]{\strut{}$0.001$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2051,1774){\makebox(0,0)[r]{\strut{}$0.01$}}%
+      \put(849,1827){\makebox(0,0)[r]{\strut{}$0.01$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2051,2954){\makebox(0,0)[r]{\strut{}$0.1$}}%
+      \put(849,2953){\makebox(0,0)[r]{\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2051,4133){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(849,4080){\makebox(0,0)[r]{\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2153,409){\makebox(0,0){\strut{}$0.1$}}%
+      \put(2178,481){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3581,409){\makebox(0,0){\strut{}$1$}}%
+      \put(4533,481){\makebox(0,0){\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5010,409){\makebox(0,0){\strut{}$10$}}%
-      \csname LTb\endcsname%%
-      \put(2721,3423){\makebox(0,0)[l]{\strut{}$1^{\mathrm{st}}\:\mathrm{order}$}}%
+      \put(6888,481){\makebox(0,0){\strut{}$10$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(1355,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$P_o-P_w\:(\mathrm{Pa})$}}}%
+      \put(182,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$P_o-P_w\:(\mathrm{Pa})$}}}%
       \csname LTb\endcsname%%
-      \put(3922,130){\makebox(0,0){\strut{}$1/h^*$}}%
+      \put(3917,153){\makebox(0,0){\strut{}$h^*$}}%
       \csname LTb\endcsname%%
-      \put(4903,1366){\makebox(0,0)[r]{\strut{}$Ca=1.0 \times 10^{0}$}}%
+      \put(2927,1663){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0}$}}%
       \csname LTb\endcsname%%
-      \put(4903,1087){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
+      \put(2927,1335){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
       \csname LTb\endcsname%%
-      \put(4903,808){\makebox(0,0)[r]{\strut{}$2\gamma/h$}}%
+      \put(2927,1007){\makebox(0,0)[r]{\strut{}$2\gamma/h$}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{Pc}}%

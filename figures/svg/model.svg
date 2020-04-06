@@ -231,7 +231,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="308.23012"
+     inkscape:cx="180.73012"
      inkscape:cy="193.3283"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -241,9 +241,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="970"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -259,7 +259,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -371,7 +371,7 @@
          id="tspan5162"
          x="38.880173"
          y="116.59566"
-         style="stroke-width:0.21166666">Inlet o</tspan></text>
+         style="stroke-width:0.21166666">Inlet $o$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.1044445px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21166666"
@@ -382,7 +382,7 @@
          id="tspan5162-9"
          x="38.337536"
          y="121.78881"
-         style="stroke-width:0.21166666">Inlet w</tspan></text>
+         style="stroke-width:0.21166666">Inlet $w$</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21166666px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker5198)"
        d="m 155.16859,119.53012 h 8.46668"
@@ -441,7 +441,7 @@
          id="tspan6174"
          x="58.588078"
          y="144.18156"
-         style="stroke-width:0.21166666">w-phase</tspan></text>
+         style="stroke-width:0.21166666">$w$-phase</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.1044445px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21166666"
@@ -452,7 +452,7 @@
          id="tspan6174-3"
          x="59.803009"
          y="138.72093"
-         style="stroke-width:0.21166666">o-phase</tspan></text>
+         style="stroke-width:0.21166666">$o$-phase</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21166666px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6266)"
        d="m 72.778958,138.05175 7.408332,-0.0454"
@@ -486,7 +486,7 @@
          id="tspan9532"
          x="98.941063"
          y="129.41971"
-         style="font-size:2.53999996px;stroke-width:0.21166666">h</tspan></text>
+         style="font-size:2.53999996px;stroke-width:0.21166666">$h$</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21166666px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6448)"
        d="m 92.588056,147.70918 -2.174689,-9.6663"
@@ -503,9 +503,9 @@
          id="tspan9550"
          x="88.559448"
          y="149.87996"
-         style="stroke-width:0.21166666">A<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan1232">ws</tspan></tspan></text>
+         style="stroke-width:0.21166666">$A_{ws}$<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan1232" /></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21166666px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6448-6)"
        d="m 104.73471,149.99334 -6.053173,-5.72616"
@@ -522,9 +522,7 @@
          id="tspan9550-2"
          x="105.32223"
          y="151.41086"
-         style="stroke-width:0.21166666">A<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan1234">wo</tspan></tspan></text>
+         style="stroke-width:0.21166666">$A_{wo}</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.21166666px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6266-5)"
        d="m 72.377751,143.42644 7.408332,-0.0454"
@@ -567,12 +565,12 @@
        transform="rotate(179.3987)"><tspan
          sodipodi:role="line"
          id="tspan2601"
-         x="-142.28073"
-         y="-103.03705"
-         style="font-size:2.82222223px;writing-mode:tb-rl;direction:ltr;stroke-width:0.21166666">l</tspan><tspan
+         x="-140.68243"
+         y="-104.63536"
+         style="font-size:2.82222223px;writing-mode:tb-rl;direction:ltr;stroke-width:0.21166666">$l$</tspan><tspan
          sodipodi:role="line"
-         x="-142.28073"
-         y="-113.62038"
+         x="-140.68243"
+         y="-115.2187"
          style="font-size:2.82222223px;writing-mode:tb-rl;direction:ltr;stroke-width:0.21166666"
          id="tspan2605" /></text>
     <text
