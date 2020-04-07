@@ -2938,7 +2938,39 @@ noprefix "false"
 
 , the difference in intrinsic mean pressure of the fluids is entirely controlled
  by the pressure jump caused by the out-of-plane meniscus, even for the
- larger aperture.
+ larger aperture, and does not depends on the capillary number at all.
+ How the pressure jump compared to the pressure gradient across a cell?
+ Based on the pressure fields in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pField"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ one can answer that for 
+\begin_inset Formula $Ca=1$
+\end_inset
+
+ the pressure gradient across the cell is larger than the pressure jump
+ and, interestingly, it becomes larger and larger than the pressure jump
+ as the aperture between the plates is reduced.
+ It is quite different when the capillary number decreases, and for 
+\begin_inset Formula $Ca=0.01$
+\end_inset
+
+ combined with a large aperture the pressure gradient across the cell is
+ negligible in front of the pressure jump due to surface tension effects.
+ As the aperture decreases, the pressure gradient increases and becomes
+ comparable to the pressure jump, but the pressure itsel is differently
+ distributed in the cell compared to higher capillary number cases with
+ a higher pressure in the wetting fluid.
  
 \end_layout
 
@@ -2994,7 +3026,7 @@ name "fig:Pc"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3016,7 +3048,7 @@ Pressure field in UC3 for two different capillary number and two different
 \begin_inset Formula $\phi$
 \end_inset
 
-=0.5 contour (white line) and isobar (black line)
+=0.5 contour (white line) and isobar (black lines)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pField"
@@ -3041,10 +3073,59 @@ name "fig:pField"
 \end_layout
 
 \begin_layout Standard
+We now turn to the study of the traction exerted upon the solid-fluid boundaries
+ 
+\begin_inset Formula $\mathbf{T}_{s}$
+\end_inset
+
+, i.e.
+ fluid 
+\begin_inset Formula $i$
+\end_inset
+
+ upon the plates and wetting fluid upon the cylinder, along with the traction
+ at the fluid-fluid interace 
+\begin_inset Formula $\mathbf{T}_{f}$
+\end_inset
+
+.
+ We focus on the magnitude of the traction exerted at the fluid-fluid interface
+ compared to the traction exerted upon the solid boundaries.
+ In the following we discuss only the 
+\begin_inset Formula $x$
+\end_inset
+
+-component of the traction vector, i.e.
+ aligned according to the inlet velocity.
+ 
+\end_layout
+
+\begin_layout Standard
+The traction exerted upont the plates by the fluids was obtained as described
+ in the theoretical backgound section.
+ Traction on the cylinder boundary was obtained by calculating the integral
+ Eq.
+\begin_inset space ~
+\end_inset
+
+.
+ We computed the fluid-fluid traction 
+\begin_inset Formula $\mathbf{T}_{f}$
+\end_inset
+
+ in two steps.
+ The first step concerns the viscous part of the stress tensor, which was
+ calculated directly from the velocity gradients available on the interface
+ contour.
+ The second step concerns the pressure part, which was obtained by applying
+ the divergence theorem on each phase into a cell (UC3).
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3229,7 +3310,7 @@ name "fig:ratioTractionCa"
 
 \end_inset
 
-
+-
 \end_layout
 
 \begin_layout Standard

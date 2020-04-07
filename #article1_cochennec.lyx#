@@ -3089,12 +3089,71 @@ We now turn to the study of the traction exerted upon the solid-fluid boundaries
 \end_inset
 
 .
+ We focus on the magnitude of the traction exerted at the fluid-fluid interface
+ compared to the traction exerted upon the solid boundaries.
  In the following we discuss only the 
 \begin_inset Formula $x$
 \end_inset
 
--component of the traction vector, i.e.
- the compenent aligned according to the inlet velocity.
+-component of the traction vector 
+\begin_inset Formula $T^{x}$
+\end_inset
+
+, i.e.
+ aligned according to the inlet velocity.
+ 
+\end_layout
+
+\begin_layout Standard
+The traction exerted upont the plates by the fluids was obtained as described
+ in the theoretical backgound section.
+ Traction on the cylinder boundary was obtained by calculating the integral
+ Eq.
+\begin_inset space ~
+\end_inset
+
+.
+ We computed the fluid-fluid traction 
+\begin_inset Formula $\mathbf{T}_{f}$
+\end_inset
+
+ in two steps.
+ The first step concerns the viscous part of the stress tensor, which was
+ calculated directly from the velocity gradients available on the interface
+ contour.
+ The second step concerns the pressure part, which was obtained by applying
+ the divergence theorem on each phase into a cell (UC3).
+ 
+\end_layout
+
+\begin_layout Standard
+We assessed that the traction exerted on the fluid-fluid boundary reaches
+ between 10 and 50% of the traction exerted on the solid-fluid boundaries,
+ as can be seen in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ratioTraction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, on which we plot the ratio 
+\begin_inset Formula $T_{f}^{x}/T_{s}^{x}$
+\end_inset
+
+ as a function of the dimensionless aperture between the cell plates.
+ Interestingly, the ratio varies non-monotonically with 
+\begin_inset Formula $h$
+\end_inset
+
+ and the maximum value is obtained for the smallest aperture which then
+ decreases when the aperture increases.
  
 \end_layout
 
@@ -3103,99 +3162,6 @@ We now turn to the study of the traction exerted upon the solid-fluid boundaries
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset include
-LatexCommand input
-filename "figures/pdflatex/multiplotTractionFluidInterface.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Viscous and pressure part of 
-\begin_inset Formula $x$
-\end_inset
-
--component of the traction exerted upon the fluid-fluid interface in UC3
- as a function of the dimensionless aperture between the Hele-Shaw plates
- at steady-state for different capillary numbers.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:tractionFluid"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset include
-LatexCommand input
-filename "figures/pdflatex/tractionTotal.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $x$
-\end_inset
-
--component of the traction exerted upon fluid-fluid interface in UC3 as
- a function of the dimensionless aperture between the Hele-Shaw plates and
- for different capillary numbers at steady-state.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:tractionTotal"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3269,6 +3235,99 @@ Ratio of traction (
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ratioTractionCa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "figures/pdflatex/tractionTotal.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+-component of the traction exerted upon fluid-fluid interface in UC3 as
+ a function of the dimensionless aperture between the Hele-Shaw plates and
+ for different capillary numbers at steady-state.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tractionTotal"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "figures/pdflatex/multiplotTractionFluidInterface.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Viscous and pressure part of 
+\begin_inset Formula $x$
+\end_inset
+
+-component of the traction exerted upon the fluid-fluid interface in UC3
+ as a function of the dimensionless aperture between the Hele-Shaw plates
+ at steady-state for different capillary numbers.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tractionFluid"
 
 \end_inset
 
