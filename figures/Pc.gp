@@ -21,7 +21,7 @@ set style line 10 lc rgb '#dd181f' dt 4 pt 6 lw 5.0 ps 1.2
 set key at 0.4,0.01 spacing 1.5
 # Axes label 
 set xlabel '$h^*$'
-set ylabel '$P_o-P_w\:(\mathrm{Pa})$' 
+set ylabel '$\vert P_o-P_w\:(\mathrm{Pa}) \vert$' 
 
 
 set log y

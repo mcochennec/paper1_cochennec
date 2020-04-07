@@ -1,5 +1,8 @@
 % GNUPLOT: LaTeX picture with Postscript
 \begingroup
+  % Encoding inside the plot.  In the header of your document, this encoding
+  % should to defined, e.g., by using
+  % \usepackage[cp1252,<other encodings>]{inputenc}
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -79,38 +82,46 @@
     \fi%
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
-\begin{picture}(7200.00,4320.00)%
+\begin{picture}(7180.00,4300.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,595){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(655,700){\makebox(0,0)[r]{\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,1303){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(655,1376){\makebox(0,0)[r]{\strut{}$0.2$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,2010){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(655,2052){\makebox(0,0)[r]{\strut{}$0.4$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,2718){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(655,2728){\makebox(0,0)[r]{\strut{}$0.6$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,3425){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(655,3404){\makebox(0,0)[r]{\strut{}$0.8$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1949,4133){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(655,4080){\makebox(0,0)[r]{\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2051,409){\makebox(0,0){\strut{}$0.1$}}%
+      \put(2024,481){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3526,409){\makebox(0,0){\strut{}$1$}}%
+      \put(4456,481){\makebox(0,0){\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5002,409){\makebox(0,0){\strut{}$10$}}%
+      \put(6888,481){\makebox(0,0){\strut{}$10$}}%
+      \csname LTb\endcsname%%
+      \put(915,2390){\makebox(0,0)[l]{\strut{}\includegraphics{SatCa00075HL005.png}}}%
+      \csname LTb\endcsname%%
+      \put(3347,3066){\makebox(0,0)[l]{\strut{}\includegraphics{SatCa00075HL05.png}}}%
+      \csname LTb\endcsname%%
+      \put(915,1038){\makebox(0,0)[l]{\strut{}\includegraphics{SatCa1HL005.png}}}%
+      \csname LTb\endcsname%%
+      \put(3347,1376){\makebox(0,0)[l]{\strut{}\includegraphics{SatCa1HL05.png}}}%
+      \csname LTb\endcsname%%
+      \put(5779,1883){\makebox(0,0)[l]{\strut{}\includegraphics{SatCa1HL5.png}}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(1457,2364){\rotatebox{-270}{\makebox(0,0){\strut{}$S_w$}}}%
+      \put(3820,153){\makebox(0,0){\strut{}$h^*$}}%
       \csname LTb\endcsname%%
-      \put(3820,130){\makebox(0,0){\strut{}$1/h^*$}}%
+      \put(6122,3829){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0}$}}%
       \csname LTb\endcsname%%
-      \put(4801,3919){\makebox(0,0)[r]{\strut{}$Ca=1.0 \times 10^{0}$}}%
+      \put(6122,3501){\makebox(0,0)[r]{\strut{}$Ca=5 \times 10^{-2}$}}%
       \csname LTb\endcsname%%
-      \put(4801,3640){\makebox(0,0)[r]{\strut{}$Ca=5.0 \times 10^{-2}$}}%
-      \csname LTb\endcsname%%
-      \put(4801,3361){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
+      \put(6122,3173){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{saturation}}%

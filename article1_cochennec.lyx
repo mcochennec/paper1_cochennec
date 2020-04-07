@@ -82,7 +82,7 @@ subequations
 \color #faf0e6
 \end_branch
 \branch DNS
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -1753,7 +1753,7 @@ literal "true"
 \begin_layout Standard
 \begin_inset Branch DNS
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Direct numerical simulations
@@ -1768,16 +1768,21 @@ Level Set model
 \end_layout
 
 \begin_layout Standard
-We use the Level Set method to capture the moving free interface between
- the fluids.
+We used the standard Level Set method to capture the moving free interface
+ between the fluids.
+ The method is part of Eulerian methods which have the particularity of
+ easily reproducing topological changes of the phases contrary to Lagrangian
+ methods.
+ As topological changes of the fluids is not excluded here, this motivated
+ the choice for this type of method.
  In this framework the fluid phases are identified with a level set (scalar)
- function that goes smoothly from 0 to 1 across the fluid interface and
- the interface is implicitely defined as the iso-level 
+ function that goes smoothly from 0 to 1 across the fluid interface, which
+ is implicitely defined as the iso-level 
 \begin_inset Formula $\phi=0.5$
 \end_inset
 
 .
- The transport of the level set function 
+ Transport of the level set function 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -1800,7 +1805,7 @@ In this equation,
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
- is the velocity field, 
+ is the velocity field and 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -1809,9 +1814,11 @@ In this equation,
 \end_inset
 
  are two numerical parameters that control the diffuse interface thickness
- and the amount of reinitialization of the $
-\backslash
-phi$ function, respectively 
+ and the amount of reinitialization of 
+\begin_inset Formula $\phi$
+\end_inset
+
+ function, respectively 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Olsson2007"
@@ -1829,22 +1836,27 @@ Flow equations
 
 \begin_layout Standard
 Remember that we need to take into account tangential stress as well perpendicul
-ar stress due to the flow confinement, a full-3D resolution of the flow
- equations would be meaningful.
+ar stress due to flow confinement, a full-3D resolution of flow equations
+ would be meaningful.
  In order to avoid solving such resource-intensive simulations we rather
  resolved 2D flow equations plus an additional term taking into account
  the perpendicular stress.
- The velocity and pressure fields are obtained by solving the 2D-modified
- Stokes equations since the Reynolds number is assumed to be sufficiently
- low so that the flow is creeping, the whole-domain formulation Stokes and
- continuity equations read
+ Velocity and pressure fields are obtained by solving 2D-modified Stokes
+ equations since the Reynolds number is assumed to be sufficiently low so
+ that the flow is creeping.
+ The whole-domain formulation Stokes and continuity equations read
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-0=-\nabla p+\mu(\phi)\left(\nabla^{2}\mathbf{u}-k^{2}\mathbf{u}\right)+\mathbf{F}_{st},
-\]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
@@ -1853,9 +1865,36 @@ ar stress due to the flow confinement, a full-3D resolution of the flow
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
+0=-\nabla p+\mu(\phi)\left(\nabla^{2}\mathbf{u}-k^{2}\mathbf{u}\right)+\mathbf{F}_{st},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
 0=\nabla\cdot\mathbf{u},
-\]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1867,23 +1906,15 @@ where
 \begin_inset Formula $k=\frac{\sqrt{12}}{h}$
 \end_inset
 
- is an additional term that pertain to a Darcy-term arising from the depth-avera
-ging of the Stokes equation, as described in the theoretical background
- section and 
+ is an additional term that pertain to a Darcy-term arising from depth-averaging
+ of Stokes equation, as described in the theoretical background section
+ and 
 \begin_inset Formula $\mathbf{F}_{st}$
 \end_inset
 
- is the capillary contribution.
- The capillary contribution is difficult to compute in volumetric methods
- such as Level Set and is itself the object of a large body of work 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Popinet2018"
-literal "true"
-
-\end_inset
-
-, this term is defined here as 
+ is the surface tension fore per unit volume.
+ This term is defined here as a purely normal contribution, i.e.
+ constant surface tension along the interface, and reads
 \end_layout
 
 \begin_layout Standard
@@ -1899,14 +1930,6 @@ literal "true"
 
 \begin_layout Standard
 where 
-\begin_inset Formula $\gamma$
-\end_inset
-
- is the surface tension,
-\begin_inset Formula $\kappa$
-\end_inset
-
- is the interface mean curvature, 
 \begin_inset Formula $\mathbf{n}$
 \end_inset
 
@@ -1917,7 +1940,7 @@ where
  is the Dirac delta function localized on the interface 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "Galusinski2008"
+key "Sussman1994"
 literal "true"
 
 \end_inset
@@ -1933,9 +1956,9 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{n}=\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert},
-\]
+\end{equation}
 
 \end_inset
 
@@ -1944,9 +1967,9 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\kappa=\frac{\pi}{4}\nabla\cdot\left(\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert}\right)+\kappa_{\perp},
-\]
+\begin{equation}
+\kappa=\frac{\pi}{4}\nabla\cdot\left(\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert}\right)+\frac{2}{h},
+\end{equation}
 
 \end_inset
 
@@ -1954,29 +1977,25 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-respectively, where the 
+respectively, where we added the 
 \begin_inset Formula $\pi/4$
 \end_inset
 
- correction was derived in 
+ factor in the curvature expression to be consistent with the correction
+ derived by 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "park1984two"
 literal "true"
 
 \end_inset
 
- and 
-\begin_inset Formula $\kappa_{\perp}=\frac{2}{h}$
-\end_inset
-
- is the out-of-plane curvature as described previously in the theoretical
- background section.
+.
 \end_layout
 
 \begin_layout Standard
-The material parameters, that is the fluid density and the fluid viscosity,
- varies smoothly from one fluid to another 
+The fluid density and the fluid viscosity vary smoothly from one fluid to
+ another 
 \end_layout
 
 \begin_layout Standard
@@ -2075,11 +2094,58 @@ One can notice the two following dimensionless numbers
 
 \begin_layout Standard
 the viscosity ratio and the capillary number, respectively, which add up
- to the already identified aspect ratio 
+ to the aspect ratio 
 \begin_inset Formula $h/l$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+In the following, the results are given as a function of 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Ca=\frac{(U_{o}+U_{w})\mu_{o}}{\gamma},\qquad U_{w}^{'}=\frac{U_{w}}{U_{o}+U_{w}}=f_{f},\qquad U_{o}^{'}=1-f_{f},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $f_{f}$
+\end_inset
+
+ is called fractional flow, the reference viscosity is the invading fluid
+ viscosity (
+\begin_inset Formula $\mu_{o}=2\times\mu_{w}=2\times10^{-3}$
+\end_inset
+
+ Pa.s) and the reference velocity is the total velocity 
+\begin_inset Formula $U=U_{o}+U_{w}$
+\end_inset
+
+.
+ The viscosity ratio 
+\begin_inset Formula $\bar{\mu}$
+\end_inset
+
+ as well as the fractional flow 
+\begin_inset Formula $f_{f}$
+\end_inset
+
+ are kept constant at 2 and 0.25, respectively, and the reference length
+ is the cell's width denoted 
+\begin_inset Formula $l=5\times10^{-4}$
+\end_inset
+
+ m .
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2143,7 +2209,7 @@ filename "figures/pdflatex/model.pdf_tex"
 The geometry used is an array of 5 cylinders in a thin square cuboid, resembling
  a Hele-Shaw-cell where both fluids are injecting from left to right, initially
  the square cuboïd are saturated with wetting fluid (in blue), the length
- of one Unit-Cell (UC) is one millimetre.
+ of one cell (UC) is one millimetre.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:model"
@@ -2446,56 +2512,9 @@ Results
 \end_layout
 
 \begin_layout Standard
-The results are given as a function of the dimensionless numbers defined
- previously and expressed as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Ca=\frac{(U_{o}+U_{w})\mu_{o}}{\gamma},\qquad U_{w}^{'}=\frac{U_{w}}{U_{o}+U_{w}}=f_{f},\qquad U_{o}^{'}=1-f_{f},
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $f_{f}$
-\end_inset
-
- is called fractional flow, the reference viscosity is the invading fluid
- viscosity (
-\begin_inset Formula $\mu_{o}=2\times\mu_{w}=2\times10^{-3}$
-\end_inset
-
- Pa.s) and the reference velocity is the total velocity 
-\begin_inset Formula $U=U_{o}+U_{w}$
-\end_inset
-
-.
- In the following the viscosity ratio 
-\begin_inset Formula $\bar{\mu}$
-\end_inset
-
- as well as the fractional flow 
-\begin_inset Formula $f_{f}$
-\end_inset
-
- are kept constant at 2 and 0.25, respectively, and the reference length
- is the cell's width denoted 
-\begin_inset Formula $l=5\times10^{-4}$
-\end_inset
-
- m .
- 
-\end_layout
-
-\begin_layout Standard
 Before we turn to the study of traction terms, we computed the absolute
- permeability of our model, remember that it is smaller than the 
+ permeability of our model, remember that it is expected to be smaller than
+ the 
 \begin_inset Formula $12/h^{2}$
 \end_inset
 
@@ -2503,7 +2522,7 @@ Before we turn to the study of traction terms, we computed the absolute
  with the cell's plates.
  The absolute permeability of the model is varied by modifying the aperture
  between the two plates.
- We use five different values for the aperture and the correspondence in
+ We used five different values for the aperture and the correspondence in
  terms of absolute permeability, obtained from single-phase simulations,
  is given in Tab.
 \begin_inset space ~
@@ -2539,21 +2558,13 @@ ity for pure 2D case is
  Thus, the range of absolute permeability values is typical of what is encounter
 ed for high permeability porous media.
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "park1984two"
-literal "true"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2813,6 +2824,125 @@ name "tab:permeability"
 \end_layout
 
 \begin_layout Standard
+For the selected parameters, 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $0.05<h^{*}<5$
+\end_inset
+
+, we observed only a film-flow regime without any phase rupture.
+ The wetting fluid saturation in one cuboid, the third one in the rest of
+ the paper unless otherwise specified, as a function of the dimensionless
+ aperture and for different capillary numbers is given in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Saturation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ along with corresponding selected 
+\begin_inset Formula $\phi$
+\end_inset
+
+-fields.
+ Wetting fluid saturation varies between 0.3 and 0.6 and increases as the
+ aperture increases.
+ The capillary number also impacts saturation by promoting the hold-up of
+ the wetting fluid.
+ As seen in the selected 
+\begin_inset Formula $\phi$
+\end_inset
+
+-fields, the smaller the capillary the flatter the interface.
+ For a wetting fluid layer thickness equivalent at the plumb end of the
+ cylinder, the saturation is logically higher.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "figures/pdflatex/saturation.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wetting fluid saturation in UC3 as a function of the dimensionless aperture
+ between the Hele-Shaw plates and for different capillary numbers at steasy-stat
+e
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Saturation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us now take a closer look at the dynamic capillary pressure as expressed
+ in Eq.
+\begin_inset space ~
+\end_inset
+
+ and the pressure fields.
+ Here, as can be seen in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the difference in intrinsic mean pressure of the fluids is entirely controlled
+ by the pressure jump caused by the out-of-plane meniscus, even for the
+ larger aperture.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2886,7 +3016,7 @@ Pressure field in UC3 for two different capillary number and two different
 \begin_inset Formula $\phi$
 \end_inset
 
-=0.5 contour (white line)
+=0.5 contour (white line) and isobar (black line)
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pField"
@@ -2914,7 +3044,7 @@ name "fig:pField"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2961,7 +3091,7 @@ name "fig:tractionFluid"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3007,7 +3137,7 @@ name "fig:tractionTotal"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
