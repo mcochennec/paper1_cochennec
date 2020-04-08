@@ -72,12 +72,12 @@ subequations
 \color #faf0e6
 \end_branch
 \branch Introduction
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Theoretical background
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -288,7 +288,7 @@ linenumbers
 \begin_layout Standard
 \begin_inset Branch Introduction
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Introduction
@@ -489,7 +489,7 @@ Continuous model
 \begin_layout Standard
 Volume averaged microscopic equation of motion for two Newtonian fluids
  
-\begin_inset Formula $i,j=o,w\:\mathrm{and}\:i\neq j$
+\begin_inset Formula $i,j=o,w$
 \end_inset
 
  reads 
@@ -498,7 +498,7 @@ Volume averaged microscopic equation of motion for two Newtonian fluids
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\rho_{i}\varepsilon_{i}\left(\frac{\partial\mathbf{U}_{i}}{\partial t}+\mathbf{U}_{i}\cdot\nabla\mathbf{U}_{i}\right)=-\varepsilon_{i}\nabla P_{i}+\varepsilon_{i}\rho_{i}\mathbf{g}+\varepsilon_{i}\nabla\cdot\boldsymbol{\tau}_{i}+(\mathbf{F}_{ij}+\mathbf{F}_{is})\label{eq:averagedMomentum}
+\rho_{i}\varepsilon_{i}\left(\frac{\partial\mathbf{U}_{i}}{\partial t}+\mathbf{U}_{i}\cdot\nabla\mathbf{U}_{i}\right)=-\varepsilon_{i}\nabla P_{i}+\varepsilon_{i}\rho_{i}\mathbf{g}+\varepsilon_{i}\nabla\cdot\boldsymbol{\tau}_{i}+(\mathbf{F}_{ij}+\mathbf{F}_{is}),\;i\neq j,\label{eq:averagedMomentum}
 \end{equation}
 
 \end_inset
@@ -523,7 +523,7 @@ where
 \begin_inset Formula $U_{i}$
 \end_inset
 
- is the intrinsic average velocity of the
+ is the intrinsic average velocity of the 
 \begin_inset Formula $i$
 \end_inset
 
@@ -531,11 +531,11 @@ where
 \begin_inset Formula $P_{i}$
 \end_inset
 
- is the average pressure of the
+ is the intrinsic average pressure of the 
 \begin_inset Formula $i$
 \end_inset
 
--fluid, 
+-fluid and 
 \begin_inset Formula $\boldsymbol{\tau}_{i}$
 \end_inset
 
@@ -549,7 +549,7 @@ where
 \begin_inset Formula $j$
 \end_inset
 
- and the force of interaction exerted by fluid 
+ and the force of interaction per unit volume exerted by fluid 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1206,7 +1206,7 @@ m in the momentum equation that pertain for the absolute permeability of
 \begin_layout Standard
 \begin_inset Branch Theoretical background
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Theorical background
@@ -1240,8 +1240,7 @@ In the following, the superficial average of a physical quantity
 \end_layout
 
 \begin_layout Standard
-Macroscopic quantities such as saturation and intrinsic average pressure
- for two fluids 
+Thus saturation and intrinsic average pressure for two fluids 
 \begin_inset Formula $i=w,o$
 \end_inset
 
@@ -1266,7 +1265,7 @@ and
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P_{i}=\frac{\int_{V}p\chi_{i}\;\mathrm{d}V}{\int_{V}\chi_{i}\;\mathrm{d}V},
+\langle p_{i}\rangle^{i}=\frac{\int_{V}p\chi_{i}\;\mathrm{d}V}{\int_{V}\chi_{i}\;\mathrm{d}V}=P_{i},
 \]
 
 \end_inset
@@ -1301,19 +1300,24 @@ respectively.
 \begin_inset Formula $\varepsilon_{i}$
 \end_inset
 
+ and the intrinsic average ant the superficial average are linked as 
+\begin_inset Formula $\left\langle \theta_{i}\right\rangle =\varepsilon_{i}\left\langle \theta_{i}\right\rangle ^{i}$
+\end_inset
+
 .
+ 
 \end_layout
 
 \begin_layout Standard
 Then we can introduce the dynamic capillary pressure defined as the difference
- of the intrinsic mean pressures, 
+ of the intrinsic average pressures, 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 P_{c}=P_{o}-P_{w}.
-\]
+\end{equation}
 
 \end_inset
 
@@ -1325,9 +1329,9 @@ Traction terms
 \end_layout
 
 \begin_layout Standard
-As said, an essential step in order to derive some macroscopic law at macroscale
- from the microscale is to use averaged quantities to express the boundary
- integrals terms that arising because of the averaging theorem application.
+An essential step in order to derive some macroscopic law at macroscale
+ from the microscale is to use averaged quantities to express the exchange
+ surface integrals terms.
  Remember that these closure relations are not presented here but rather
  we leave intact the surface integrals, the averaged momentum balance equations
  Eq.
@@ -1428,7 +1432,7 @@ where
 \begin_inset Formula $\mathbf{T}_{is}$
 \end_inset
 
-$ the traction exerted by fluid 
+ the traction exerted by fluid 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1447,7 +1451,7 @@ literal "true"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathbf{T}_{ij}=\frac{1}{V}\int_{A_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+2\mu_{i}\mathbf{e}_{i}\right)\mathrm{d}A,
+\mathbf{T}_{ij}=\frac{1}{V}\int_{A_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+2\mu_{i}\mathbf{e}_{i}\right)\mathrm{d}A,\label{eq:tractionIntegral}
 \end{equation}
 
 \end_inset
@@ -1489,8 +1493,18 @@ Theory of two-phase displacement in Hele-Shaw cell
 \end_layout
 
 \begin_layout Standard
-Two-phase flow between two parallel plates under study here is illustrated
- in Fig.
+Displacement in a Hele-Shaw cell is a popular experimental set-up used to
+ reproduced 2D potential flow similar to flow in porous media 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "guyon1994hydrodynamique"
+literal "true"
+
+\end_inset
+
+.
+ Two-phase flow into such devices, as under study here, can be depicted
+ as in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -1518,7 +1532,8 @@ noprefix "false"
 \begin_inset Formula $h$
 \end_inset
 
- is the aperture between the plates.
+ is the aperture between the plates considered small in front of the other
+ dimensions of the cell .
  A solid obstacle of circular cross-section is sandwiched between the two
  plates.
  Tangential (cell plane) stress, as well as stress arising from the perpendicula
@@ -1596,15 +1611,22 @@ name "fig:modelHeleShaw"
 \end_layout
 
 \begin_layout Standard
-To compute the traction exerted by the fluids upon the cell plates we need
- to consider that the velocity profile in the $z$-direction is well described
- by the Poiseuille flow profile, 
+To compute the traction exerted by the fluids upon the cell plates we consider
+ that the flow velocity is only oriented with the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis and that it depends only on the 
+\begin_inset Formula $z$
+\end_inset
+
+-coordinate, where its profile follows the Poiseuille's law,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-w=-\frac{1}{2\mu}\frac{dp}{dx}z(z-h).
+u=-\frac{1}{2\mu}\frac{dp}{dx}z(z-h).
 \]
 
 \end_inset
@@ -1641,8 +1663,12 @@ Thus, the traction
 \end_layout
 
 \begin_layout Standard
-We note that the average velocity taken over the interval between the plates
- is written as follows 
+Going beyond the approximation that the velocity depends only on the 
+\begin_inset Formula $z$
+\end_inset
+
+-coordinates we note that the average velocity taken over the interval between
+ the plates is written as follows 
 \end_layout
 
 \begin_layout Standard
@@ -1657,8 +1683,9 @@ We note that the average velocity taken over the interval between the plates
 \end_layout
 
 \begin_layout Standard
-There is therefore a direct analogy between flows in a 2D porous medium
- and flow in a Hele-Shaw cell and the permeability is given by 
+There is therefore a direct analogy between the flow in a 2D porous medium
+ and the flow in a Hele-Shaw cell for which the permeability is given by
+ 
 \begin_inset Formula $h^{2}/12$
 \end_inset
 
@@ -1671,13 +1698,19 @@ literal "true"
 \end_inset
 
 .
- 
+ This allows us in the following to modify the absolute permeability of
+ the structure without modifying its overall geometry, just by varying the
+ aperture between the plates.
 \end_layout
 
 \begin_layout Standard
 Beside the interface curvature in the Hele-Shaw cell plane, the meniscus
  in the perpendicular plane must be taken into account.
- Therefore, the pressure jump at equilibrium across the interface reads
+ Considering it as a semicircle of radius 
+\begin_inset Formula $h/2$
+\end_inset
+
+, the pressure jump at equilibrium across the interface reads
 \end_layout
 
 \begin_layout Standard
@@ -1747,7 +1780,7 @@ literal "true"
 
 \end_inset
 
-
+-
 \end_layout
 
 \begin_layout Standard
@@ -3095,7 +3128,11 @@ We now turn to the study of the traction exerted upon the solid-fluid boundaries
 \begin_inset Formula $x$
 \end_inset
 
--component of the traction vector, i.e.
+-component of the traction vector 
+\begin_inset Formula $T^{x}$
+\end_inset
+
+, i.e.
  aligned according to the inlet velocity.
  
 \end_layout
@@ -3106,6 +3143,16 @@ The traction exerted upont the plates by the fluids was obtained as described
  Traction on the cylinder boundary was obtained by calculating the integral
  Eq.
 \begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tractionIntegral"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
 .
@@ -3119,99 +3166,60 @@ The traction exerted upont the plates by the fluids was obtained as described
  contour.
  The second step concerns the pressure part, which was obtained by applying
  the divergence theorem on each phase into a cell (UC3).
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset include
-LatexCommand input
-filename "figures/pdflatex/multiplotTractionFluidInterface.tex"
-
+We assessed that the traction exerted on the fluid-fluid boundary reaches
+ between 10 and 50% of the traction exerted upon the solid-fluid boundaries,
+ as can be seen in Fig.
+\begin_inset space ~
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Viscous and pressure part of 
-\begin_inset Formula $x$
-\end_inset
-
--component of the traction exerted upon the fluid-fluid interface in UC3
- as a function of the dimensionless aperture between the Hele-Shaw plates
- at steady-state for different capillary numbers.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:tractionFluid"
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ratioTraction"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+, on which we plot the ratio 
+\begin_inset Formula $T_{f}^{x}/T_{s}^{x}$
+\end_inset
 
-\end_layout
+ as a function of the dimensionless aperture between the cell plates.
+ Interestingly, the ratio varies non-monotonically with 
+\begin_inset Formula $h$
+\end_inset
 
+ and the maximum value is obtained for the smallest aperture which then
+ decreases when the aperture increases.
+ The capillary number accentuates the decrease of 
+\begin_inset Formula $T_{f}^{x}$
+\end_inset
+
+ compared to 
+\begin_inset Formula $T_{s}^{x}$
+\end_inset
+
+ when it decreases, as can be seen in Fig.
+\begin_inset space ~
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ratioTractionCa"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset include
-LatexCommand input
-filename "figures/pdflatex/tractionTotal.tex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $x$
-\end_inset
-
--component of the traction exerted upon fluid-fluid interface in UC3 as
- a function of the dimensionless aperture between the Hele-Shaw plates and
- for different capillary numbers at steady-state.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:tractionTotal"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -3292,6 +3300,176 @@ Ratio of traction (
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ratioTractionCa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider now the total traction on the fluid-fluid interface and the total
+ traction exerted upon the solid boundaries plotted separately against the
+ dimensionless aperture in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tractionTotal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Between 
+\begin_inset Formula $h^{*}=0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $h^{*}=0.05$
+\end_inset
+
+ the traction exerted upon the solid scale as 
+\begin_inset Formula $h^{2}$
+\end_inset
+
+, in contrast the traction at the fluid-fluid interface increases faster
+ with 
+\begin_inset Formula $h$
+\end_inset
+
+ over the same interval.
+ This explains why 
+\begin_inset Formula $T_{f}^{x}/T_{s}^{x}$
+\end_inset
+
+ increases as the aperture between the plates decreases.
+ To go further we studied separately the pressure part and the viscous contribut
+ion in Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:tractionIntegral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ at the fluid-fluid interface as a function of the dimensionless aperture,
+ see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tractionFluid"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For 
+\begin_inset Formula $h^{*}<0.5$
+\end_inset
+
+ the pressure part largely dominates the viscous contribution and the evolution
+ of the traction is therefore controlled by it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "figures/pdflatex/tractionTotal.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+-component of the traction exerted upon fluid-fluid interface and upon the
+ solid-fluid interface in UC3 as a function of the dimensionless aperture
+ between the Hele-Shaw plates and for different capillary numbers at steady-stat
+e.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tractionTotal"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "figures/pdflatex/multiplotTractionFluidInterface.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Viscous and pressure part of 
+\begin_inset Formula $x$
+\end_inset
+
+-component of the traction exerted upon the fluid-fluid interface in UC3
+ as a function of the dimensionless aperture between the Hele-Shaw plates
+ at steady-state for different capillary numbers.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tractionFluid"
 
 \end_inset
 
