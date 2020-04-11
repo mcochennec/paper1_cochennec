@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: article1_cochennec.aux
+A level-1 auxiliary file: figures/pdflatex/model.aux
+A level-1 auxiliary file: figures/pdflatex/pressureField.aux
+The style file: elsarticle-harv.bst
+Database file #1: biblio.bib
+Warning--string name "characterization" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "of" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "porous" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "materials:" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "from" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "angstroms" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "to" is undefined
+--line 1371 of file biblio.bib
+Warning--string name "millimeters" is undefined
+--line 1371 of file biblio.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty journal in odeh1959effect
+You've used 39 entries,
+            2990 wiz_defined-function locations,
+            918 strings with 13002 characters,
+and the built_in function-call counts, 24843 in all, are:
+= -- 1958
+> -- 822
+< -- 24
++ -- 339
+- -- 279
+* -- 2660
+:= -- 3602
+add.period$ -- 131
+call.type$ -- 39
+change.case$ -- 283
+chr.to.int$ -- 38
+cite$ -- 40
+duplicate$ -- 1891
+empty$ -- 1914
+format.name$ -- 410
+if$ -- 4652
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 358
+newline$ -- 224
+num.names$ -- 156
+pop$ -- 645
+preamble$ -- 1
+purify$ -- 247
+quote$ -- 0
+skip$ -- 540
+stack$ -- 0
+substring$ -- 1183
+swap$ -- 1309
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 339
+warning$ -- 1
+while$ -- 167
+width$ -- 0
+write$ -- 588
+(There were 9 warnings)
