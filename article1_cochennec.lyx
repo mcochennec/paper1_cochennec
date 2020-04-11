@@ -689,12 +689,20 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586620207
+(MQ: voir mon message 
+\begin_inset Formula $p_{i}\rightarrow\tilde{p}_{i}$
+\end_inset
+
+ 
+\change_unchanged
 where 
 \begin_inset Formula $p_{i}$
 \end_inset
 
  and 
-\begin_inset Formula $u_{i}$
+\begin_inset Formula $\mathbf{u}_{i}$
 \end_inset
 
  are microscopic pressure and velocity fields of fluid 
@@ -714,6 +722,8 @@ where
 
 \end_inset
 
+
+\change_deleted -267026771 1586620256
 
 \end_layout
 
@@ -752,8 +762,11 @@ noprefix "false"
  has, to our knowledge, never been used in practice to model two-phase subsurfac
 e flows.
  On the contrary, the ubiquitous continuous model used to describe two-phase
- flows in soils is based on a direct extension of the Darcy's equation and
- the whole model, also known as Muskat equations 
+ flows in soils is based on a direct extension of 
+\change_deleted -267026771 1586620279
+the 
+\change_unchanged
+Darcy's equation and the whole model, also known as Muskat equations 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wyckoff1936flow,muskat1938flow"
@@ -762,6 +775,12 @@ literal "true"
 \end_inset
 
 , reads
+\change_inserted -267026771 1586620362
+ (MQ: may be we should mention that there are other discussion about the
+ relevance of generalized Darcy's laws (like terms with interfacial area,
+ etc...)?)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -856,9 +875,17 @@ end{subequations}
 \end_inset
 
 
+\change_deleted -267026771 1586620376
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586620431
+(MQ: isi it necessary to put an isotropic relative permeability? (which
+ is restriuctive...
+ do we use it later?) 
+\change_unchanged
 where 
 \begin_inset Formula $\mathbf{K}$
 \end_inset

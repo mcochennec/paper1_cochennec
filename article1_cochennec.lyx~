@@ -6,6 +6,7 @@
 \origin unavailable
 \textclass elsarticle
 \begin_preamble
+%\usepackage{amsmath}
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
 \usepackage{xcolor}
@@ -45,7 +46,7 @@ subequations
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_package amsmath 1
+\use_package amsmath 2
 \use_package amssymb 1
 \use_package cancel 1
 \use_package esint 1
@@ -106,11 +107,12 @@ subequations
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
-\output_changes false
+\tracking_changes true
+\output_changes true
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -267026771 "quintard"
 \end_header
 
 \begin_body
@@ -247,10 +249,21 @@ The macroscopic description of two-phase flow in porous media requires modeling
  the two fluids and the solid phase.
  The flow regimes specific to high permeability porous media are characterized
  by a non-negligible extent of the interface between the two fluids, compared
- to the fluid-solid interface.
- This argues for the systematic introduction of the fluid-fluid interaction
- terms, i.e.
- surface integrals also called traction, in the macroscopic momentum equations.
+ to the fluid-solid interface
+\change_inserted -267026771 1586617915
+ MQ: to be discussed
+\change_unchanged
+.
+ This argues for the systematic introduction of 
+\change_deleted -267026771 1586617926
+the 
+\change_unchanged
+fluid-fluid interaction terms, i.e.
+ surface integrals also called traction
+\change_inserted -267026771 1586617937
+ MQ: useful?
+\change_unchanged
+, in the macroscopic momentum equations.
  However, we do not know whether these terms are always non-negligible for
  this type of flow regime, for example in cases where the friction with
  the solid becomes very large.
@@ -264,6 +277,18 @@ The macroscopic description of two-phase flow in porous media requires modeling
  does not prejudge the importance of the traction between fluids in the
  total pressure drop as long as the flow regime is characteristic of flow
  in high permeability porous media.
+\change_inserted -267026771 1586618079
+
+\end_layout
+
+\begin_layout Abstract
+
+\change_inserted -267026771 1586618157
+MQ: maybe we should explicitly state that we are interested in micromodels
+ and/or microfluidic devices? This would make easier writing an introduction
+ and the overall context of the paper?
+\change_unchanged
+
 \end_layout
 
 \begin_layout EndFrontmatter
@@ -506,6 +531,11 @@ Volume averaged microscopic equation of motion for two Newtonian fluids
 \end_inset
 
  reads 
+\change_inserted -267026771 1586618739
+MQ: need comment and some introduction (e.g.
+ what is the average stress tensor, etc...)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -517,9 +547,16 @@ Volume averaged microscopic equation of motion for two Newtonian fluids
 \end_inset
 
 
+\change_deleted -267026771 1586618186
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586618585
+MQ: eqs are part of the sentence, therefore they are not followed by an
+ indentation 
+\change_unchanged
 where 
 \begin_inset Formula $\varepsilon_{i}=V_{i}/V$
 \end_inset
@@ -533,7 +570,7 @@ where
 \end_inset
 
  is a representative elementary volume, 
-\begin_inset Formula $U_{i}$
+\begin_inset Formula $\mathbf{U}_{i}$
 \end_inset
 
  is the intrinsic average velocity of the 
@@ -594,8 +631,14 @@ noprefix "false"
 \end_inset
 
  and the associated equations.
- In volume averaging litterature, one seeks to express the terms of interaction
- between the phases with averaged quantities and to recast equation Eq.
+ In volume averaging 
+\change_deleted -267026771 1586618762
+litterature
+\change_inserted -267026771 1586618762
+literature
+\change_unchanged
+, one seeks to express the terms of interaction between the phases with
+ averaged quantities and to recast equation Eq.
 \begin_inset space ~
 \end_inset
 
@@ -610,7 +653,11 @@ noprefix "false"
 \end_inset
 
  in a form similar to Darcy's law (equation for creeping saturated single-phase
- flow in porous media).
+ flow in porous media
+\change_inserted -267026771 1586618810
+ (MQ: why not directly start with Stokes eqs....!)
+\change_unchanged
+).
  Indeed, by considering creeping two-phase flow Eq.
 \begin_inset space ~
 \end_inset
@@ -636,6 +683,8 @@ noprefix "false"
 
 \end_inset
 
+
+\change_deleted -267026771 1586618828
 
 \end_layout
 
