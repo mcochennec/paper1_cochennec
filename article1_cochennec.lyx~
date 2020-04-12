@@ -689,12 +689,20 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586620207
+(MQ: voir mon message 
+\begin_inset Formula $p_{i}\rightarrow\tilde{p}_{i}$
+\end_inset
+
+ 
+\change_unchanged
 where 
 \begin_inset Formula $p_{i}$
 \end_inset
 
  and 
-\begin_inset Formula $u_{i}$
+\begin_inset Formula $\mathbf{u}_{i}$
 \end_inset
 
  are microscopic pressure and velocity fields of fluid 
@@ -714,6 +722,8 @@ where
 
 \end_inset
 
+
+\change_deleted -267026771 1586620256
 
 \end_layout
 
@@ -752,8 +762,11 @@ noprefix "false"
  has, to our knowledge, never been used in practice to model two-phase subsurfac
 e flows.
  On the contrary, the ubiquitous continuous model used to describe two-phase
- flows in soils is based on a direct extension of the Darcy's equation and
- the whole model, also known as Muskat equations 
+ flows in soils is based on a direct extension of 
+\change_deleted -267026771 1586620279
+the 
+\change_unchanged
+Darcy's equation and the whole model, also known as Muskat equations 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wyckoff1936flow,muskat1938flow"
@@ -762,6 +775,12 @@ literal "true"
 \end_inset
 
 , reads
+\change_inserted -267026771 1586701186
+ (MQ: may be we should mention that there are other discussion about the
+ relevance of generalized Darcy's laws (like terms with interfacial area,
+ etc...)? see it is done later)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -856,9 +875,17 @@ end{subequations}
 \end_inset
 
 
+\change_deleted -267026771 1586620376
+
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586620431
+(MQ: is it necessary to put an isotropic relative permeability? (which is
+ restrictive...
+ do we use it later?) 
+\change_unchanged
 where 
 \begin_inset Formula $\mathbf{K}$
 \end_inset
@@ -964,8 +991,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Another approach, widely used in the literature on two-phase flow in Trickle
- Bed Reactor (TBR), is to implement Eq.
+Another approach, widely used in the literature
+\change_inserted -267026771 1586701225
+ (MQ: widely used ...but no refs?)
+\change_unchanged
+ on two-phase flow in Trickle Bed Reactor (TBR), is to implement Eq.
 \begin_inset space ~
 \end_inset
 
@@ -990,6 +1020,22 @@ noprefix "false"
 
 \begin_layout Subsection
 Modeling of the interaction between fluids
+\change_inserted -267026771 1586701416
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586701477
+MQ:
+\begin_inset space ~
+\end_inset
+
+on devrait introduire la notion de permeabilite et repartition des phases
+ plus tot pour expliquer que les termes croisés peuvent ne pas etre importants.
+ Tu ne fais pas assez ressortir l'objectif (tel qu'on le perçoit).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1007,10 +1053,24 @@ noprefix "false"
 
 \end_inset
 
-, experimental works computed the coupled transport coefficient through
- steady-state cocurent flow in sandpack with one fluid, and alternatively
- the other, which is submitted to a null pressure gradient.
- This protocol was used with oil and water in a cylindric sandpack 
+, 
+\change_inserted -267026771 1586701328
+several 
+\change_unchanged
+experimental works 
+\change_deleted -267026771 1586701315
+computed
+\change_inserted -267026771 1586701316
+determined
+\change_unchanged
+ the coupled transport coefficient through steady-state cocurent flow in
+ sandpack with one fluid, and alternatively the other, which is submitted
+ to a null pressure gradient.
+ This protocol was used with oil and water in a cylindric
+\change_inserted -267026771 1586701257
+al
+\change_unchanged
+ sandpack 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "zarcone1994determination"
@@ -1029,8 +1089,18 @@ literal "true"
 \end_inset
 
  found that the coupled permeabilities are important since they can contribute
- at best to 35% of the effective permeability.
- Alternatively, authors imposed 
+ 
+\change_deleted -267026771 1586701278
+at best
+\change_inserted -267026771 1586701279
+up
+\change_unchanged
+ to 35% of the effective permeability.
+ Alternatively, 
+\change_inserted -267026771 1586701289
+some 
+\change_unchanged
+authors imposed 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ramakrishnan2015measurement"
@@ -1087,9 +1157,18 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-Several numerical studies investigated the share of the coupled permeabilities
- in the effective permeability.
- The seminal work of 
+Several numerical studies investigated the share
+\change_inserted -267026771 1586701354
+??
+\change_unchanged
+ of the coupled permeabilities in the effective permeability.
+ The 
+\change_deleted -267026771 1586701393
+seminal
+\change_inserted -267026771 1586701394
+early
+\change_unchanged
+ work of 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Rothman1990"
@@ -1098,7 +1177,13 @@ literal "true"
 \end_inset
 
  examined the question by conducting two-phase flow simulations in simple
- geometries with the immiscible lattice-gas method.
+ geometries with 
+\change_deleted -267026771 1586701374
+the
+\change_inserted -267026771 1586701377
+an
+\change_unchanged
+ immiscible lattice-gas method.
  The author found non-negligible participation of the coupled permeabilities
  by applying the volume force alternatively on each fluid.
  Numerous authors used the lattice-Boltzmann method, such as 
@@ -1161,8 +1246,14 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-Several correlations from theorical analysis for the fluid-fluid force interacti
-on have been derived in hydrodynamic of TBR litterature.
+Several correlations from 
+\change_deleted -267026771 1586701345
+theorical
+\change_inserted -267026771 1586701345
+theoretical
+\change_unchanged
+ analysis for the fluid-fluid force interaction have been derived in hydrodynami
+c of TBR litterature.
  These correlations usually relate the momentum exchange between the fluids
  to the flow velocity and the medium properties with Ergun's like relations.
  For example, 
@@ -1174,6 +1265,11 @@ literal "true"
 \end_inset
 
  found that the drag between the fluids can be expressed as follows
+\change_inserted -267026771 1586701557
+ (MQ: on a des o,w des l,g....choisir deux notations plus neutres utilisables
+ tout le temps!)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1184,6 +1280,8 @@ F_{lg}=A_{lg}U_{r}+B_{lg}U_{r}^{2},
 
 \end_inset
 
+
+\change_deleted -267026771 1586701494
 
 \end_layout
 
@@ -1230,25 +1328,61 @@ literal "true"
 
 .
  
+\change_inserted -267026771 1586701616
+MQ: à discuter!!! 
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
 Outline of the study
+\change_inserted -267026771 1586701672
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586702047
+MQ: il me semble que l'on devrait plus se rapprocher de la microfluidique
+ dans la mise en contexte.
+ C'est important car il faut qu'on justifie l'utilisation de Hele Shaw!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Up to this point we have seen that the macroscopic momentum equations need
- the modeling of the force of interaction terms between phases.
+ the modeling of the 
+\change_deleted -267026771 1586701634
+force of 
+\change_unchanged
+interaction terms between phases.
  The interaction between fluids is neglected in the traditional model used
- for the study of subsurface two-phase flow, while it has been experimentally
- observed that these terms are important when studying two-phase flow in
- high permeability porous media.
+ for the study of subsurface two-phase flow
+\change_inserted -267026771 1586701727
+ (elargir le contexte et parler de µfluidique?)
+\change_unchanged
+, while it has been experimentally observed that these terms are important
+ when studying two-phase flow in high permeability porous media.
  However, it is not known whether these terms are always important when
  the extent of the interface between the fluids is important.
  For example, do they become negligible when friction with the solid phase
  increases? To what extent? To answer this question, we performed direct
- numerical simulations of two-phase flow in a Hele-Shaw cell as a model
- high permeability porous medium.
+ numerical simulations of two-phase flow in a Hele-Shaw cell 
+\change_inserted -267026771 1586701758
+with obstacles 
+\change_unchanged
+as a model 
+\change_inserted -267026771 1586701763
+of 
+\change_unchanged
+high permeability porous medi
+\change_inserted -267026771 1586701769
+a
+\change_deleted -267026771 1586701768
+um
+\change_unchanged
+.
  We solved a coupled Level-Set and Stokes equations with an additional Darcy-ter
 m in the momentum equation that pertain for the absolute permeability of
  the flow between two plates.
@@ -1316,6 +1450,24 @@ name "sec:Theorical-background"
 \end_inset
 
 
+\change_inserted -267026771 1586702052
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586702101
+MQ: On ne doit pas laisser un intervalle vide entre deux 
+\begin_inset Quotes eld
+\end_inset
+
+headers
+\begin_inset Quotes erd
+\end_inset
+
+: mettre phrases d'intro!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -1362,6 +1514,8 @@ S_{i}=\frac{1}{V}\int_{V}\chi_{i}\;\mathrm{d}V
 \end_inset
 
 
+\change_deleted -267026771 1586701804
+
 \end_layout
 
 \begin_layout Standard
@@ -1376,6 +1530,8 @@ and
 
 \end_inset
 
+
+\change_deleted -267026771 1586701813
 
 \end_layout
 
@@ -1394,19 +1550,45 @@ respectively.
 \end_inset
 
 -fluid (scalar function that takes the value 1 in the fluid and 0 elsewhere).
- The quantity 
-\begin_inset Formula $\int_{V}\chi_{i}\;\mathrm{d}V$
+ The quantity
+\change_inserted -267026771 1586701853
+ 
+\begin_inset Formula $\varepsilon_{i}$
 \end_inset
 
+
+\change_unchanged
+ 
+\change_inserted -267026771 1586701857
+(
+\change_unchanged
+
+\begin_inset Formula $\varepsilon_{i}=\int_{V}\chi_{i}\;\mathrm{d}V$
+\end_inset
+
+
+\change_inserted -267026771 1586701861
+)
+\change_unchanged
  is the volume fraction of the 
 \begin_inset Formula $i$
 \end_inset
 
--fluid that is 
+-fluid
+\change_deleted -267026771 1586701867
+ that is 
 \begin_inset Formula $\varepsilon_{i}$
 \end_inset
 
- and the intrinsic average ant the superficial average are linked as 
+
+\change_unchanged
+ and the intrinsic average ant the superficial average are linked 
+\change_deleted -267026771 1586701881
+as
+\change_inserted -267026771 1586701881
+by
+\change_unchanged
+ 
 \begin_inset Formula $\left\langle \theta_{i}\right\rangle =\varepsilon_{i}\left\langle \theta_{i}\right\rangle ^{i}$
 \end_inset
 
@@ -1415,8 +1597,15 @@ respectively.
 \end_layout
 
 \begin_layout Standard
-Then we can introduce the dynamic capillary pressure defined as the difference
- of the intrinsic average pressures, 
+Then we can introduce the dynamic 
+\change_deleted -267026771 1586701899
+capillary
+\change_unchanged
+ pressure 
+\change_inserted -267026771 1586701905
+difference 
+\change_unchanged
+defined as the difference of the intrinsic average pressures, 
 \end_layout
 
 \begin_layout Standard
@@ -1427,6 +1616,18 @@ P_{c}=P_{o}-P_{w}.
 
 \end_inset
 
+
+\change_inserted -267026771 1586701909
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586702018
+In the case of quasi-static capillary dominated flows it will correspond
+ to the traditional capillary pressure, while in highly permeable media
+ it is mostly dominated by dynamic effects due to pressure and viscous stress.
+\change_unchanged
 
 \end_layout
 
