@@ -2458,14 +2458,6 @@ where
 \begin_inset Formula $\delta(\phi)$
 \end_inset
 
-
-\change_inserted -267026771 1586794405
- (MQ: expliciter 
-\begin_inset Formula $\delta(\phi),$
-\end_inset
-
-aussi necessaire pour l'adimensionnement)
-\change_unchanged
  is the Dirac delta function localized on the interface 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2503,19 +2495,7 @@ literal "true"
 \end_inset
 
 
-\change_inserted -267026771 1586793844
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -267026771 1586793869
-Expliciter comment on calcule 
-\begin_inset Formula $\delta(\phi),$
-\end_inset
-
-utile pour comprendre l'adimensionnement
-\change_deleted -267026771 1586793839
+\change_deleted -267026771 1586784566
 
 \end_layout
 
@@ -2665,13 +2645,13 @@ MQ: je ne comprends pas, la perméabilité a disparu?
 
 \begin_layout Standard
 
-\change_inserted -267026771 1586848017
-Ton analyse dimensionnelle est un peu courte (et fausse) tu devrais garder
- les deux termles dans 
+\change_inserted -267026771 1586788896
+Ton analyse dimensionnelle est un peu courte tu devrais garder les deux
+ termles dans 
 \begin_inset Formula $\kappa$
 \end_inset
 
- et la perméabilité! voir fichier discussion_adimen_MQ.lyx
+ et la perméabilité!
 \change_unchanged
 
 \end_layout

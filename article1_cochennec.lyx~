@@ -1442,7 +1442,13 @@ inverted 0
 status open
 
 \begin_layout Section
-Theorical background
+
+\change_deleted -267026771 1586784442
+Theorical
+\change_inserted -267026771 1586784442
+Theoretical
+\change_unchanged
+ background
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Theorical-background"
@@ -1718,6 +1724,8 @@ end{subequations}
 \end_inset
 
 
+\change_deleted -267026771 1586702134
+
 \end_layout
 
 \begin_layout Standard
@@ -1764,6 +1772,8 @@ literal "true"
 \end_inset
 
 
+\change_deleted -267026771 1586702163
+
 \end_layout
 
 \begin_layout Standard
@@ -1793,6 +1803,29 @@ where
 \end_inset
 
 .
+\change_inserted -267026771 1586702488
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586702638
+MQ: attention, voir ma remarque plus haut sur 
+\begin_inset Formula $\tilde{p}_{i}$
+\end_inset
+
+ au lieu de 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+! Remarque, dans Kalaydjian que tu cites, il enleve bien le terme 
+\begin_inset Formula $P_{i}\nabla\varepsilon_{i}$
+\end_inset
+
+ , voir Eqs.
+ 26, 27....
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -1809,6 +1842,10 @@ literal "true"
 
 \end_inset
 
+
+\change_inserted -267026771 1586702683
+ MQ: Hele Shaw est connu bien avant: bizarre de citer Guyon pour çà?
+\change_unchanged
 .
  Two-phase flow into such devices, as under study here, can be depicted
  as in Fig.
@@ -1841,10 +1878,19 @@ noprefix "false"
 
  is the aperture between the plates considered small in front of the other
  dimensions of the cell .
- A solid obstacle of circular cross-section is sandwiched between the two
- plates.
+ A solid obstacle 
+\change_inserted -267026771 1586702891
+illustrated here by a pillar 
+\change_unchanged
+of circular cross-section is sandwiched between the two plates.
  Tangential (cell plane) stress, as well as stress arising from the perpendicula
-r confinement, need to be taking into account to properly describe the flow.
+r confinement, need to be tak
+\change_deleted -267026771 1586702903
+ing
+\change_inserted -267026771 1586702903
+en
+\change_unchanged
+ into account to properly describe the flow.
  The important parameter here are the aspect ratio 
 \begin_inset Formula $h/l$
 \end_inset
@@ -1927,7 +1973,11 @@ To compute the traction exerted by the fluids upon the cell plates we consider
 \begin_inset Formula $z$
 \end_inset
 
--coordinate, where its profile follows the Poiseuille's law,
+-coordinate, where its profile follows 
+\change_deleted -267026771 1586702925
+the 
+\change_unchanged
+Poiseuille's law,
 \end_layout
 
 \begin_layout Standard
@@ -1938,6 +1988,16 @@ u=-\frac{1}{2\mu}\frac{dp}{dx}z(z-h).
 
 \end_inset
 
+
+\change_inserted -267026771 1586784259
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586784286
+MQ: il aurait mieux valu doner une version vectorielle 2D?
+\change_unchanged
 
 \end_layout
 
@@ -1966,7 +2026,18 @@ Thus, the traction
 \begin_inset Formula $i$
 \end_inset
 
+
+\change_inserted -267026771 1586703014
+ in the considered volume.
+ MQ:
+\change_deleted -267026771 1586703006
 .
+
+\change_inserted -267026771 1586703072
+ quid du pb de definition dont je parle plus haut? Il faut faire une difference
+ plus claire entre le micro et le macro!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2008,6 +2079,26 @@ literal "true"
  This allows us in the following to modify the absolute permeability of
  the structure without modifying its overall geometry, just by varying the
  aperture between the plates.
+
+\change_inserted -267026771 1586703450
+ However, the emergence of a Poiseuille law requires that the zone considered
+ is far enough from an obstacke wall.
+ Indeed, in such areas, the flow becomes 3D and the averaged approximation
+ should be modified.
+ In practice, one still conserves in the 2D avaerged equations Darcy's law
+ with the 
+\begin_inset Formula $\frac{h^{2}}{12}$
+\end_inset
+
+ permeability and a no-slip condition for the average velocity.
+ It results from such an approximation a difference between the actual 
+\begin_inset Formula $z$
+\end_inset
+
+-averaged field and the prediction of the 2D approximate averaged model
+ (MQ: suggestion, donner comme example les comparaisons entre manips et
+ 2D de P.
+ Horgue et al., ....
 \end_layout
 
 \begin_layout Standard
@@ -2028,6 +2119,8 @@ Beside the interface curvature in the Hele-Shaw cell plane, the meniscus
 
 \end_inset
 
+
+\change_deleted -267026771 1586784054
 
 \end_layout
 
@@ -2069,8 +2162,25 @@ literal "true"
 \end_inset
 
  factor for the curvature in the cell plane.
- The reader is warnes that while dynamic film formation along the plates
- is an important phenomenom regarding the flow 
+ The reader is warne
+\change_deleted -267026771 1586784081
+s
+\change_inserted -267026771 1586784081
+d
+\change_unchanged
+ that while dynamic film formation along the plates 
+\change_deleted -267026771 1586784129
+is
+\change_inserted -267026771 1586784131
+may be
+\change_unchanged
+ an important 
+\change_deleted -267026771 1586784090
+phenomenom
+\change_inserted -267026771 1586784090
+phenomenon
+\change_unchanged
+ regarding the flow 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "jackson2015dynamic"
@@ -2078,11 +2188,24 @@ literal "true"
 
 \end_inset
 
-, this question requires dedicated study and is beyond the scope of this
- article.
+, 
+\change_inserted -267026771 1586784148
+especially at high capillary number, 
+\change_unchanged
+this question requires dedicated study and is beyond the scope of this article.
  Thus, we consider in the following that the invading fluid is in contact
  with the cell plates, i.e.
- presence of a triple line.
+ 
+\change_deleted -267026771 1586784595
+presence
+\change_inserted -267026771 1586784597
+existence
+\change_unchanged
+ of a triple line
+\change_inserted -267026771 1586784189
+, and that no substantial dynamic films are formed
+\change_unchanged
+.
 \end_layout
 
 \end_inset
@@ -2093,7 +2216,7 @@ literal "true"
 \begin_layout Standard
 \begin_inset Branch DNS
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Direct numerical simulations
@@ -2104,10 +2227,31 @@ name "sec:Direct-numerical-simulations"
 \end_inset
 
 
+\change_inserted -267026771 1586784220
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586784226
+need intro
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
 Equations
+\change_inserted -267026771 1586784452
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586784611
+MQ: suggestion: on a beaucoup de u (2D, 3D), il serait mieux d'adopter une
+ notation specifique pour tout çà!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -2124,7 +2268,13 @@ We used the standard Level Set method to capture the moving free interface
  the choice for this type of method.
  In this framework the fluid phases are identified with a level set (scalar)
  function that goes smoothly from 0 to 1 across the fluid interface, which
- is implicitely defined as the iso-level 
+ is 
+\change_deleted -267026771 1586784314
+implicitely
+\change_inserted -267026771 1586784314
+implicitly
+\change_unchanged
+ defined as the iso-level 
 \begin_inset Formula $\phi=0.5$
 \end_inset
 
@@ -2152,7 +2302,11 @@ In this equation,
 \begin_inset Formula $\mathbf{u}$
 \end_inset
 
- is the velocity field and 
+ is the 
+\change_inserted -267026771 1586784514
+2D 
+\change_unchanged
+velocity field and 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -2161,7 +2315,13 @@ In this equation,
 \end_inset
 
  are two numerical parameters that control the diffuse interface thickness
- and the amount of reinitialization of 
+ and the amount of 
+\change_deleted -267026771 1586784505
+reinitialization
+\change_inserted -267026771 1586784505
+re-initialization
+\change_unchanged
+ of 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -2182,9 +2342,12 @@ Flow equations
 \end_layout
 
 \begin_layout Standard
-Remember that we need to take into account tangential stress as well perpendicul
-ar stress due to flow confinement, a full-3D resolution of flow equations
- would be meaningful.
+Remember that we need to take into account tangential stress as well 
+\change_inserted -267026771 1586784333
+as 
+\change_unchanged
+perpendicular stress due to flow confinement, a full-3D resolution of flow
+ equations would be meaningful.
  In order to avoid solving such resource-intensive simulations we rather
  resolved 2D flow equations plus an additional term taking into account
  the perpendicular stress.
@@ -2246,6 +2409,8 @@ end{subequations}
 \end_inset
 
 
+\change_deleted -267026771 1586784395
+
 \end_layout
 
 \begin_layout Standard
@@ -2255,11 +2420,18 @@ where
 
  is an additional term that pertain to a Darcy-term arising from depth-averaging
  of Stokes equation, as described in the theoretical background section
+\change_inserted -267026771 1586784411
+,
+\change_unchanged
  and 
 \begin_inset Formula $\mathbf{F}_{st}$
 \end_inset
 
- is the surface tension fore per unit volume.
+ is the surface tension for
+\change_inserted -267026771 1586784415
+c
+\change_unchanged
+e per unit volume.
  This term is defined here as a purely normal contribution, i.e.
  constant surface tension along the interface, and reads
 \end_layout
@@ -2273,6 +2445,8 @@ where
 \end_inset
 
 
+\change_deleted -267026771 1586784397
+
 \end_layout
 
 \begin_layout Standard
@@ -2284,6 +2458,14 @@ where
 \begin_inset Formula $\delta(\phi)$
 \end_inset
 
+
+\change_inserted -267026771 1586794405
+ (MQ: expliciter 
+\begin_inset Formula $\delta(\phi),$
+\end_inset
+
+aussi necessaire pour l'adimensionnement)
+\change_unchanged
  is the Dirac delta function localized on the interface 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2321,6 +2503,20 @@ literal "true"
 \end_inset
 
 
+\change_inserted -267026771 1586793844
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586793869
+Expliciter comment on calcule 
+\begin_inset Formula $\delta(\phi),$
+\end_inset
+
+utile pour comprendre l'adimensionnement
+\change_deleted -267026771 1586793839
+
 \end_layout
 
 \begin_layout Standard
@@ -2343,6 +2539,16 @@ literal "true"
 \begin_layout Standard
 The fluid density and the fluid viscosity vary smoothly from one fluid to
  another 
+\change_inserted -267026771 1586788753
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586788770
+MQ: toutes les equations devraient etre numerotées
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2369,6 +2575,51 @@ The fluid density and the fluid viscosity vary smoothly from one fluid to
 
 \begin_layout Subsubsection
 Dimensionless equations and relevant dimensionless numbers
+\change_inserted -267026771 1586784694
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586784867
+MQ: tu as déjà utilisé 
+\begin_inset Formula $U$
+\end_inset
+
+, il vaut mieux mettre qqchose comme 
+\begin_inset Formula $U_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586785058
+Ensuite, on a de temps en temps des 
+\begin_inset Formula $u$
+\end_inset
+
+, des 
+\begin_inset Formula $U$
+\end_inset
+
+: on s'y perd!
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586785081
+\begin_inset Formula $U_{o}$
+\end_inset
+
+ et 
+\begin_inset Formula $U_{w}$
+\end_inset
+
+ sont-ils definis qqpart?
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2383,6 +2634,8 @@ If one define the following dimensionless variables
 
 \end_inset
 
+
+\change_deleted -267026771 1586784690
 
 \end_layout
 
@@ -2400,6 +2653,27 @@ where
 \end_inset
 
  a reference length, Stokes and continuity equations can be recast as
+\change_inserted -267026771 1586788670
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586788721
+MQ: je ne comprends pas, la perméabilité a disparu?
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586846809
+Ton analyse dimensionnelle est un peu courte (et fausse) tu devrais garder
+ les deux termles dans 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ et la perméabilité!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2425,7 +2699,13 @@ where
 \end_layout
 
 \begin_layout Standard
-One can notice the two following dimensionless numbers
+
+\change_deleted -267026771 1586784928
+One can notice
+\change_inserted -267026771 1586784935
+The problem is characterized by
+\change_unchanged
+ the two following dimensionless numbers
 \end_layout
 
 \begin_layout Standard
@@ -2437,11 +2717,30 @@ One can notice the two following dimensionless numbers
 \end_inset
 
 
+\change_inserted -267026771 1586788847
+MQ: pas 
+\begin_inset Formula $U'$
+\end_inset
+
+?!
+\change_deleted -267026771 1586784771
+
 \end_layout
 
 \begin_layout Standard
-the viscosity ratio and the capillary number, respectively, which add up
- to the aspect ratio 
+
+\change_inserted -267026771 1586784908
+representing 
+\change_unchanged
+the viscosity ratio and the capillary number, respectively, 
+\change_deleted -267026771 1586784945
+which add up
+\change_inserted -267026771 1586784950
+with the addition of
+\change_deleted -267026771 1586784951
+ to
+\change_unchanged
+ the aspect ratio 
 \begin_inset Formula $h/l$
 \end_inset
 
@@ -2449,17 +2748,30 @@ the viscosity ratio and the capillary number, respectively, which add up
 \end_layout
 
 \begin_layout Standard
-In the following, the results are given as a function of 
+In the following, the results are given 
+\change_inserted -267026771 1586785122
+with 
+\begin_inset Formula $U_{r}=U_{o}+U_{w}$
+\end_inset
+
+ , i.e., the total velocity.
+ We have
+\change_deleted -267026771 1586785048
+as a function of
+\change_unchanged
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-Ca=\frac{(U_{o}+U_{w})\mu_{o}}{\gamma},\qquad U_{w}^{'}=\frac{U_{w}}{U_{o}+U_{w}}=f_{f},\qquad U_{o}^{'}=1-f_{f},
+Ca=\frac{(U_{o}+U_{w})\mu_{o}}{\gamma},\qquad U_{w}^{'}=\frac{U_{w}}{U_{o}+U_{w}}=f_{f},\qquad U_{o}^{'}=\frac{U_{o}}{U_{o}+U_{w}}=1-f_{f},
 \]
 
 \end_inset
 
+
+\change_deleted -267026771 1586784806
 
 \end_layout
 
@@ -2473,10 +2785,19 @@ where
 \begin_inset Formula $\mu_{o}=2\times\mu_{w}=2\times10^{-3}$
 \end_inset
 
- Pa.s) and the reference velocity is the total velocity 
+ Pa.s
+\change_inserted -267026771 1586785198
+ MQ: pourquoi donner çà entre ()? c'est un peu à la sauvette! Je pense qu'il
+ ne faut pas mélanger le pb general et les applications que tu as abordé!)
+\change_unchanged
+)
+\change_deleted -267026771 1586785131
+ and the reference velocity is the total velocity 
 \begin_inset Formula $U=U_{o}+U_{w}$
 \end_inset
 
+
+\change_unchanged
 .
  The viscosity ratio 
 \begin_inset Formula $\bar{\mu}$
@@ -2493,6 +2814,11 @@ where
 
  m .
  
+\change_inserted -267026771 1586785268
+Toutes ces valeurs précises devraient être regroupées avec une intro expliquant
+ le choix! Sinon çà fait très bizarre.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -2501,7 +2827,13 @@ Geometry and boundary conditions
 
 \begin_layout Standard
 We study a model system consisting of an array of cylinders in a thin square
- cuboid, resembling a Hele-Shaw-cell with obstacles, as shown in Fig.
+ cuboid, 
+\change_inserted -267026771 1586786203
+(MQ: dans les figures tu les numerotes UC1 etc...
+ tu devrais introduire le concept de cellule unitaire et discuter plus haut
+ ce que serait le modele macro!) 
+\change_unchanged
+resembling a Hele-Shaw-cell with obstacles, as shown in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -2518,7 +2850,13 @@ noprefix "false"
 .
  The two fluids are injected from the left at a constant normal velocity.
  The outlet boundary condition for the flow is a constant pressure.
- Initially the wetting fluid occupy the entire geometry.
+ Initially the wetting fluid occup
+\change_deleted -267026771 1586785297
+y
+\change_inserted -267026771 1586785297
+ies
+\change_unchanged
+ the entire geometry.
  The different boundary conditions are listed in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2530,6 +2868,31 @@ noprefix "false"
 \end_inset
 
 .
+\change_inserted -267026771 1586786267
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586786358
+MQ: la figure 3 manque de lisibilité, notamment pour les flèches.
+ On voit aussi que ton 
+\begin_inset Quotes eld
+\end_inset
+
+cuboid
+\begin_inset Quotes erd
+\end_inset
+
+ n'est pas cubique!!!!
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586786363
+Il n'y a que 5 UCs?
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -2554,9 +2917,26 @@ filename "figures/pdflatex/model.pdf_tex"
 
 \begin_layout Plain Layout
 The geometry used is an array of 5 cylinders in a thin square cuboid, resembling
- a Hele-Shaw-cell where both fluids are injecting from left to right, initially
- the square cuboïd are saturated with wetting fluid (in blue), the length
- of one cell (UC) is one millimetre.
+ a Hele-Shaw-cell where both fluids are inject
+\change_deleted -267026771 1586785312
+ing
+\change_inserted -267026771 1586785313
+ed
+\change_unchanged
+ from left to right, initially the square 
+\change_deleted -267026771 1586785320
+cuboïd
+\change_inserted -267026771 1586785320
+cuboid
+\change_unchanged
+ 
+\change_deleted -267026771 1586785327
+are
+\change_inserted -267026771 1586785327
+is
+\change_unchanged
+ saturated with wetting fluid (in blue), the length of one cell (UC) is
+ one millimetre.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:model"
@@ -2867,8 +3247,13 @@ name "sec:Results"
 
 \begin_layout Standard
 Before we turn to the study of traction terms, we computed the absolute
- permeability of our model, remember that it is expected to be smaller than
- the 
+ permeability of our model
+\change_inserted -267026771 1586785451
+ (MQ: indiquer que tu as changé d'echelle, quelle est l'UC, etc....
+ il y a un vrai probleme de presentation ou les echelles 3D 2.5D 1D macro
+ ne sont pas clairement indiquées dans le texte et les notations!)
+\change_unchanged
+, remember that it is expected to be smaller than the 
 \begin_inset Formula $12/h^{2}$
 \end_inset
 
@@ -3178,6 +3563,15 @@ name "tab:permeability"
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted -267026771 1586787999
+MQ: introduire et commenter une figure, sinon on ne comprend pas.
+ Indiquer ce qui se passe, la dynamique, qu'on atteint un etat stationnaire,
+ etc....
+ 
+\end_layout
+
+\begin_layout Standard
 For the selected parameters, 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
@@ -3188,8 +3582,13 @@ For the selected parameters,
 
 , we observed only a film-flow regime without any phase rupture.
  The wetting fluid saturation in one cuboid, the third one in the rest of
- the paper unless otherwise specified, as a function of the dimensionless
- aperture and for different capillary numbers is given in Fig.
+ the paper unless otherwise specified
+\change_inserted -267026771 1586787904
+ (MQ: j'ai tjs peur de ces données qui sont cachées qqpart dans le texte
+ → répeter cette info! 
+\change_unchanged
+, as a function of the dimensionless aperture and for different capillary
+ numbers is given in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -3211,15 +3610,64 @@ noprefix "false"
  Wetting fluid saturation varies between 0.3 and 0.6 and increases as the
  aperture increases.
  The capillary number also impacts saturation by promoting the hold-up of
- the wetting fluid.
+ the wetting fluid
+\change_inserted -267026771 1586788138
+, while with a more limited effect than aperture
+\change_unchanged
+.
  As seen in the selected 
 \begin_inset Formula $\phi$
 \end_inset
 
--fields, the smaller the capillary the flatter the interface.
- For a wetting fluid layer thickness equivalent at the plumb end of the
- cylinder, the saturation is logically higher.
+-fields, the smaller the capillary 
+\change_inserted -267026771 1586788162
+number 
+\change_unchanged
+the flatter the interface.
+ For a wetting fluid layer thickness equivalent at the 
+\change_deleted -267026771 1586788322
+plumb end of the cylinder
+\change_inserted -267026771 1586788326
+pore-throat section
+\change_unchanged
+, the saturation is logically higher.
+
+\change_deleted -267026771 1586788151
  
+\change_inserted -267026771 1586787904
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586787539
+MQ: tu devrais faire de vraies figures, comme cela on les verraient dans
+ le lyx.
+ Inkscape a du Latex embedded, par consequent il n'y a pas besoin de passer
+ par .tex! de toute façon, tu ne pourras pas envoyer ces figures a l'editeur!
+ On a d'ailleurs un doute: quelle est la source originale dans tes directories?
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586788383
+MQ: figure 4, legende y-axis manquante
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586788430
+figure4: il n'y a que 5 petits graphiques, on ne sait pas a quels points
+ dans le plan ils correspondent? pourquoi pas 6?
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1586787785
+ATTENTION: il manque tjs des données dans tes figures: compte le nb de parametre
+s independants et debrouille-toi pour que tout soit specifié a chaque fois!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -3232,6 +3680,7 @@ status open
 \align center
 \begin_inset CommandInset include
 LatexCommand input
+preview true
 filename "figures/pdflatex/saturation.tex"
 
 \end_inset
@@ -3275,7 +3724,11 @@ Let us now take a closer look at the dynamic capillary pressure as expressed
 \begin_inset space ~
 \end_inset
 
- and the pressure fields.
+ 
+\change_inserted -267026771 1586787472
+?? 
+\change_unchanged
+and the pressure fields.
  Here, as can be seen in Fig.
 \begin_inset space ~
 \end_inset
