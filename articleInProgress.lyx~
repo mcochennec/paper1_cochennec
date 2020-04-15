@@ -1,0 +1,724 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrartcl
+\begin_preamble
+\usepackage{xcolor}
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Cambria"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing double
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options sort
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Introduction
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Theoretical background
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Numerical investigation of two-phase flows in highly-permeable porous media:
+ Effect of the permeability on the drag force between fluid phases
+\end_layout
+
+\begin_layout Author
+Maxime Cochennec, Hossein Davarzani, Yohan Davit
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Ioannis Ignatiadis, Michel Quintard
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+The macroscopic description of two-phase flows in porous media requires
+ accurate modelling of the drag forces between the two fluids and the solid
+ phase.
+ In standard porous media, where capillarity is often dominant, the fluids-solid
+ interactions are well-known and the fluid-fluid drag force is neglected
+ in the momentum transport equations.
+ High permeability porous media, however, are often characterized by a larger
+ area of the interface between the two fluids and the development of thin
+ films.
+ In such cases, the fluid-fluid interaction is not necessarily negligible,
+ and may play an important role in the momentum transport equations.
+ Here, we use computational methods to study two-phase flows in a microfluidic
+ device made of an array of cylinders.
+ The idea is to keep the geometry of the device in the 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane identical, while changing the aperture between the plates to explore
+ different ranges of permeability.
+ We assess that the share of the drag between the fluids in the overall
+ pressure drop increases when the aperture decreases, and thus the absolute
+ permeability increases.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+linenumbers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Branch Introduction
+inverted 0
+status open
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+An accurate description of two-phase flows in high-permeability porous media
+ is of major importance in several practical applications.
+ This includes soil remediation in gravely soils 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fetter2017contaminant"
+literal "true"
+
+\end_inset
+
+, nuclear safety 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "clavier2017modeling"
+literal "true"
+
+\end_inset
+
+ or catalytic fixed bed reactors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Santos1991"
+literal "true"
+
+\end_inset
+
+.
+ However, most of the literature on the topic is focused two-phase flow
+ in low-permeability porous media.
+\end_layout
+
+\begin_layout Standard
+For low-permeability porous media, the flow is often dominated by surface
+ tension forces and the capillary, Bond and Weber numbers are low.
+ In this case, the fluid repartition is well described as two independent
+ flow channels 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dullien2012porous,blunt2017multiphase"
+literal "true"
+
+\end_inset
+
+.
+ The two fluids are segregated, the non-wetting fluid flowing into the larger
+ pores while the wetting fluid occupies the smaller pores, and the area
+ of the fluid-fluid interface is small, as illustrated in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fluidPatterns"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (a).
+\end_layout
+
+\begin_layout Standard
+In contrast, for high-permeability porous media, the flow is the result
+ of a complex interaction between capillary, gravity, viscous and inertial
+ forces 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "davit2018one"
+literal "true"
+
+\end_inset
+
+.
+ Capillary effects no longer dominate and the Weber, capillary and Bond
+ numbers may be large.
+ Schematically, the fluids distribution in the pore space take two forms,
+ either the non-wetting fluid is continuous and flowing in the center of
+ the pore surrounded by the wetting fluid flowing as a thin film in contact
+ with the solid, see Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fluidPatterns"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (b), or is discontinuous and flowing in the center of the pore as droplets
+ or ganglias as in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fluidPatterns"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (c).
+ Here the surface area between the fluids is large and one would consider
+ that the surface forces between the fluids are not negligible compared
+ to their counterpart between the fluid phases and the solid phase, in contrast
+ with surface-tension dominated flow for which the area of the fluid-fluid
+ interface is small.
+ This is important because, as discussed in the following, these terms of
+ surface forces between phases are the basis of any attempt to establish
+ continuous relationships on a macroscopic scale starting from the pore
+ scale and that the interaction between the fluids is commonly overlooked
+ in the traditionnal model in porous media.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/fluidRepartitionSketch.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Illustration of possible fluids distributions in a 2D porous network with
+ solid phase in black, the non-wetting fluid (fluid 1) in light grey, and
+ the wetting fluid (fluid 2) in white, (a) the two fluids are flowing in
+ different channels separated by numerous meniscus, (b) the wetting and
+ non-wetting fluids are flowing together in most of the pores as two continuous
+ streams and (c) both fluids are flowing together in most of the pores and
+ the non-wetting phase is discontinuous.
+ - Adapted from 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dullien2012porous"
+literal "true"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fluidPatterns"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Indeed the ubiquitous continuous model used to describe two-phase flows
+ in soils is based on a direct extension of the Darcy's equation and does
+ not take into account the interaction between the fluids.
+ The whole model, also knwon as Muskat equations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wyckoff1936flow,muskat1938flow"
+literal "true"
+
+\end_inset
+
+, reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:muskatModel"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+0=\frac{\partial\varepsilon S_{i}}{\partial t}+\nabla\cdot\mathbf{U}_{i},\quad i=o,w,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{U}_{i}=-\frac{1}{\mu_{i}}\mathbf{K}_{i}\cdot(\nabla P_{i}-\rho_{i}\mathbf{g}),\quad i=o,w,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+1=S_{w}+S_{o}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{K}_{w}=\mathbf{K}\mathbf{k}_{rw}(S_{w}),\qquad\mathbf{K}_{o}=\mathbf{K}\mathbf{k}_{ro}(S_{w}),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+P_{c}(S_{w})=P_{o}-P_{w}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ is the porosity, 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ is the saturation of fluid 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{U}_{i}$
+\end_inset
+
+ is the intrinsic average velocity of fluid 
+\begin_inset Formula $i$
+\end_inset
+
+,
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ is the absolute permeability tensor and 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ is the intrinsic average pressure of fluid 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The generalization toward two-phase flows involves the introduction of
+ the relative permeability terms 
+\begin_inset Formula $\mathbf{k}_{ri}$
+\end_inset
+
+ which account for the division of the void space between the fluids 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "dullien2012porous"
+literal "true"
+
+\end_inset
+
+, thus the relative permeability depends (non-linearly) only on the saturation.
+ To close the set of the macroscopic equations a constitutive relation between
+ the macroscopic pressure of each fluid has to be furnished.
+ This relation is known as the capillary pressure relation and, as for the
+ relative permeabilities, is supposed to depends non-linearly only on the
+ saturation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "leverett1941capillary"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since the early 1980s, numerous work attempted to improve the model Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:muskatModel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ on a sound physical basis.
+ Among them, some authors used averaging and analogous methods and found
+ additionnal coupled permeability terms 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MARLE1982643,auriault1986remarques,Whitaker1986a,Lasseux1996"
+literal "true"
+
+\end_inset
+
+.
+ The momentum equations then read
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+\mathbf{U}_{i}=-\frac{1}{\mu_{i}}\mathbf{K}_{ii}^{*}\cdot(\nabla P_{i}-\rho_{i}\mathbf{g})-\frac{1}{\mu_{j}}\mathbf{K}_{ij}^{*}\cdot(\nabla P_{j}-\rho_{j}\mathbf{g}),\quad i,j=o,w\:\mathrm{and}\:i\neq j,\label{eq:darcyCross}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+in which 
+\begin_inset Formula $\mathbf{K}_{ij}^{*}$
+\end_inset
+
+ are the coupled relative permeability tensors that pertain to the interaction
+ between the fluids.
+ Several experimental works determined the coupled permeability for a steady-sta
+te cocurent flow of oil and water in a cylindrical sandpack sandpack.
+ Each fluid was submitted alternatively to a null pressure gradient to isolate
+ each terms.
+ This protocol was used in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "zarcone1994determination"
+literal "true"
+
+\end_inset
+
+ and the authors found a negligible effect of the coupled permeabilities
+ in the overall flow.
+ With the same protocol with oil and water in a 2D-sandpack, authors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dullien1996"
+literal "true"
+
+\end_inset
+
+ found that the coupled permeabilities are important since they can contribute
+ up to 35% of the effective permeability.
+ Othe authors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bentsen1993use"
+literal "true"
+
+\end_inset
+
+ made cocurrent and countercurrent experiment to isolate each terms as proposed
+ by Rose 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rose1988"
+literal "true"
+
+\end_inset
+
+ with water and oil in a sandpack found that coupled permeabilities reach,
+ at least, 15% of the effective permeability value.
+ However, it was pointed out that the saturation between the two sets of
+ experiments can be very different and therefore the computed relative permeabil
+ities can not be safely compared 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "langaas2001numerical"
+literal "true"
+
+\end_inset
+
+.
+ The effect of the non-wetting phase connectivity on the transport parameters
+ was extensively studied in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Avraam1995"
+literal "true"
+
+\end_inset
+
+, in which the authors performed steady-state cocurrent two-phase flow in
+ 2D-micromodel experiments and found that the contribution of the coupled
+ permeabilities on the flow is non-negligible and depend on the flow regimes.
+\end_layout
+
+\begin_layout Standard
+In terms of numerical studies, the early work of Rothman 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rothman1990"
+literal "true"
+
+\end_inset
+
+ examined the question by conducting two-phase flow simulations in simple
+ geometries with an immiscible lattice-gas method.
+ The author found a non-negligible participation of the coupled permeabilities
+ by applying the volume force alternatively on each fluid.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Li2005"
+literal "true"
+
+\end_inset
+
+, the authors used the lattice-Boltzmann method and examined the value of
+ the coupled permeabilities as a function of the saturation in a 3D-sphere
+ pack and they found results in agreement with Rothman's results.
+ Other authors used a lattice-Boltzmann method in 2D and 3D pore networks
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yiotis2007"
+literal "false"
+
+\end_inset
+
+ and found a non-wetting apparent relative permeability greater than unity
+ when the wetting fluid is more viscous than the non-wetting fluid.
+ Recently 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shams2018study"
+literal "true"
+
+\end_inset
+
+, authors have used a Volume Of Fluid method to study the transport coefficients
+ of fluid layers in non-circular capillary tubes.
+ Based on analogy with a model Couette flow the authors have derived simple
+ relations that can predict with good accuracy the transport coefficients,
+ including the coupled ones, of fluid layers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "biblio"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
