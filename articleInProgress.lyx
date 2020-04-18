@@ -16,7 +16,7 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "Cambria"
+\font_roman "default" "Georgia"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -51,7 +51,6 @@
 \cite_engine natbib
 \cite_engine_type authoryear
 \biblio_style plainnat
-\biblio_options sort
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -134,31 +133,6 @@ today
 \end_layout
 
 \begin_layout Abstract
-The macroscopic description of two-phase flows in porous media requires
- accurate modelling of the drag forces between the two fluids and the solid
- phase.
- In standard porous media, where capillarity is often dominant, the fluids-solid
- interactions are well-known and the fluid-fluid drag force is neglected
- in the momentum transport equations.
- High permeability porous media, however, are often characterized by a larger
- area of the interface between the two fluids and the development of thin
- films.
- In such cases, the fluid-fluid interaction is not necessarily negligible,
- and may play an important role in the momentum transport equations.
- Here, we use computational methods to study two-phase flows in a microfluidic
- device made of an array of cylinders.
- The idea is to keep the geometry of the device in the 
-\begin_inset Formula $x-y$
-\end_inset
-
- plane identical, while changing the aperture between the plates to explore
- different ranges of permeability.
- We assess that the share of the drag between the fluids in the overall
- pressure drop increases when the aperture decreases, and thus the absolute
- permeability increases.
-\end_layout
-
-\begin_layout Abstract
 \begin_inset ERT
 status open
 
@@ -174,7 +148,7 @@ linenumbers
 
 \end_layout
 
-\begin_layout Abstract
+\begin_layout Standard
 \begin_inset Branch Introduction
 inverted 0
 status open
@@ -211,7 +185,7 @@ literal "true"
 \end_inset
 
 .
- However, most of the literature on the topic is focused two-phase flow
+ However, most of the literature on the topic is focused on two-phase flow
  in low-permeability porous media.
 \end_layout
 
@@ -222,7 +196,7 @@ For low-permeability porous media, the flow is often dominated by surface
  flow channels 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "dullien2012porous,blunt2017multiphase"
+key "blunt2017multiphase,dullien2012porous"
 literal "true"
 
 \end_inset
@@ -295,7 +269,7 @@ noprefix "false"
 
  (c).
  Here the surface area between the fluids is large and one would consider
- that the surface forces between the fluids are not negligible compared
+ that the interaction forces between the fluids are not negligible compared
  to their counterpart between the fluid phases and the solid phase, in contrast
  with surface-tension dominated flow for which the area of the fluid-fluid
  interface is small.
@@ -364,8 +338,8 @@ name "fig:fluidPatterns"
 
 \begin_layout Standard
 Indeed the ubiquitous continuous model used to describe two-phase flows
- in soils is based on a direct extension of the Darcy's equation and does
- not take into account the interaction between the fluids.
+ in porous media is based on a direct extension of the Darcy's equation
+ and does not take into account the interaction between the fluids.
  The whole model, also knwon as Muskat equations 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -494,7 +468,7 @@ where
 \begin_inset Formula $i$
 \end_inset
 
-,
+, 
 \begin_inset Formula $\mathbf{K}$
 \end_inset
 
@@ -521,8 +495,8 @@ literal "true"
 \end_inset
 
 , thus the relative permeability depends (non-linearly) only on the saturation.
- To close the set of the macroscopic equations a constitutive relation between
- the macroscopic pressure of each fluid has to be furnished.
+ A constitutive relation between the macroscopic pressure of each fluid
+ has to be furnished to close the set of the macroscopic equations .
  This relation is known as the capillary pressure relation and, as for the
  relative permeabilities, is supposed to depends non-linearly only on the
  saturation 
@@ -537,23 +511,10 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-Since the early 1980s, numerous work attempted to improve the model Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:muskatModel"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- on a sound physical basis.
- Among them, some authors used averaging and analogous methods and found
- additionnal coupled permeability terms 
+Since the early 1980s, numerous work attempted to improve the generalized
+ Darcy equations on a sound physical basis.
+ Among them, several authors used upscaling techniques and found additionnal
+ coupled permeability terms 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "MARLE1982643,auriault1986remarques,Whitaker1986a,Lasseux1996"
@@ -585,13 +546,22 @@ in which
 
  are the coupled relative permeability tensors that pertain to the interaction
  between the fluids.
- Several experimental works determined the coupled permeability for a steady-sta
-te cocurent flow of oil and water in a cylindrical sandpack sandpack.
+ Several experimental works determined the coupled permeability from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:darcyCross"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ for a steady-state cocurrent flow of oil and water in sandpack.
  Each fluid was submitted alternatively to a null pressure gradient to isolate
  each terms.
- This protocol was used in 
+ This protocol was used by 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "zarcone1994determination"
 literal "true"
 
@@ -599,9 +569,9 @@ literal "true"
 
  and the authors found a negligible effect of the coupled permeabilities
  in the overall flow.
- With the same protocol with oil and water in a 2D-sandpack, authors 
+ With the same protocol with oil and water in a 2D-sandpack, 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "Dullien1996"
 literal "true"
 
@@ -609,16 +579,16 @@ literal "true"
 
  found that the coupled permeabilities are important since they can contribute
  up to 35% of the effective permeability.
- Othe authors 
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "bentsen1993use"
 literal "true"
 
 \end_inset
 
- made cocurrent and countercurrent experiment to isolate each terms as proposed
- by Rose 
+ made cocurrent and countercurrent experiment to isolate each terms, as
+ proposed by Rose 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Rose1988"
@@ -626,7 +596,7 @@ literal "true"
 
 \end_inset
 
- with water and oil in a sandpack found that coupled permeabilities reach,
+, with water and oil in a sandpack found that coupled permeabilities reach,
  at least, 15% of the effective permeability value.
  However, it was pointed out that the saturation between the two sets of
  experiments can be very different and therefore the computed relative permeabil
@@ -654,9 +624,9 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-In terms of numerical studies, the early work of Rothman 
+In terms of numerical studies, the early work of 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "Rothman1990"
 literal "true"
 
@@ -666,37 +636,37 @@ literal "true"
  geometries with an immiscible lattice-gas method.
  The author found a non-negligible participation of the coupled permeabilities
  by applying the volume force alternatively on each fluid.
- In 
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "Li2005"
 literal "true"
 
 \end_inset
 
-, the authors used the lattice-Boltzmann method and examined the value of
- the coupled permeabilities as a function of the saturation in a 3D-sphere
- pack and they found results in agreement with Rothman's results.
- Other authors used a lattice-Boltzmann method in 2D and 3D pore networks
+ used the lattice-Boltzmann method and examined the value of the coupled
+ permeabilities as a function of the saturation in a 3D-sphere pack and
+ they found results in agreement with Rothman's results.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "Yiotis2007"
 literal "false"
 
 \end_inset
 
- and found a non-wetting apparent relative permeability greater than unity
- when the wetting fluid is more viscous than the non-wetting fluid.
+ alson used a lattice-Boltzmann method in 2D and 3D pore networks and found
+ a non-wetting apparent relative permeability greater than unity when the
+ wetting fluid is more viscous than the non-wetting fluid.
  Recently 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "shams2018study"
 literal "true"
 
 \end_inset
 
-, authors have used a Volume Of Fluid method to study the transport coefficients
+ have used a Volume Of Fluid method to study the transport coefficients
  of fluid layers in non-circular capillary tubes.
  Based on analogy with a model Couette flow the authors have derived simple
  relations that can predict with good accuracy the transport coefficients,
@@ -712,12 +682,198 @@ literal "true"
 Theoretical background
 \end_layout
 
-\begin_layout Abstract
+\begin_layout Standard
+In this section we derive the average flow equations for two-phase flows
+ in Hele-Shaw cell, starting from the three-dimensional Stokes equations.
+ The system under consideration is depicted in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schematic_heleSahw"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which represents a cocurrent two-phase flow between two parallel plates.
+ The transverse dimension of the cell is noted 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $h$
+\end_inset
+
+ is the length of the aperture between the plates.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/heleShawSystemSketch.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematic view of two-phase flow in a Hele-Shaw cell parallel to the 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane with solid obstacles.
+ The transverse dimension of the cell is noted 
+\begin_inset Formula $L$
+\end_inset
+
+ while 
+\begin_inset Formula $h$
+\end_inset
+
+ denoted the aperture between the plates.
+ The boundary 
+\begin_inset Formula $\Gamma_{wc}$
+\end_inset
+
+ between the fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ and the cylinder is marked in red and the interface 
+\begin_inset Formula $\Gamma_{ow}$
+\end_inset
+
+ between the two fluids is marked in blue.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schematic_heleSahw"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Depth averaging
+\end_layout
+
+\begin_layout Standard
+Three-dimensional continuity and Stokes equations for Newtonian fluids 
+\begin_inset Formula $i=o,w$
+\end_inset
+
+, in the absence of external forcing read, respectively,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot\mathbf{u}_{i}=0,\label{eq:3dcontinuity}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-\nabla p_{i}+\mu_{i}\nabla^{2}\mathbf{u}_{i}=0.\label{eq:3dStokes}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Since the length scales in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction are smaller than the length scales in the 
+\begin_inset Formula $x,y$
+\end_inset
+
+ direction, an order of magnitude estimation of Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:3dStokes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ lead to 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu\frac{\partial\mathbf{u}_{\parallel}}{\partial z}=\nabla_{\parallel}p(x,y),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the subscript 
+\begin_inset Formula $\parallel$
+\end_inset
+
+stands for the vector component in the 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane.
+ As the pressure no longer
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "biblio"
-options "plain"
+options "elsarticle-harv"
 
 \end_inset
 

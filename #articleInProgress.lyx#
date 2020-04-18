@@ -546,11 +546,7 @@ in which
 
  are the coupled relative permeability tensors that pertain to the interaction
  between the fluids.
- Several experimental works determined the coupled permeability from Eq.
-\begin_inset space ~
-\end_inset
-
-
+ Several experimental works determined the coupled permeability from 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:darcyCross"
