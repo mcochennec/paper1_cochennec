@@ -1,4 +1,4 @@
-set terminal cairolatex eps dashed 
+set terminal cairolatex standalone pdf dashed 
 set output 'Pc.tex'
 
 # define axis
@@ -21,7 +21,7 @@ set style line 10 lc rgb '#dd181f' dt 4 pt 6 lw 5.0 ps 1.2
 set key at 0.4,0.01 spacing 1.5
 # Axes label 
 set xlabel '$h^*$'
-set ylabel '$\vert P_o-P_w\vert\:(\mathrm{Pa}) $' 
+set ylabel '$P_o-P_w \.3:(\mathrm{Pa}) $' 
 
 
 set log y
@@ -35,6 +35,6 @@ set xrange[0.03:10]
 # Axis labels
 #set tics scale 0.5
 # Plot
-plot 'Pc.csv' u 1:2 w lp ls 1 t '$Ca=1 \times 10^{0}$', \
-'Pc.csv' u 1:5 w lp ls 2 t '$Ca=7.5 \times 10^{-3}$', \
-'Pc.csv' u 1:6 w lp ls 10 t '$2\gamma/h$'
+plot 'pc.txt' u 1:2 w lp ls 1 t '$Ca=1 \times 10^{0}$', \
+'pc.txt' u 1:4 w lp ls 2 t '$Ca=7.5 \times 10^{-3}$', \
+'pc.txt' u 1:5 w lp ls 10 t '$2\gamma/h$'

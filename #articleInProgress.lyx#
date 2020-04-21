@@ -16,10 +16,10 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "Georgia"
+\font_roman "lmodern" "Georgia"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_math "default" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -65,6 +65,11 @@
 \end_branch
 \branch Theoretical background
 \selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Results
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -285,7 +290,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -523,7 +528,7 @@ literal "true"
 \end_inset
 
 .
- The momentum equations then read
+ The average momentum equations read
 \end_layout
 
 \begin_layout Standard
@@ -550,8 +555,8 @@ in which
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:darcyCross"
-plural "false"
-caps "false"
+plural "true"
+caps "true"
 noprefix "false"
 
 \end_inset
@@ -621,6 +626,36 @@ literal "true"
 , in which the authors performed steady-state cocurrent two-phase flow in
  2D-micromodel experiments and found that the contribution of the coupled
  permeabilities on the flow is non-negligible and depend on the flow regimes.
+ Another approach, widely used in the literature on two-phase flow in packed-bed
+s 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Santos1991,carbonell2000multiphase"
+literal "false"
+
+\end_inset
+
+, is to work with non-closed average momentum equations and to provide constitut
+ive relations for the modeling of the interaction terms between the phases.
+ These relations are obtained through interpretation of experimental data
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Saez1985"
+literal "false"
+
+\end_inset
+
+ or through theoretical developments 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tung1988hydrodynamic,Attou1999,boyer2007hydrodynamics"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -635,7 +670,18 @@ literal "true"
  examined the question by conducting two-phase flow simulations in simple
  geometries with an immiscible lattice-gas method.
  The author found a non-negligible participation of the coupled permeabilities
- by applying the volume force alternatively on each fluid.
+ by applying the volume force alternatively on each fluid to isolate each
+ of the trems in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:darcyCross"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -673,6 +719,93 @@ literal "true"
  including the coupled ones, of fluid layers.
 \end_layout
 
+\begin_layout Standard
+We would stress that the importance of the interaction forces between the
+ fluids in tIn 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:comparison_Kr_litterature"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ we plot some results available in the literature on coupled relative permeabili
+ty values, adimensionalized by the absolute permeability.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/litt_perm.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Non-dimensionalized coupled relative permeabilities from experimental work
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dullien1996,zarcone1994determination"
+literal "false"
+
+\end_inset
+
+ and numerical simulations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rothman1990,Li2005"
+literal "false"
+
+\end_inset
+
+ compared with and analytical solution for a steady-state annular two-phase
+ flow in a circular capillary tube (dashed line) 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bacri1990modele"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:comparison_Kr_litterature"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -684,7 +817,7 @@ Theoretical background
 
 \begin_layout Standard
 In this section we derive the average flow equations for two-phase flows
- in Hele-Shaw cell, starting from the three-dimensional Stokes equations.
+ in a Hele-Shaw cell, starting from the three-dimensional Stokes equations.
  The system under consideration is depicted in Fig.
 \begin_inset space ~
 \end_inset
@@ -716,7 +849,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -788,28 +921,14 @@ Depth averaging
 \end_layout
 
 \begin_layout Standard
-Three-dimensional continuity and Stokes equations for Newtonian fluids 
-\begin_inset Formula $i=o,w$
-\end_inset
-
-, in the absence of external forcing read, respectively,
+Three-dimensional continuity and Stokes equations for a Newtonian fluid
+ in the absence of external forcing read, respectively,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\nabla\cdot\mathbf{u}_{i}=0,\label{eq:3dcontinuity}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
--\nabla p_{i}+\mu_{i}\nabla^{2}\mathbf{u}_{i}=0.\label{eq:3dStokes}
+\nabla\cdot\mathbf{u}=0,\qquad-\nabla p+\mu\nabla^{2}\mathbf{u}=0.\label{eq:3dStokes}
 \end{equation}
 
 \end_inset
@@ -827,27 +946,23 @@ Since the length scales in the
 \begin_inset Formula $x,y$
 \end_inset
 
- direction, an order of magnitude estimation of Eq.
-\begin_inset space ~
-\end_inset
-
-
+ direction, an order of magnitude estimation allows to rewrite 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "eq:3dStokes"
-plural "false"
-caps "false"
+plural "true"
+caps "true"
 noprefix "false"
 
 \end_inset
 
- lead to 
+, at leading order, as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mu\frac{\partial\mathbf{u}_{\parallel}}{\partial z}=\nabla_{\parallel}p(x,y),
+\nabla_{\parallel}\cdot\mathbf{u}_{\parallel}=0,\qquad\mu\frac{\partial^{2}\mathbf{u}_{\parallel}}{\partial z^{2}}=\nabla_{\parallel}p(x,y),
 \end{equation}
 
 \end_inset
@@ -856,6 +971,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\noindent
 where the subscript 
 \begin_inset Formula $\parallel$
 \end_inset
@@ -865,7 +981,884 @@ stands for the vector component in the
 \end_inset
 
  plane.
- As the pressure no longer
+ One can write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}_{\parallel}(x,y,z)=(\bar{u}(x,y)f(z),\bar{v}(x,y)f(z),0)^{T},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+since the velocity variations in the 
+\begin_inset Formula $x,y$
+\end_inset
+
+ directions are much slower than the velocity variations in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
+ The depth-averaged velocity vector 
+\begin_inset Formula $\bar{\mathbf{u}}=\frac{1}{h}\int_{-h/2}^{h/2}\mathbf{u}_{\parallel}\:\mathrm{d}z$
+\end_inset
+
+ is introduced and using its definition along with the no-slip boundary
+ conditions at 
+\begin_inset Formula $z\pm h/2$
+\end_inset
+
+, we obtain,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}_{\parallel}(x,y,z)=\bar{\mathbf{u}}(x,y)\frac{3}{2}\left(1-4\frac{z^{2}}{h^{2}}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Then, calculating the second derivative lead to,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu k^{2}\bar{\mathbf{u}}(x,y)=-\nabla_{\parallel}p(x,y),\label{eq:darcyHeleShaw}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $k^{2}=12/h^{2}$
+\end_inset
+
+ is a permeability term.
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:darcyHeleShaw"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ is valid in the limit of very small aspect ratio 
+\begin_inset Formula $h/L$
+\end_inset
+
+ and is analogous to the well known Darcy equation.
+ To obtain a more versatile flow equation valid for moderate aspect ratio
+ we retain that the velocity profile is described by a parabolic profile
+ in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction but we reintroduce the second derivatives along the 
+\begin_inset Formula $x,y$
+\end_inset
+
+ directions.
+ Then, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:3dStokes"
+plural "true"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ read,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla_{\parallel}\cdot\bar{\mathbf{u}}=0,\qquad\mu\left(\nabla_{\parallel}^{2}\bar{\mathbf{u}}-k^{2}\bar{\mathbf{u}}\right)=\nabla_{\parallel}p(x,y).\label{eq:amalgamStokesDarcy}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:amalgamStokesDarcy"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ are the continuity and momentum equations for the depth-averaged flow of
+ one fluid.
+ In the case of two-phases flow, 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:amalgamStokesDarcy"
+plural "true"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ have to be written for each fluid and boundary conditions at the fluid-fluid
+ interface has to be given 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saffman1958penetration"
+literal "false"
+
+\end_inset
+
+.
+ These boundary conditions are continuity of the depth-averaged velocities
+ across the interface and a jump of interface normal stress, and can be
+ expressed as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{\mathbf{u}}_{o}-\bar{\mathbf{u}}_{w}=0\;\textrm{at}\;\text{\ensuremath{\Gamma_{ow}}},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\bar{\boldsymbol{\sigma}}_{w}-\boldsymbol{\bar{\sigma}}_{o}\right)\cdot\mathbf{n}_{\parallel ow}=\gamma\left(\frac{\pi}{4}\kappa_{\parallel}+\frac{2}{h}\cos\theta\right)\mathbf{n}_{\parallel ow}\;\textrm{at}\;\text{\ensuremath{\Gamma_{ow}}},\label{eq:BCHeleShawStress}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\bar{\boldsymbol{\sigma}}_{i}$
+\end_inset
+
+ are the in-plane stress tensor of fluid 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{n}_{\parallel ow}$
+\end_inset
+
+ is the in-plane normal vector at the fluid interface pointing toward the
+ fluid 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the surface tension, 
+\begin_inset Formula $\kappa_{\parallel}$
+\end_inset
+
+ is the in-plane interface curvature and 
+\begin_inset Formula $\theta$
+\end_inset
+
+ denotes the contact angle between the fluid interface and the plates (see
+ 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Schematic_heleSahw"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The meniscus in the 
+\begin_inset Formula $z$
+\end_inset
+
+ direction is approximated as a half-circle of radius 
+\begin_inset Formula $h/2$
+\end_inset
+
+ and the 
+\begin_inset Formula $\pi/4$
+\end_inset
+
+ correction for the in-plane curvature was derived by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "park1984two"
+literal "false"
+
+\end_inset
+
+.
+ In 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:BCHeleShawStress"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ we neglect aditionnal term proposed by that pertain for the formation of
+ dynamic film 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "park1984two"
+literal "false"
+
+\end_inset
+
+.
+ We rather consider a non-zero contact angle an consequently the absence
+ of such thin films.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Surface averaging
+\end_layout
+
+\begin_layout Standard
+Here we proceed to the spatial averaging of the in-plane momentum equations.
+ We drop the subscript 
+\begin_inset Formula $\parallel$
+\end_inset
+
+ in the following since we work only with depth-averaged quantities.
+ We place ourselves in the volume averaging framework 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Whitaker2013"
+literal "false"
+
+\end_inset
+
+.
+ Acknowledge that 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:amalgamStokesDarcy"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ are two-dimensional, the traditional averaging theorem for some depth-averaged
+ quantity 
+\begin_inset Formula $\bar{\omega}_{i}$
+\end_inset
+
+ associated to the fluid 
+\begin_inset Formula $i$
+\end_inset
+
+ reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\langle\nabla\bar{\omega}_{i}\rangle=\nabla\langle\bar{\omega}_{i}\rangle+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\bar{\omega}_{i}\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\bar{\omega}_{i}\:\mathrm{d}\Gamma,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\langle\bar{\omega}_{i}\rangle=\frac{1}{S}\int_{S_{i}}\bar{\omega}_{i}\:\mathrm{d}S,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+is the superficial surface average.
+ Applying the superficial surface average of 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:amalgamStokesDarcy"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ along with the averaging theorem and using traditional length-scale arguments
+ we obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma-\\
+-\mu_{i}k^{2}\langle\bar{\mathbf{u}}_{i}\rangle=\varepsilon_{i}\nabla\langle p_{i}\rangle^{i}+\langle p_{i}\rangle^{i}\nabla\varepsilon_{i},\quad i,j=o,w,\:i\neq j,\label{eq:averagedFull}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ is the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ identity matrix and 
+\begin_inset Formula $\langle p_{i}\rangle^{i}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\langle p_{i}\rangle^{i}=\langle p_{i}\rangle/\varepsilon_{i}\right)$
+\end_inset
+
+ is the intrinsic surface average pressure of fluid 
+\begin_inset Formula $i$
+\end_inset
+
+, with 
+\begin_inset Formula $\varepsilon_{i}$
+\end_inset
+
+ the volume fraction of the fluid 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Two remarks must be made at this stage, firstly the presence of obstacles
+ wall in the cell plane, illustrated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Schematic_heleSahw"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ by a pillar of circular cross-section, implies that the velocity field
+ is three-dimensional near the obstacle because the flow is influenced by
+ the no-flow condition over a distance of the order of the aperture 
+\begin_inset Formula $h$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "guyon1991hydrodynamique"
+literal "false"
+
+\end_inset
+
+.
+ Thus, the parabolic flow profile approximation This also applies to the
+ interface between fluids, especially since the integral on the contour
+ of the interface in the 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane is an approximation, because the curvature of the interface, here
+ a half-circle, is neglected.
+ As shown in appendix 1, using three-dimensional flow simulations in microchanne
+ls, these approximations remain reasonable.
+\end_layout
+
+\begin_layout Standard
+A more compact form of the 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:averagedFull"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ can be written as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -12mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat}{1}
+0 & =-\varepsilon_{w}\nabla\langle p_{w}\rangle^{w}-\mathbf{f}_{wp}+\mathbf{f}_{wc}+\mathbf{f}_{wo},\\
+0 & =-\varepsilon_{o}\nabla\langle p_{o}\rangle^{o}-\mathbf{f}_{op}+\mathbf{f}_{ow},
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+if the variation in space of the saturation of each phase is negligible
+ and aknwoledging that, as illustrated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Schematic_heleSahw"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+, only the wetting fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ is in contact with the pillar.
+ Here, 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ denotes the drag forces vectors that must be computed or modeled to obtain
+ closed macroscopic equations.
+ 
+\end_layout
+
+\begin_layout Section
+Direct numerical simulations
+\end_layout
+
+\begin_layout Standard
+In this section we introduce the standard Level Set method to capture the
+ moving free interface between the fluids along with the flow equations
+ solved with a Finite Element solver (Comsol Multiphysics).
+\end_layout
+
+\begin_layout Subsection
+Equations
+\end_layout
+
+\begin_layout Paragraph
+Level Set model
+\end_layout
+
+\begin_layout Standard
+The Level Set method is part of Eulerian methods which have the particularity
+ of easily reproducing topological changes of the phases contrary to Lagrangian
+ methods.
+ As topological changes of the fluids is not excluded here, this motivated
+ the choice for this type of method.
+ 
+\end_layout
+
+\begin_layout Standard
+In this framework the fluid phases are identified with a level set (scalar)
+ function that goes smoothly from 0 to 1 across the fluid interface, which
+ is implicitly defined as the iso-level 
+\begin_inset Formula $\phi=0.5$
+\end_inset
+
+.
+ Transport of the level set function 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is governed by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial t}+\nabla\cdot(\bar{\mathbf{u}}\phi)=\tau\nabla\cdot\left(\psi\boldsymbol{\nabla}\phi-\phi(1-\phi)\frac{\boldsymbol{\nabla}\phi}{\vert\nabla\phi\vert}\right),\label{eq:advecPhi}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\bar{\mathbf{u}}$
+\end_inset
+
+ is the in-plane velocity field and 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi$
+\end_inset
+
+ are two numerical parameters that control the diffuse interface thickness
+ and the amount of re-initialization of 
+\begin_inset Formula $\phi$
+\end_inset
+
+ function, respectively 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Olsson2007"
+literal "true"
+
+\end_inset
+
+.
+ Remember that the differential operators have components only in the 
+\begin_inset Formula $x,y$
+\end_inset
+
+ directions.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Flow equations
+\end_layout
+
+\begin_layout Standard
+The flow equations to solve are analogous to the depth-averaged 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:amalgamStokesDarcy"
+plural "true"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ except that one continuity and momentum equation is valid for the whole
+ domain and the contribution of capillary forces is included in the momentum
+ equations, as
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -12mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat}{1}
+0 & =\nabla'\cdot\bar{\mathbf{u}}\\
+0 & =-\nabla p+\mu(\phi)\left(\nabla^{2}\bar{\mathbf{u}}-\frac{12}{h^{2}}\bar{\mathbf{u}}\right)+\gamma\left(\frac{\pi}{4}\nabla\cdot\left(\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert}\right)-\frac{2}{h}\delta(\phi)\right)\mathbf{n},\label{eq:Momentum-1}
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the Dirac delta function localized on the interface and 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+denotes the unit normal to the interface, respectively defined as,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\delta(\phi)=6\left|\boldsymbol{\nabla}\phi\right|\left|\phi\left(1+\phi\right)\right|,\quad\textrm{and}\quad\mathbf{n}=\frac{\boldsymbol{\nabla}\phi}{\left|\boldsymbol{\nabla}\phi\right|}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+We introduce the following reference and dimensionless quantities,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{\mathbf{u}}=\bar{\mathbf{u}}'\times U_{r},\;p=p'\times\frac{\mu_{r}U_{r}}{L},\;\mathbf{x}=\mathbf{x}'\times L,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+and thus the dimensionless continuity and momentum equations read,
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -12mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat}{1}
+0 & =\nabla'\cdot\bar{\mathbf{u}}'\\
+0 & =-\nabla'p'+\frac{\mu(\phi)}{\mu_{r}}\left(\nabla'^{2}\bar{\mathbf{u}}'-\frac{12}{\left(h/L\right)^{2}}\bar{\mathbf{u}}'\right)+\frac{\gamma}{\mu_{r}U_{r}}\left(\frac{\pi}{4}\nabla'\cdot\left(\frac{\boldsymbol{\nabla'}\phi}{\vert\boldsymbol{\nabla'}\phi\vert}\right)-\frac{2}{h/L}\delta'(\phi)\right)\mathbf{n},\label{eq:dimensionlessMomentum}
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+with 
+\begin_inset Formula $\delta'(\phi)=6\left|\boldsymbol{\nabla'}\phi\right|\left|\phi\left(1+\phi\right)\right|$
+\end_inset
+
+.
+ From 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:dimensionlessMomentum"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ we note three dimensionless numbers, namely the viscosity ratio 
+\begin_inset Formula $M=\frac{\mu(\phi)}{\mu_{r}}$
+\end_inset
+
+, the capillary number 
+\begin_inset Formula $Ca^{-1}=\frac{\gamma}{\mu_{r}U_{r}}$
+\end_inset
+
+ and the aspect ratio 
+\begin_inset Formula $h^{*}=h/L$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Geometry and boundary conditions
+\end_layout
+
+\begin_layout Paragraph
+Mesh convergence study and comparison with an Eulerian method
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Results
+inverted 0
+status collapsed
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/saturation.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -878,6 +1871,18 @@ options "elsarticle-harv"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Approximation made near the interfaces for the Stokes-Darcy equations
 \end_layout
 
 \end_body
