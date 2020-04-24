@@ -720,8 +720,9 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-We would stress that the importance of the interaction forces between the
- fluids in tIn 
+The literature indicates that fluid interaction terms are mostly not negligible,
+ but it is not yet clear what parameters control the value of these terms.
+ In 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:comparison_Kr_litterature"
@@ -731,9 +732,15 @@ noprefix "false"
 
 \end_inset
 
- we plot some results available in the literature on coupled relative permeabili
-ty values, adimensionalized by the absolute permeability.
- 
+ we present a comparison between some of the results available in the literature
+ on coupled relative permeability values, adimensionalized by the absolute
+ permeability, and the analytical value obtained from steady-state two-phase
+ flow in a capillary tube of circular cross-section.
+ This theoretical case represents a limit case regarding the large structure's
+ permeability and the large extent of the fluid-fluid interface.
+ Based on the qualitative arguments on the relation between the permeability,
+ the flow regime and the extent of the fluid/fluid interface given in this
+ section, the discrepancy between the theorecial case and the r
 \end_layout
 
 \begin_layout Standard
@@ -1340,8 +1347,8 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\nabla\bar{\mathbf{u}}_{i}\right)\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\nabla\bar{\mathbf{u}}_{i}\right)\:\mathrm{d}\Gamma-\\
--k^{2}\langle\bar{\mathbf{u}}_{i}\rangle=\varepsilon_{i}\nabla\langle p_{i}\rangle^{i}+\langle p_{i}\rangle^{i}\nabla\varepsilon_{i},\quad i,j=o,w,\:i\neq j,\label{eq:averagedFull}
+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma-\\
+-\mu_{i}k^{2}\langle\bar{\mathbf{u}}_{i}\rangle=\varepsilon_{i}\nabla\langle p_{i}\rangle^{i}+\langle p_{i}\rangle^{i}\nabla\varepsilon_{i},\quad i,j=o,w,\:i\neq j,\label{eq:averagedFull}
 \end{multline}
 
 \end_inset
@@ -1433,6 +1440,13 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -12mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1474,6 +1488,33 @@ end{subequations}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+if the variation in space of the saturation of each phase is negligible
+ and acknowledging that, as illustrated in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Schematic_heleSahw"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+, only the wetting fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ is in contact with the pillar.
+ Here, 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ denotes the drag forces vectors that must be computed or modeled to obtain
+ closed macroscopic equations.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1769,8 +1810,375 @@ noprefix "false"
 Geometry and boundary conditions
 \end_layout
 
+\begin_layout Standard
+Our macroscopic model ressembling a Hele-Shaw cell with wedges of cylindrical
+ cross section sandwiched between the plates as obstacles.
+ This system is subdivised in five subdomains comprising one pins and the
+ encompassing unit-cell (UC), as depicted in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:model"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+ Only the upper half of a line is studied taking advantage of the conditions
+ of symmetry, and each fluid flows from right to left.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/model.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The geometry used is the superior half of an array of five cylindrical wedges
+ inside five cuboid where both fluids are injected from left to right, initially
+ the square cuboid is saturated with wetting fluid (in red), and the length
+ of one Unit Cell cuboid (UC) is one millimetre.
+ Symmetric boundary conditions are used on each length side and the no-flow
+ boundary condition is set at the the pins boundary 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:model"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Boundary conditions for flow variables and the Level Set function
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Boundary-conditions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Boundary
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\phi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Outlet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{n}\cdot\boldsymbol{\nabla}\phi=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inlet 
+\begin_inset Formula $o$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{u}_{o}^{x}=\mathrm{cst}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inlet 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{u}_{w}^{x}=\mathrm{cst}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
-Mesh convergence study and comparison with an Eulerian method
+Mesh convergence study
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/mesh_conv.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mesh convergence study of (a) drag force (
+\begin_inset Formula $x$
+\end_inset
+
+-component) exerted upon the fluid-fluid interface (blue line), drag force
+ (
+\begin_inset Formula $x$
+\end_inset
+
+-component) exerted upon the cylindrical wedge interface (green), intrinsic
+ average velocity of fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ (yellow) and difference of the intrinsic average pressure (orange), all
+ these results are normalized with respect to the result obtained with the
+ coarser mesh and are computed at steady-state in UC3 (b) fluid-fluid interface
+ position in UC3 at steady-state for different mesh densities.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mesh-convergence-study"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

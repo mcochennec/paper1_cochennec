@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  21 APR 2020 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  23 APR 2020 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**litt_perm.tex
-(./litt_perm.tex
+**test_half_circle.tex
+(./test_half_circle.tex
 LaTeX2e <2020-02-02>
 L3 programming layer <2020-02-03>
 (c:/texlive/2019/texmf-dist/tex/latex/base/minimal.cls
 Document Class: minimal 2001/05/25 Standard LaTeX minimal class
-) (c:/texlive/2019/texmf-dist/tex/latex/extsizes/size9.clo
-File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+) (c:/texlive/2019/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 (c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
@@ -99,8 +99,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count173
 \l__pdf_internal_box=\box45
 )
-(./litt_perm.aux)
-\openout1 = `litt_perm.aux'.
+(./test_half_circle.aux)
+\openout1 = `test_half_circle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
@@ -157,12 +157,12 @@ e
 * \topmargin=-109.26999pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=9.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
 * \marginparwidth=4.0pt
 * \marginparsep=10.0pt
 * \columnsep=0.0pt
-* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -176,36 +176,33 @@ e
 \gptboxwidth=\skip51
 \gptboxtext=\box47
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 189.
+(Font)              <10.95> on input line 179.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 189.
+(Font)              <8> on input line 179.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 189.
-<litt_perm-inc.pdf, id=1, 361.35pt x 216.81pt>
-File: litt_perm-inc.pdf Graphic file (type pdf)
-<use litt_perm-inc.pdf>
-Package pdftex.def Info: litt_perm-inc.pdf  used on input line 190.
+(Font)              <6> on input line 179.
+<test_half_circle-inc.pdf, id=1, 361.35pt x 216.81pt>
+File: test_half_circle-inc.pdf Graphic file (type pdf)
+<use test_half_circle-inc.pdf>
+Package pdftex.def Info: test_half_circle-inc.pdf  used on input line 180.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./litt_perm-i
-nc.pdf>] (./litt_perm.aux) ) 
+[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./test_half_c
+ircle-inc.pdf>] (./test_half_circle.aux) ) 
 Here is how much of TeX's memory you used:
- 1706 strings out of 481248
- 26069 string characters out of 5922089
- 264722 words of memory out of 5000000
- 16973 multiletter control sequences out of 15000+600000
- 534161 words of font info for 30 fonts, out of 8000000 for 9000
+ 1718 strings out of 481248
+ 26263 string characters out of 5922089
+ 263823 words of memory out of 5000000
+ 16986 multiletter control sequences out of 15000+600000
+ 535077 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,36p,204b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2019/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c
-:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on litt_perm.pdf (1 page, 54037 bytes).
+ 30i,6n,36p,211b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb>
+Output written on test_half_circle.pdf (1 page, 23663 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 19 PDF objects out of 1000 (max. 8388607)
+ 12 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,7 +19,7 @@
 \font_roman "lmodern" "Georgia"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "default" "default"
+\font_math "default" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -593,9 +593,9 @@ literal "true"
 \end_inset
 
  made cocurrent and countercurrent experiment to isolate each terms, as
- proposed by 
+ proposed by Rose 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Rose1988"
 literal "true"
 
@@ -615,9 +615,9 @@ literal "true"
 
 .
  The effect of the non-wetting phase connectivity on the transport parameters
- was extensively studied by 
+ was extensively studied in 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Avraam1995"
 literal "true"
 
@@ -626,28 +626,6 @@ literal "true"
 , in which the authors performed steady-state cocurrent two-phase flow in
  2D-micromodel experiments and found that the contribution of the coupled
  permeabilities on the flow is non-negligible and depend on the flow regimes.
- Recently, a whole analytical model for all the transport coefficients in
- 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eq:darcyCross"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- has been derived for one-dimensional inertial two-phase flow in coarse
- non-consolidated porous media and which correctly predicts the pressure
- loss in debris beds 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "clavier2017modeling"
-literal "true"
-
-\end_inset
-
-.
  Another approach, widely used in the literature on two-phase flow in packed-bed
 s 
 \begin_inset CommandInset citation
@@ -689,9 +667,8 @@ literal "true"
 
 \end_inset
 
- examined the question of the interaction terms between the fluids by conducting
- two-phase flow simulations in simple geometries with an immiscible lattice-gas
- method.
+ examined the question by conducting two-phase flow simulations in simple
+ geometries with an immiscible lattice-gas method.
  The author found a non-negligible participation of the coupled permeabilities
  by applying the volume force alternatively on each fluid to isolate each
  of the trems in 
@@ -756,9 +733,9 @@ noprefix "false"
 \end_inset
 
  we present a comparison between some of the results available in the literature
- on coupled relative permeability values, adimensionalized with respect
- to the absolute permeability, and the analytical value obtained from steady-sta
-te two-phase flow in a capillary tube of circular cross-section.
+ on coupled relative permeability values, adimensionalized by the absolute
+ permeability, and the analytical value obtained from steady-state two-phase
+ flow in a capillary tube of circular cross-section.
  This theoretical case represents a limit case regarding the large structure's
  permeability and the large extent of the fluid-fluid interface.
  The discrepancy between the results available in the literature and the
@@ -776,13 +753,7 @@ te two-phase flow in a capillary tube of circular cross-section.
 \end_layout
 
 \begin_layout Standard
-To form a better view of the relative interplay between the permeability,
- the friction exerted upon the solid and the value of the interaction terms
- between the fluids, we perfomed direct numerical simulations in a micromodel
- of porous media.
- Micromodel are widely used for the great control of the flow regimes they
- offer.
- 2d micromode
+
 \end_layout
 
 \begin_layout Standard
@@ -881,8 +852,7 @@ noprefix "false"
 
 \end_inset
 
- which represents a quasi-planar cocurrent two-phase flow between two parallel
- plates.
+ which represents a cocurrent two-phase flow between two parallel plates.
  The transverse dimension of the cell is noted 
 \begin_inset Formula $L$
 \end_inset
@@ -1056,7 +1026,7 @@ since the velocity variations in the
 \end_inset
 
 -direction.
- The depth-averaged velocity 
+ The depth-averaged velocity vector 
 \begin_inset Formula $\bar{\mathbf{u}}=\frac{1}{h}\int_{-h/2}^{h/2}\mathbf{u}_{\parallel}\:\mathrm{d}z$
 \end_inset
 
@@ -1286,8 +1256,8 @@ noprefix "false"
 
 \end_inset
 
- we neglect aditionnal term that pertain for the formation of dynamic film
- 
+ we neglect aditionnal term proposed by that pertain for the formation of
+ dynamic film 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "park1984two"
@@ -1441,9 +1411,9 @@ noprefix "false"
 
 \end_inset
 
- by a wedge of circular cross-section, implies that the velocity field is
- three-dimensional near the obstacle because the flow is influenced by the
- no-flow condition over a distance of the order of the aperture 
+ by a pillar of circular cross-section, implies that the velocity field
+ is three-dimensional near the obstacle because the flow is influenced by
+ the no-flow condition over a distance of the order of the aperture 
 \begin_inset Formula $h$
 \end_inset
 
@@ -1456,9 +1426,9 @@ literal "false"
 \end_inset
 
 .
- Thus, the parabolic flow profile approximation failed here.
- +This also applies to the interface between fluids, especially since the
- integral on the contour of the interface in the 
+ Thus, the parabolic flow profile approximation This also applies to the
+ interface between fluids, especially since the integral on the contour
+ of the interface in the 
 \begin_inset Formula $x-y$
 \end_inset
 

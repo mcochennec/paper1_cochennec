@@ -1,6 +1,6 @@
 set terminal cairolatex standalone pdf 
 set size square
-set output 'litt_perm.tex'
+set output 'test_half_circle.tex'
 
 # Line styles
 set border linewidth 1.5
@@ -19,20 +19,11 @@ set grid back ls 22
 
 # Legend
 set key l t
-set key samplen 1.5
+set xtics 0.1
+set yrange[0.5:1]
 # Axes label 
-set xlabel '$S_w$'
-set ylabel '$\frac{K^*_{wo}}{K_0},\frac{\mu_o}{\mu_w}\frac{K^*_{ow}}{K_0}$' offset -2,0
-kow(x) = (1-x)*2*(x+(1-x)*log(1-x))
+set xlabel '$h/L$'
+set ylabel 'Normalized drag force' 
 
-# Axis ranges
-set xrange[0:0.999]
-set yrange[0:0.3]
-set ytics 0.05
-set xtics 0.2
 # Plot
-plot 'litt_perm.txt' u 1:2 ls 1 t 'Rothman', \
-'litt_perm.txt' u 7:8 ls 2 t 'Dullien and Dong', \
-'litt_perm.txt' u 5:6 ls 3 t 'Li et al.', \
-'litt_perm.txt' u 3:4 ls 4 t 'Zarcone and Len. ', \
-kow(x) t 'annular' w l ls 5
+plot 'test_drag_microchannel_halfcircle.txt' u 1:2 w lp ls 1 notitle
