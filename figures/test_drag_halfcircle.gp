@@ -19,7 +19,9 @@ set grid back ls 22
 
 # Legend
 set key l t
-set xtics 0.1
+set xrange[0.05:0.5]
+set log x
+set xtics ("1/2" .5, "1/4" 0.25, "1/8" .125, "1/16" .0625)
 set yrange[0.5:1]
 # Axes label 
 set xlabel '$h/L$'

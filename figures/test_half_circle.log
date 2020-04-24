@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  23 APR 2020 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  24 APR 2020 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -176,15 +176,15 @@ e
 \gptboxwidth=\skip51
 \gptboxtext=\box47
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 179.
+(Font)              <10.95> on input line 175.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 179.
+(Font)              <8> on input line 175.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 179.
+(Font)              <6> on input line 175.
 <test_half_circle-inc.pdf, id=1, 361.35pt x 216.81pt>
 File: test_half_circle-inc.pdf Graphic file (type pdf)
 <use test_half_circle-inc.pdf>
-Package pdftex.def Info: test_half_circle-inc.pdf  used on input line 180.
+Package pdftex.def Info: test_half_circle-inc.pdf  used on input line 176.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
 [1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./test_half_c
 ircle-inc.pdf>] (./test_half_circle.aux) ) 
@@ -199,7 +199,7 @@ Here is how much of TeX's memory you used:
 <c:/texlive/2019/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr10.pfb>
-Output written on test_half_circle.pdf (1 page, 23663 bytes).
+Output written on test_half_circle.pdf (1 page, 23462 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  12 compressed objects within 1 object stream
