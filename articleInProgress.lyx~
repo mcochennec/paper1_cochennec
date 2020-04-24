@@ -1412,7 +1412,11 @@ where,
 
 \begin_layout Standard
 \noindent
-is the superficial surface average.
+is the superficial surface average and 
+\begin_inset Formula $S$
+\end_inset
+
+ is the surface of a representative elementary cell.
  Applying the superficial surface average of 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1628,7 +1632,7 @@ noprefix "false"
 \begin_inset Formula $\mathbf{f}_{ij}$
 \end_inset
 
- denotes the drag forces exerted upon phase 
+ denotes the drag forces per surface unit exerted upon phase 
 \begin_inset Formula $j$
 \end_inset
 
@@ -2514,8 +2518,8 @@ noprefix "false"
 \end_inset
 
 .
- We computed the drag force on each side wall of the microchannel and plot
- in 
+ We computed the drag force per unite of surface on each side wall of the
+ microchannel and plot in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Drag-force-exerted"
@@ -2602,8 +2606,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Drag force exerted upon the curved wall side of the microchannel normalized
- with respect to the drag force exerted upon the flat wall.
+Drag force per unite of surface exerted upon the curved wall side of the
+ microchannel normalized with respect to the drag force exerted upon the
+ flat wall.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Drag-force-exerted"
