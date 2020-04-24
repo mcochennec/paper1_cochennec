@@ -1233,6 +1233,23 @@ literal "false"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p_{o}-p_{w})n_{ow}>0,$
+\end_inset
+
+and 
+\begin_inset Formula $cos(\theta)$
+\end_inset
+
+>0 here then +2/h
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1395,7 +1412,11 @@ where,
 
 \begin_layout Standard
 \noindent
-is the superficial surface average.
+is the superficial surface average and 
+\begin_inset Formula $S$
+\end_inset
+
+ is the surface of a representative elementary cell.
  Applying the superficial surface average of 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -1611,7 +1632,7 @@ noprefix "false"
 \begin_inset Formula $\mathbf{f}_{ij}$
 \end_inset
 
- denotes the drag forces exerted upon phase 
+ denotes the drag forces per surface unit exerted upon phase 
 \begin_inset Formula $j$
 \end_inset
 
@@ -1878,7 +1899,7 @@ end{subequations}
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 here n pointing toward the fluid w giving my definition of phi in Comsol

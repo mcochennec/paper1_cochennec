@@ -1233,6 +1233,23 @@ literal "false"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p_{o}-p_{w})n_{ow}>0,$
+\end_inset
+
+and 
+\begin_inset Formula $cos(\theta)$
+\end_inset
+
+>0 here then +2/h
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1872,6 +1889,17 @@ status open
 
 \backslash
 end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+here n pointing toward the fluid w giving my definition of phi in Comsol
+ thus -2/h
 \end_layout
 
 \end_inset
