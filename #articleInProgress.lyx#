@@ -1759,7 +1759,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{alignat}{1}
 0 & =\nabla'\cdot\bar{\mathbf{u}}\\
-0 & =-\nabla p+\mu(\phi)\left(\nabla^{2}\bar{\mathbf{u}}-\frac{12}{h^{2}}\bar{\mathbf{u}}\right)+\gamma\left(\frac{\pi}{4}\nabla\cdot\left(\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert}\right)-\frac{2}{h}\delta(\phi)\right)\mathbf{n},\label{eq:Momentum-1}
+0 & =-\nabla p+\mu(\phi)\left(\nabla^{2}\bar{\mathbf{u}}-\frac{12}{h^{2}}\bar{\mathbf{u}}\right)+\gamma\left(\frac{\pi}{4}\nabla\cdot\left(\frac{\boldsymbol{\nabla}\phi}{\vert\boldsymbol{\nabla}\phi\vert}\right)-\frac{2}{h}\right)\delta(\phi)\mathbf{n},\label{eq:Momentum-1}
 \end{alignat}
 
 \end_inset
@@ -1855,7 +1855,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{alignat}{1}
 0 & =\nabla'\cdot\bar{\mathbf{u}}'\\
-0 & =-\nabla'p'+\frac{\mu(\phi)}{\mu_{r}}\left(\nabla'^{2}\bar{\mathbf{u}}'-\frac{12}{\left(h/L\right)^{2}}\bar{\mathbf{u}}'\right)+\frac{\gamma}{\mu_{r}U_{r}}\left(\frac{\pi}{4}\nabla'\cdot\left(\frac{\boldsymbol{\nabla'}\phi}{\vert\boldsymbol{\nabla'}\phi\vert}\right)-\frac{2}{h/L}\delta'(\phi)\right)\mathbf{n},\label{eq:dimensionlessMomentum}
+0 & =-\nabla'p'+\frac{\mu(\phi)}{\mu_{r}}\left(\nabla'^{2}\bar{\mathbf{u}}'-\frac{12}{\left(h/L\right)^{2}}\bar{\mathbf{u}}'\right)+\frac{\gamma}{\mu_{r}U_{r}}\left(\frac{\pi}{4}\nabla'\cdot\left(\frac{\boldsymbol{\nabla'}\phi}{\vert\boldsymbol{\nabla'}\phi\vert}\right)-\frac{2}{h/L}\right)\delta'(\phi)\mathbf{n},\label{eq:dimensionlessMomentum}
 \end{alignat}
 
 \end_inset
@@ -1872,6 +1872,17 @@ status open
 
 \backslash
 end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+here n pointing toward the fluid w giving my definition of phi in Comsol
+ thus -2/h
 \end_layout
 
 \end_inset
@@ -1932,7 +1943,18 @@ noprefix "false"
 
 .
  Only the upper half of a line is studied taking advantage of the conditions
- of symmetry, and each fluid flows from right to left.
+ of symmetry, and each fluid flows from right to left and boundary conditions
+ used are summarized in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "tab:Boundary-conditions"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -2105,6 +2127,16 @@ Outlet
 \end_inset
 
 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+à vérifier
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2242,7 +2274,7 @@ Here we study the convergence of the quantities we are interested in as
 \end_inset
 
 .
- We used a quadratic discretization for the velocity and the level-set function
+ We used a quadratic discretization for the velocity and the level-set functimon
  and a linear discretization for the pressure.
  In 
 \begin_inset CommandInset ref
@@ -2425,7 +2457,7 @@ name "sec:Approximation-made"
 \end_layout
 
 \begin_layout Paragraph
-Approximation relative to the fluid-fluid interface
+Approximation made with respect to the fluid-fluid interface
 \end_layout
 
 \begin_layout Standard
