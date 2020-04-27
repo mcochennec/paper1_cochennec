@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  25 APR 2020 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.7)  26 APR 2020 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Pc.tex
-(./Pc.tex
+**ratio_Total.tex
+(./ratio_Total.tex
 LaTeX2e <2020-02-02>
 L3 programming layer <2020-02-03>
 (c:/texlive/2019/texmf-dist/tex/latex/base/minimal.cls
 Document Class: minimal 2001/05/25 Standard LaTeX minimal class
-) (c:/texlive/2019/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+) (c:/texlive/2019/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 (c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
@@ -99,8 +99,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count173
 \l__pdf_internal_box=\box45
 )
-(./Pc.aux)
-\openout1 = `Pc.aux'.
+(./ratio_Total.aux)
+\openout1 = `ratio_Total.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
@@ -116,7 +116,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
- (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
 \scratchdimen=\dimen146
@@ -145,23 +146,23 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(0.0pt, 283.0575pt, 0.0pt)
-* v-part:(T,H,B)=(0.0pt, 283.0575pt, 0.0pt)
-* \paperwidth=283.0575pt
-* \paperheight=283.0575pt
-* \textwidth=283.0575pt
-* \textheight=283.0575pt
+* h-part:(L,W,R)=(0.0pt, 360.34624pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 215.80624pt, 0.0pt)
+* \paperwidth=360.34624pt
+* \paperheight=215.80624pt
+* \textwidth=360.34624pt
+* \textheight=215.80624pt
 * \oddsidemargin=-72.26999pt
 * \evensidemargin=-72.26999pt
 * \topmargin=-109.26999pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=3.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
 * \columnsep=0.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -175,31 +176,33 @@ e
 \gptboxwidth=\skip51
 \gptboxtext=\box47
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 191.
+(Font)              <10.95> on input line 181.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 191.
-<Pc-inc.pdf, id=1, 284.06125pt x 284.06125pt>
-File: Pc-inc.pdf Graphic file (type pdf)
-<use Pc-inc.pdf>
-Package pdftex.def Info: Pc-inc.pdf  used on input line 192.
-(pdftex.def)             Requested size: 284.06053pt x 284.06053pt.
-[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Pc-inc.pdf>
-] (./Pc.aux) ) 
+(Font)              <8> on input line 181.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 181.
+<ratio_Total-inc.pdf, id=1, 361.35pt x 216.81pt>
+File: ratio_Total-inc.pdf Graphic file (type pdf)
+<use ratio_Total-inc.pdf>
+Package pdftex.def Info: ratio_Total-inc.pdf  used on input line 182.
+(pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
+[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ratio_Total
+-inc.pdf>] (./ratio_Total.aux) ) 
 Here is how much of TeX's memory you used:
- 1702 strings out of 481248
- 25858 string characters out of 5922089
- 264746 words of memory out of 5000000
- 16976 multiletter control sequences out of 15000+600000
- 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1718 strings out of 481248
+ 26183 string characters out of 5922089
+ 263808 words of memory out of 5000000
+ 16986 multiletter control sequences out of 15000+600000
+ 535077 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,6n,36p,197b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Pc.pdf (1 page, 51154 bytes).
+ 30i,7n,36p,206b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on ratio_Total.pdf (1 page, 50324 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream

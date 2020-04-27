@@ -69,7 +69,7 @@
 \color #faf0e6
 \end_branch
 \branch Results
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -2395,7 +2395,7 @@ name "fig:Mesh-convergence-study"
 \begin_layout Standard
 \begin_inset Branch Results
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Results
@@ -2410,7 +2410,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/saturation.pdf
+	filename figures/pdf/saturation.pdf
 
 \end_inset
 
@@ -2421,6 +2421,57 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/Pc.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dynamic pressure difference normalized with respect to the pressure jump
+ across the interface due to its curvature in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction 
+\begin_inset Formula $(2\gamma/h$
+\end_inset
+
+) as a function of the dimensionless aperture and for different capillary
+ numbers, the resuslts are obtained at steady-state in UC3 for 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{w}=0.5$
+\end_inset
+
 
 \end_layout
 
@@ -2518,7 +2569,7 @@ noprefix "false"
 \end_inset
 
 .
- We computed the drag force per unite of surface on each side wall of the
+ We computed the drag force per unit surface area on each side wall of the
  microchannel and plot in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2531,8 +2582,9 @@ noprefix "false"
 
  the drag force exerted upon the curved side normalized with respect to
  the flat wall.
- The drag exerted upon the curved wall is between 70% to 80% of the drag
- upon the flat wall and the discrepancy becomes smaller when 
+ The drag per unit surface area exerted upon the curved wall is between
+ 70% to 80% of the drag per unit surface area upon the flat wall and the
+ discrepancy becomes smaller when 
 \begin_inset Formula $h/L$
 \end_inset
 
@@ -2606,7 +2658,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Drag force per unite of surface exerted upon the curved wall side of the
+Drag force per unit surface area exerted upon the curved wall side of the
  microchannel normalized with respect to the drag force exerted upon the
  flat wall.
 \begin_inset CommandInset label
