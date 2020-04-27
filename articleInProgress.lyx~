@@ -1585,8 +1585,8 @@ POURQUOI PAS LE MEME SIGNE DEVANT LES DRAG?
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-0 & =-\varepsilon_{w}\nabla\langle p_{w}\rangle^{w}-\mathbf{f}_{wp}+\mathbf{f}_{wc}+\mathbf{f}_{wo},\\
-0 & =-\varepsilon_{o}\nabla\langle p_{o}\rangle^{o}-\mathbf{f}_{op}+\mathbf{f}_{ow},
+0 & =-\varepsilon_{w}\nabla\langle p_{w}\rangle^{w}-\mu_{w}k^{2}\langle\bar{\mathbf{u}}_{w}\rangle+\mathbf{f}_{wc}+\mathbf{f}_{wo},\\
+0 & =-\varepsilon_{o}\nabla\langle p_{o}\rangle^{o}-\mu_{o}k^{2}\langle\bar{\mathbf{u}}_{o}\rangle+\mathbf{f}_{ow},
 \end{alignat}
 
 \end_inset
@@ -1632,11 +1632,11 @@ noprefix "false"
 \begin_inset Formula $\mathbf{f}_{ij}$
 \end_inset
 
- denotes the drag forces per surface unit exerted upon phase 
+ denotes the drag forces per unit surface area exerted upon phase 
 \begin_inset Formula $j$
 \end_inset
 
- by the phase 
+ by phase 
 \begin_inset Formula $i$
 \end_inset
 
@@ -1945,7 +1945,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Paragraph
-Geometry and boundary conditions
+Geometry and boundary conditions and simulation parameters
 \end_layout
 
 \begin_layout Standard
@@ -1983,7 +1983,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2032,7 +2032,7 @@ name "fig:model"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2405,7 +2405,7 @@ Results
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2454,8 +2454,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dynamic pressure difference normalized with respect to the pressure jump
- across the interface due to its curvature in the 
+Dynamic pressure difference and pressure jump across the interface due to
+ its curvature in the 
 \begin_inset Formula $z$
 \end_inset
 
@@ -2463,7 +2463,11 @@ Dynamic pressure difference normalized with respect to the pressure jump
 \begin_inset Formula $(2\gamma/h$
 \end_inset
 
-) as a function of the dimensionless aperture and for different capillary
+) normalized with respect to the reference pressure 
+\begin_inset Formula $U_{T}\mu_{o}/L$
+\end_inset
+
+ as a function of the dimensionless aperture and for different capillary
  numbers, the resuslts are obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
