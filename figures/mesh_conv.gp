@@ -1,5 +1,5 @@
 set terminal cairolatex standalone pdf size 16cm,9cm
-set output 'mesh_conv.tex'
+set output 'DNS_mesh_conv.tex'
 
 
 set style line 1 linecolor rgb '#0072bd' lt 1 lw 2.5 dt 1 pt 5 ps .5  # blue

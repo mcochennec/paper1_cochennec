@@ -23,7 +23,7 @@ set style line 4 lc rgb '#f4a582' lt 4 pt 15 lw 5.0 ps 1.2
 set key at 0.3,1 spacing 1.25
 # Axes label 
 set xlabel '$h^*$'
-set ylabel '$T_{f}^x/T_{s}^x$' 
+set ylabel '$d_{f}^x/d_{s}^x$' 
 
 
 #set log y

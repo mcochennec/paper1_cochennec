@@ -1,6 +1,6 @@
 set terminal cairolatex standalone pdf 
 set size square
-set output 'litt_perm.tex'
+set output 'INTRODUCTION_litt_perm.tex'
 
 # Line styles
 set border linewidth 1.5

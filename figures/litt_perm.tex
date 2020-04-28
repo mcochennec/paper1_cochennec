@@ -18,7 +18,19 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[cp1252]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{unicode-math}
+\setmathfont{STIX2Math}[
+Extension={.otf},
+Path=STIX2fonts/,
+Scale=1.1]
+\setmainfont{STIX2Text}[
+Extension={.otf},
+Path=STIX2fonts/,
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+ItalicFont={*-Italic},
+BoldItalicFont={*-BoldItalic}]
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -63,7 +75,6 @@
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-  \inputencoding{cp1252}%
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%

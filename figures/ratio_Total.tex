@@ -18,7 +18,21 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[cp1252]{inputenc}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmathfont{STIX2Math}[
+Extension={.otf},
+Path=STIX2fonts/,
+Scale=1.1]
+\setmainfont{STIX2Text}[
+Extension={.otf},
+Path=STIX2fonts/,
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+ItalicFont={*-Italic},
+BoldItalicFont={*-BoldItalic}]
+
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -63,7 +77,6 @@
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-  \inputencoding{cp1252}%
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -166,7 +179,7 @@
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(182,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$T_{f}^x/T_{s}^x$}}}%
+      \put(182,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$d_{f}^x/d_{s}^x$}}}%
       \csname LTb\endcsname%%
       \put(3820,153){\makebox(0,0){\strut{}$h^*$}}%
       \csname LTb\endcsname%%

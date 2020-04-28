@@ -309,7 +309,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/fluidRepartitionSketch.pdf
+	filename figures/pdf/INTRODUCTION_fluidRepartitionSketch.pdf
 
 \end_inset
 
@@ -840,7 +840,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/litt_perm.pdf
+	filename figures/pdf/INTRODUCTION_litt_perm.pdf
 
 \end_inset
 
@@ -950,7 +950,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/heleShawSystemSketch.pdf
+	filename figures/pdf/THEORY_heleShawSystemSketch.pdf
 
 \end_inset
 
@@ -1599,8 +1599,8 @@ POURQUOI PAS LE MEME SIGNE DEVANT LES DRAG?
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-0 & =-\varepsilon_{w}\nabla\langle p_{w}\rangle^{w}-\mu_{w}k^{2}\langle\bar{\mathbf{u}}_{w}\rangle+\mathbf{f}_{wc}+\mathbf{f}_{wo},\\
-0 & =-\varepsilon_{o}\nabla\langle p_{o}\rangle^{o}-\mu_{o}k^{2}\langle\bar{\mathbf{u}}_{o}\rangle+\mathbf{f}_{ow},
+0 & =-\varepsilon_{w}\nabla\langle p_{w}\rangle^{w}-\mu_{w}k^{2}\langle\bar{\mathbf{u}}_{w}\rangle+\mathbf{d}_{wc}+\mathbf{d}_{wo},\\
+0 & =-\varepsilon_{o}\nabla\langle p_{o}\rangle^{o}-\mu_{o}k^{2}\langle\bar{\mathbf{u}}_{o}\rangle+\mathbf{d}_{ow},
 \end{alignat}
 
 \end_inset
@@ -1643,7 +1643,7 @@ noprefix "false"
 
  is in contact with the wedge.
  Here, 
-\begin_inset Formula $\mathbf{f}_{ij}$
+\begin_inset Formula $\mathbf{d}_{ij}$
 \end_inset
 
  denotes the drag forces per unit surface area exerted upon phase 
@@ -1997,12 +1997,12 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/model.pdf
+	filename figures/pdf/DNS_model.pdf
 
 \end_inset
 
@@ -2353,7 +2353,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/mesh_conv.pdf
+	filename figures/pdf/DNS_mesh_conv.pdf
 
 \end_inset
 
@@ -2424,7 +2424,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/saturation.pdf
+	filename figures/pdf/RESULTS_saturation.pdf
 
 \end_inset
 
@@ -2452,12 +2452,12 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/Pc.pdf
+	filename figures/pdf/RESULTS_Pc.pdf
 
 \end_inset
 
@@ -2495,6 +2495,43 @@ Dynamic pressure difference and pressure jump across the interface due to
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_ratio_Total.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2619,7 +2656,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/microchannel.pdf
+	filename figures/pdf/APPENDIX_microchannel.pdf
 
 \end_inset
 
@@ -2665,7 +2702,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/test_half_circle.pdf
+	filename figures/pdf/APPENDIX_test_half_circle.pdf
 
 \end_inset
 

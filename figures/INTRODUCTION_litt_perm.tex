@@ -32,8 +32,6 @@ UprightFont={*-Regular},
 BoldFont={*-Bold},
 ItalicFont={*-Italic},
 BoldItalicFont={*-BoldItalic}]
-
-
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -78,7 +76,6 @@ BoldItalicFont={*-BoldItalic}]
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -161,36 +158,48 @@ BoldItalicFont={*-BoldItalic}]
 \begin{picture}(7180.00,4300.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2033,1076){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(2081,700){\makebox(0,0)[r]{\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2033,1827){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(2081,1263){\makebox(0,0)[r]{\strut{}$0.05$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2033,2578){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(2081,1827){\makebox(0,0)[r]{\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2033,3329){\makebox(0,0)[r]{\strut{}$1.2$}}%
+      \put(2081,2390){\makebox(0,0)[r]{\strut{}$0.15$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2033,4080){\makebox(0,0)[r]{\strut{}$1.4$}}%
+      \put(2081,2953){\makebox(0,0)[r]{\strut{}$0.2$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2458,481){\makebox(0,0){\strut{}1/16}}%
+      \put(2081,3517){\makebox(0,0)[r]{\strut{}$0.25$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3475,481){\makebox(0,0){\strut{}1/8}}%
+      \put(2081,4080){\makebox(0,0)[r]{\strut{}$0.3$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(4493,481){\makebox(0,0){\strut{}1/4}}%
+      \put(2178,481){\makebox(0,0){\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5510,481){\makebox(0,0){\strut{}1/2}}%
+      \put(2855,481){\makebox(0,0){\strut{}$0.2$}}%
+      \colorrgb{0.50,0.50,0.50}%%
+      \put(3532,481){\makebox(0,0){\strut{}$0.4$}}%
+      \colorrgb{0.50,0.50,0.50}%%
+      \put(4209,481){\makebox(0,0){\strut{}$0.6$}}%
+      \colorrgb{0.50,0.50,0.50}%%
+      \put(4886,481){\makebox(0,0){\strut{}$0.8$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(1560,2390){\rotatebox{-270}{\makebox(0,0){\strut{}Normalized drag force}}}%
+      \put(1317,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$\frac{K^*_{wo}}{K_0},\frac{\mu_o}{\mu_w}\frac{K^*_{ow}}{K_0}$}}}%
       \csname LTb\endcsname%%
-      \put(3820,153){\makebox(0,0){\strut{}$h/L$}}%
+      \put(3868,153){\makebox(0,0){\strut{}$S_w$}}%
       \csname LTb\endcsname%%
-      \put(5084,3970){\makebox(0,0)[r]{\strut{}drag}}%
+      \put(3924,3883){\makebox(0,0)[r]{\strut{}Rothman}}%
       \csname LTb\endcsname%%
-      \put(5084,3751){\makebox(0,0)[r]{\strut{}- / unit surface area}}%
+      \put(3924,3664){\makebox(0,0)[r]{\strut{}Dullien and Dong}}%
+      \csname LTb\endcsname%%
+      \put(3924,3445){\makebox(0,0)[r]{\strut{}Li et al.}}%
+      \csname LTb\endcsname%%
+      \put(3924,3226){\makebox(0,0)[r]{\strut{}Zarcone and Len. }}%
+      \csname LTb\endcsname%%
+      \put(3924,3007){\makebox(0,0)[r]{\strut{}annular}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{test_half_circle-inc}}%
+    \put(0,0){\includegraphics{INTRODUCTION_litt_perm-inc}}%
     \gplfronttext
   \end{picture}%
 \endgroup

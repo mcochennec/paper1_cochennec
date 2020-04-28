@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass scrartcl
+\textclass article
 \begin_preamble
 \usepackage{xcolor}
 \usepackage{lineno,hyperref}
@@ -1643,7 +1643,7 @@ noprefix "false"
 
  is in contact with the wedge.
  Here, 
-\begin_inset Formula $\mathbf{f}_{ij}$
+\begin_inset Formula $\mathbf{d}_{ij}$
 \end_inset
 
  denotes the drag forces per unit surface area exerted upon phase 
