@@ -1,6 +1,6 @@
-set terminal cairolatex standalone pdf 
+set terminal cairolatex standalone pdf size 13cm,10cm
 set size square
-set output 'test_half_circle.tex'
+set output 'APPENDIX_test_half_circle.tex'
 
 # Line styles
 set border linewidth 1.5

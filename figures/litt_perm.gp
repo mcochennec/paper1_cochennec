@@ -1,13 +1,13 @@
-set terminal cairolatex standalone pdf 
+set terminal cairolatex standalone pdf size 13cm,10cm
 set size square
 set output 'INTRODUCTION_litt_perm.tex'
 
 # Line styles
 set border linewidth 1.5
-set style line 1 linecolor rgb '#0072bd' lt 1 lw 4.5 dt 1 pt 5 ps 0.5  # blue
-set style line 2 linecolor rgb '#d95319' lt 1 lw 4.5 dt 2 pt 7 ps 0.5 # red
-set style line 3 linecolor rgb '#edb120' lt 1 lw 4.5 dt 2 pt 9 ps 0.5 # green
-set style line 4 linecolor rgb '#77ac30' lt 1 lw 4.5 dt 2 pt 11 ps 0.5 # green
+set style line 1 linecolor rgb '#0072bd' lt 1 lw 4.5 dt 1 pt 5 ps 1.0  # blue
+set style line 2 linecolor rgb '#d95319' lt 1 lw 4.5 dt 2 pt 7 ps 1.0 # red
+set style line 3 linecolor rgb '#edb120' lt 1 lw 4.5 dt 2 pt 9 ps 1.0 # green
+set style line 4 linecolor rgb '#77ac30' lt 1 lw 4.5 dt 2 pt 11 ps 1.0 # green
 set style line 5 lc rgb '#000000' lt 1 lw 4 dt 2  # --- green
 
 set style line 21 lc rgb '#808080' lt 1
@@ -18,7 +18,7 @@ set style line 22 lc rgb '#808080' lt 0 lw 1
 set grid back ls 22
 
 # Legend
-set key l t
+set key at 0.55,0.29
 set key samplen 1.5
 # Axes label 
 set xlabel '$S_w$'

@@ -18,7 +18,6 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[cp1252]{inputenc}
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -63,7 +62,6 @@
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-  \inputencoding{cp1252}%
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -179,7 +177,7 @@
       \put(2579,4464){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{ratio_Total-inc}}%
+    \put(0,0){\includegraphics{RESULTS_ratio_Total-inc}}%
     \gplfronttext
   \end{picture}%
 \endgroup

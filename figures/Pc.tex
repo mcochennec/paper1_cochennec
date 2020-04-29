@@ -18,7 +18,20 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[cp1252]{inputenc}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmathfont{STIX2Math}[
+Extension={.otf},
+Path=STIX2fonts/,
+Scale=1.1]
+\setmainfont{STIX2Text}[
+Extension={.otf},
+Path=STIX2fonts/,
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+ItalicFont={*-Italic},
+BoldItalicFont={*-BoldItalic}]
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -47,7 +60,7 @@
 \fi
 \makeatother
 % Set papersize
-\usepackage[papersize={282.00bp,282.00bp},text={282.00bp,282.00bp}]{geometry}
+\usepackage[papersize={367.00bp,282.00bp},text={367.00bp,282.00bp}]{geometry}
 % No page numbers and no paragraph indentation
 \pagestyle{empty}
 \setlength{\parindent}{0bp}%
@@ -63,7 +76,6 @@
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-  \inputencoding{cp1252}%
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -143,50 +155,50 @@
     \fi%
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
-\begin{picture}(5640.00,5640.00)%
+\begin{picture}(7340.00,5640.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,1167){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(1625,1030){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{0}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,2191){\makebox(0,0)[r]{\strut{}$10$}}%
+      \put(1625,2128){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{1}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,3214){\makebox(0,0)[r]{\strut{}$100$}}%
+      \put(1625,3225){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{2}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,4238){\makebox(0,0)[r]{\strut{}$1000$}}%
+      \put(1625,4323){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{3}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(849,5261){\makebox(0,0)[r]{\strut{}$10000$}}%
+      \put(1625,5420){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{4}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1124,640){\makebox(0,0){\strut{}1/20}}%
+      \put(1937,481){\makebox(0,0){\strut{}1/20}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2407,640){\makebox(0,0){\strut{}1/4}}%
+      \put(3490,481){\makebox(0,0){\strut{}1/4}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2960,640){\makebox(0,0){\strut{}1/2}}%
+      \put(4158,481){\makebox(0,0){\strut{}1/2}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(4795,640){\makebox(0,0){\strut{}5}}%
+      \put(6379,481){\makebox(0,0){\strut{}5}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(1677,640){\makebox(0,0){\strut{}$0.1$}}%
+      \put(2606,481){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3512,640){\makebox(0,0){\strut{}$1$}}%
+      \put(4827,481){\makebox(0,0){\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(5348,640){\makebox(0,0){\strut{}$10$}}%
+      \put(7048,481){\makebox(0,0){\strut{}$10$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
       \put(182,3060){\rotatebox{-270}{\makebox(0,0){\strut{}$P_o^*-P_w^*$}}}%
       \csname LTb\endcsname%%
-      \put(3147,312){\makebox(0,0){\strut{}$h^*$}}%
+      \put(4385,153){\makebox(0,0){\strut{}$h^*$}}%
       \csname LTb\endcsname%%
-      \put(4825,5130){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0}$}}%
+      \put(6525,5289){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0}$}}%
       \csname LTb\endcsname%%
-      \put(4825,4868){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
+      \put(6525,5027){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
       \csname LTb\endcsname%%
-      \put(4825,4606){\makebox(0,0)[r]{\strut{}$Ca=5 \times 10^{-2}$}}%
+      \put(6525,4765){\makebox(0,0)[r]{\strut{}$Ca=5 \times 10^{-2}$}}%
       \csname LTb\endcsname%%
-      \put(4825,4344){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
+      \put(6525,4503){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
       \csname LTb\endcsname%%
-      \put(4825,4082){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
+      \put(6525,4241){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
       \csname LTb\endcsname%%
-      \put(4825,3820){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
+      \put(6525,3979){\makebox(0,0)[r]{\strut{}$-,(2\gamma/h)^*$}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{Pc-inc}}%

@@ -2296,7 +2296,7 @@ Mesh convergence study
 \begin_layout Standard
 Here we study the convergence of the quantities we are interested in as
  a function of the number of mesh elements in the whole geometry.
- The dimensionless numbers for the case study was 
+ The dimensionless numbers for the case study were 
 \begin_inset Formula $Ca=1$
 \end_inset
 
@@ -2333,7 +2333,7 @@ noprefix "false"
 \end_inset
 
  (b).
- These results was obtained in the third unit-cell (UC3) at steady-state
+ These results were obtained in the third unit-cell (UC3) at steady-state
  and, except the difference in average intrinsic pressure, are not very
  sensitive to the number of mesh elements.
  In the following simulations we used 
@@ -2435,7 +2435,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Wetting fluid saturation at steady-state in UC3 as a function of the dimensionle
+ss aperture and for different capillary numbers.
+ Fields of the level-set function at steady-state in UC3 are given for selected
+ value of the dimensionless aperture and 
+\begin_inset Formula $Ca=1$
+\end_inset
 
+ and 
+\begin_inset Formula $Ca=7.5\times10^{-3}$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:wettingFluidSaturation"
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -2452,7 +2470,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2482,7 +2500,8 @@ Dynamic pressure difference and pressure jump across the interface due to
 \end_inset
 
  as a function of the dimensionless aperture and for different capillary
- numbers, the resuslts are obtained at steady-state in UC3 for 
+ numbers.
+ Results obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
@@ -2490,6 +2509,83 @@ Dynamic pressure difference and pressure jump across the interface due to
 \begin_inset Formula $M_{w}=0.5$
 \end_inset
 
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:dynamicPressureDifference"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_tractionTotal.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_multiplotTractionFluidInterface.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2523,15 +2619,37 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Ratio of the total drag force (
+\begin_inset Formula $x$
+\end_inset
 
-\end_layout
+-component) exerted upon the fluid-fluid interface over the total drag force
+ (
+\begin_inset Formula $x$
+\end_inset
+
+-component) exerted upon the fluid-solid interface as a function of the
+ dimensionless aperture and for different capillary numbers.
+ Results obtained at steady-state in UC3 for 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{w}=0.5$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ratioDrafForceTotal"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
 
@@ -2584,6 +2702,10 @@ name "sec:Approximation-made"
 \end_layout
 
 \begin_layout Paragraph
+Approximation made with respect to the fluid-solid interface
+\end_layout
+
+\begin_layout Paragraph
 Approximation made with respect to the fluid-fluid interface
 \end_layout
 
@@ -2612,7 +2734,7 @@ noprefix "false"
 ).
  Due to the construction of this geometry by extruding a cylinder to create
  the curved side of the channel, a special treatment has to be done to correctly
- meshed this part and we chosen to build very small chamfers, as depicted
+ meshed this part and we chose to build very small chamfers, as depicted
  in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2624,7 +2746,7 @@ noprefix "false"
 \end_inset
 
 .
- We computed the drag force per unit surface area on each side wall of the
+ We computed the drag force per unit surface area on each sidewall of the
  microchannel and plot in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2637,13 +2759,10 @@ noprefix "false"
 
  the drag force exerted upon the curved side normalized with respect to
  the flat wall.
- The drag per unit surface area exerted upon the curved wall is between
- 70% to 80% of the drag per unit surface area upon the flat wall and the
- discrepancy becomes smaller when 
-\begin_inset Formula $h/L$
-\end_inset
-
- decreases.
+ The drag per unit surface area exerted upon the curved wall is roughly
+ 70% of the drag per unit surface area upon the flat wall.
+ Giving the greater extent of surface area for the curved wall, the difference
+ regarding the drag computation is negligible.
  
 \end_layout
 
@@ -2713,9 +2832,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Drag force per unit surface area exerted upon the curved wall side of the
- microchannel normalized with respect to the drag force exerted upon the
- flat wall.
+Drag force and drag force per unit surface area exerted upon the curved
+ wall side of the microchannel normalized with respect to the drag force
+ exerted upon the flat wall.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Drag-force-exerted"

@@ -3,7 +3,7 @@
 % Set font size
 \makeatletter
 \def\@ptsize{1}
-\InputIfFileExists{size9.clo}{}{%
+\InputIfFileExists{size11.clo}{}{%
    \GenericError{(gnuplot) \space\space\space\@spaces}{%
       Gnuplot Error: File `size11.clo' not found! Could not set font size%
    }{See the gnuplot documentation for explanation.%
@@ -18,19 +18,7 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[T1]{fontenc}
-\usepackage{unicode-math}
-\setmathfont{STIX2Math}[
-Extension={.otf},
-Path=STIX2fonts/,
-Scale=1.1]
-\setmainfont{STIX2Text}[
-Extension={.otf},
-Path=STIX2fonts/,
-UprightFont={*-Regular},
-BoldFont={*-Bold},
-ItalicFont={*-Italic},
-BoldItalicFont={*-BoldItalic}]
+
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -59,7 +47,7 @@ BoldItalicFont={*-BoldItalic}]
 \fi
 \makeatother
 % Set papersize
-\usepackage[papersize={359.00bp,215.00bp},text={359.00bp,215.00bp}]{geometry}
+\usepackage[papersize={367.00bp,282.00bp},text={367.00bp,282.00bp}]{geometry}
 % No page numbers and no paragraph indentation
 \pagestyle{empty}
 \setlength{\parindent}{0bp}%
@@ -154,51 +142,53 @@ BoldItalicFont={*-BoldItalic}]
     \fi%
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
-\begin{picture}(7180.00,4300.00)%
+\begin{picture}(7340.00,5640.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,700){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(1722,1374){\makebox(0,0)[r]{\strut{}1}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,1263){\makebox(0,0)[r]{\strut{}$0.05$}}%
+      \put(1722,700){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{-1}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,1827){\makebox(0,0)[r]{\strut{}$0.1$}}%
+      \put(1722,2049){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{1}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,2390){\makebox(0,0)[r]{\strut{}$0.15$}}%
+      \put(1722,2723){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{2}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,2953){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(1722,3397){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{3}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,3517){\makebox(0,0)[r]{\strut{}$0.25$}}%
+      \put(1722,4071){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{4}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2081,4080){\makebox(0,0)[r]{\strut{}$0.3$}}%
+      \put(1722,4746){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{5}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2178,481){\makebox(0,0){\strut{}$0$}}%
+      \put(1722,5420){\makebox(0,0)[r]{\strut{}\(1.0 \times 10^{6}\)}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2855,481){\makebox(0,0){\strut{}$0.2$}}%
+      \put(2903,481){\makebox(0,0){\strut{}$0.1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(3532,481){\makebox(0,0){\strut{}$0.4$}}%
+      \put(4975,481){\makebox(0,0){\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(4209,481){\makebox(0,0){\strut{}$0.6$}}%
-      \colorrgb{0.50,0.50,0.50}%%
-      \put(4886,481){\makebox(0,0){\strut{}$0.8$}}%
+      \put(7048,481){\makebox(0,0){\strut{}$10$}}%
+      \csname LTb\endcsname%%
+      \put(2078,5355){\makebox(0,0)[l]{\strut{}$2^{\mathrm{nd}}\:\mathrm{order}$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(1317,2390){\rotatebox{-270}{\makebox(0,0){\strut{}$\frac{K^*_{wo}}{K_0},\frac{\mu_o}{\mu_w}\frac{K^*_{ow}}{K_0}$}}}%
+      \put(473,3060){\rotatebox{-270}{\makebox(0,0){\strut{}$T_{i}^x\:(\mathrm{N/m^3})$}}}%
       \csname LTb\endcsname%%
-      \put(3868,153){\makebox(0,0){\strut{}$S_w$}}%
+      \put(4433,153){\makebox(0,0){\strut{}$h^*$}}%
       \csname LTb\endcsname%%
-      \put(3924,3883){\makebox(0,0)[r]{\strut{}Rothman}}%
+      \put(6282,5196){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0},s$}}%
       \csname LTb\endcsname%%
-      \put(3924,3664){\makebox(0,0)[r]{\strut{}Dullien and Dong}}%
+      \put(6282,4923){\makebox(0,0)[r]{\strut{}$-,f$}}%
       \csname LTb\endcsname%%
-      \put(3924,3445){\makebox(0,0)[r]{\strut{}Li et al.}}%
+      \put(6282,4650){\makebox(0,0)[r]{\strut{}$Ca=5 \times 10^{-2},s$}}%
       \csname LTb\endcsname%%
-      \put(3924,3226){\makebox(0,0)[r]{\strut{}Zarcone and Len. }}%
+      \put(6282,4377){\makebox(0,0)[r]{\strut{}$-,f$}}%
       \csname LTb\endcsname%%
-      \put(3924,3007){\makebox(0,0)[r]{\strut{}annular}}%
+      \put(6282,4104){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3},s$}}%
+      \csname LTb\endcsname%%
+      \put(6282,3831){\makebox(0,0)[r]{\strut{}$-,f$}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{litt_perm-inc}}%
+    \put(0,0){\includegraphics{tractionTotal-inc}}%
     \gplfronttext
   \end{picture}%
 \endgroup

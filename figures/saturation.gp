@@ -1,5 +1,5 @@
-set terminal cairolatex standalone pdf dashed
-set output 'saturation.tex'
+set terminal cairolatex standalone pdf dashed size 13cm,10cm
+set output 'RESULTS_saturation.tex'
 
 # define axis
 # remove border on top and right and set color to gray
@@ -32,6 +32,7 @@ set yrange[0.0:1.0]
 #set format y "%2.1t{*10^{%L}}"
 #set ytics add ('0' 0)
 set ytic 0.2
+#set xtics ("5" 5, "1/2" .5, "1/4" 0.25, "1/8" .125, "1/20" .05)
 # Axis labels
 #set tics scale 0.5
 

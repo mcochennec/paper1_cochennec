@@ -1,6 +1,6 @@
-set terminal cairolatex standalone pdf dashed size 10cm,10cm
-set output 'Pc.tex'
-set size square
+set terminal cairolatex standalone pdf dashed size 13cm,10cm
+set output 'RESULTS_Pc.tex'
+
 # define axis
 # remove border on top and right and set color to gray
 set style line 21 lc rgb '#808080' lt 1
@@ -35,7 +35,7 @@ set xrange[4e-2:10]
 set yrange[0.5:10000]
 
 
-#set format y '\(%2.1t \times 10^{%L}\)'
+set format y '\(%2.1t \times 10^{%L}\)'
 #set ytics add ('0' 0)
 #et ytic 0.4
 # Axis labels

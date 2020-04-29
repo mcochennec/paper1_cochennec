@@ -1,5 +1,5 @@
-set terminal cairolatex eps dashed
-set output 'tractionTotal.tex'
+set terminal cairolatex standalone pdf dashed size 13cm,10cm
+set output 'RESULTS_tractionTotal.tex'
 
 # define axis
 # remove border on top and right and set color to gray
@@ -32,7 +32,7 @@ set log y
 set log x
 # Axis ranges
 set xrange[0.03:10]
-set yrange[1:1e6]
+#set yrange[1:1e6]
 set format y '\(%2.1t \times 10^{%L}\)'
 set ytics add ('1' 1)
 #set ytic 0.1

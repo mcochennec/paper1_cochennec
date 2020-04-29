@@ -1,5 +1,5 @@
-set terminal cairolatex eps dashed size 14cm,14cm
-set output 'multiplotTractionFluidInterface.tex'
+set terminal cairolatex standalone pdf dashed size 14cm,14cm
+set output 'RESULTS_multiplotTractionFluidInterface.tex'
 
 # define axis
 # remove border on top and right and set color to gray
@@ -48,7 +48,7 @@ set format y '\(%2.1t \times 10^{%L}\)'
 # Plot
 #
 set xlabel '$h^*$'
-set ylabel '$T_{f}^x\:(\mathrm{N/m^3})$' offset 3,0
+set ylabel '$d_{f}^x\:(\mathrm{N/m^3})$' offset 3,0
 set label 1 '$Ca=1$' at 0.5,9e3
 set label 2 '$2$' at 0.1,6e2
 set object 1 poly from X1,Y1 to X2,Y1 to X1,Y2 to X1,Y1 fs empty border 0

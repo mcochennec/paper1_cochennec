@@ -18,7 +18,7 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage[cp1252]{inputenc}
+
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -63,7 +63,7 @@
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
-  \inputencoding{cp1252}%
+
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -146,40 +146,36 @@
 \begin{picture}(7340.00,5640.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,700){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(1443,1224){\makebox(0,0)[r]{\strut{}$0.6$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,1644){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(1443,2273){\makebox(0,0)[r]{\strut{}$0.8$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,2588){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(1443,3322){\makebox(0,0)[r]{\strut{}$1$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,3532){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(1443,4371){\makebox(0,0)[r]{\strut{}$1.2$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,4476){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(1443,5420){\makebox(0,0)[r]{\strut{}$1.4$}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(655,5420){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(1997,481){\makebox(0,0){\strut{}1/16}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(2057,481){\makebox(0,0){\strut{}$0.1$}}%
+      \put(3418,481){\makebox(0,0){\strut{}1/8}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(4552,481){\makebox(0,0){\strut{}$1$}}%
+      \put(4839,481){\makebox(0,0){\strut{}1/4}}%
       \colorrgb{0.50,0.50,0.50}%%
-      \put(7048,481){\makebox(0,0){\strut{}$10$}}%
+      \put(6260,481){\makebox(0,0){\strut{}1/2}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%%
-      \put(182,3060){\rotatebox{-270}{\makebox(0,0){\strut{}$d_{f}^x/d_{s}^x$}}}%
+      \put(970,3060){\rotatebox{-270}{\makebox(0,0){\strut{}Normalized drag force}}}%
       \csname LTb\endcsname%%
-      \put(3900,153){\makebox(0,0){\strut{}$h^*$}}%
+      \put(3900,153){\makebox(0,0){\strut{}$h/L$}}%
       \csname LTb\endcsname%%
-      \put(2579,5283){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{0}$}}%
+      \put(5834,5310){\makebox(0,0)[r]{\strut{}drag}}%
       \csname LTb\endcsname%%
-      \put(2579,5010){\makebox(0,0)[r]{\strut{}$Ca=5 \times 10^{-2}$}}%
-      \csname LTb\endcsname%%
-      \put(2579,4737){\makebox(0,0)[r]{\strut{}$Ca=1 \times 10^{-2}$}}%
-      \csname LTb\endcsname%%
-      \put(2579,4464){\makebox(0,0)[r]{\strut{}$Ca=7.5 \times 10^{-3}$}}%
+      \put(5834,5091){\makebox(0,0)[r]{\strut{}- / unit surface area}}%
     }%
     \gplbacktext
-    \put(0,0){\includegraphics{ratio_Total-inc}}%
+    \put(0,0){\includegraphics{APPENDIX_test_half_circle-inc}}%
     \gplfronttext
   \end{picture}%
 \endgroup

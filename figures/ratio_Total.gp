@@ -1,6 +1,6 @@
-set terminal cairolatex standalone pdf
+set terminal cairolatex standalone pdf size 13cm,10cm
 
-set output 'ratio_Total.tex'
+set output 'RESULTS_ratio_Total.tex'
 
 # define axis
 # remove border on top and right and set color to gray
