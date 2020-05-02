@@ -30,7 +30,7 @@ Y2 = 10**(2*log10(X2/X1)+log10(Y1))
 X22 = 0.5
 Y11 = 5
 Y22 = 20
-X11 = 10**(-log10(Y22/Y11)/2+log10(X22)) 
+X11 = 10**(-log10(Y22/Y11)/3+log10(X22)) 
 
 #Multiplot Layout
 set multiplot layout 2,2
@@ -78,7 +78,7 @@ unset label
 unset object 1
 set object 2 poly from X22,Y11 to X22,Y22 to X11,Y22 to X22,Y11 fs empty border 0
 set label '$Ca=0.0075$' at 0.3,9e1
-set label 2 '$2$' at 0.7,10
+set label 2 '$3^{rd}\:\mathrm{order}$' at 0.7,10
 plot 'multiplotFluidInterface.txt' u 1:8 w lp ls 2 t '$viscous$', \
 'multiplotFluidInterface.txt' u 1:9 w lp ls 12 t '$pressure$'
 unset multiplot

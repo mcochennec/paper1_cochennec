@@ -22,8 +22,8 @@ set title '(a)'
 set yrange[0.85:2.]
 set xrange[2e3:4e5]
 set multiplot layout 1,2
-plot 'mesh_conv.txt' u 1:2 w lp ls 1 t '$t^x_{wo}\quad$', \
-'mesh_conv.txt' u 1:4 w lp ls 4 t '$t^x_{wc}\quad$', \
+plot 'mesh_conv.txt' u 1:2 w lp ls 1 t '$d^x_{wo}\quad$', \
+'mesh_conv.txt' u 1:4 w lp ls 4 t '$d^x_{wc}\quad$', \
 'mesh_conv.txt' u 1:5 w lp ls 3 t '$\langle u^x_w \rangle\quad$', \
 'mesh_conv.txt' u 1:3 w lp ls 2 t '$\langle p_o \rangle^o-\langle p_w \rangle^w$'
 

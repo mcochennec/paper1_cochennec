@@ -18,20 +18,7 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{transparent}
-\usepackage{fontspec}
-\usepackage{unicode-math}
 
-\setmathfont{STIX2Math}[
-Extension={.otf},
-Path=STIX2fonts/,
-Scale=1.1]
-\setmainfont{STIX2Text}[
-Extension={.otf},
-Path=STIX2fonts/,
-UprightFont={*-Regular},
-BoldFont={*-Bold},
-ItalicFont={*-Italic},
-BoldItalicFont={*-BoldItalic}]
 \makeatletter
 % Select an appropriate default driver (from TeXLive graphics.cfg)
 \begingroup
@@ -76,6 +63,7 @@ BoldItalicFont={*-BoldItalic}]
   % Encoding inside the plot.  In the header of your document, this encoding
   % should to defined, e.g., by using
   % \usepackage[cp1252,<other encodings>]{inputenc}
+
   \makeatletter
   \providecommand\color[2][]{%
     \GenericError{(gnuplot) \space\space\space\@spaces}{%
@@ -182,9 +170,9 @@ BoldItalicFont={*-BoldItalic}]
       \csname LTb\endcsname%%
       \put(2490,4751){\makebox(0,0){\strut{}(a)}}%
       \csname LTb\endcsname%%
-      \put(2304,4171){\makebox(0,0)[r]{\strut{}$t^x_{wo}\quad$}}%
+      \put(2304,4171){\makebox(0,0)[r]{\strut{}$d^x_{wo}\quad$}}%
       \csname LTb\endcsname%%
-      \put(2304,3843){\makebox(0,0)[r]{\strut{}$t^x_{wc}\quad$}}%
+      \put(2304,3843){\makebox(0,0)[r]{\strut{}$d^x_{wc}\quad$}}%
       \csname LTb\endcsname%%
       \put(2304,3515){\makebox(0,0)[r]{\strut{}$\langle u^x_w \rangle\quad$}}%
       \csname LTb\endcsname%%

@@ -25,7 +25,7 @@ set key t r spacing 1.25
 #set key Left
 # Axes label 
 set xlabel '$h^*$'
-set ylabel '$T_{i}^x\:(\mathrm{N/m^3})$' offset 3,0
+set ylabel '$d_{i}^x\:(\mathrm{N/m^3})$' offset 3,0
 
 
 set log y
@@ -39,13 +39,15 @@ set ytics add ('1' 1)
 # Axis labels
 #set tics scale 0.5
 # Slope 
-X1 = 0.125
-Y1 = 5e4
-Y2 = 5e5
-X2 = 10**(-log10(Y2/Y1)/2+log10(X1))
-set object 1 poly from X1,Y1 to X1,Y2 to X2,Y2 to X1,Y1 fs empty border 0
-set label '$2^{\mathrm{nd}}\:\mathrm{order}$' at 4e-2,8e5
-
+X1 = 0.1
+Y1 = 1
+X2 = 0.3
+Y2 = 10**(2*log10(X2/X1)+log10(Y1))
+Y22 = 10**(3*log10(X2/X1)+log10(Y1))
+set object 1 poly from X1,Y1 to X2,Y1 to X1,Y2 to X1,Y1 fs empty border 0
+set object 2 poly from X1,Y1 to X2,Y1 to X1,Y22 to X1,Y1 fs empty border 0
+set label '$2^{\mathrm{nd}}\:\mathrm{order}$' at 0.035,3
+set label '$3^{\mathrm{rd}}\:\mathrm{order}$' at 0.035,20
 # Plot
 plot 'tractionTotal.txt' u 1:3 w lp ls 1 t '$Ca=1 \times 10^{0},s$', \
 'tractionTotal.txt' u 1:2 w lp ls 11 t '$-,f$', \

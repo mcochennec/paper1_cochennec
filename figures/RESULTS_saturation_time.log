@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.7)  1 MAY 2020 18:02
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.7)  29 APR 2020 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**RESULTS_tractionTotal.tex
-(./RESULTS_tractionTotal.tex
+**RESULTS_saturation_time.tex
+(./RESULTS_saturation_time.tex
 LaTeX2e <2020-02-02>
 L3 programming layer <2020-02-03>
 (c:/texlive/2019/texmf-dist/tex/latex/base/minimal.cls
@@ -441,8 +441,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/STIX2Text(1)/bx/n on input line 17.
 
 )
-(./RESULTS_tractionTotal.aux)
-\openout1 = `RESULTS_tractionTotal.aux'.
+(./RESULTS_saturation_time.aux)
+\openout1 = `RESULTS_saturation_time.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
@@ -506,31 +506,31 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \gptboxwidth=\skip54
 \gptboxtext=\box48
 LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 8.43153pt on input line 193.
+(Font)              scaled to size 8.43153pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 6.62479pt on input line 193.
+(Font)              scaled to size 6.62479pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 12.04622pt on input line 193.
+(Font)              scaled to size 12.04622pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 8.43236pt on input line 193.
+(Font)              scaled to size 8.43236pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 6.62543pt on input line 193.
+(Font)              scaled to size 6.62543pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 12.04372pt on input line 193.
+(Font)              scaled to size 12.04372pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 8.4306pt on input line 193.
+(Font)              scaled to size 8.4306pt on input line 189.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 6.62405pt on input line 193.
-File: RESULTS_tractionTotal-inc.pdf Graphic file (type pdf)
-<use RESULTS_tractionTotal-inc.pdf>
-[1] (./RESULTS_tractionTotal.aux) ) 
+(Font)              scaled to size 6.62405pt on input line 189.
+File: RESULTS_saturation_time-inc.pdf Graphic file (type pdf)
+<use RESULTS_saturation_time-inc.pdf>
+[1] (./RESULTS_saturation_time.aux) ) 
 Here is how much of TeX's memory you used:
- 8504 strings out of 479827
- 179467 string characters out of 5897345
- 739534 words of memory out of 5000000
- 25566 multiletter control sequences out of 15000+600000
- 534287 words of font info for 51 fonts, out of 8000000 for 9000
+ 8498 strings out of 479827
+ 179231 string characters out of 5897345
+ 738536 words of memory out of 5000000
+ 25563 multiletter control sequences out of 15000+600000
+ 534263 words of font info for 48 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 49i,8n,111p,300b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,7n,111p,302b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RESULTS_tractionTotal.pdf (1 page).
+Output written on RESULTS_saturation_time.pdf (1 page).
