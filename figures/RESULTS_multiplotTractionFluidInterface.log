@@ -1,248 +1,415 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.7)  1 MAY 2020 20:21
-entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.2.12)  2 MAY 2020 20:11
+ restricted system commands enabled.
 **RESULTS_multiplotTractionFluidInterface.tex
 (./RESULTS_multiplotTractionFluidInterface.tex
-LaTeX2e <2020-02-02>
-L3 programming layer <2020-02-03>
-(c:/texlive/2019/texmf-dist/tex/latex/base/minimal.cls
+LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2019-05-18 2.97 luaotfload entry point
+Lua module: luaotfload-init 2019-05-18 2.97 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2019-05-18 2.65 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-05-18 2.65 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2019-05-18 2.97 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-05-18 2.97 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-05-18 2.97 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is /home/maxime/.texlive2019/texmf-var/
+luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-05-18.lua” from kpse
+-resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
+-2019-05-18.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.108”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2019-05-18 2.97 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2019-05-18 2.97 luaotfload submodule / database
+Lua module: luaotfload-colors 2019-05-18 2.97 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2019-05-18 2.97 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is /home/maxime/.texlive2019/texmf-var/
+luatex-cache/generic/names.
+Lua module: luaotfload-features 2019-05-18 2.97 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-05-18 2.97 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-05-18 2.97 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.050 seconds
+(/usr/share/texlive/texmf-dist/tex/latex/base/minimal.cls
 Document Class: minimal 2001/05/25 Standard LaTeX minimal class
-) (c:/texlive/2019/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
-)
-(c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/maxime/.texlive2019/texm
+f-var/luatex-cache/generic/names/luaotfload-names.luc)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count163
-\calc@Bcount=\count164
-\calc@Adimen=\dimen134
-\calc@Bdimen=\dimen135
-\calc@Askip=\skip47
-\calc@Bskip=\skip48
+\calc@Acount=\count80
+\calc@Bcount=\count81
+\calc@Adimen=\dimen102
+\calc@Bdimen=\dimen103
+\calc@Askip=\skip41
+\calc@Bskip=\skip42
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count165
-\calc@Cskip=\skip49
+\calc@Ccount=\count82
+\calc@Cskip=\skip43
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 105.
+Package graphics Info: Driver file: luatex.def on input line 99.
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 ))
-\Gin@req@height=\dimen136
-\Gin@req@width=\dimen137
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: xetex.def on input line 147.
+Package color Info: Driver file: luatex.def on input line 147.
 )
-(c:/texlive/2019/texmf-dist/tex/latex/transparent/transparent.sty
-Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
+Package: transparent 2018/11/18 v1.3 Transparency via pdfTeX's color stack (HO)
 
-
-(c:/texlive/2019/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
 
-Package transparent Warning: Loading aborted, because pdfTeX is not running in 
-PDF mode.
-
-) (c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(c:/texlive/2019/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count166
-\Gm@cntv=\count167
-\c@Gm@tempcnt=\count168
-\Gm@bindingoffset=\dimen138
-\Gm@wd@mp=\dimen139
-\Gm@odd@mp=\dimen140
-\Gm@even@mp=\dimen141
-\Gm@layoutwidth=\dimen142
-\Gm@layoutheight=\dimen143
-\Gm@layouthoffset=\dimen144
-\Gm@layoutvoffset=\dimen145
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count83
+\Gm@cntv=\count84
+\c@Gm@tempcnt=\count85
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
 \Gm@dimlist=\toks15
 )
 Using configuration file gnuplot.cfg
-(./gnuplot.cfg (c:/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec.sty
-(c:/texlive/2019/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(c:/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-02-03 L3 programming layer (loader) 
+(./gnuplot.cfg (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-07-01 L3 programming layer (loader) 
 
-(c:/texlive/2019/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
-File: l3backend-xdvipdfmx.def 2020-02-03 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count169
-\l__pdf_internal_box=\box45
-\g__pdf_backend_object_int=\count170
-\g__pdf_backend_annotation_int=\count171
-))
-Package: xparse 2020-02-03 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count172
-\g__xparse_grabber_int=\count173
-\l__xparse_m_args_int=\count174
-\l__xparse_v_nesting_int=\count175
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-07-01 L3 programming layer (code)
+\ucharcat@table=\catcodetable5
+\c_max_int=\count86
+\l_tmpa_int=\count87
+\l_tmpb_int=\count88
+\g_tmpa_int=\count89
+\g_tmpb_int=\count90
+\g__kernel_prg_map_int=\count91
+\c__ior_term_ior=\count92
+\c_log_iow=\count93
+\l_iow_line_count_int=\count94
+\l__iow_line_target_int=\count95
+\l__iow_one_indent_int=\count96
+\l__iow_indent_int=\count97
+\c_zero_dim=\dimen114
+\c_max_dim=\dimen115
+\l_tmpa_dim=\dimen116
+\l_tmpb_dim=\dimen117
+\g_tmpa_dim=\dimen118
+\g_tmpb_dim=\dimen119
+\c_zero_skip=\skip44
+\c_max_skip=\skip45
+\l_tmpa_skip=\skip46
+\l_tmpb_skip=\skip47
+\g_tmpa_skip=\skip48
+\g_tmpb_skip=\skip49
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count98
+\l__intarray_loop_int=\count99
+\c__intarray_sp_dim=\dimen120
+\g__intarray_font_int=\count100
+\c__fp_leading_shift_int=\count101
+\c__fp_middle_shift_int=\count102
+\c__fp_trailing_shift_int=\count103
+\c__fp_big_leading_shift_int=\count104
+\c__fp_big_middle_shift_int=\count105
+\c__fp_big_trailing_shift_int=\count106
+\c__fp_Bigg_leading_shift_int=\count107
+\c__fp_Bigg_middle_shift_int=\count108
+\c__fp_Bigg_trailing_shift_int=\count109
+\g__fp_array_int=\count110
+\l__fp_array_loop_int=\count111
+\l__sort_length_int=\count112
+\l__sort_min_int=\count113
+\l__sort_top_int=\count114
+\l__sort_max_int=\count115
+\l__sort_true_max_int=\count116
+\l__sort_block_int=\count117
+\l__sort_begin_int=\count118
+\l__sort_end_int=\count119
+\l__sort_A_int=\count120
+\l__sort_B_int=\count121
+\l__sort_C_int=\count122
+\l__str_internal_int=\count123
+\l__tl_analysis_normal_int=\count124
+\l__tl_analysis_index_int=\count125
+\l__tl_analysis_nesting_int=\count126
+\l__tl_analysis_type_int=\count127
+\l__regex_internal_a_int=\count128
+\l__regex_internal_b_int=\count129
+\l__regex_internal_c_int=\count130
+\l__regex_balance_int=\count131
+\l__regex_group_level_int=\count132
+\l__regex_mode_int=\count133
+\c__regex_cs_in_class_mode_int=\count134
+\c__regex_cs_mode_int=\count135
+\l__regex_catcodes_int=\count136
+\l__regex_default_catcodes_int=\count137
+\c__regex_catcode_L_int=\count138
+\c__regex_catcode_O_int=\count139
+\c__regex_catcode_A_int=\count140
+\c__regex_all_catcodes_int=\count141
+\l__regex_show_lines_int=\count142
+\l__regex_min_state_int=\count143
+\l__regex_max_state_int=\count144
+\l__regex_left_state_int=\count145
+\l__regex_right_state_int=\count146
+\l__regex_capturing_group_int=\count147
+\l__regex_min_pos_int=\count148
+\l__regex_max_pos_int=\count149
+\l__regex_curr_pos_int=\count150
+\l__regex_start_pos_int=\count151
+\l__regex_success_pos_int=\count152
+\l__regex_curr_char_int=\count153
+\l__regex_curr_catcode_int=\count154
+\l__regex_last_char_int=\count155
+\l__regex_case_changed_char_int=\count156
+\l__regex_curr_state_int=\count157
+\l__regex_step_int=\count158
+\l__regex_min_active_int=\count159
+\l__regex_max_active_int=\count160
+\l__regex_replacement_csnames_int=\count161
+\l__regex_match_count_int=\count162
+\l__regex_min_submatch_int=\count163
+\l__regex_submatch_int=\count164
+\l__regex_zeroth_submatch_int=\count165
+\g__regex_trace_regex_int=\count166
+\c_empty_box=\box27
+\l_tmpa_box=\box28
+\l_tmpb_box=\box29
+\g_tmpa_box=\box30
+\g_tmpb_box=\box31
+\l__box_top_dim=\dimen121
+\l__box_bottom_dim=\dimen122
+\l__box_left_dim=\dimen123
+\l__box_right_dim=\dimen124
+\l__box_top_new_dim=\dimen125
+\l__box_bottom_new_dim=\dimen126
+\l__box_left_new_dim=\dimen127
+\l__box_right_new_dim=\dimen128
+\l__box_internal_box=\box32
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen129
+\l__coffin_offset_x_dim=\dimen130
+\l__coffin_offset_y_dim=\dimen131
+\l__coffin_x_dim=\dimen132
+\l__coffin_y_dim=\dimen133
+\l__coffin_x_prime_dim=\dimen134
+\l__coffin_y_prime_dim=\dimen135
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\g_tmpa_coffin=\box39
+\g_tmpb_coffin=\box40
+\l__coffin_bounding_shift_dim=\dimen136
+\l__coffin_left_corner_dim=\dimen137
+\l__coffin_right_corner_dim=\dimen138
+\l__coffin_bottom_corner_dim=\dimen139
+\l__coffin_top_corner_dim=\dimen140
+\l__coffin_scaled_total_height_dim=\dimen141
+\l__coffin_scaled_width_dim=\dimen142
+\c__coffin_empty_coffin=\box41
+\l__coffin_display_coffin=\box42
+\l__coffin_display_coord_coffin=\box43
+\l__coffin_display_pole_coffin=\box44
+\l__coffin_display_offset_dim=\dimen143
+\l__coffin_display_x_dim=\dimen144
+\l__coffin_display_y_dim=\dimen145
+\g__file_internal_ior=\read1
+\l__seq_internal_a_int=\count167
+\l__seq_internal_b_int=\count168
+\c__deprecation_minus_one=\count169
 )
-Package: fontspec 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
-
-(c:/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTe
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2019-04-06 v L3 Experimental backend support: PDF mo
+de
+\l__kernel_color_stack_int=\count170
+\l__pdf_internal_box=\box45
+))
+Package: xparse 2019-05-28 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count171
+\g__xparse_grabber_int=\count172
+\l__xparse_m_args_int=\count173
+\l__xparse_v_nesting_int=\count174
+)
+Package: fontspec 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2019/03/15 2.7c Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count176
-\l__fontspec_language_int=\count177
-\l__fontspec_strnum_int=\count178
-\l__fontspec_tmp_int=\count179
-\l__fontspec_tmpa_int=\count180
-\l__fontspec_tmpb_int=\count181
-\l__fontspec_tmpc_int=\count182
-\l__fontspec_em_int=\count183
-\l__fontspec_emdef_int=\count184
-\l__fontspec_strong_int=\count185
-\l__fontspec_strongdef_int=\count186
+\l__fontspec_script_int=\count175
+\l__fontspec_language_int=\count176
+\l__fontspec_strnum_int=\count177
+\l__fontspec_tmp_int=\count178
+\l__fontspec_tmpa_int=\count179
+\l__fontspec_tmpb_int=\count180
+\l__fontspec_tmpc_int=\count181
+\l__fontspec_em_int=\count182
+\l__fontspec_emdef_int=\count183
+\l__fontspec_strong_int=\count184
+\l__fontspec_strongdef_int=\count185
 \l__fontspec_tmpa_dim=\dimen146
 \l__fontspec_tmpb_dim=\dimen147
 \l__fontspec_tmpc_dim=\dimen148
 
-(c:/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/01/25 v2.0m Standard LaTeX package
-)
-(c:/texlive/2019/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-(c:/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math.sty
-Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(c:/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
-Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLa
+(/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
+File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3783.
+LaTeX Info: Redefining \slshape on input line 3788.
+LaTeX Info: Redefining \scshape on input line 3793.
+LaTeX Info: Redefining \upshape on input line 3798.
+LaTeX Info: Redefining \em on input line 3828.
+LaTeX Info: Redefining \emph on input line 3853.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+Package: unicode-math 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.sty
+Package: unicode-math-luatex 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLa
 TeX
 
-(c:/texlive/2019/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2020-02-03 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2019-05-28 LaTeX2e option processing using LaTeX3 keys
 )
-(c:/texlive/2019/texmf-dist/tex/latex/base/fix-cm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 
-(c:/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip50
+(/usr/share/texlive/texmf-dist/tex/lualatex/lualatex-math/lualatex-math.sty
+Package: lualatex-math 2019/01/21 v1.8 Patches for mathematics typesetting with 
+LuaLaTeX
 
-For additional information on amsmath, use the `?' option.
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count186
+)
+Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
+h LuaLaTeX)
+\g__um_fam_int=\count187
+\g__um_fonts_used_int=\count188
+\l__um_primecount_int=\count189
+\g__um_primekern_muskip=\muskip16
 
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen149
-))
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen150
-)
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count187
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count188
-\leftroot@=\count189
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count190
-\DOTSCASE@=\count191
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box46
-\strutbox@=\box47
-\big@size=\dimen151
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count192
-\c@MaxMatrixCols=\count193
-\dotsspace@=\muskip16
-\c@parentequation=\count194
-\dspbrk@lvl=\count195
-\tag@help=\toks17
-\row@=\count196
-\column@=\count197
-\maxfields@=\count198
-\andhelp@=\toks18
-\eqnshift@=\dimen152
-\alignsep@=\dimen153
-\tagshift@=\dimen154
-\tagwidth@=\dimen155
-\totwidth@=\dimen156
-\lineht@=\dimen157
-\@envbody=\toks19
-\multlinegap=\skip51
-\multlinetaggap=\skip52
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
-)
-\g__um_fam_int=\count199
-\g__um_fonts_used_int=\count266
-\l__um_primecount_int=\count267
-\g__um_primekern_muskip=\muskip17
-
-(c:/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
 
 Package fontspec Info: Font family 'STIX2Math(0)' created for font 'STIX2Math'
 (fontspec)             with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,Extension={.otf},Path={STIX2fonts/},Scale={1.1}].
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCaps
+Font={},Script=Math,FontAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Extension={.otf},Path={STIX2fonts/},Scale={1.1}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.1]"[STIX2fonts/STIX2Math.otf]/OT:script=math;lan
-guage=dflt;"
+(fontspec)             <->s*[1.1]"[STIX2fonts/STIX2Math.otf]:mode=base;script=ma
+th;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/STIX2Math(0)/m/n' will be
 (Font)              scaled to size 12.04506pt on input line 10.
 
 Package fontspec Info: Font family 'STIX2Math(1)' created for font 'STIX2Math'
 (fontspec)             with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2Math,Style=Ma
-thScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Extension={.ot
-f},Path={STIX2fonts/},Scale={1.1}].
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCaps
+Font={},Script=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2
+Math,Style=MathScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Fo
+ntAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Extension={.otf},Path={STIX2fonts/},Scale={1.1}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <9.3075->s*[1.1]"[STIX2fonts/STIX2Math.otf]/OT:script=ma
-th;language=dflt;"<6.84375-9.3075>s*[1.1]"[STIX2fonts/STIX2Math.otf]/OT:script=
-math;language=dflt;+ssty=0;"<-6.84375>s*[1.1]"[STIX2fonts/STIX2Math.otf]/OT:scr
-ipt=math;language=dflt;+ssty=1;"
+(fontspec)             <9.3075->s*[1.1]"[STIX2fonts/STIX2Math.otf]:mode=base;scr
+ipt=math;language=DFLT;"<6.84375-9.3075>s*[1.1]"[STIX2fonts/STIX2Math.otf]:mode=
+base;script=math;language=DFLT;+ssty=0;"<-6.84375>s*[1.1]"[STIX2fonts/STIX2Math.
+otf]:mode=base;script=math;language=DFLT;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
 (Font)              scaled to size 12.04506pt on input line 10.
@@ -253,7 +420,7 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 10.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/STIX2Math(1)/b/n on input line 10.
+(Font)                  OT1/cmr/bx/n --> TU/STIX2Math(1)/bx/n on input line 10.
 
 Package fontspec Info: STIX2Math scale = 1.10011.
 
@@ -269,18 +436,20 @@ Package fontspec Info: STIX2Math scale = 1.10011.
 
 Package fontspec Info: Font family 'STIX2Math(2)' created for font 'STIX2Math'
 (fontspec)             with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2Math,Style=Ma
-thScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Extension={.ot
-f},Path={STIX2fonts/},Scale={1.1},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCaps
+Font={},Script=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2
+Math,Style=MathScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Fo
+ntAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Extension={.otf},Path={STIX2fonts/},Scale={1.1},ScaleAg
+ain=1.0001,FontAdjustment={\fontdimen
 (fontspec)             8\font =7.70883pt\relax \fontdimen 9\font
-(fontspec)             =7.04636pt\relax \fontdimen 10\font =5.66118pt\relax
+(fontspec)             =7.04636pt\relax \fontdimen 10\font =5.66116pt\relax
 (fontspec)             \fontdimen 11\font =7.70883pt\relax \fontdimen 12\font
-(fontspec)             =7.04636pt\relax \fontdimen 13\font =4.33623pt\relax
-(fontspec)             \fontdimen 14\font =4.33623pt\relax \fontdimen 15\font
-(fontspec)             =3.03535pt\relax \fontdimen 16\font =2.52946pt\relax
-(fontspec)             \fontdimen 17\font =2.52946pt\relax \fontdimen 18\font
-(fontspec)             =2.77037pt\relax \fontdimen 19\font =1.92722pt\relax
+(fontspec)             =7.04636pt\relax \fontdimen 13\font =4.33621pt\relax
+(fontspec)             \fontdimen 14\font =4.33621pt\relax \fontdimen 15\font
+(fontspec)             =3.03535pt\relax \fontdimen 16\font =2.52945pt\relax
+(fontspec)             \fontdimen 17\font =2.52945pt\relax \fontdimen 18\font
+(fontspec)             =2.77036pt\relax \fontdimen 19\font =1.9272pt\relax
 (fontspec)             \fontdimen 22\font =3.10762pt\relax \fontdimen 20\font
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
 (fontspec)              
@@ -288,22 +457,23 @@ f},Path={STIX2fonts/},Scale={1.1},ScaleAgain=1.0001,FontAdjustment={\fontdimen
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <9.3075->s*[1.10011]"[STIX2fonts/STIX2Math.otf]/OT:scrip
-t=math;language=dflt;"<6.84375-9.3075>s*[1.10011]"[STIX2fonts/STIX2Math.otf]/OT
-:script=math;language=dflt;+ssty=0;"<-6.84375>s*[1.10011]"[STIX2fonts/STIX2Math
-.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <9.3075->s*[1.10011]"[STIX2fonts/STIX2Math.otf]:mode=base
+;script=math;language=DFLT;"<6.84375-9.3075>s*[1.10011]"[STIX2fonts/STIX2Math.ot
+f]:mode=base;script=math;language=DFLT;+ssty=0;"<-6.84375>s*[1.10011]"[STIX2font
+s/STIX2Math.otf]:mode=base;script=math;language=DFLT;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =7.70883pt\relax \fontdimen 9\font
-(fontspec)             =7.04636pt\relax \fontdimen 10\font =5.66118pt\relax
-(fontspec)             \fontdimen 11\font =7.70883pt\relax \fontdimen 12\font
-(fontspec)             =7.04636pt\relax \fontdimen 13\font =4.33623pt\relax
-(fontspec)             \fontdimen 14\font =4.33623pt\relax \fontdimen 15\font
-(fontspec)             =3.03535pt\relax \fontdimen 16\font =2.52946pt\relax
-(fontspec)             \fontdimen 17\font =2.52946pt\relax \fontdimen 18\font
-(fontspec)             =2.77037pt\relax \fontdimen 19\font =1.92722pt\relax
-(fontspec)             \fontdimen 22\font =3.10762pt\relax \fontdimen 20\font
-(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =7.70883pt\relax \fontdimen 9\font =7.04636pt\relax
+(fontspec)             \fontdimen 10\font =5.66116pt\relax \fontdimen 11\font
+(fontspec)             =7.70883pt\relax \fontdimen 12\font =7.04636pt\relax
+(fontspec)             \fontdimen 13\font =4.33621pt\relax \fontdimen 14\font
+(fontspec)             =4.33621pt\relax \fontdimen 15\font =3.03535pt\relax
+(fontspec)             \fontdimen 16\font =2.52945pt\relax \fontdimen 17\font
+(fontspec)             =2.52945pt\relax \fontdimen 18\font =2.77036pt\relax
+(fontspec)             \fontdimen 19\font =1.9272pt\relax \fontdimen 22\font
+(fontspec)             =3.10762pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `normal' on input line 10.
@@ -312,7 +482,7 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `bold' on input line 10.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/STIX2Math(2)/b/n on input line 10.
+(Font)                  OMS/cmsy/b/n --> TU/STIX2Math(2)/bx/n on input line 10.
 
 Package fontspec Info: STIX2Math scale = 1.09989.
 
@@ -328,139 +498,220 @@ Package fontspec Info: STIX2Math scale = 1.09989.
 
 Package fontspec Info: Font family 'STIX2Math(3)' created for font 'STIX2Math'
 (fontspec)             with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
-=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2Math,Style=Ma
-thScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Extension={.ot
-f},Path={STIX2fonts/},Scale={1.1},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             [Renderer=Basic,BoldItalicFont={},ItalicFont={},SmallCaps
+Font={},Script=Math,SizeFeatures={{Size=9.3075-},{Size=6.84375-9.3075,Font=STIX2
+Math,Style=MathScript},{Size=-6.84375,Font=STIX2Math,Style=MathScriptScript}},Fo
+ntAdjustment={\__um_luatex_copy_fontdimens:
+(fontspec)             },Extension={.otf},Path={STIX2fonts/},Scale={1.1},ScaleAg
+ain=0.9999,FontAdjustment={\fontdimen
 (fontspec)             8\font =0.81906pt\relax \fontdimen 9\font
-(fontspec)             =1.62608pt\relax \fontdimen 10\font =1.62608pt\relax
-(fontspec)             \fontdimen 11\font =3.61353pt\relax \fontdimen 12\font
-(fontspec)             =8.07019pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)             =1.62607pt\relax \fontdimen 10\font =1.62607pt\relax
+(fontspec)             \fontdimen 11\font =3.61351pt\relax \fontdimen 12\font
+(fontspec)             =8.07018pt\relax \fontdimen 13\font =0pt\relax }].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <9.3075->s*[1.09989]"[STIX2fonts/STIX2Math.otf]/OT:scrip
-t=math;language=dflt;"<6.84375-9.3075>s*[1.09989]"[STIX2fonts/STIX2Math.otf]/OT
-:script=math;language=dflt;+ssty=0;"<-6.84375>s*[1.09989]"[STIX2fonts/STIX2Math
-.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <9.3075->s*[1.09989]"[STIX2fonts/STIX2Math.otf]:mode=base
+;script=math;language=DFLT;"<6.84375-9.3075>s*[1.09989]"[STIX2fonts/STIX2Math.ot
+f]:mode=base;script=math;language=DFLT;+ssty=0;"<-6.84375>s*[1.09989]"[STIX2font
+s/STIX2Math.otf]:mode=base;script=math;language=DFLT;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.81906pt\relax \fontdimen 9\font
-(fontspec)             =1.62608pt\relax \fontdimen 10\font =1.62608pt\relax
-(fontspec)             \fontdimen 11\font =3.61353pt\relax \fontdimen 12\font
-(fontspec)             =8.07019pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             \__um_luatex_copy_fontdimens: \fontdimen 8\font
+(fontspec)             =0.81906pt\relax \fontdimen 9\font =1.62607pt\relax
+(fontspec)             \fontdimen 10\font =1.62607pt\relax \fontdimen 11\font
+(fontspec)             =3.61351pt\relax \fontdimen 12\font =8.07018pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 1
-0.
+(Font)              `largesymbols' in the math version `normal' on input line 10
+.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/STIX2Math(3)/m/n on input line 10.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `bold' on input line 10.
-
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/STIX2Math(3)/b/n on input line 10.
+(Font)                  OMX/cmex/m/n --> TU/STIX2Math(3)/bx/n on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
+(Font)              scaled to size 8.43153pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
+(Font)              scaled to size 6.62479pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
+(Font)              scaled to size 12.04622pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
+(Font)              scaled to size 8.43236pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
+(Font)              scaled to size 6.62543pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
+(Font)              scaled to size 12.04372pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
+(Font)              scaled to size 8.4306pt on input line 10.
+LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
+(Font)              scaled to size 6.62405pt on input line 10.
 
 Package fontspec Info: Font family 'STIX2Text(0)' created for font 'STIX2Text'
 (fontspec)             with options
-(fontspec)             [Ligatures=TeX,Extension={.otf},Path=STIX2fonts/,Upright
-Font={*-Regular},BoldFont={*-Bold},ItalicFont={*-Italic},BoldItalicFont={*-Bold
-Italic}].
+(fontspec)             [Ligatures=TeX,Extension={.otf},Path=STIX2fonts/,UprightF
+ont={*-Regular},BoldFont={*-Bold},ItalicFont={*-Italic},BoldItalicFont={*-BoldIt
+alic}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]/OT:script=latn;la
-nguage=dflt;mapping=tex-text;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]:mode=node;script=l
+atn;language=DFLT;+tlig;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]/OT:script=latn;la
-nguage=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]/OT:script=latn;langu
-age=dflt;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]/OT:script=latn;langu
-age=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]:mode=node;script=l
+atn;language=DFLT;+tlig;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]:mode=node;script=latn
+;language=DFLT;+tlig;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]:mode=node;script=latn
+;language=DFLT;+tlig;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]/OT:script=latn;lan
-guage=dflt;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]/OT:script=latn;lan
-guage=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]/OT:script=latn
-;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]/OT:script=latn
-;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]:mode=node;script=la
+tn;language=DFLT;+tlig;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]:mode=node;script=la
+tn;language=DFLT;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]:mode=node;scrip
+t=latn;language=DFLT;+tlig;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]:mode=node;scrip
+t=latn;language=DFLT;+tlig;+smcp;"
 
+LaTeX Info: Redefining \rmfamily on input line 17.
 
 Package fontspec Info: Font family 'STIX2Text(1)' created for font 'STIX2Text'
 (fontspec)             with options
-(fontspec)             [Extension={.otf},Path=STIX2fonts/,UprightFont={*-Regula
-r},BoldFont={*-Bold},ItalicFont={*-Italic},BoldItalicFont={*-BoldItalic}].
+(fontspec)             [Renderer=Basic,Extension={.otf},Path=STIX2fonts/,Upright
+Font={*-Regular},BoldFont={*-Bold},ItalicFont={*-Italic},BoldItalicFont={*-BoldI
+talic}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]/OT:script=latn;la
-nguage=dflt;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]:mode=base;script=l
+atn;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]/OT:script=latn;la
-nguage=dflt;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]/OT:script=latn;langu
-age=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]/OT:script=latn;langu
-age=dflt;+smcp;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Regular.otf]:mode=base;script=l
+atn;language=DFLT;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]:mode=base;script=latn
+;language=DFLT;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Bold.otf]:mode=base;script=latn
+;language=DFLT;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]/OT:script=latn;lan
-guage=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]/OT:script=latn;lan
-guage=dflt;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]/OT:script=latn
-;language=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]/OT:script=latn
-;language=dflt;+smcp;"
+(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]:mode=base;script=la
+tn;language=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-Italic.otf]:mode=base;script=la
+tn;language=DFLT;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]:mode=base;scrip
+t=latn;language=DFLT;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
+(fontspec)             <->"[STIX2fonts/STIX2Text-BoldItalic.otf]:mode=base;scrip
+t=latn;language=DFLT;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/STIX2Math(1)/m/n --> TU/STIX2Text(1)/m/n on input li
-ne 17.
+(Font)                  TU/STIX2Math(1)/m/n --> TU/STIX2Text(1)/m/n on input lin
+e 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/STIX2Text(1)/m/it on input line 17.
-
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/STIX2Text(1)/bx/n on input line 17.
-
 )
-(./RESULTS_multiplotTractionFluidInterface.aux)
-\openout1 = `RESULTS_multiplotTractionFluidInterface.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+Package lualatex-math Info: I'm going to patch macro \frac.
 
+ (./RESULTS_multiplotTractionFluidInterface.aux)
+\openout1 = RESULTS_multiplotTractionFluidInterface.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count190
+\scratchdimen=\dimen149
+\scratchbox=\box46
+\nofMPsegments=\count191
+\nofMParguments=\count192
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count193
+\MPscratchDim=\dimen150
+\MPnumerator=\count194
+\makeMPintoPDFobject=\count195
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks18
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+))
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvips
@@ -468,12 +719,12 @@ LaTeX Font Info:    ... okay on input line 61.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(0.0pt, 396.48125pt, 0.0pt)
-* v-part:(T,H,B)=(0.0pt, 396.48125pt, 0.0pt)
-* \paperwidth=396.48125pt
-* \paperheight=396.48125pt
-* \textwidth=396.48125pt
-* \textheight=396.48125pt
+* h-part:(L,W,R)=(0.0pt, 397.48499pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 397.48499pt, 0.0pt)
+* \paperwidth=397.48499pt
+* \paperheight=397.48499pt
+* \textwidth=397.48499pt
+* \textheight=397.48499pt
 * \oddsidemargin=-72.26999pt
 * \evensidemargin=-72.26999pt
 * \topmargin=-109.26999pt
@@ -495,42 +746,44 @@ LaTeX Font Info:    ... okay on input line 61.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 61.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 61.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 61.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 61.
-\gptboxheight=\skip53
-\gptboxwidth=\skip54
-\gptboxtext=\box48
-LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 8.43153pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 6.62479pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 12.04622pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 8.43236pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 6.62543pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 12.04372pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 8.4306pt on input line 253.
-LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 6.62405pt on input line 253.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 60.
+\gptboxheight=\skip50
+\gptboxwidth=\skip51
+\gptboxtext=\box47
+<RESULTS_multiplotTractionFluidInterface-inc.pdf, id=1, 397.485pt x 397.485pt>
 File: RESULTS_multiplotTractionFluidInterface-inc.pdf Graphic file (type pdf)
 <use RESULTS_multiplotTractionFluidInterface-inc.pdf>
-[1] (./RESULTS_multiplotTractionFluidInterface.aux) ) 
-Here is how much of TeX's memory you used:
- 8504 strings out of 479827
- 179755 string characters out of 5897345
- 742554 words of memory out of 5000000
- 25566 multiletter control sequences out of 15000+600000
- 534287 words of font info for 51 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 49i,7n,111p,318b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+Package luatex.def Info: RESULTS_multiplotTractionFluidInterface-inc.pdf  used o
+n input line 249.
+(luatex.def)             Requested size: 397.48402pt x 397.48402pt.
+[1
+Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./RE
+SULTS_multiplotTractionFluidInterface-inc.pdf>]
+(./RESULTS_multiplotTractionFluidInterface.aux))
 
-Output written on RESULTS_multiplotTractionFluidInterface.pdf (1 page).
+Here is how much of LuaTeX's memory you used:
+ 18987 strings out of 494291
+ 125171,794899 words of node,token memory allocated
+ 405 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 47 glue_spec,
+ 5 attribute_list, 1 write nodes
+   avail lists: 2:481,3:11,4:4,5:182,6:1,7:596,8:10,9:231
+ 22657 multiletter control sequences out of 65536+600000
+ 50 fonts using 18414547 bytes
+ 51i,7n,109p,1005b,446s stack positions out of 5000i,500n,10000p,200000b,100000s
+<./STIX2fonts/STIX2Text-Regular.otf><./STIX2fonts/STIX2Text-Regular.otf><./STIX2
+fonts/STIX2Math.otf><./STIX2fonts/STIX2Math.otf>
+Output written on RESULTS_multiplotTractionFluidInterface.pdf (1 page, 18825 byt
+es).
+
+PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

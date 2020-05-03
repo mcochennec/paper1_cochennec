@@ -155,19 +155,42 @@ today
 The macroscopic description of two-phase flows in porous media requires
  accurate modelling of the drag forces between the two fluids and the solid
  phase.
- In standard porous media, where capillarity is often dominant, the fluids/solid
+ In standard porous media, where capillarity is often dominant, the fluids-solid
  interactions are well-known and the fluid-fluid drag force is neglected
  in the momentum transport equation.
- High permeability porous media, however, are often characterized by a larger
- area of the interface between the two fluids and the development of thin
- films.
+ Two-phases flows in high permeability porous media, however, are often
+ characterized by a larger area of the interface between the two fluids
+ and the development of thin films.
  In such cases, the fluid-fluid interaction is not necessarily negligible
  and may play an important role in the momentum transport equations.
  Here, we use computational methods to study two-phase flows in a microfluidic
  device made of an array of cylinders sandwiched in a Hele-Shaw cell.
- The idea is to keep the geometry of the device in the cell plane untouched,
- while changing the height in the orthogonal direction, i.e.
- the cell plates aperture, to explore different ranges of permeability.
+ The idea is to keep the geometry in the cell plane unaltered, while changing
+ the height in the orthogonal direction, i.e.
+ the cell plates aperture 
+\begin_inset Formula $h$
+\end_inset
+
+, to explore different ranges of permeability.
+ This was done by taking advantage of the quasi-planar nature of the flow
+ which justifies the use of depth-averaged flow equations.
+ Here we reproduce a film-flow regime and show that the drag exerted at
+ the fluid-fluid interface is between 5% and 60% of the drag exerted upon
+ the solid.
+ Furthermore, we found that the drag exerted upon the fluid-fluid interface
+ increases as 
+\begin_inset Formula $h^{-3}$
+\end_inset
+
+ while the solid-fluid drag increases as 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+.
+ Our results demonstrate that the fluid-fluid drag force should not be neglected
+ in momentum tranport equations when modelling macroscopic two-phase flows
+ in microfluidic devices or highly permeable porous media, for which the
+ film-flow regime is commonly encountered.
 \end_layout
 
 \begin_layout Abstract
@@ -562,7 +585,7 @@ literal "true"
 \end_inset
 
 .
- The average momentum equations read
+ The average momentum transport equations read
 \end_layout
 
 \begin_layout Standard
@@ -691,8 +714,9 @@ literal "false"
 
 \end_inset
 
-, is to work with non-closed average momentum equations and to provide constitut
-ive relations for the modeling of the interaction terms between the phases.
+, is to work with non-closed average momentum transport equations and to
+ provide constitutive relations for the modeling of the interaction terms
+ between the phases.
  These relations are obtained through the interpretation of experimental
  data 
 \begin_inset CommandInset citation
@@ -1252,8 +1276,8 @@ noprefix "false"
 
 \end_inset
 
- are the continuity and momentum equations for the depth-averaged flow of
- one fluid.
+ are the continuity and momentum transport equations for the depth-averaged
+ flow of one fluid.
  In the case of two-phases flow, these equations have to be written for
  each fluid and boundary conditions at the fluid-fluid interfaces has to
  be given 
@@ -1424,7 +1448,8 @@ Surface averaging
 \end_layout
 
 \begin_layout Standard
-Here we proceed to the spatial averaging of the in-plane momentum equations.
+Here we proceed to the spatial averaging of the in-plane momentum transport
+ equations.
  We stop using the subscript 
 \begin_inset Formula $\parallel$
 \end_inset
@@ -1864,9 +1889,9 @@ noprefix "false"
 
 \end_inset
 
- except that one continuity and momentum equation is valid for the whole
- domain and thus contribution of capillary forces is included in the momentum
- equation, as
+ except that one continuity and momentum transport equation is valid for
+ the whole domain and thus contribution of capillary forces is included
+ in the momentum transport equation, as
 \end_layout
 
 \begin_layout Standard
@@ -1962,7 +1987,7 @@ We introduce the following reference and dimensionless quantities,
 
 \begin_layout Standard
 \noindent
-and thus the dimensionless continuity and momentum equations read,
+and thus the dimensionless continuity and momentum transport equations read,
 \end_layout
 
 \begin_layout Standard
@@ -2057,7 +2082,8 @@ noprefix "false"
 \end_inset
 
 .
- 
+ For a small apect ratio we can clearly see that the Darcean terms become
+ preponderant.
 \end_layout
 
 \begin_layout Paragraph
@@ -2128,7 +2154,27 @@ noprefix "false"
 \end_inset
 
 .
- 
+ The viscosity ratio was chosen in favor of the invading fluid to mimic
+ the invasion of an initially fully water-saturated micromodel by an oil-like
+ fluid.
+ The range of dimensionless aperture tested is large and the reader is warned
+ that the depth-averaged equations derived in the previous section are outside
+ their condition of validity for the extreme value 
+\begin_inset Formula $h/L=5$
+\end_inset
+
+, on the other hand, it provides a limit 2-dimensionnal case for information
+ purposes
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+bofbof, à virer ?
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2730,7 +2776,7 @@ inverted 0
 status open
 
 \begin_layout Section
-Results
+Results and discussion
 \end_layout
 
 \begin_layout Standard
@@ -2997,6 +3043,11 @@ noprefix "false"
 \end_inset
 
 .
+ In the following, the 
+\begin_inset Formula $x$
+\end_inset
+
+–component of the drag forces are expressed by unite surface area of unit-cell.
  
 \end_layout
 
@@ -3036,7 +3087,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3105,6 +3156,10 @@ noprefix "false"
 
  we present the total drag upon either the solid-fluid interface or the
  fluid-fluid interface as a function of the dimensionless aperture.
+ The drag forces at the fluid-fluid and solid-fluid interfaces logically
+ increase as the capillary number increases.
+ As the aperture between the plates decreases, the drag upon the fluid-solid
+ interfaces also increases, which was to be expected.
  Regarding 
 \begin_inset Formula $Ca=1$
 \end_inset
@@ -3134,17 +3189,17 @@ noprefix "false"
  behaviour.
  This explains the influence of the capillary number and the origin of the
  variation in the ratio between the drag forces at the different interfaces.
- We note that 
+ We mention that 
 \begin_inset Formula $d_{s}^{x}$
 \end_inset
 
- is not entirely driven by friction on the plates, as might be suggested
- by the 
+ is not entirely driven by the fluid friction upon the plates, as might
+ be suggested by the 
 \begin_inset Formula $h^{-2}$
 \end_inset
 
- behavior, in fact the drag force on the wedge is at least about 80% of
- the drag upon the plates, for 
+ behavior, in fact, the drag force upon the wedge is at least about 80%
+ of the drag upon the plates, for 
 \begin_inset Formula $h^{*}=1/20$
 \end_inset
 
@@ -3230,16 +3285,85 @@ noprefix "false"
 \begin_inset Formula $1/2$
 \end_inset
 
-, the viscous part is negligible front of the pressure part.
- Then, the pressure part drives the 
+, the viscous part is negligible in front of the pressure part.
+ Thus, the pressure drives the 
 \begin_inset Formula $h^{-2}$
 \end_inset
 
- and the 
+ and 
 \begin_inset Formula $h^{-3}$
 \end_inset
 
- behavior, depending on the capillary number.
+ behaviors, depending on the capillary number.
+ As the plates aperture decreases, for a constant inlet velocity and a constant
+ output pressure boundary condition; the pressure gradient through the micromode
+l increases, and the pressure force exerted by the flow on the solid-fluid
+ and fluid-fluid interfaces as well.
+ To better understand the effect of capillary number on pressure one can
+ look at the pressure fields in UC3 for different capillary numbers and
+ different apertures, as shown in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Pressure-field"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+ Regarding 
+\begin_inset Formula $Ca=1$
+\end_inset
+
+, the pressure gradient along the 
+\begin_inset Formula $x$
+\end_inset
+
+-direction across the cell is multiplied by 100 while the opening between
+ the plates divided by ten, following 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:darcyHeleShaw"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ .
+ Now, for 
+\begin_inset Formula $Ca=0.01$
+\end_inset
+
+, and for the same change of plates aperture, the pressure gradient across
+ the cell is multiplied by 2,000.
+ A noteworthy feature ot the pressure gradient is how it compares with the
+ pressure jump across the fluid-fluid interface because of its curavture.
+ Indeed, for 
+\begin_inset Formula $Ca=1$
+\end_inset
+
+, the pressure jump and the pressure gradient are about the same order when
+ 
+\begin_inset Formula $h^{*}=0.5$
+\end_inset
+
+, but the former becomes negligible in front of the latter as the opening
+ decreases.
+ This is to be expected since the pressure gradient increases as 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+, whereas the pressure jump increases as 
+\begin_inset Formula $h^{-1}$
+\end_inset
+
+ since it is mainly induced by the curvature in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
  
 \end_layout
 
@@ -3299,6 +3423,101 @@ name "fig:Pressure-and-viscous"
 \begin_inset Float figure
 wide false
 sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_pressureField.pdf
+	lyxscale 150
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pressure field in UC3 at steady-state for 
+\begin_inset Formula $Ca=1$
+\end_inset
+
+ and 
+\begin_inset Formula $Ca=0.01$
+\end_inset
+
+ and for different dimensionless aperture values 
+\begin_inset Formula $h^{*}=0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $h^{*}=0.05$
+\end_inset
+
+.
+ Isobar are representes in solid black lines and the fluid-fluid interface
+ isdepicted with solid white lines.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pressure-field"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This last statement is veryfied in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:dynamicPressureDifference"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ which shows the difference between the mean intrinsic pressures of the
+ fluids as a function of the aperture between the plates along with the
+ pressure jump produced by the curvature in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
+ There is a very slight discrepancy between the two quantities in the case
+ of 
+\begin_inset Formula $Ca=1$
+\end_inset
+
+, but the difference between the average intrinsic pressures, regardless
+ of the capillary number tested here, is caused by the curvature of the
+ interface in the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
@@ -3316,8 +3535,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dynamic pressure difference and pressure jump across the interface due to
- its curvature in the 
+Dynamic pressure difference and pressure jump due to the interface curvature
+ in the 
 \begin_inset Formula $z$
 \end_inset
 
@@ -3364,16 +3583,23 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-The simulations that are presented here for quasi-planar two-phases flow
- allow to study the influence of the permeability of a model porous medium
- on the drag force at the interfaces between fluids and between fluids and
- solids.
- These terms have to be modelled to obtain the macroscopic momentum equations.
- For capillary-controlled flow, the drag at the fluid-fluid interface can
- be neglected.
- Here we have studied the effect of permeability on the different drag forces,
- for a film-flow regime encountered for in two-phase flows in highly permeable
- media two-phase flows or in microfluidic devices.
+In this study we conducted direct simulations of depth-averaged two-phases
+ flow, and we investigated the effect of the permeability on the drag forces
+ exerted upon the different interfaces.
+ The permeability was changed by varying the Darcean term which arising
+ from the depth-averaging, thus without altering the in-plane geometry.
+ These drag terms have to be modelled to obtain the macroscopic momentum
+ transport equations but the drag exerted upon the the fluid-fluid interface
+ is commonly neglected for flow driven by capillarity forces.
+ Here we focused on film-flow regime encountered in two-phases flows in
+ high permeability porous media or in microfluidic devices.
+ We found that the drag exerted upon the fluid-fluid interface should not
+ be neglected into the momentum transport equations for film-flow regimes.
+ Lower permeability does not make the drag force terms at the interface
+ negligible as long as the flow regime remains a film regime.
+ On the contrary, the drag force upon the fluid-fluid interface increases
+ faster than the drag upon the fluid-solid interfaces, as the aperture between
+ the plates decreases.
  
 \end_layout
 
@@ -3575,7 +3801,7 @@ name "fig:Drag-force-exerted"
 \end_layout
 
 \begin_layout Section
-Calculation of the pressure part of the drag
+Calculation of the pressure part of the drag upon the fluid-fluid interface
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:pressureDrag"
@@ -3590,7 +3816,7 @@ The pressure part of the drag exerted upon the fluid-fluid boundary
 \begin_inset Formula $\Gamma_{ij}$
 \end_inset
 
- by the fluid 
+ by fluid 
 \begin_inset Formula $i$
 \end_inset
 
@@ -3600,7 +3826,7 @@ The pressure part of the drag exerted upon the fluid-fluid boundary
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(p_{i}\mathbf{I}\right)\:\mathrm{d}\Gamma,\label{eq:dragPressurePart}
+\int_{\Gamma_{ij}}\left(p_{i}\mathbf{I}\right)\cdot\mathbf{n}_{ij}\:\mathrm{d}\Gamma,\label{eq:dragPressurePart}
 \end{equation}
 
 \end_inset
@@ -3614,15 +3840,15 @@ where
 \begin_inset Formula $p_{i}=p_{i}(x,y)$
 \end_inset
 
-, the 
-\begin_inset Formula $2\times2$
-\end_inset
-
- identity matrix ise denoted 
+, 
 \begin_inset Formula $\mathbf{I}$
 \end_inset
 
- and 
+ stands for the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ identity matrix and 
 \begin_inset Formula $\mathbf{n}_{ij}$
 \end_inset
 
@@ -3642,9 +3868,9 @@ noprefix "false"
 
 \end_inset
 
- is obtained after subtracting the terms at the different boundaries of
- an unit-cell that appear when applying the divergence theorem, i.e., for
- fluid 
+ is obtained after applying the divergence theorem and subtracting the boundarie
+s participitaion in an unit-cell other than from the fluid-fluid boundary,
+ i.e., for fluid 
 \begin_inset Formula $w$
 \end_inset
 
@@ -3667,16 +3893,20 @@ noprefix "false"
 \noindent
 where the change of sign allows to take into account the change of orientation
  of the normal.
- In the case of the 
+ Regarding the 
 \begin_inset Formula $x$
 \end_inset
 
--component which interests us the integrals on the top and bottom boundaries
- vanish, and regarding the fluid 
+-component, the integrals on the top and bottom boundaries vanish, and regarding
+ fluid 
 \begin_inset Formula $o$
 \end_inset
 
-, the integral on the cylinder's boundary is also vanishes.
+, the integral on the cylinder's boundary vanishes, since only fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ is in contact with the wedges.
 \end_layout
 
 \end_body
