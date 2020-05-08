@@ -3833,6 +3833,64 @@ name "fig:Drag-force-exerted"
 \end_layout
 
 \begin_layout Section
+Comparison with a Boundary Element Method
+\end_layout
+
+\begin_layout Standard
+Here the code is validated by comparison with a Boundary-Element Method
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{nagel2015boundary}
+\end_layout
+
+\end_inset
+
+, which relies on a surface discretization of the interface and a pseudo-analyti
+cal formulation in the bulk of the phases.
+ This allows us to precisely locate the interface, even in the case of very
+ thin film flow, and to carefully analyze the choice of parameters in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:advecPhi"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The test case resembles the case study, as can be seen on Fig.
+ Fluid 
+\begin_inset Formula $o$
+\end_inset
+
+ is injected in the initially fully saturated model with fluid 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ is injected with a purelly normal inlet velocity with 
+\begin_inset Formula $u_{w}^{x}=0.3\times u_{o}^{x}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
 Calculation of the pressure part of the drag upon the fluid-fluid interface
 \begin_inset CommandInset label
 LatexCommand label
