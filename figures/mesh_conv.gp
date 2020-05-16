@@ -14,7 +14,7 @@ set tics nomirror
 set style line 12 lc rgb '#808080' lt 0 lw 1
 set grid back ls 12
 set key t l spacing 1.5
-set xlabel 'Mesh elements' 
+set xlabel 'Number of mesh elements' 
 set ylabel 'Normalized results' 
 set format x '\(%2.1t \times 10^{%L}\)'
 set log x

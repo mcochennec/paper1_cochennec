@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.7)  30 APR 2020 13:14
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.2.7)  16 MAY 2020 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,25 +441,26 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/STIX2Text(1)/bx/n on input line 17.
 
 )
-No file DNS_mesh_conv.aux.
+(./DNS_mesh_conv.aux)
 \openout1 = `DNS_mesh_conv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvips
@@ -494,38 +495,38 @@ LaTeX Font Info:    ... okay on input line 61.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 61.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 61.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 61.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 61.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 60.
 \gptboxheight=\skip53
 \gptboxwidth=\skip54
 \gptboxtext=\box48
 LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 8.43153pt on input line 221.
+(Font)              scaled to size 8.43153pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(1)/m/n' will be
-(Font)              scaled to size 6.62479pt on input line 221.
+(Font)              scaled to size 6.62479pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 12.04622pt on input line 221.
+(Font)              scaled to size 12.04622pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 8.43236pt on input line 221.
+(Font)              scaled to size 8.43236pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(2)/m/n' will be
-(Font)              scaled to size 6.62543pt on input line 221.
+(Font)              scaled to size 6.62543pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 12.04372pt on input line 221.
+(Font)              scaled to size 12.04372pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 8.4306pt on input line 221.
+(Font)              scaled to size 8.4306pt on input line 219.
 LaTeX Font Info:    Font shape `TU/STIX2Math(3)/m/n' will be
-(Font)              scaled to size 6.62405pt on input line 221.
+(Font)              scaled to size 6.62405pt on input line 219.
 File: DNS_mesh_conv-inc.pdf Graphic file (type pdf)
 <use DNS_mesh_conv-inc.pdf>
 [1] (./DNS_mesh_conv.aux) ) 
 Here is how much of TeX's memory you used:
- 8496 strings out of 479827
- 179035 string characters out of 5897345
+ 8498 strings out of 479827
+ 179071 string characters out of 5897345
  740526 words of memory out of 5000000
  25563 multiletter control sequences out of 15000+600000
  534263 words of font info for 48 fonts, out of 8000000 for 9000
