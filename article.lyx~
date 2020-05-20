@@ -102,13 +102,11 @@ BoldItalicFont={*-BoldItalic}]
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
-\output_changes true
+\tracking_changes false
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1030020954 "Maxime"
-\author -838067963 "Davarzani"
 \end_header
 
 \begin_body
@@ -222,7 +220,7 @@ Introduction
 \begin_layout Standard
 An accurate description of two-phase flows in high-permeability porous media
  is of major importance in several practical applications.
- This includes soil remediation in sandy or gravely soils 
+ This includes soil remediation in gravely soils 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "fetter2017contaminant"
@@ -247,76 +245,13 @@ literal "true"
 \end_inset
 
 .
- However, most of the literature on 
-\change_inserted -1030020954 1589379309
-two-phase flows in porous media
-\change_deleted -1030020954 1589379284
-the topic
-\change_inserted -838067963 1589187295
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589187300
-which topic?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- is focused 
-\change_deleted -1030020954 1589379269
-on two-phase flows
-\change_unchanged
- 
-\change_deleted -1030020954 1589379316
-in
-\change_inserted -1030020954 1589379319
-on
-\change_unchanged
- low-permeability porous media
-\change_deleted -838067963 1589187316
-.
-\change_inserted -838067963 1589187316
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589187348
-references?
-\change_inserted -1030020954 1589379329
-Mieux?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
+ However, most of the literature on the topic is focused on two-phase flows
+ in low-permeability porous media.
 \end_layout
 
 \begin_layout Standard
 For low-permeability porous media, the flow is often dominated by surface
- tension forces
-\change_deleted -838067963 1589187432
-, and
-\change_inserted -838067963 1589187433
- where
-\change_unchanged
- 
-\change_inserted -1030020954 1589379515
-for which 
-\change_unchanged
-the capillary, Bond, and Weber numbers are low.
+ tension forces, and the capillary, Bond, and Weber numbers are low.
  In this case, the fluid repartition is well described as two independent
  flow channels 
 \begin_inset CommandInset citation
@@ -402,60 +337,7 @@ noprefix "false"
  these drag force is the basis of any attempt to establish continuous relationsh
 ips on a macroscopic scale starting from the pore scale.
  However, the fluid-fluid drag force terms are commonly overlooked in the
- traditional 
-\change_inserted -1030020954 1589379578
-two-phases flow 
-\change_unchanged
-model 
-\change_inserted -838067963 1589190103
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589190204
-modèle de quoi?
-\change_inserted -1030020954 1589379613
-Mieux?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-in porous media regardless of the permeability
-\change_inserted -1030020954 1589379658
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "dullien2012porous"
-literal "false"
-
-\end_inset
-
-
-\change_unchanged
-.
-
-\change_inserted -838067963 1589190145
- 
-\change_deleted -1030020954 1589379679
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-references?
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
+ traditional model in porous media regardless of the permeability.
 \end_layout
 
 \begin_layout Standard
@@ -527,32 +409,6 @@ literal "true"
 \end_inset
 
 , reads
-\change_inserted -838067963 1589190459
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589190606
-Pourquoi ne pas déplacer toutes les équations (théorie) dans la section
- « theoretical background ».
- 
-\change_inserted -1030020954 1589379928
-La partie theoretical background me sert à présenter les équations moyennées
- que j'utilise par la suite.
- Si tu penses que ces équations ne sont pas utiles ici (c'est possible au
- final je ne parle plus de perméabilités relatives dans la suite après tout)
- il vaut mieyx que je les supprime directement.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -586,39 +442,6 @@ name "eq:muskatModel"
 
 \end_inset
 
-
-\change_inserted -838067963 1589190883
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589191455
-Je mettrais 
-\begin_inset Quotes eld
-\end_inset
-
-nw
-\begin_inset Quotes erd
-\end_inset
-
- au lieu de 
-\begin_inset Quotes eld
-\end_inset
-
-o
-\begin_inset Quotes erd
-\end_inset
-
- parce que diphasique n’est pas que oil-water.
- Mais bon, ce n'est pas important.
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -732,25 +555,9 @@ literal "true"
 
 \end_inset
 
-, thus the relative permeability depends (non-linearly) only on the saturation
-\change_inserted -1030020954 1589380432
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "brooks1964hydrau,van1980closed"
-literal "false"
-
-\end_inset
-
-
-\change_unchanged
-.
+, thus the relative permeability depends (non-linearly) only on the saturation.
  A constitutive relation between the macroscopic pressure of each fluid
- has to be furnished to close the macroscopic equations set
-\change_deleted -838067963 1589191608
- 
-\change_unchanged
-.
+ has to be furnished to close the macroscopic equations set .
  This relation is known as the capillary pressure relation and, as for the
  relative permeabilities, is supposed to depend non-linearly only on the
  saturation 
@@ -762,39 +569,13 @@ literal "true"
 \end_inset
 
 .
-\change_inserted -838067963 1589191733
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589192664
-Brooks and Corey, 1964; van Genuchten, 1980
-\change_inserted -1030020954 1589380341
- Ok mais plutôt pour Kr(S) non?
-\change_inserted -838067963 1589192664
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-The fluid-fluid drag is not negligible compared with the solid-fluid drag
- and the ratio of the former over the latter increases as the aperture decreases.
 \end_layout
 
 \begin_layout Standard
 Since the early 1980s, numerous work attempted to improve the generalized
  Darcy equations on a sound physical basis.
- Among them, several authors used upscaling techniques 
-\change_deleted -1030020954 1589381149
-and found additional coupled permeability terms
-\change_unchanged
- 
+ Among them, several authors used upscaling techniques and found additional
+ coupled permeability terms 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "MARLE1982643,auriault1986remarques,Whitaker1986a,Lasseux1996"
@@ -803,12 +584,6 @@ literal "true"
 \end_inset
 
 .
-
-\change_inserted -1030020954 1589381805
- They found additional coupling permeability tensors that arise from taking
- the viscous terms at the fluid-fluid boundary into account during the upscaling.
-
-\change_unchanged
  The average momentum transport equations read
 \end_layout
 
@@ -830,72 +605,21 @@ in which
 \begin_inset Formula $\mathbf{K}_{ij}^{*}$
 \end_inset
 
- are the coupling
-\change_deleted -1030020954 1589381183
-ed
-\change_unchanged
- relative permeability tensors that pertain to the interaction between the
- fluids
-\change_inserted -838067963 1589193493
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589196710
-pas assez claire comment d'un coup eq 1b devient 2; ca depande de quoi l'effet
- de couplage?
-\change_inserted -1030020954 1589381904
-J'ai complété un peu au-dessus, suffisant ? Pour aller vite ça dépend des
- termes visqueux à l'interface entre les fluides qu'on laisse et qu'on doit
- mapper
-\change_unchanged
-
-\end_layout
+ are the coupled relative permeability tensors that pertain to the interaction
+ between the fluids.
+ Several experimental works measured the coupled permeability from 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:darcyCross"
+plural "true"
+caps "true"
+noprefix "false"
 
 \end_inset
 
-
-\change_unchanged
-.
- Several experimental works measured the coupling permeabilities through
- steady-state cocurrent flows.
- Each fluid was submitted alternatively to a null pressure gradient 
-\change_deleted -1030020954 1589382200
-to isolate each term
-\change_inserted -1030020954 1589382347
-to isolate the effects of the pressure gradient of each phase and thus obtain
- each of the four relative permeabilities
-\change_unchanged
-.
-\change_inserted -838067963 1589193857
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589193869
-pas claire 
-\begin_inset Quotes eld
-\end_inset
-
-to isolate each term
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_inserted -1030020954 1589382359
- Mieux ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
+ from a steady-state cocurrent flow of oil and water in a sandpack.
+ Each fluid was submitted alternatively to a null pressure gradient to isolate
+ each term.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -904,42 +628,8 @@ literal "true"
 
 \end_inset
 
- used this protocol
-\change_inserted -1030020954 1589384706
- in a cylindrical sandpack, with water and oil
-\change_deleted -838067963 1589193894
- 
-\change_inserted -838067963 1589193894
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-
-\change_inserted -838067963 1589194144
-pour quel milieu? quelle permeabilité intrinsèque? pour quels fluids? ratio
- de viscosité? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-and found a negligible effect of the coupled permeabilities in the overall
- flow
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-rechercher l'article de zarcone
-\end_layout
-
-\end_inset
-
-.
+ used this protocol and found a negligible effect of the coupled permeabilities
+ in the overall flow.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -948,30 +638,9 @@ literal "true"
 
 \end_inset
 
-, with the same protocol and with water
-\change_inserted -1030020954 1589384871
- and oil of same viscosity
-\change_unchanged
- in a 2D-sandpack
-\change_inserted -1030020954 1589384849
- with an intrinsic permeability of 81 darcy
-\change_unchanged
-, found that the coupled permeabilities are important since they can contribute
+, with the same protocol and with oil and water in a 2D-sandpack, found
+ that the coupled permeabilities are important since they can contribute
  up to 35% of the effective permeability.
-
-\change_inserted -1030020954 1589385168
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Rose1988"
-literal "true"
-
-\end_inset
-
- proposed an indirect method which involved performing two sets of experiment
- in different conditions, e.g., vertical and hozirontal flow.
-
-\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -980,37 +649,20 @@ literal "true"
 
 \end_inset
 
- 
-\change_inserted -1030020954 1589385150
-followed Rose's proposition and performed
-\change_unchanged
- cocurrent and countercurrent experiments to isolate each term, ,
-\change_inserted -838067963 1589194340
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589194486
-Mieux de mettre cette référence Rose (1988) avant les autres références
- s’il était le premier à proposer ce protocole expérimental.
-
-\change_inserted -1030020954 1589385220
- Fait
-\change_unchanged
-
-\end_layout
+ made cocurrent and countercurrent experiments to isolate each term, as
+ proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rose1988"
+literal "true"
 
 \end_inset
 
-
-\change_unchanged
- with water and oil in a sandpack and found that coupled permeabilities
+, with water and oil in a sandpack and found that coupled permeabilities
  reach, at least, 15% of the effective permeability value.
  However, it was pointed out that the saturation between the two sets of
  experiments can strongly differ and therefore the computed relative permeabilit
-ies cannot be safely compared 
+ies can not be safely compared 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "langaas2001numerical"
@@ -1020,7 +672,7 @@ literal "true"
 
 .
  The effect of the non-wetting phase connectivity on the relative permeabilities
- was studied by 
+ was extensively studied by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Avraam1995"
@@ -1030,74 +682,11 @@ literal "true"
 
 , for which the authors performed steady-state cocurrent two-phase flows
  in a 2D-micromodel device and found that the coupled permeabilities contributio
-n of the flow is 
-\change_deleted -1030020954 1589385334
-non-negligible
-\change_inserted -1030020954 1589385386
-significant
-\change_unchanged
- and depend on the flow regimes
-\change_inserted -1030020954 1589385498
-, i.e., either the non-wetting fluid flows as a continous stream, ganglias
- or dropplets
-\change_unchanged
-.
-\change_inserted -838067963 1589194719
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589194824
-pas claire: Si c’est négligeable, pourquoi il dépende du régime ? le terme
- « régime » n’est pas claire non plus.
-
-\change_inserted -1030020954 1589385522
- J'ai mis non-négligeable, mais je peux même mettre significatif, ça sera
- plus clair, j'ai rajouté ce qu'ils entendent par régime, c'est mieux ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- Recently, a whole 
-\change_deleted -1030020954 1589385604
-analytical 
-\change_unchanged
-model
-\change_inserted -1030020954 1589385891
- for each permeability term, including coupling ones, has been derived from
- interpretation of one-dimensional inertial two-phase flows experiments
- in coarse non-consolidated porous media.
-\change_unchanged
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-solution analytique de quoi? ce n'est pas claire si ils ont fait eux-même
- des experiences aussi?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
-dans un tube
-\end_layout
-
-\end_inset
-
- 
+n of the on the flow is non-negligible and depend on the flow regimes.
+ Recently, a whole analytical model which correctly predicts the pressure
+ loss in debris beds has been derived for each permeability term, including
+ coupled ones, for one-dimensional inertial two-phase flows in coarse non-consol
+idated porous media 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "clavier2017modeling"
@@ -1136,28 +725,7 @@ literal "false"
 \end_inset
 
 .
-
-\change_deleted -838067963 1589194916
  
-\change_inserted -838067963 1589195238
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589195391
-Ok mais quels sont leurs foundings? ça donne quoi la comparaison avec les
- données expérimentales?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1170,33 +738,11 @@ literal "true"
 \end_inset
 
  examined the question of the coupled permeability terms by conducting two-phase
-s flows simulations in a 2D geometr
-\change_inserted -1030020954 1589392975
-y made of a square block as a solid obstacle in the middle of a channel.
- 
-\change_inserted -838067963 1589195564
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589195613
-Géométrie de quelle forme ?
-\change_inserted -1030020954 1589386688
-Mieux?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-Rothman used an immiscible lattice-gas method 
-\change_inserted -1030020954 1589393040
-and applied an external volume force alternatively on each fluid to isolate
- all terms in 
+ flow simulations in simple 2D geometries with an immiscible lattice-gas
+ method.
+ The author found non-negligible participation of the coupled permeabilities
+ by applying an external volume force alternatively on each fluid to isolate
+ each term in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:darcyCross"
@@ -1206,35 +752,6 @@ noprefix "false"
 
 \end_inset
 
-.
- The author
-\change_unchanged
- found a significant participation of the coupled permeabilities
-\change_inserted -1030020954 1589393182
-, as they are of the same order of magnitude as the dominant relative permeabili
-ties for intermediate values of saturation.
- Moreover, Rothman found that the relative coupling permeabilities are equal.
-
-\change_deleted -838067963 1589196564
- 
-\change_inserted -838067963 1589196564
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589196674
-ça ne veut rien dire « non-negligible ».
- On ne peut pas quantifier l’effet ? en pourcentage ?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 .
  
 \begin_inset CommandInset citation
@@ -1247,29 +764,9 @@ literal "true"
  used the lattice-Boltzmann method and examined the value of the coupled
  permeabilities as a function of the saturation in a 3D-sphere pack for
  an unique given viscosity ratio and capillary number.
- Unlike Rothman (1990)'s result, they found that the relative coupling permeabil
-ity terms are not equal.
-
-\change_deleted -838067963 1589196791
+ Unlike Rothman's result, they found that the coupled permeability terms
+ are not equal.
  
-\change_inserted -838067963 1589196791
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589196797
-pas claire pour moi
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Yiotis2007"
@@ -1279,32 +776,9 @@ literal "false"
 
  also used a lattice-Boltzmann method in 2D and 3D pore networks and found
  a non-wetting apparent relative permeability greater than unity when the
- wetting 
-\change_inserted -1030020954 1589394592
-phase viscosity
-\change_unchanged
- is 
-\change_inserted -1030020954 1589394663
-ten times less than the non-wetting phase viscosity 
-\change_inserted -838067963 1589196827
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589196842
-de combien? ratio de viscosité?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-, which emphasizes a strong interaction between the fluids.
- Recently, 
+ wetting fluid is more viscous than the non-wetting fluid, which emphasizes
+ a strong interaction between the fluids.
+ Recently 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "shams2018study"
@@ -1314,38 +788,9 @@ literal "true"
 
  have used a Volume Of Fluid method to study the transport coefficients
  of fluid layers in non-circular capillary tubes.
- Based on analogy with a model of Couette flow, the authors
-\change_inserted -1030020954 1589395757
- shown that the fluid-fluid drag contribute significantly to the amount
- of flow in the layers
-\change_deleted -1030020954 1589395761
- 
-\change_inserted -1030020954 1589395763
- and 
-\change_unchanged
-derived simple relations that can predict with good accuracy the transport
- coefficients, including the coupling ones
-\change_inserted -1030020954 1589396176
-.
-\change_inserted -838067963 1589196976
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589197094
-Ça a l'air intéressant: peut-on dire un peu plus? ils ont trouvé que l'effet
- de couplage est important ou pas? ça dépende de quoi?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
+ Based on analogy with a model Couette flow the authors have derived simple
+ relations that can predict with good accuracy the relative permeability
+ coefficients, including the coupled ones, of fluid layers.
 \end_layout
 
 \begin_layout Standard
@@ -1364,7 +809,7 @@ noprefix "false"
 
  we present a comparison between some of the results available in the literature
  on coupled relative permeability values, adimensionalized with respect
- to the intrinsic permeability, along with the analytical value obtained
+ to the absolute permeability, along with the analytical value obtained
  from steady-state two-phase flow in a circular capillary tube 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1373,128 +818,21 @@ literal "false"
 
 \end_inset
 
-
-\change_inserted -838067963 1589197378
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589197492
-Pourquoi le modèle analytique de Bacri ne s’affiche pas dans les biblios
- en haut ? quand tu parles du modèle analytique de Clavier
-\change_inserted -1030020954 1589396336
- Je me suis mal exprimée je voulais dire que Clavier a donnée des relations,
- mais celles-ci sont obtenues grâce à l'interprétation de résultats expérimentau
-x.
- Je peux parer de Bacri plus tôt, mais pour le coup c'est ni expé ni numérique
- donc c'est pour ça que je ne l'ai pas introduit
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 .
  This last theoretical case represents a limit case regarding the large
  permeability and the large extent of the fluid-fluid interface.
- The discrepancy between the results available in the literature
-\change_deleted -838067963 1589199191
- 
-\change_inserted -838067963 1589199191
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589199250
-experimental? numerical? c'est pas vrai en plus car Rothman fitte mieux
- sur les resultas analytiques
-\change_inserted -1030020954 1589396438
-je veux dire en général
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-and the value for this limit case could be explained by a smaller permeability
-\change_deleted -838067963 1589197632
- 
-\change_inserted -838067963 1589197632
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589197636
-pas claire
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-if one based on the qualitative arguments given in this section about the
+ The discrepancy between the results available in the literature and the
+ value for this limit case could be explained by a smaller permeability
+ if one based on the qualitative arguments given in this section about the
  relation between the permeability, the flow regime, and the extent of the
  fluid/fluid interface.
- What is important here is that the effect of the 
-\change_inserted -838067963 1589197703
-crossed 
-\change_unchanged
-permeability is broader than the flow regime changes
-\change_inserted -838067963 1589197719
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589197820
-Je ne comprends pas ce que tu veux dire: il y a en plus plein de différentes
- définitions pour « flow regime »
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-.
+ What is important here is that the effect of the permeability is broader
+ than the flow regime changes.
  Indeed, the part of the fluid-fluid drag in the total pressure drop can
- decreases either due to a changing flow regime
-\change_deleted -838067963 1589197884
- 
-\change_inserted -838067963 1589197884
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589197897
-toujours pas claire pour moi ce changement de regime
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-or because of the increasing friction exerted upon the solid structure by
- the fluids due to the lower permeability, whereas the value of the interaction
- terms between fluids would remain stable.
+ decreases either due to a chnaging flow regime or because of the increasing
+ friction exerted upon the solid structure by the fluids due to the lower
+ permeability, whereas the value of the interaction terms between fluids
+ would remain stable.
 \end_layout
 
 \begin_layout Standard
@@ -1528,9 +866,10 @@ literal "false"
  simulations.
  The original idea of the article lies in the use of depth-averaged equations
  to vary the permeability without having to change the in-plane geometry.
- In the next section, we present the averaged equations suitable for the
- study of two-phase quasi-planar flows.
- Then we present the numerical model, which is based on the level-set method
+ It is organized as follows.
+ In the next section we present the averaged equations suitable for the
+ study of two-phases quasi-planar flows.
+ Then we present the numerical method, which is based on the level-set method
  for the tracking of the interface between the fluids.
  Finally, the result section presents a study of the different drag terms
  between the phases as a function of the capillary number of the flow and
@@ -1545,52 +884,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -838067963 1589198082
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589199555
-Figure 2:
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589199648
-- Attention: cette figure ne s'affiche pas dans la version pdf.
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589198484
-- Marqueurs vides pour la simulation numérique pour les distinguer avec
- les données expérimentales.
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589199643
-- Utilise Numerical, Experimental et Analytical devant les références en
- parenthèse: “annular” ça veut rien dire.
- Analytical (Bacri et al.)
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589199576
-- Il faut dire dans le texte que le modèle de Li et al.
- predit mieux les données experimentales non? et que le modèle de Rothman
- est très proche des resultats analytique...
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \begin_inset Graphics
 	filename figures/pdf/INTRODUCTION_litt_perm.pdf
 	lyxscale 150
@@ -1604,39 +897,8 @@ Figure 2:
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Adimensionalized coupled relativWetting fluid saturation at steady-state
- in UC3 as a function of the dimensionless aperture and for different capillary
- numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit lWetting
- fluid saturation at steady-state in UC3 as a function of the dimensionless
- aperture and for different capillary numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit lesse permeabil
-ities as a function of the wetting-fluid saturation from experimental work
- 
+Adimensionalized coupled relative permeabilities as a function of the wetting-fl
+uid saturation from experimental work 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Dullien1996,zarcone1994determination"
@@ -1695,52 +957,11 @@ name "fig:comparison_Kr_litterature"
 
 \begin_layout Section
 Theoretical background
-\change_inserted -838067963 1589224645
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589224957
-
-\size small
-l'introdcution aussi contient les biblios theoriques.
- il faut changer le titre: gouverning equations ou mathematical formulations
- or theoretical model formulations 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
 In this section we derive the averaged flow equations for two-phases flows
- in a Hele-Shaw 
-\change_inserted -838067963 1589225023
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589225492
-on ne parle pas de tout de Hele-Shaw dans l'introducton : ça fait bizzare
- pourtant c'est la base de ton article
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-cell, starting from the three-dimensional Stokes equations.
+ in a Hele-Shaw cell, starting from the three-dimensional Stokes equations.
  The system under consideration is depicted in Fig.
 \begin_inset space ~
 \end_inset
@@ -1756,7 +977,7 @@ noprefix "false"
 \end_inset
 
  which represents a quasi-planar cocurrent two-phase flow between two parallel
- plates with a wedge of circular cross-section as a solid obstacle.
+ plates.
  The transverse dimension of the cell is noted 
 \begin_inset Formula $L$
 \end_inset
@@ -1766,28 +987,7 @@ noprefix "false"
 \end_inset
 
  is the length of the aperture between the plates.
-
-\change_deleted -838067963 1589225469
  
-\change_inserted -838067963 1589225342
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589225198
-attention: dans le fichier pdf, figure 2 apparaisse ici.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1798,8 +998,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-bien.
- 
 \begin_inset Graphics
 	filename figures/pdf/THEORY_heleShawSystemSketch.pdf
 	lyxscale 150
@@ -1868,25 +1066,6 @@ name "fig:Schematic_heleSahw"
 
 \begin_layout Paragraph
 Depth-averaging
-\change_inserted -838067963 1589228464
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589233808
-Sans aucune introduction, tu présentes depth-averaging.
- ton objectif? le problème? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -1978,25 +1157,7 @@ again since the velocity variations in the
 \begin_inset Formula $x,y$
 \end_inset
 
- directions are much slower 
-\change_inserted -838067963 1589226046
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589226060
-in steady state?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-than the velocity variations in the 
+ directions are much slower than the velocity variations in the 
 \begin_inset Formula $z$
 \end_inset
 
@@ -2005,9 +1166,7 @@ than the velocity variations in the
 \begin_inset Formula $\bar{\mathbf{u}}=\frac{1}{h}\int_{-h/2}^{h/2}\mathbf{u}_{\parallel}\:\mathrm{d}z$
 \end_inset
 
- is introduced and using its definition along with thThe fluid-fluid drag
- is not negligible compared with the solid-fluid drag and the ratio of the
- former over the latter increases as the aperture decreases.e no-slip boundary
+ is introduced and using its definition along with the no-slip boundary
  conditions at 
 \begin_inset Formula $z\pm h/2$
 \end_inset
@@ -2064,37 +1223,7 @@ noprefix "false"
 \end_inset
 
  and is analogous to the well known Darcy equation.
- To obtain a more versatile flow equation valid for moderate aspect Wetting
- fluid saturation at steady-state in UC3 as a function of the dimensionless
- aperture and for different capillary numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit lWetting
- fluid saturation at steady-state in UC3 as a function of the dimensionless
- aperture and for different capillary numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit lessratio
+ To obtain a more versatile flow equation valid for moderate aspect ratio
  we recognise that the velocity profile is described by a parabolic profile
  in the 
 \begin_inset Formula $z$
@@ -2175,9 +1304,9 @@ citep{nagel2015boundary}
  The approximation made by using on the reproduction of the velocity profile
  in a channel compared to the 3d results remains reasonable up to aspect
  ratios of 1.
- In the case of two-phase flow, these equations have to be written for each
- fluid and boundary conditions at the fluid-fluid interfaces are required
- 
+ can In the case of two-phases flow, these equations have to be written
+ for each fluid and boundary conditions at the fluid-fluid interfaces has
+ to be given 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saffman1958penetration"
@@ -2189,24 +1318,6 @@ literal "false"
  Continuity of the depth-averaged velocities across the interface and a
  jump of interface normal stress are sufficient if the surface tension is
  constant along the interface, and these conditions are expressed 
-\change_inserted -838067963 1589226996
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589227001
-reference?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -2230,7 +1341,7 @@ reference?
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 MC:
@@ -2248,7 +1359,7 @@ and
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 MC:keep using 
@@ -2316,7 +1427,7 @@ noprefix "false"
 \begin_inset Formula $z$
 \end_inset
 
--direction is approximated as a half-circle of radius 
+ direction is approximated as a half-circle of radius 
 \begin_inset Formula $h/2$
 \end_inset
 
@@ -2343,8 +1454,8 @@ noprefix "false"
 
 \end_inset
 
-, we neglected the additional terms that pertain to the formation of the
- dynamic film 
+ we neglect aditionnal terms that pertain for the formation of dynamic film
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "park1984two"
@@ -2353,13 +1464,9 @@ literal "false"
 \end_inset
 
  which scaled non-linearly with the capillary number.
- We rather considered a non-zero contact angle, and consequently, the absence
+ We rather consider a non-zero contact angle an consequently the absence
  of such thin films.
-
-\change_deleted -1030020954 1589396873
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Paragraph
@@ -2367,13 +1474,13 @@ Surface averaging
 \end_layout
 
 \begin_layout Standard
-Here, we proceed to the spatial averaging of the in-plane momentum transport
+Here we proceed to the spatial averaging of the in-plane momentum transport
  equations.
  We stop using the subscript 
 \begin_inset Formula $\parallel$
 \end_inset
 
- in the following, since we work only with depth-averaged
+ in the following since we work only with depth-averaged
 \begin_inset Note Note
 status collapsed
 
@@ -2383,7 +1490,7 @@ velocity
 
 \end_inset
 
- or two-dimensional quantities
+ or two-dimensionnal quantities
 \begin_inset Note Note
 status collapsed
 
@@ -2394,7 +1501,7 @@ pressure, nabla
 \end_inset
 
 .
- According to the volume averaging framework 
+ We place ourselves in the volume averaging framework 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Whitaker2013"
@@ -2402,7 +1509,8 @@ literal "false"
 
 \end_inset
 
- and acknowledging that 
+.
+ Acknowledging that 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "eq:amalgamStokesDarcy"
@@ -2412,12 +1520,12 @@ noprefix "false"
 
 \end_inset
 
- are two-dimensional, the traditional averaging theorem for the depth-averaged
+ are two-dimensional, the traditional averaging theorem for some depth-averaged
  quantity 
 \begin_inset Formula $\bar{\omega}_{i}$
 \end_inset
 
- associated with the fluid 
+ associated to the fluid 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2482,43 +1590,14 @@ noprefix "false"
 
 \end_inset
 
-
-\change_deleted -838067963 1589231382
- 
-\change_inserted -838067963 1589231382
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
-
-\change_inserted -838067963 1589231493
-on ne l’applique pas à la continuité?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-along with the averaging theorem and using traditional length-scale arguments
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Whitaker2013"
-literal "false"
-
-\end_inset
-
+ along with the averaging theorem and using traditional length-scale arguments
  we obtain
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot can\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma-\\
+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma-\\
 -\mu_{i}k^{2}\langle\bar{\mathbf{u}}_{i}\rangle=\varepsilon_{i}\nabla\langle p_{i}\rangle^{i}+\langle p_{i}\rangle^{i}\nabla\varepsilon_{i},\quad i,j=o,w,\:i\neq j,\label{eq:averagedFull}
 \end{multline}
 
@@ -2598,11 +1677,10 @@ literal "false"
 
 \end_inset
 
-.
  This also applies to the interface between fluids.
  A second point is that the integral on the fluid-fluid boundary interface
- is not strictly equivalent to an integral on this surface.
- Here, we consider that the contour in the 
+ is not strictly equivalent to an integral on this surface, here we make
+ an approximation by considering that the contour in the 
 \begin_inset Formula $x-y$
 \end_inset
 
@@ -2645,9 +1723,7 @@ noprefix "false"
 
 \end_inset
 
- readsThe fluid-fluid drag is not negligible compared with the solid-fluid
- drag and the ratio of the former over the latter increases as the aperture
- decreases.
+ reads
 \end_layout
 
 \begin_layout Standard
@@ -2703,7 +1779,7 @@ end{subequations}
 
 \begin_layout Standard
 \noindent
-If the variation of the saturation in space is negligible and acknowledging
+if the variation in space of the saturation is negligible and acknowledging
  that, as illustrated in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -2732,6 +1808,7 @@ noprefix "false"
 \end_inset
 
  and which must be computed or modeled to obtain closed macroscopic equations.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2739,9 +1816,19 @@ Direct numerical simulations
 \end_layout
 
 \begin_layout Standard
-In this section, we introduce the standard Level Set method to capture the
+In this section we introduce the standard Level Set method to capture the
  moving free interface between the fluids along with the flow equations
- solved with the commercial Finite Element solver Comsol Multiphysics ®.
+ solved with the commercial Finite Element solver Comsol Multiphysics
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Trademarks?
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2756,8 +1843,9 @@ Level Set model
 The Level Set method is part of the Eulerian methods which have the particularit
 y of easily handle the topological phases changes, in contrast to Lagrangian
  methods.
- As topological changes of the fluids are not excluded here, this motivated
+ As topological changes of the fluids is not excluded here, this motivated
  our choice for this method.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2853,33 +1941,6 @@ literal "false"
  is the maximum inlet velocity.
  We applied this relation in the following.
  
-\change_inserted -838067963 1589233434
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589233512
-We showed that...
- il faut le dire plus tard dans la partie 
-\begin_inset Quotes eld
-\end_inset
-
-Geometry, boundary conditions and simulation parameters
-\begin_inset Quotes erd
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Paragraph
@@ -2963,8 +2024,7 @@ where
 \begin_inset Formula $\mathbf{n}$
 \end_inset
 
- denotes the unit normal to the interface, respectively defined as, bien.
- 
+ denotes the unit normal to the interface, respectively defined as,
 \end_layout
 
 \begin_layout Standard
@@ -3101,8 +2161,8 @@ Geometry, boundary conditions and simulation parameters
 
 \begin_layout Standard
 Our macroscopic model resembling a Hele-Shaw cell with wedges of cylindrical
- cross-section confined between two plates as obstacles.
- This system is subdivided into five unit-cell (UC) subdomains encompassing
+ cross-section sandwiched between the plates as obstacles.
+ This system is subdivided into five init-cell (UC) subdomains encompassing
  one wedge, as depicted in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -3119,7 +2179,7 @@ noprefix "false"
 \begin_inset Formula $x$
 \end_inset
 
--direction) and boundary conditions used are summarized in 
+ direction) and boundary conditions used are summarized in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "tab:Boundary-conditions"
@@ -3139,36 +2199,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-Wetting fluid saturation at steady-state in UC3 as a function of the dimensionle
-ss aperture and for different capillary numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit lWetting
- fluid saturation at steady-state in UC3 as a function of the dimensionless
- aperture and for different capillary numbers.
- Fields of the level-set function at steady-state in UC3 are given for the
- selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=1$
-\end_inset
-
- and 
-\begin_inset Formula $Ca=7.5\times10^{-3}$
-\end_inset
-
-.
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
- A decrease in the capillary number acts in the same way, albeit less
 \begin_inset Formula 
 \begin{equation}
 f_{f}=\frac{u_{w}^{x}}{U_{t}},\quad\textrm{with}\quad U_{t}=u_{w}^{x}+u_{o}^{x}.
@@ -3176,24 +2206,6 @@ f_{f}=\frac{u_{w}^{x}}{U_{t}},\quad\textrm{with}\quad U_{t}=u_{w}^{x}+u_{o}^{x}.
 
 \end_inset
 
-
-\change_inserted -838067963 1589234973
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589235059
-On n'a pas defini ce qui est uxv et uxo? et si ademntionnel, il faut prime?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -3214,34 +2226,24 @@ noprefix "false"
  The viscosity ratio was chosen in favor of the invading fluid to mimic
  the invasion of an initially fully water-saturated micromodel by an oil-like
  fluid.
- We tested a larger range of plates aperture, however, the reader is warned
+ We tsted a larger range of plates aperture, however the reader is warned
  that the depth-averaged equations derived in the previous section are outside
  their validity conditions for the extreme value 
 \begin_inset Formula $h/L=5$
 \end_inset
 
-,
-\change_deleted -838067963 1589235250
- 
-\change_inserted -838067963 1589235250
-
+, on the other hand, it provides a limit 2-dimensionnal case for information
+ purposes
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-\noindent
-
-\change_inserted -838067963 1589235302
-As-tu une référence pour h/=5?
-\change_unchanged
-
+bofbof, à virer ?
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
-on the other hand, it provides a limit 2-dimensionnal case.
+.
 \begin_inset Float figure
 wide false
 sideways false
@@ -3256,8 +2258,6 @@ status open
 \end_inset
 
 
-\change_inserted -838067963 1589235392
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3265,46 +2265,11 @@ status open
 
 \begin_layout Plain Layout
 The geometry used is the superior half of an array of five cylindrical wedges
- inside five cuboid
-\change_inserted -838067963 1589235609
-s
-\change_unchanged
- where both fluids are injected from left to right.
- Initially
-\change_inserted -838067963 1589235567
-,
-\change_unchanged
- the model is saturated 
-\change_deleted -838067963 1589235801
-in
-\change_inserted -838067963 1589235801
-with
-\change_unchanged
- wetting fluid (red), and the length of one Unit Cell (UC) is one millime
-\change_deleted -838067963 1589235847
-tre
-\change_inserted -838067963 1589235847
-ter
-\change_unchanged
-.
- Symmetr
-\change_inserted -838067963 1589235681
-y
-\change_deleted -838067963 1589235680
-ic
-\change_unchanged
- boundary conditions are used on both length sides and the no-flow boundary
- condition is 
-\change_deleted -838067963 1589235736
-enforced
-\change_inserted -838067963 1589235737
-imposed
-\change_unchanged
- at the 
-\change_deleted -838067963 1589235660
-the 
-\change_unchanged
-wedge boundary.
+ inside five cuboid where both fluids are injected from left to right.
+ Initially the model is saturated in wetting fluid (red), and the length
+ of one Unit Cell (UC) is one millimetre.
+ Symmetric boundary conditions are used on both length sides and the no-flow
+ boundary condition is enforced at the the wedge boundary.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3317,6 +2282,10 @@ name "fig:model"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -3446,7 +2415,7 @@ Outlet
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 MC:à vérifier
@@ -3565,24 +2534,6 @@ Inlet
 
 \begin_layout Plain Layout
 
-\change_inserted -838067963 1589235900
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589236258
-Pourquoi u en gras? u et p sont adimensionnés? ajouter ' alors.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -3600,11 +2551,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Simulation parameters
-\change_deleted -1030020954 1589397419
- 
-\change_unchanged
-.
+Simulation parameters and their respective values in the following work.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Simulation-parameters"
@@ -3767,6 +2714,10 @@ from
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -3777,7 +2728,8 @@ Mesh convergence study
 \end_layout
 
 \begin_layout Standard
-We studied the mesh convergence of the various drag quantities.
+Here we study the mesh convergence of the various drag quantities we are
+ interested in.
  The dimensionless numbers for this study were 
 \begin_inset Formula $Ca=1$
 \end_inset
@@ -3819,12 +2771,12 @@ noprefix "false"
  (b).
  These results were obtained in the third unit-cell (UC3) at steady-state
  and, except the difference in average intrinsic pressure, rapidly converge
- with the number of mesh elements.
+ with the amount of mesh elements.
  In the following simulations, we used 
 \begin_inset Formula $1\times10^{5}$
 \end_inset
 
- mesh elements in the whole domain.
+ meh elements in the whole domain.
 \end_layout
 
 \begin_layout Standard
@@ -3841,92 +2793,6 @@ status open
 
 \end_inset
 
-
-\change_inserted -838067963 1589236441
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589236444
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589237126
-cette figure s'affiche avant la section 
-\begin_inset Quotes eld
-\end_inset
-
-Mesh convergence study
-\begin_inset Quotes erd
-\end_inset
-
- dans le fichier pdf.
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589237465
-a) 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589237465
--axe x: Number of elements
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589238147
-- bizarre que (uxw) diminue en augmentant le nombre de mailles! est-ce possible?
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589238176
-- il faut dire que la difference de la pression est plus sensible au nombre
- de mailles.
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589237582
-b) 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589237585
-- tracer l'interface pour 1.0*10^5 au lieu de 1.9*10^5¨.
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589238025
-- utiliser les lignes en diffèrent styles.
- Mets 
-\begin_inset Quotes eld
-\end_inset
-
-number of elements
-\begin_inset Quotes erd
-\end_inset
-
- au-dessus des légendes.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 
 \end_layout
 
@@ -3950,8 +2816,8 @@ Mesh convergence study of (a) drag force (
  (yellow) and difference of the intrinsic average pressure (orange).
  All the results are normalized with respect to the result obtained with
  the coarser mesh, at steady-state and in UC3 (b) fluid-fluid interface
- position in UC3 at steady-state for the different number of mesh elements
- in the whole geometry.
+ position in UC3 at steady-state for different number of mesh elements in
+ the whole geometry.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Mesh-convergence-study"
@@ -3981,79 +2847,19 @@ Results and discussion
 \end_layout
 
 \begin_layout Standard
-Before we 
-\change_deleted -838067963 1589286334
-turn
-\change_inserted -838067963 1589286335
-present
-\change_unchanged
- 
-\change_deleted -838067963 1589286387
-to the study
-\change_inserted -838067963 1589286422
-the results for
-\change_deleted -838067963 1589286424
- of
-\change_unchanged
- drag force terms, we briefly discuss the 
-\change_inserted -838067963 1589286705
-two-phase 
-\change_unchanged
-flow regime observed along with the variation of the saturation with time.
-\change_inserted -838067963 1589286454
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589286671
-Explique pourquoi il est important de regarder le régime de l’écoulement
- diphasique.
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
+Before we turn to the study of drag force terms, we briefly discuss the
+ flow regime observed along with the variation of the saturation with time.
 \end_layout
 
 \begin_layout Paragraph
-
-\change_inserted -838067963 1589286694
-Two-phase 
-\change_deleted -838067963 1589286695
-F
-\change_inserted -838067963 1589286696
-f
-\change_unchanged
-low regime 
+Flow regime 
 \end_layout
 
 \begin_layout Standard
 We observed that the two fluids remain continuous at all times and for the
- entire range of tested capillary 
-\change_inserted -838067963 1589287533
-numbers 
-\change_unchanged
-and aspect ratio
-\change_inserted -838067963 1589287535
-s
-\change_unchanged
-.
+ entire range of tested capillary and aspect ratio.
  The interface between the fluids becomes stationary and a stationary state
- is reached for every capillary 
-\change_inserted -838067963 1589287568
-number 
-\change_unchanged
-and aspect ratio value
-\change_inserted -838067963 1589287579
-s
-\change_unchanged
-.
+ is reached for every capillary and aspect ratio value.
  Initial, intermediate, and final configurations of the fluid repartition
  are presented in 
 \begin_inset CommandInset ref
@@ -4065,151 +2871,22 @@ noprefix "false"
 
 \end_inset
 
-
-\change_inserted -838067963 1589287164
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589287183
-for the case Ca=...
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
 .
  At steady-state, the fluid-fluid interface is periodic on the three central
  unit cells whereas the interface is slightly deformed at the inlet and
  outlet cells, under the influence of boundary conditions.
-\change_inserted -838067963 1589287703
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589287821
-Est-il intéressant de tracer l'interface fluide-fluide en fonctionne de
- temps dans UC1, UC3 et UC5? à coté de cette figure?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
  
-\change_inserted -838067963 1589288098
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288218
-Dommage qu'on n'a pas le changement de régime comme ce qu'on a fait en 2D!
- :-( Comment peut-on valoriser tes calculs 2D? passer autant de temps et
- d’efforts pour rien?! ! 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
-The flow-regime observed is a film-flow regime in 
-\change_deleted -838067963 1589288373
-each case
-\change_inserted -838067963 1589288373
-within the limit of the paramaters chosen for this study.
-\change_deleted -838067963 1589288380
-.
-
-\change_unchanged
+The flow-regime observed is a film-flow regime in each case.
  This flow-regime is ideal to study the magnitude of the fluid-fluid drag
  terms, because the extent of the fluid-fluid interface is comparable to
  the extent of the fluid-solid interface and because the interface is parallel
- to the dominant direction of the flow, thus it is subject to high drag
-\change_inserted -838067963 1589288413
- force
-\change_unchanged
-.
- In the following work, the results were obtained 
-\change_inserted -838067963 1589287455
-at steady-state and only 
-\change_unchanged
-in the central unit cell UC3
-\change_inserted -838067963 1589287412
- to be far from the perturbation caused by the inlet and outlet boundary
- conditions
-\change_deleted -838067963 1589287470
-, and after steady-state was reached
-\change_unchanged
-.
-
-\change_deleted -838067963 1589288502
+ to the dominant direction of the flow, thus it is subject to high drag.
+ In the following work, the results were obtained in the central unit cell
+ UC3, and after steady-state was reached.
  
-\change_inserted -838067963 1589288796
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288578
-Est-ce que tu as testé des cas limites pour voir s’il y a un changement
- de régime? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288750
-peut-on dans cette section tracer toutes les interfaces en UC3 en fonaction
- de Ca et h*? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288874
-peut-on au moins discuter un peu plus et expliquer dans quelles conditions
- ce regime du film pourrait changer? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -4234,19 +2911,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fluids repartion along the superior half-row at 
-\change_inserted -838067963 1589287610
-(a) 
-\change_unchanged
-the initial time, 
-\change_inserted -838067963 1589287616
-(b) 
-\change_unchanged
-for an intermediate time and 
-\change_inserted -838067963 1589287621
-(c) 
-\change_unchanged
-final time (steady-state reached) for 
+Fluids repartion along the superior half-row at the initial time, for an
+ intermediate time and final time (steady-state reached) for 
 \begin_inset Formula $Ca=0.05$
 \end_inset
 
@@ -4263,14 +2929,10 @@ final time (steady-state reached) for
 \end_inset
 
 .
- 
-\change_deleted -838067963 1589287644
-The dimensionless time is defined as 
+ The dimensionless time is defined as 
 \begin_inset Formula $t^{*}=t\times(U_{T}/L)^{-1}$
 \end_inset
 
-
-\change_unchanged
 .
  At steady-state the fluid-fluid interface taken on the central unit cells
  is periodic whereas it is slightly deformed in the first and last UC under
@@ -4292,62 +2954,6 @@ name "fig:Fluid-repartion-along"
 
 \begin_layout Plain Layout
 
-\change_inserted -838067963 1589286836
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288069
-- a, b et c dans la figure.
- sinon, les temps t*=0, 6 et 22 dans la légende de figure.
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589288003
-les paramètres adimensionnés ont été présentés avec ' pourquoi ici t avec
- une étoile? « t’ » doit être présenté dans la section où tu fais l’adimensionna
-lisation.
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589287950
-- t*=22 me semble pas l'état finale! à moins que l’interface bouge beaucoup
- dans la UC5 comme on l'avait observé en 2D?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -838067963 1589288999
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589289268
-Avant présenter la partie saturation, je propose de calculer la perméabilité
- intrinsèque en fonction de h*.
- On étudie l'écoulement dans « high permeable media » mais on ne sait toujours
- pas la gamme de perméabilité de notre milieu.
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -4360,15 +2966,8 @@ Saturation
 \end_layout
 
 \begin_layout Standard
-Wetting fluid saturation at steady-state decreases
-\change_inserted -838067963 1589301812
-, in average,
-\change_unchanged
- from 0.6 to 0.3 as the aperture between the plates decreases
-\change_inserted -838067963 1589301854
- from 5 to 1/20
-\change_unchanged
-.
+Wetting fluid saturation at steady-state decreases from 0.6 to 0.3 as the
+ aperture between the plates decreases.
  This can be seen in 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -4380,94 +2979,11 @@ noprefix "false"
 \end_inset
 
 , on which the saturation in UC3 is given as a function of the dimensionless
- aperture and 
-\change_inserted -838067963 1589289589
-for 
-\change_unchanged
-different capillary numbers.
- As the aperture between the plates increases, the 
-\change_inserted -838067963 1589301953
-fluid-fluid 
-\change_unchanged
-interface becomes flatter
-\change_deleted -838067963 1589301971
- 
-\change_inserted -838067963 1589301971
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589302095
-expliquer plutot par rapport à la courbure 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-but the film thickness at the throat pore level barely changes
-\change_inserted -838067963 1589302236
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589325106
-mieux de le quantifer.
- ça ne veut rien dire 
-\begin_inset Quotes eld
-\end_inset
-
-barely changes
-\begin_inset Quotes erd
-\end_inset
-
- quand on pourra le quantifier et dire quelques chose plus solide avec %!
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-, 
-\change_deleted -838067963 1589302390
-so
-\change_inserted -838067963 1589302394
-therefore,
-\change_unchanged
- the saturation of the wetting fluid increases.
-\change_inserted -838067963 1589302421
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589302565
-Ce n'est qu'une observation expérimentale mais comment on l'explique “physiqueme
-nt”? pourquoi la courbure change avec h*?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
- This is noticeable 
-\change_deleted -838067963 1589289411
-on
-\change_inserted -838067963 1589289411
-in
-\change_unchanged
- the embedded saturation fields in 
+ aperture and different capillary numbers.
+ As the aperture between the plates increases, the interface becomes flatter
+ but the film thickness at the throat pore level barely changes, so the
+ saturation of the wetting fluid increases.
+ This is noticeable on the embedded saturation fields in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:wettingFluidSaturation"
@@ -4478,48 +2994,9 @@ noprefix "false"
 \end_inset
 
 .
+ For an increasing capillary number the wetting fluid saturation slightly
+ decreases but with a more limited effect that the aperture variation.
  
-\change_deleted -838067963 1589289694
-For an i
-\change_inserted -838067963 1589289694
-I
-\change_unchanged
-ncreasing capillary number
-\change_inserted -838067963 1589302606
- from ? to ? decreases
-\change_unchanged
- 
-\change_inserted -838067963 1589289734
-slightly 
-\change_unchanged
-the wetting fluid saturation 
-\change_deleted -838067963 1589289731
-slightly
-\change_unchanged
- 
-\change_deleted -838067963 1589302966
-decreases but with a more limited effect that the aperture variation.
- 
-\change_inserted -838067963 1589303101
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589303379
-Il faut dire que l'effet est optimal pour h*=0.5–> mais pourquoi l'effet
- du nombre capillaire et petit pour les h* petit et puis devient plus important
- pour h* moderé et à la fin devient négligeable pour h* grand?
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -4530,22 +3007,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-In this study we conducted direct simulations of depth-averaged two-phases
- flows, and we investigated the effect of the permeability on the drag forces
- exerted upon the different phase interfaces.
- The permeability was changed by varying the Darcean term which arising
- from the depth-averaging, thus without altering the in-plane geometry.
- These drag terms have to be modelled to obtain the macroscopic momentum
- transport equations but the drag exerted upon the the fluid-fluid interface
- is commonly neglected for flow driven by capillarity forces.
- Here we focused on film-flow regime pourencountered in two-phases flows
- in high permeability porous media or in microfluidic devices.
- We found that the drag exerted upon the fluid-fluid interface should not
- be neglected into the momentum transport equations for film-flow regimes.
- Lower permeability does not make the drag force terms at the interface
- negligible as long as the flow regime remains a film regime.
- On the contrary, the fluid-fluid drag force increases faster than the drag
- upon the fluid-solid interfaces, as the aperture between the plates decreases
 \begin_inset Graphics
 	filename figures/pdf/RESULTS_saturation.pdf
 	lyxscale 150
@@ -4553,56 +3014,16 @@ In this study we conducted direct simulations of depth-averaged two-phases
 \end_inset
 
 
-\change_inserted -838067963 1589302771
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589302773
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589302875
-il manque un poin h* entre 0.5 et 5 (1.5 ou 2?) 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Wetting
-\change_inserted -838067963 1589322864
-The fluid-fluid drag is not negligible compared with the solid-fluid drag
- and the ratio of the former over the latter increases as the aperture decreases.
-
-\change_unchanged
- fluid saturation at steady-state in UC3 as a function of the dimensionless
- aperture and for different capillary numbers.
- 
-\change_inserted -838067963 1589303885
-Wetting saturation 
-\change_deleted -838067963 1589303886
-F
-\change_inserted -838067963 1589303886
-f
-\change_unchanged
-ields of the level-set function at steady-state in UC3 are given for 
-\change_inserted -838067963 1589301723
-the 
-\change_unchanged
-selected value of the dimensionless aperture and 
+Wetting fluid saturation at steady-state in UC3 as a function of the dimensionle
+ss aperture and for different capillary numbers.
+ Fields of the level-set function at steady-state in UC3 are given for selected
+ value of the dimensionless aperture and 
 \begin_inset Formula $Ca=1$
 \end_inset
 
@@ -4613,15 +3034,7 @@ selected value of the dimensionless aperture and
 .
  As the aperture increases the interface flattens and the wetting fluid
  saturation increases.
- A decrease in the capil
-\change_deleted -838067963 1589301745
-a
-\change_unchanged
-l
-\change_inserted -838067963 1589301746
-a
-\change_unchanged
-ry number acts in the same way, albeit less strongly.
+ A decrease in the capilalry number acts in the same way, albeit less strongly.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -4664,27 +3077,7 @@ noprefix "false"
 \begin_inset Formula $\phi=0.5$
 \end_inset
 
-
-\change_deleted -838067963 1589320275
- 
-\change_inserted -838067963 1589320275
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589320890
-gradient de vitesse dans quel sens? 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-contour and the pressure part was obtained by application of the divergence
+ contour and the pressure part was obtained by application of the divergence
  theorem (see appendix 
 \begin_inset CommandInset ref
 LatexCommand formatted
@@ -4697,22 +3090,8 @@ noprefix "false"
 
 ).
  The drag force exerted upon the wedge boundary, viscous and pressure part,
- was computed straight forward
-\change_inserted -838067963 1589320514
- from the model
-\change_unchanged
-.
- In the following
-\change_inserted -838067963 1589319474
-,
-\change_unchanged
- we are interested in the drag force comp
-\change_inserted -838067963 1589319495
-o
-\change_deleted -838067963 1589319494
-e
-\change_unchanged
-nent in the 
+ was computed straight forward.
+ In the following we are interested in the drag force compenent in the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -4731,15 +3110,7 @@ nent in the
 \begin_inset Formula $d_{f}^{x}$
 \end_inset
 
-, is the sum of the cont
-\change_inserted -838067963 1589319543
-r
-\change_unchanged
-ibution of each fluid
-\change_deleted -838067963 1589319593
-s
-\change_unchanged
-, i.e., 
+, is the sum of the contibution of each fluids, i.e., 
 \begin_inset Formula $d_{f}^{x}=d_{ow}^{x}+d_{wo}^{x}$
 \end_inset
 
@@ -4748,42 +3119,14 @@ s
 \begin_inset Formula $x$
 \end_inset
 
-–component of the drag forces are expressed 
-\change_deleted -838067963 1589321004
-by 
-\change_inserted -838067963 1589321004
-per 
-\change_unchanged
-unit
-\change_deleted -838067963 1589319567
-e
-\change_unchanged
- surface area of unit-cell.
+–component of the drag forces are expressed by unite surface area of unit-cell.
  
 \end_layout
 
 \begin_layout Standard
 The total drag exerted upon the fluid-fluid interface reaches between 5
- and 60% 
-\change_inserted -838067963 1589321220
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589321234
-ca n'arrie pas à 0.6
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-of the total drag exerted upon the solid-fluid boundaries, as can be seen
- in 
+ and 60% of the total drag exerted upon the solid-fluid boundaries, as can
+ be seen in 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:ratioDragForceTotal"
@@ -4800,85 +3143,14 @@ noprefix "false"
  as a function of the dimensionless aperture between the cell plates and
  for different capillary numbers.
  The main observation here is that the drag upon the fluid-fluid interface
- is not negligible compared 
-\change_deleted -838067963 1589319667
-compared 
-\change_unchanged
-to the solid-fluid drag.
- This could be anticipated by the flow regime, as discussed above
-\change_inserted -838067963 1589321355
- in Section ?
-\change_unchanged
-, which is very favourable to the interactions between the two fluids.
-
-\change_inserted -838067963 1589321436
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589321442
-je ne comprends pas
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
+ is not negligible compared compared to the solid-fluid drag.
+ This could be anticipated by the flow regime, as discussed above, which
+ is very favourable to the interactions between the two fluids.
  Interestingly, the part of the fluid-fluid drag increases, compared with
  the solid-fluid interface drag, as the aperture between the plates decreases.
-
-\change_deleted -838067963 1589321595
+ At first glance, this may seem contradictory, since narrowing the aperture
+ increases the fluids friction upon the plates.
  
-\change_inserted -838067963 1589321598
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589321665
-ce n'est pas vrai pour ca=10e-2 et 7.5*10e-3 entre h*=0.5-10!
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-At first glance, this may seem contradictory, since narrowing the aperture
- increases the fluid
-\change_inserted -838067963 1589319726
-'
-\change_unchanged
-s friction upon the plates.
-
-\change_deleted -838067963 1589321429
- 
-\change_inserted -838067963 1589321787
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589321987
-On distinct deux comportement différents: Ca grand et Ca modéré.
- Il faut les expliquer séparément et comprendre pourquoi pour les Ca modérés,
- on a un changement du comportement sur le point h*=0.5
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -4896,10 +3168,6 @@ status open
 \end_inset
 
 
-\change_inserted -838067963 1589321683
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4916,24 +3184,8 @@ Ratio of the total drag force (
 \end_inset
 
 -component) exerted upon the fluid-solid interface as a function of the
- dimensionless aperture and for different capillary numbers
-\change_inserted -838067963 1589322365
- ( 
-\change_deleted -838067963 1589322379
-.
- Results obtained at steady-state in
-\change_unchanged
- 
-\change_inserted -838067963 1589322395
-in 
-\change_unchanged
-UC3 
-\change_deleted -838067963 1589322384
-for 
-\change_inserted -838067963 1589322385
-, 
-\change_unchanged
-
+ dimensionless aperture and for different capillary numbers.
+ Results obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
@@ -4941,45 +3193,15 @@ for
 \begin_inset Formula $M_{w}=0.5$
 \end_inset
 
-
-\change_inserted -838067963 1589322389
-)
-\change_deleted -838067963 1589322414
 .
-
-\change_unchanged
- 
-\change_deleted -838067963 1589322407
-The fluid-fluid drag is not negligible compared with the solid-fluid drag
+ The fluid-fluid drag is not negligible compared with the solid-fluid drag
  and the ratio of the former over the latter increases as the aperture decreases.
-\change_unchanged
-
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:ratioDragForceTotal"
 
 \end_inset
 
-
-\change_inserted -838067963 1589322421
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589322446
-Est-ce qu'on est obligé de redire les résultats à chaque fois dans les légendes
- des figures? à revoir et simplifier les légendes des figures.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
- 
-\change_unchanged
 
 \end_layout
 
@@ -4994,15 +3216,7 @@ Est-ce qu'on est obligé de redire les résultats à chaque fois dans les légen
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -838067963 1589325707
-In order to better undrestand the above mentioned behavior, 
-\change_deleted -838067963 1589322978
-O
-\change_inserted -838067963 1589322979
-o
-\change_unchanged
-n 
+On 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "fig:Total-drag-force"
@@ -5046,27 +3260,8 @@ noprefix "false"
 \end_inset
 
  behaviour.
- This explains the influence of the capillary number
-\change_deleted -838067963 1589323312
- 
-\change_inserted -838067963 1589323312
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589323354
-Qu’on n'a pas expliqué dans la section précédente! :D
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-and the origin of the variation in the 
+ This explains the influence of the capillary number and the origin of the
+ variation in the 
 \begin_inset Formula $d_{f}^{x}/d_{s}^{x}$
 \end_inset
 
@@ -5083,30 +3278,12 @@ and the origin of the variation in the
  behavior.
  In fact, the drag force upon the wedge is at least about 80% of the drag
  upon the plates, in the less advantageous case 
-\change_inserted -838067963 1589323489
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589323534
-où on peut le voir? pas de figure sur ça!
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \begin_inset Formula $h^{*}=1/20$
 \end_inset
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 MC:etonnant
@@ -5132,31 +3309,6 @@ status open
 \end_inset
 
 
-\change_inserted -838067963 1589323210
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589323213
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589323250
-je sais qu'on n'a pas assez de points mais si on trace di=f(Ca), on voit
- mieux le comportement.
- 
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5164,20 +3316,8 @@ je sais qu'on n'a pas assez de points mais si on trace di=f(Ca), on voit
 
 \begin_layout Plain Layout
 Total solid-fluid drag force and total fluid-fluid drag force as a function
- of the dimensionless aperture and for different capillary numbers
-\change_deleted -838067963 1589323640
-.
-
-\change_unchanged
- 
-\change_deleted -838067963 1589323601
-Results obtained at steady-state
-\change_inserted -838067963 1589323601
-(
-\change_deleted -838067963 1589323604
- 
-\change_unchanged
-in UC3 for 
+ of the dimensionless aperture and for different capillary numbers.
+ Results obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
@@ -5185,18 +3325,9 @@ in UC3 for
 \begin_inset Formula $M_{w}=0.5$
 \end_inset
 
-
-\change_inserted -838067963 1589323611
-)
-\change_unchanged
 .
- Fluid-fluid drag increases 
-\change_deleted -838067963 1589323708
-faster
-\change_inserted -838067963 1589323709
-more
-\change_unchanged
- than the solid-fluid drag as the aperture decreases.
+ Fluid-fluid drag increases faster than the solid-fluid drag as the aperture
+ decreases.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5229,50 +3360,12 @@ noprefix "false"
 \end_inset
 
  we present the viscous and pressure parts of the fluid-fluid drag force.
- 
-\change_inserted -838067963 1589324079
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589324178
-J’imagine qu'il y a une raison que tu ne présentes p
-\change_unchanged
-sur sur
-\change_inserted -838067963 1589324178
-as plutot leurs ratios?
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-For dimensionless aperture lower than 
+ For dimensionless aperture lower than 
 \begin_inset Formula $1/2$
 \end_inset
 
 , the viscous part is negligible compared with the pressure part.
- 
-\change_inserted -838067963 1589324261
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589324286
-je ne suis pas sur que ça soit valable pour tous les Ca
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-Thus, the pressure drives the 
+ Thus, the pressure drives the 
 \begin_inset Formula $h^{-2}$
 \end_inset
 
@@ -5318,13 +3411,7 @@ noprefix "false"
 \end_inset
 
 .
- 
-\change_deleted -838067963 1589324463
-Now
-\change_inserted -838067963 1589324465
-However
-\change_unchanged
-, for 
+ Now, for 
 \begin_inset Formula $Ca=0.01$
 \end_inset
 
@@ -5357,11 +3444,7 @@ However
 \end_inset
 
 -direction.
-
-\change_deleted -838067963 1589324385
  
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -5379,38 +3462,6 @@ status open
 \end_inset
 
 
-\change_inserted -838067963 1589324602
-
-\end_layout
-
-\begin_layout Plain Layout
-sur sur
-\change_inserted -838067963 1589324605
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589324937
-- Le point où ces deux courbes se croisent est intéressant : en diminuant
- Ca, ce point se déplace vers df plus petit et pour un h* plus petit.
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\change_inserted -838067963 1589324980
-- Garde la définition scientifique pour Ca comme pour les autres figures
-\change_unchanged
-
-\end_layout
-
-\end_inset
-
-
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5418,18 +3469,9 @@ status open
 
 \begin_layout Plain Layout
 Pressure and viscous part of the total fluid-fluid drag force as a function
- of the dimensionless aperture and for different value
-\change_inserted -838067963 1589324557
-s
-\change_unchanged
- of the capillary number
-\change_deleted -838067963 1589324578
-.
- Results obtained at steady-state 
-\change_inserted -838067963 1589324568
-(
-\change_unchanged
-in UC3 for 
+ of the dimensionless aperture and for different value of the capillary
+ number.
+ Results obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
@@ -5437,10 +3479,6 @@ in UC3 for
 \begin_inset Formula $M_{w}=0.5$
 \end_inset
 
-
-\change_inserted -838067963 1589324572
-)
-\change_unchanged
 .
  The pressure part of the drag drives the 
 \begin_inset Formula $h^{-2}$
@@ -5529,6 +3567,10 @@ name "fig:Pressure-field"
  
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -5573,39 +3615,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-- ca marche!
-\end_layout
-
-\begin_layout Plain Layout
-- tu n'as pas dit que la difference de pression devient plus importnat en
- diminuant h* 
-\end_layout
-
-\begin_layout Plain Layout
-- les legendes ne sont pas claires (tu calcules delta_p, une fois avec ton
- modèle et une fois avec la coubure) donc Ca=1 — model et ***2gamma/h
-\end_layout
-
-\begin_layout Plain Layout
-- peut-on tenter d'obtenir delta_p vs Sw?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
-
-\change_deleted -838067963 1589327034
-sur sur
-\change_unchanged
-
 \begin_inset Graphics
 	filename figures/pdf/RESULTS_Pc.pdf
 	lyxscale 150
@@ -5632,30 +3642,14 @@ Dynamic pressure difference and pressure jump due to the interface curvature
 \begin_inset Formula $U_{T}\mu_{o}/L$
 \end_inset
 
-) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-tu ne dis pas ça dans le texte!
-\end_layout
-
-\end_inset
-
-as a function of the dimensionless aperture and for different capillary
- numbers
-\change_inserted -838067963 1589327006
- (
-\change_deleted -838067963 1589327013
-.
- Results obtained at steady-state 
-\change_unchanged
-in UC3 for 
+) as a function of the dimensionless aperture and for different capillary
+ numbers.
+ Results obtained at steady-state in UC3 for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
  and 
-\begin_inset Formula $M_{w}=0.5)$
+\begin_inset Formula $M_{w}=0.5$
 \end_inset
 
 .
@@ -5697,8 +3691,8 @@ In this study we conducted direct simulations of depth-averaged two-phases
  These drag terms have to be modelled to obtain the macroscopic momentum
  transport equations but the drag exerted upon the the fluid-fluid interface
  is commonly neglected for flow driven by capillarity forces.
- Here we focused on film-flow regime pourencountered in two-phases flows
- in high permeability porous media or in microfluidic devices.
+ Here we focused on film-flow regime encountered in two-phases flows in
+ high permeability porous media or in microfluidic devices.
  We found that the drag exerted upon the fluid-fluid interface should not
  be neglected into the momentum transport equations for film-flow regimes.
  Lower permeability does not make the drag force terms at the interface
@@ -5892,7 +3886,7 @@ name "fig:Drag-force-exerted"
 
 \end_inset
 
-.
+
 \end_layout
 
 \end_inset
@@ -5901,8 +3895,7 @@ name "fig:Drag-force-exerted"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-sur sur
+
 \end_layout
 
 \end_inset

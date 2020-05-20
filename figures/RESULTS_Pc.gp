@@ -1,5 +1,5 @@
 set terminal cairolatex standalone pdf dashed size 13cm,10cm
-set output 'RESULTS_Pc.tex'
+set output 'RESULTS_RESULTS_Pc.tex'
 
 # define axis
 # remove border on top and right and set color to gray
@@ -41,9 +41,9 @@ set format y '\(%2.1t \times 10^{%L}\)'
 # Axis labels
 #set tics scale 0.5
 # Plot
-plot 'pc.txt' u 1:2 w lp ls 1 t '$Ca=1 \times 10^{0}$', \
-'pc.txt' u 1:5 w lp ls 11 t '$-,(2\gamma/h)^*$',\
-'pc.txt' u 1:3 w lp ls 2 t '$Ca=5 \times 10^{-2}$', \
-'pc.txt' u 1:6 w lp ls 12 t '$-,(2\gamma/h)^*$',\
-'pc.txt' u 1:4 w lp ls 3 t '$Ca=7.5 \times 10^{-3}$', \
-'pc.txt' u 1:7 w lp ls 13 t '$-,(2\gamma/h)^*$'
+plot 'RESULTS_Pc.txt' u 1:2 w lp ls 1 t '$Ca=1 \times 10^{0}$', \
+'RESULTS_Pc.txt' u 1:5 w lp ls 11 t '$-,(2\gamma/h)^*$',\
+'RESULTS_Pc.txt' u 1:3 w lp ls 2 t '$Ca=5 \times 10^{-2}$', \
+'RESULTS_Pc.txt' u 1:6 w lp ls 12 t '$-,(2\gamma/h)^*$',\
+'RESULTS_Pc.txt' u 1:4 w lp ls 3 t '$Ca=7.5 \times 10^{-3}$', \
+'RESULTS_Pc.txt' u 1:7 w lp ls 13 t '$-,(2\gamma/h)^*$'
