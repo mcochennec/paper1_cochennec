@@ -1,0 +1,49 @@
+* INTRODUCTION - littérature 
+
+#+NAME: littPerm
+| S rothman | K rothman | S zarcone | K zarcone |   S Li |   K Li | S Dullien | K Dullien |
+|-----------+-----------+-----------+-----------+--------+--------+-----------+-----------|
+|     0.248 |     0.037 |      0.41 |    0.0015 |  0.198 | 0.0188 |      0.27 |     0.005 |
+|     0.348 |     0.091 |      0.52 |    0.0022 | 0.4187 | 0.0634 |      0.44 |     0.035 |
+|     0.421 |     0.124 |      0.58 |    0.0028 | 0.5110 | 0.0828 |      0.52 |     0.055 |
+|     0.498 |     0.163 |      0.63 |    0.0033 | 0.6312 | 0.0392 |      0.60 |     0.056 |
+|     0.549 |     0.175 |      0.66 |    0.0037 | 0.8663 | 0.0023 |         0 |         0 |
+|     0.599 |     0.169 |         0 |         0 |      0 |      0 |         0 |         0 |
+|      0.65 |     0.171 |         0 |         0 |      0 |      0 |         0 |         0 |
+|      0.70 |     0.156 |         0 |         0 |      0 |      0 |         0 |         0 |
+|     0.752 |     0.156 |         0 |         0 |      0 |      0 |         0 |         0 |
+|      0.85 |     0.099 |         0 |         0 |      0 |      0 |         0 |         0 |
+
+#+begin_src python :session :results file :exports none :var data=littPerm
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+
+matplotlib.use('Agg')
+plt.figure(num=1,figsize=(10,4.8))
+plt.clf()
+matplotlib.rcParams['mathtext.fontset'] = 'stix'
+matplotlib.rcParams['font.family'] = 'STIXGeneral'
+plt.rc('legend',fontsize=12) # using a size in points
+arr = np.array(data)
+x = np.linspace(1e-4,1-1e-4)
+anCapK12 = 2*(1-x)*(x+(1-x)*np.log(1-x))
+#plot
+plt.xlabel(r'$S_w$')
+plt.ylabel(r'$\frac{K^*_{wo}}{K_0},\frac{\mu_o}{\mu_w}\frac{K^*_{ow}}{K_0}$')
+plt.plot(arr[:,0],arr[:,1],'ko',markerfacecolor='red',ms=8,label=r'Num. (Rothman)')
+plt.plot(arr[0:5,4],arr[0:5,5],'ks',markerfacecolor='blue',ms=8,label=r'Num. (Li et al.)')
+plt.plot(arr[0:5,2],arr[0:5,3],'k^',markerfacecolor='green',ms=8,label=r'Exp. (Zarcone and Len.)')
+plt.plot(arr[0:4,6],arr[0:4,7],'kD',markerfacecolor='yellow',ms=8,label=r'Exp. (Dullien and Dong)')
+plt.plot(x,anCapK12,'k--',label=r'Ana. (Bacri)')
+plt.ylim(0,0.3)
+plt.xlim(0,1)
+plt.legend(loc='upper left')
+
+plt.tight_layout()
+plt.savefig('littPerm.pdf')
+'littPerm.pdf'
+#+end_src
+
+#+RESULTS:
+[[file:littPerm.pdf]]

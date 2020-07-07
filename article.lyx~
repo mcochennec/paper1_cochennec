@@ -3191,7 +3191,7 @@ noprefix "false"
 \end_inset
 
  the interface is symmetric regardless the aperture's value, whereas the
- interface is non-symmetric for low Ca and small aperture.
+ interface is largely
 \end_layout
 
 \begin_layout Standard
@@ -3392,7 +3392,7 @@ noprefix "false"
  function of the aperture between the plates and different values of capillary
  number.
  
-\change_inserted -1030020954 1593601287
+\change_inserted -1030020954 1593600840
 Our results show that the fluid-fluid drag is non-negligible compared to
  the solid-fluid drag.
  At most, the fluid-fluid drag reaches 80% of the value of the solid-fluid
@@ -3423,15 +3423,23 @@ Our results show that the fluid-fluid drag is non-negligible compared to
 
  and below the fluid-fluid drag either remains constant, for the higher
  Ca, or increases.
- In the end, for the smallest aperture, the importance of the fluid-fluid
- drag does not depend on the capillary number and is 40% of the value of
- the solid-fluid drag.
-\end_layout
+ 
+\change_unchanged
+The ratio decreases as the aperture decreases, until the aperture 
+\begin_inset Formula $h^{*}=1/2$
+\end_inset
 
-\begin_layout Standard
+ from which the ratio either remains approximately constant for 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
 
-\change_inserted -1030020954 1593601344
-Regarding the limit case of infinite aperture the capillary number is important
+ or increases for lower capillary numbers.
+ The fluid-fluid drag is 40% of the solid-fluid drag, regardless the value
+ of 
+\begin_inset Formula $Ca$
+\end_inset
+
+, for the smallest aperture.
 \end_layout
 
 \begin_layout Standard
