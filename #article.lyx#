@@ -4,15 +4,29 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass paper
+\textclass elsarticle
 \begin_preamble
 \usepackage{xcolor}
 \usepackage{fontspec}
 \usepackage{unicode-math}
 \usepackage{hyperref}
+\setmathfont{STIX2Math}[
+Extension={.otf},
+Path=STIX2fonts/,
+Scale=1.1]
+\setmainfont{STIX2Text}[
+Extension={.otf},
+Path=STIX2fonts/,
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+ItalicFont={*-Italic},
+BoldItalicFont={*-BoldItalic}]
 \end_preamble
 \use_default_options true
 \begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
 customHeadersFooters
 fixltx2e
 \end_modules
@@ -47,7 +61,7 @@ fixltx2e
 \pdf_bookmarksopenlevel 1
 \pdf_breaklinks false
 \pdf_pdfborder true
-\pdf_colorlinks true
+\pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle false
 \papersize a4paper
@@ -113,20 +127,19 @@ fixltx2e
 \begin_body
 
 \begin_layout Title
-Numerical investigation of two-phase flows in highly-permeable porous media:
- Effect of the permeability on the drag force between fluid phases
+Numerical investigation of two-phase flows
 \end_layout
 
 \begin_layout Author
 Maxime Cochennec, Hossein Davarzani, 
-\change_inserted -1030020954 1594378306
+\change_inserted -1030020954 1594381229
 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-\change_inserted -1030020954 1594378307
+\change_inserted -1030020954 1594381230
 
 
 \backslash
@@ -142,8 +155,6 @@ status open
 
 \change_unchanged
 Yoahn Davit, Michel Quintard
-\change_inserted -1030020954 1594375914
-
 \end_layout
 
 \begin_layout Abstract

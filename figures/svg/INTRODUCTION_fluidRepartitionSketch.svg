@@ -8,12 +8,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="131.1176mm"
-   height="42.913372mm"
-   viewBox="0 0 371.67194 121.6442"
+   width="133.31023mm"
+   height="42.682194mm"
+   viewBox="0 0 377.88726 120.98889"
    version="1.2"
    id="svg9828"
-   sodipodi:docname="fluidRepartitionSketch.svg"
+   sodipodi:docname="INTRODUCTION_fluidRepartitionSketch.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata9832">
@@ -37,14 +37,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-height="997"
      id="namedview9830"
      showgrid="false"
-     inkscape:zoom="0.929308"
-     inkscape:cx="55.597449"
-     inkscape:cy="73.931299"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="1.31424"
+     inkscape:cx="-25.048184"
+     inkscape:cy="181.14507"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="surface48279"
      units="mm"
@@ -12376,7 +12376,7 @@
   </defs>
   <g
      id="surface48279"
-     transform="translate(-106.94765,248.44662)">
+     transform="translate(-100.73233,248.53273)">
     <g
        clip-path="url(#clip1)"
        id="g9253"
@@ -13923,7 +13923,7 @@
          id="tspan14080"
          x="180.99319"
          y="-129.14197"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Cambria;-inkscape-font-specification:Cambria;writing-mode:lr-tb;stroke-width:0.48000002">(a)</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';writing-mode:lr-tb;stroke-width:0.48000002">(a)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.48000002"
@@ -13934,7 +13934,7 @@
          id="tspan14080-8"
          x="302.24445"
          y="-129.13884"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Cambria;-inkscape-font-specification:Cambria;writing-mode:lr-tb;stroke-width:0.48000002">(b)</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';writing-mode:lr-tb;stroke-width:0.48000002">(b)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.48000002"
@@ -13945,7 +13945,7 @@
          id="tspan14080-7"
          x="423.82819"
          y="-129.14197"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Cambria;-inkscape-font-specification:Cambria;writing-mode:lr-tb;stroke-width:0.48000002">(c)</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';writing-mode:lr-tb;stroke-width:0.48000002">(c)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.48000002"
@@ -13956,17 +13956,17 @@
          id="tspan14110"
          x="235.27266"
          y="-240.73373"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Cambria;-inkscape-font-specification:Cambria;writing-mode:lr-tb;stroke-width:0.48000002">fluid 2</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';writing-mode:lr-tb;stroke-width:0.48000002">fluid 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.48000002"
-       x="106.52333"
+       x="100.52333"
        y="-175.9464"
        id="text14112-8"><tspan
          sodipodi:role="line"
          id="tspan14110-5"
-         x="106.52333"
+         x="100.52333"
          y="-175.9464"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:Cambria;-inkscape-font-specification:Cambria;writing-mode:lr-tb;stroke-width:0.48000002">fluid 1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;font-family:'STIX Two Text';-inkscape-font-specification:'STIX Two Text';writing-mode:lr-tb;stroke-width:0.48000002">fluid 1</tspan></text>
   </g>
 </svg>

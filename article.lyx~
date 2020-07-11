@@ -4,27 +4,20 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass scrartcl
+\textclass revtex4
 \begin_preamble
 \usepackage{xcolor}
-\usepackage{lineno,hyperref}
-\modulolinenumbers[5]
 \usepackage{fontspec}
 \usepackage{unicode-math}
-
-\setmathfont{STIX2Math}[
-Extension={.otf},
-Path=STIX2fonts/,
-Scale=1.1]
-\setmainfont{STIX2Text}[
-Extension={.otf},
-Path=STIX2fonts/,
-UprightFont={*-Regular},
-BoldFont={*-Bold},
-ItalicFont={*-Italic},
-BoldItalicFont={*-BoldItalic}]
+\usepackage{hyperref}
+\headers{An Example Article}{D. Doe, P. T. Frank, and J. E. Smith}
 \end_preamble
+\options review,onefignum,onetabnum
 \use_default_options true
+\begin_modules
+customHeadersFooters
+fixltx2e
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -47,11 +40,20 @@ BoldItalicFont={*-BoldItalic}]
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing double
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 2
 \use_package amssymb 1
 \use_package cancel 1
@@ -91,8 +93,8 @@ BoldItalicFont={*-BoldItalic}]
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 2
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -118,37 +120,8 @@ Numerical investigation of two-phase flows in highly-permeable porous media:
 \end_layout
 
 \begin_layout Author
-Maxime Cochennec, Hossein Davarzani, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
- Yoahn Davit, Michel Quintard
-\end_layout
-
-\begin_layout Date
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-today
-\end_layout
-
-\end_inset
-
+Maxime Cochennec, Hossein Davarzani, Yoahn Davit, Michel Quintard
+\change_inserted -1030020954 1594375914
 
 \end_layout
 
@@ -178,38 +151,21 @@ zed by a larger area of the interface between the two fluids and the development
  of the quasi-planar nature of the flow.
  We reproduce a film-flow regime and show that the fluid-fluid drag is non-negli
 gible as it reaches between 5% and 60% of the solid-fluid drag.
- 
-\change_inserted -1030020954 1591808319
-XXX
-\change_unchanged
-Our results demonstrate that the fluid-fluid drag force should not be neglected
- in momentum transport equations and behaves differently than the drag upon
- solids, confirming that a no-flow condition between fluids is not suitable.
+ XXXOur results demonstrate that the fluid-fluid drag force should not be
+ neglected in momentum transport equations and behaves differently than
+ the drag upon solids, confirming that a no-flow condition between fluids
+ is not suitable.
  This is an important part of the physics that has strong implications relevant
  for upscaling and modelling two-phase flows in microfluidic devices or
  highly permeable porous media.
-\end_layout
-
-\begin_layout Abstract
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-linenumbers
-\end_layout
-
-\end_inset
-
+\change_inserted -1030020954 1594215451
 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Branch Introduction
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 Introduction
@@ -223,8 +179,20 @@ name "sec:Introduction"
 \end_layout
 
 \begin_layout Standard
-An accurate description of two-phase flows in high-permeability porous media
- is of major importance in several practical applications.
+An accurate description of two-phase flows in high-perme
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+ability porous media is of major importance in several practical applications.
  This includes soil remediation in sandy or gravely soils 
 \begin_inset ERT
 status open
@@ -368,13 +336,14 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename figures/pdf/INTRODUCTION_fluidRepartitionSketch.pdf
 	lyxscale 150
+	scale 65
 
 \end_inset
 
@@ -614,12 +583,8 @@ citet{ramakrishnan2015measurement}
 
 \end_inset
 
-
-\change_inserted -1030020954 1593173511
- 
-\change_unchanged
-directly measured the coupling permeability terms in natural media by performing
- steady-state cocurrent two-phase flows.
+ directly measured the coupling permeability terms in natural media by performin
+g steady-state cocurrent two-phase flows.
  
 \begin_inset ERT
 status open
@@ -830,8 +795,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figures/pdf/INTRODUCTION_littPerm.pdf
-	scale 150
+	filename figures/pdf/littPerm.pdf
 
 \end_inset
 
@@ -1018,7 +982,7 @@ name "fig:Schematic_heleSahw"
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 Pore-scale flow equations
 \end_layout
 
@@ -1044,7 +1008,7 @@ where the superscript * indicates that the derivative operators are three-dimens
 ional.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 Depth-averaged flow equations
 \end_layout
 
@@ -1349,7 +1313,7 @@ literal "false"
  of such thin films.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Volume-averaged flow equations
 \end_layout
 
@@ -1583,11 +1547,7 @@ where
 \end_inset
 
  ratio.
- However, as shown in the Appendix
-\begin_inset space ~
-\end_inset
-
-
+ However, as shown in the 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Approximation-made"
@@ -1691,7 +1651,7 @@ end{subequations}
 
 \begin_layout Standard
 \noindent
-Here, 
+where, 
 \begin_inset Formula $\mathbf{d}_{ij}$
 \end_inset
 
@@ -2044,7 +2004,7 @@ In this section, we introduce the standard Level Set method to capture the
 Equations
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Level Set model
 \end_layout
 
@@ -2106,11 +2066,7 @@ literal "true"
 .
  We investigated the accuracy of the implicit definition of the interface
  as well as the effect of the value of the initialization parameter on the
- interface position in Appendix
-\begin_inset space ~
-\end_inset
-
-
+ interface position in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Comparison-with-BEM"
@@ -2315,7 +2271,7 @@ with
 .
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Geometry, boundary conditions and simulation parameters
 \end_layout
 
@@ -2857,7 +2813,7 @@ from
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Mesh convergence study
 \end_layout
 
@@ -2915,8 +2871,7 @@ noprefix "false"
  (b).
  We obtain these results in the fourth unit-cell (UC4) at steady-state.
  The drag terms are not very sensitive to the mesh density and the interface
- between the fluids is correct even for a coarse mesh and converges very
- quickly.
+ between the fluids is correct even for a coarse mesh and converges quickly.
  In the following simulations, we use a mesh that corresponds to 
 \begin_inset Formula $3.7\times10⁵$
 \end_inset
@@ -3014,7 +2969,7 @@ Before presenting the results for drag force terms, we briefly discuss the
  surface area between the fluids.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 Two-phase flow regimes
 \end_layout
 
@@ -3126,7 +3081,7 @@ name "fig:Fluid-repartion-along"
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 Saturation
 \end_layout
 
@@ -3191,7 +3146,11 @@ noprefix "false"
 \end_inset
 
  the interface is symmetric regardless the aperture's value, whereas the
- interface is largely
+ interface is non-symmetric for low 
+\begin_inset Formula $Ca$
+\end_inset
+
+ and small aperture.
 \end_layout
 
 \begin_layout Standard
@@ -3308,7 +3267,7 @@ name "fig:Comparison-of-interface"
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 Drag force
 \end_layout
 
@@ -3392,7 +3351,7 @@ noprefix "false"
  function of the aperture between the plates and different values of capillary
  number.
  
-\change_inserted -1030020954 1593600840
+\change_inserted -1030020954 1593601287
 Our results show that the fluid-fluid drag is non-negligible compared to
  the solid-fluid drag.
  At most, the fluid-fluid drag reaches 80% of the value of the solid-fluid
@@ -3423,23 +3382,15 @@ Our results show that the fluid-fluid drag is non-negligible compared to
 
  and below the fluid-fluid drag either remains constant, for the higher
  Ca, or increases.
- 
-\change_unchanged
-The ratio decreases as the aperture decreases, until the aperture 
-\begin_inset Formula $h^{*}=1/2$
-\end_inset
+ In the end, for the smallest aperture, the importance of the fluid-fluid
+ drag does not depend on the capillary number and is 40% of the value of
+ the solid-fluid drag.
+\end_layout
 
- from which the ratio either remains approximately constant for 
-\begin_inset Formula $Ca=5\times10^{-1}$
-\end_inset
+\begin_layout Standard
 
- or increases for lower capillary numbers.
- The fluid-fluid drag is 40% of the solid-fluid drag, regardless the value
- of 
-\begin_inset Formula $Ca$
-\end_inset
-
-, for the smallest aperture.
+\change_inserted -1030020954 1593601344
+Regarding the limit case of infinite aperture the capillary number is important
 \end_layout
 
 \begin_layout Standard
@@ -3919,7 +3870,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3966,7 +3917,7 @@ name "fig:Microchannel"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4153,7 +4104,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4200,7 +4151,7 @@ name "fig:Test-case"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

@@ -4,16 +4,30 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass paper
+\textclass revtex4-1
 \begin_preamble
 \usepackage{xcolor}
 \usepackage{fontspec}
 \usepackage{unicode-math}
 \usepackage{hyperref}
+\hypersetup{
+    citecolor = red,
+}
+\setmathfont{STIX2Math}[
+Extension={.otf},
+Path=STIX2fonts/,
+Scale=1]
+\setmainfont{STIX2Text}[
+Extension={.otf},
+Path=STIX2fonts/,
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+ItalicFont={*-Italic},
+BoldItalicFont={*-BoldItalic}]
 \end_preamble
+\options preprint,rmp
 \use_default_options true
 \begin_modules
-customHeadersFooters
 fixltx2e
 \end_modules
 \maintain_unincluded_children false
@@ -21,12 +35,12 @@ fixltx2e
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "lmodern" "Georgia"
+\font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts true
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -38,8 +52,8 @@ fixltx2e
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
-\spacing double
+\paperfontsize default
+\spacing single
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -49,10 +63,10 @@ fixltx2e
 \pdf_pdfborder true
 \pdf_colorlinks true
 \pdf_backref false
-\pdf_pdfusetitle false
-\papersize a4paper
-\use_geometry true
-\use_package amsmath 2
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
 \use_package esint 1
@@ -64,7 +78,8 @@ fixltx2e
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type authoryear
-\biblio_style plainnat
+\biblio_style unsrtnat 
+\biblio_options authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -72,27 +87,12 @@ fixltx2e
 \justification true
 \use_refstyle 1
 \use_minted 0
-\branch Introduction
-\selected 1
-\filename_suffix 0
-\color #faf0e6
-\end_branch
-\branch Theoretical background
-\selected 1
-\filename_suffix 0
-\color #faf0e6
-\end_branch
-\branch Results
-\selected 1
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 2
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -102,48 +102,59 @@ fixltx2e
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
-\output_changes true
+\tracking_changes false
+\output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1030020954 "Maxime"
 \end_header
 
 \begin_body
 
 \begin_layout Title
-Numerical investigation of two-phase flows in highly-permeable porous media:
- Effect of the permeability on the drag force between fluid phases
+Numerical simulations of two-phase flows in high-permeability porous media
 \end_layout
 
 \begin_layout Author
-Maxime Cochennec, Hossein Davarzani, 
-\change_inserted -1030020954 1594378306
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted -1030020954 1594378307
-
-
-\backslash
-
-\backslash
-
-\change_unchanged
-
+Maxime Cochennec
 \end_layout
 
-\end_inset
+\begin_layout Affiliation
+BRGM, French Geological Survey, 45060 Orléans, France
+\end_layout
 
+\begin_layout Author
+Hossein Davarzani
+\end_layout
 
-\change_unchanged
-Yoahn Davit, Michel Quintard
-\change_inserted -1030020954 1594375914
+\begin_layout Affiliation
+BRGM, French Geological Survey, 45060 Orléans, France
+\end_layout
 
+\begin_layout Author
+Stéfan Colombano
+\end_layout
+
+\begin_layout Affiliation
+BRGM, French Geological Survey, 45060 Orléans, France
+\end_layout
+
+\begin_layout Author
+Yohan Davit
+\end_layout
+
+\begin_layout Affiliation
+Institut de Mécanique des Fluides de Toulouse (IMFT), Université de Toulouse,
+ CNRS, France
+\end_layout
+
+\begin_layout Author
+Michel Quintard
+\end_layout
+
+\begin_layout Affiliation
+Institut de Mécanique des Fluides de Toulouse (IMFT), Université de Toulouse,
+ CNRS, France
 \end_layout
 
 \begin_layout Abstract
@@ -170,33 +181,11 @@ zed by a larger area of the interface between the two fluids and the development
  between the plates is changed to explore different ranges of permeability.
  This is done by solving depth-averaged flow equations, taking advantage
  of the quasi-planar nature of the flow.
- We reproduce a film-flow regime and show that the fluid-fluid drag is non-negli
-gible as it reaches between 5% and 60% of the solid-fluid drag.
- XXXOur results demonstrate that the fluid-fluid drag force should not be
- neglected in momentum transport equations and behaves differently than
- the drag upon solids, confirming that a no-flow condition between fluids
- is not suitable.
- This is an important part of the physics that has strong implications relevant
- for upscaling and modelling two-phase flows in microfluidic devices or
- highly permeable porous media.
-\change_inserted -1030020954 1594215451
-
+ 
 \end_layout
-
-\begin_layout Standard
-\begin_inset Branch Introduction
-inverted 0
-status open
 
 \begin_layout Section
 Introduction
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Introduction"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -357,14 +346,13 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename figures/pdf/INTRODUCTION_fluidRepartitionSketch.pdf
 	lyxscale 150
-	scale 65
 
 \end_inset
 
@@ -878,15 +866,6 @@ name "fig:comparison_Kr_litterature"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
@@ -1334,7 +1313,7 @@ literal "false"
  of such thin films.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Volume-averaged flow equations
 \end_layout
 
@@ -2025,10 +2004,6 @@ In this section, we introduce the standard Level Set method to capture the
 Equations
 \end_layout
 
-\begin_layout Subsubsection
-Level Set model
-\end_layout
-
 \begin_layout Standard
 The Level Set method is an Eulerian method that easily handles the topological
  phases changes, in contrast with Lagrangian methods.
@@ -2098,10 +2073,15 @@ noprefix "false"
 \end_inset
 
  by comparing to a boundary element method 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "nagel2015boundary"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{nagel2015boundary}
+\end_layout
 
 \end_inset
 
@@ -2292,7 +2272,7 @@ with
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Geometry, boundary conditions and simulation parameters
 \end_layout
 
@@ -2732,11 +2712,11 @@ Value
 
 \begin_layout Plain Layout
 from 
-\begin_inset Formula $0.5$
+\begin_inset Formula $1.25\times10^{-1}$
 \end_inset
 
  to 
-\begin_inset Formula $0.02$
+\begin_inset Formula $5\times10^{-3}$
 \end_inset
 
 
@@ -2762,7 +2742,10 @@ from
 \begin_inset Text
 
 \begin_layout Plain Layout
-1
+\begin_inset Formula $1$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2785,7 +2768,10 @@ from
 \begin_inset Text
 
 \begin_layout Plain Layout
-1/4
+\begin_inset Formula $1/4$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2834,14 +2820,14 @@ from
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Mesh convergence study
 \end_layout
 
 \begin_layout Standard
 Here, we study the mesh convergence of the various drag forces.
  The dimensionless numbers for this study are 
-\begin_inset Formula $Ca=0.5$
+\begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
 , 
@@ -2921,9 +2907,9 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mesh convergence study of (a) drag force exerted upon the wedge (red), drag
- force exerted upon the fluid-fluid boundary (blue) and intrinsic average
- velocity of fluid 
+Mesh convergence study of (a) drag force exerted upon the wedge (blue),
+ drag force e—xerted upon the fluid-fluid boundary (orange) and intrinsic
+ average velocity of fluid 
 \begin_inset Formula $o$
 \end_inset
 
@@ -2933,7 +2919,7 @@ Mesh convergence study of (a) drag force exerted upon the wedge (red), drag
  (b) Fluid-fluid interface position in UC4 at steady-state for different
  number of degree of freedoms in the whole geometry.
  Flow parameters are 
-\begin_inset Formula $Ca=0.5$
+\begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
 , 
@@ -2973,11 +2959,6 @@ name "fig:Mesh-convergence-study"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Branch Results
-inverted 0
-status open
-
 \begin_layout Section
 Results and discussion
 \end_layout
@@ -2991,7 +2972,7 @@ Before presenting the results for drag force terms, we briefly discuss the
 \end_layout
 
 \begin_layout Subsection
-Two-phase flow regimes
+Flow regimes and fluids saturation
 \end_layout
 
 \begin_layout Standard
@@ -3014,8 +2995,8 @@ noprefix "false"
 \end_inset
 
  shows the initial, intermediate, and final configurations of the fluid
- repartition for the case 
-\begin_inset Formula $Ca=1\times10^{-1}$
+ repartition for 
+\begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
  and 
@@ -3028,28 +3009,16 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-We could have expected a break-up of the invading phase either by snap off
- phenomena, or by the shear action of the wetting fluid flow.
- However, the pore throat is large and the fractional flow is low, which
- favours the continuity of the fluid phases.
- The flow regime observed is therefore a film-flow regime within the limit
- of the parameters chosen for this study.
- We obtained all the following results in the fourth unit-cell (UC4) in
- order to be far from the influence of the inlet and outlet boundary conditions.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename figures/pdf/RESULTS_dynamic.pdf
 	lyxscale 150
-	scale 120
 
 \end_inset
 
@@ -3063,7 +3032,7 @@ status open
 Fluids repartion along the superior half-row at (a) the initial time, (b)
  for an intermediate time and (c) final time (steady-state reached) for
  
-\begin_inset Formula $Ca=0.1$
+\begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
 , 
@@ -3102,89 +3071,16 @@ name "fig:Fluid-repartion-along"
 
 \end_layout
 
-\begin_layout Subsection
-Saturation
-\end_layout
-
-\begin_layout Standard
-Wetting fluid saturation at steady-state decreases, in average, from 0.6
- to 0.4 as the aperture between the plates decreases from 5 to 1/20.
- This can be seen in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:wettingFluidSaturation"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-, which presents the saturation in UC4 as a function of the dimensionless
- aperture and for different capillary numbers.
- The saturation does not depend on the capillary number for the smallest
- apertures.
- However, as the aperture between the plates increases, the fluid-fluid
- interface becomes flatter and the saturation of the wetting fluid increases
- until it converges to the saturation obtained for the 2D limit case which
- values slightly depend on the capillary number (see saturation fields insets
- in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:wettingFluidSaturation"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-).
- Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Comparison-of-interface"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- compares the position of the fluid-fluid interface in UC4 for different
- aperture and capillary numbers.
- For 
-\begin_inset Formula $Ca=5\times10^{-1}$
-\end_inset
-
- the interface is symmetric regardless the aperture's value, whereas the
- interface is non-symmetric for low 
-\begin_inset Formula $Ca$
-\end_inset
-
- and small aperture.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename figures/pdf/RESULTS_saturation.pdf
-	lyxscale 150
 	scale 150
 
 \end_inset
@@ -3200,11 +3096,11 @@ Fluid saturation at steady-state in UC4 as a function of the dimensionless
  aperture and for different capillary numbers.
  Fields of the level-set function at steady-state in UC4 are given for the
  selected value of the dimensionless aperture and 
-\begin_inset Formula $Ca=5\times10^{-1}$
+\begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
  and 
-\begin_inset Formula $Ca=2\times10^{-2}$
+\begin_inset Formula $Ca=5\times10^{-3}$
 \end_inset
 
 .
@@ -3227,523 +3123,7 @@ name "fig:wettingFluidSaturation"
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_interfacePosition.pdf
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparison of interface position for different aperture (a) 
-\begin_inset Formula $Ca=5\times10^{-1}$
-\end_inset
-
-and (b) 
-\begin_inset Formula $Ca=2\times10^{-2}$
-\end_inset
-
- (in UC4 for 
-\begin_inset Formula $f_{f}=0.25$
-\end_inset
-
- and 
-\begin_inset Formula $M=1$
-\end_inset
-
-).
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Comparison-of-interface"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Drag force
-\end_layout
-
-\begin_layout Standard
-We compute the fluid-fluid drag according to Eq.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:averagedFull"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-.
- The viscous part is obtained through the velocity gradient available at
- the 
-\begin_inset Formula $\phi=0.5$
-\end_inset
-
--contour and the pressure part is obtained by application of the divergence
- theorem.
- In the following, we are interested in the drag force component in the
- 
-\begin_inset Formula $x$
-\end_inset
-
--direction, i.e., the main flow direction.
- The drag force exerted upon the solid-fluids boundaries, denoted 
-\begin_inset Formula $d_{s}^{x}$
-\end_inset
-
-, is the sum of the drag upon the wedge and upon the cell plates by both
- fluids, as defined in Tab
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Summary-of-each-drag"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- The fluid-fluid drag, denoted 
-\begin_inset Formula $d_{f}^{x}$
-\end_inset
-
-, is the sum 
-\begin_inset Formula $d_{f}^{x}=d_{ow}^{x}+d_{wo}^{x}$
-\end_inset
-
-.
- In the following, the 
-\begin_inset Formula $x$
-\end_inset
-
-–component of the drag forces are expressed per unit surface area of unit-cell.
-\end_layout
-
-\begin_layout Standard
-Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ratioDragForceTotal"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the ratio of the fluid-fluid drag over the solid-fluid drag as a
- function of the aperture between the plates and different values of capillary
- number.
- 
-\change_inserted -1030020954 1593601287
-Our results show that the fluid-fluid drag is non-negligible compared to
- the solid-fluid drag.
- At most, the fluid-fluid drag reaches 80% of the value of the solid-fluid
- drag and this occur for high 
-\begin_inset Formula $Ca$
-\end_inset
-
- and large aperture.
- The results from the purely 2d simulations (
-\begin_inset Formula $h^{*}\rightarrow\infty)$
-\end_inset
-
- indicate that for 
-\begin_inset Formula $h/L=5$
-\end_inset
-
-, the larger aperture tested, the contribution of the drag upon the plates
- is already insignificant.
- Then, by narrowing the aperture, the fluid-fluid drag decreases compared
- to the solid-fluid drag, until 
-\begin_inset Formula $h^{*}=1/2$
-\end_inset
-
-.
- From 
-\begin_inset Formula $h^{*}=1/2$
-\end_inset
-
- and below the fluid-fluid drag either remains constant, for the higher
- Ca, or increases.
- In the end, for the smallest aperture, the importance of the fluid-fluid
- drag does not depend on the capillary number and is 40% of the value of
- the solid-fluid drag.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted -1030020954 1593601344
-Regarding the limit case of infinite aperture the capillary number is important
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_ratioDrag.pdf
-	lyxscale 150
-	scale 150
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Ratio of fluid-fluid drag force over solid-fluid drag force as a function
- of the dimensionless aperture and for different capillary numbers (in UC4
- for 
-\begin_inset Formula $f_{f}=0.25$
-\end_inset
-
- and 
-\begin_inset Formula $M=1$
-\end_inset
-
-).
- The 2D limit case is given with plain black markers.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ratioDragForceTotal"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Fluid-fluid-and-solid-fluid"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the fluid-fluid ant the solid-fluid drag forces as a function of
- the aperture and for two capillary numbers.
- Here again, the dimensionless aperture 
-\begin_inset Formula $h^{*}=1/2$
-\end_inset
-
- signal a change in the drag behavior.
- For 
-\begin_inset Formula $1/2<h^{*}$
-\end_inset
-
-, the fluid-fluid and solid-fluid drag forces barely change with the aperture
- whereas, for 
-\begin_inset Formula $h^{*}<1/2$
-\end_inset
-
- both drag forces scale approximately as 
-\begin_inset Formula $h^{-2}.$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_Drag.pdf
-	scale 150
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparison of fluid-fluid and solid-fluid drag force as a function of the
- dimensionless aperture for two capillary numbers (in UC4 for 
-\begin_inset Formula $f_{f}=0.25$
-\end_inset
-
- and 
-\begin_inset Formula $M=1$
-\end_inset
-
-).
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Fluid-fluid-and-solid-fluid"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Proportion-solid--drag"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the proportion of the solid-fluid drag which is due to the drag exerted
- upon the wedge as a function of the aperture.
- Here the 2D limit case is clear since the solid-fluid drag is only due
- to the drag upon the wedge in that case.
- The importance of the drag upon the wedge decreases as the aperture decrease,
- however it remains non-negligible (40% of the solid-fluid drag) even for
- the smallest aperture 
-\begin_inset Formula $h^{*}=1/20$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_solidDrag.pdf
-	scale 150
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Proportion of the solid-fluid drag force due to the contribution of the
- drag exerted upon the wedge, as a function of the dimensionless aperture
- and for different capillary numbers (in UC4 for 
-\begin_inset Formula $f_{f}=0.25$
-\end_inset
-
- and 
-\begin_inset Formula $M=1$
-\end_inset
-
-).
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Proportion-solid--drag"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Proportion-of-pressureTerm"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the proportion of the fluid-fluid and solid-fluid drag upon the wedge
- which is due to the pressure part of the stress-tensor.
- The pressure part produces most of the drag force, either regarding the
- fluid-fluid or the solid-fluid drag upon the wedge, for 
-\begin_inset Formula $h^{*}<1/2$
-\end_inset
-
-.
- For larger aperture, the fluid-fluid drag is mainly produced by the viscous
- part, whereas the pressure part has a minimum contribution as high as 60%
- of 
-\begin_inset Formula $d_{wc}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_decompose.pdf
-	scale 130
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Proportion of the fluid/fluid drag (a) or the solid-fluid drag upon the
- wedge (b) due to the pressure term contribution, as a function of the dimension
-less aperture and for different capillary numbers (in UC4 for 
-\begin_inset Formula $f_{f}=0.25$
-\end_inset
-
- and 
-\begin_inset Formula $M=1$
-\end_inset
-
-) 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Proportion-of-pressureTerm"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/RESULTS_details.pdf
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Comparison of the drag produced by the pressure for
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -3757,32 +3137,16 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-In this study we conducted direct simulations of depth-averaged two-phases
- flows, and we investigated the effect of the permeability on the drag forces
- exerted upon the different phase interfaces.
- The permeability was changed by varying the Darcean term which arising
- from the depth-averaging, thus without altering the in-plane geometry.
- These drag terms have to be modelled to obtain the macroscopic momentum
- transport equations but the drag exerted upon the the fluid-fluid interface
- is commonly neglected for flow driven by capillarity forces.
- Here we focused on film-flow regime pourencountered in two-phases flows
- in high permeability porous media or in microfluidic devices.
- We found that the drag exerted upon the fluid-fluid interface should not
- be neglected into the momentum transport equations for film-flow regimes.
- Lower permeability does not make the drag force terms at the interface
- negligible as long as the flow regime remains a film regime.
- On the contrary, the fluid-fluid drag force increases faster than the drag
- upon the fluid-solid interfaces, as the aperture between the plates decreases.
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
 \end_layout
 
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3794,434 +3158,6 @@ LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "biblio"
 options "elsarticle-harv"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-\start_of_appendix
-Approximation made on the drag force when considering a fluid-fluid flat
- interface
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Approximation-made"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We conduct three-dimensional one-phase flow simulations into a microchannel
- to determine the approximation made on the drag calculation when considering
- that the fluid-fluid contour can be translated along the 
-\begin_inset Formula $z$
-\end_inset
-
--direction.
-\end_layout
-
-\begin_layout Standard
-One side of the microchannel is a half-circle wall to mimic a fluid-fluid
- interface whereas the opposite side is a flat wall (Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Microchannel"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-).
- We obtain the curved side by extruding a cylinder; thus a special treatment
- is done to correctly meshed the very thin part left, and we build very
- small chamfers (Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Microchannel"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-).
- We compute the drag force per unit surface area on each sidewall of the
- microchannel and plot in Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Drag-force-exerted"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- the drag force exerted upon the curved side normalized with respect to
- the flat wall.
- The drag per unit surface area exerted upon the curved wall is roughly
- 70% of the drag per unit surface area upon the flat wall.
- Giving the greater extent of surface area for the curved wall, the difference
- regarding the drag value is negligible.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/APPENDIX_microchannel.pdf
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Microchannel with one side is a half-circle wall and the opposite side is
- a flat wall with 
-\begin_inset Formula $h/L=1/16$
-\end_inset
-
- (left) and mesh detail at the small chamfer build after the cylinder extrusion
- (right).
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Microchannel"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/APPENDIX_test_half_circle.pdf
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Drag force and drag force per unit surface area exerted upon the curved
- wall of the microchannel normalized with respect to the drag force exerted
- upon the flat wall.
- The drag exerted upon the curved solid wall is almost equal to the drag
- exerted upon the flat wall, since the smaller drag per unite surface area
- is almost fully compensated by the greater surface area.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Drag-force-exerted"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Comparison with a Boundary Element Method
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Comparison-with-BEM"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Here we validate the Level Set (LS) code by comparison with a Boundary-Element
- Method (BEM) 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-citep{nagel2015boundary}
-\end_layout
-
-\end_inset
-
-, which relies on a surface discretization of the interface and a pseudo-analyti
-cal formulation in the bulk of the phases.
- This allows us to precisely locate the interface, even in the case of very
- thin film flow, and to carefully analyze the choice of parameters in Eq.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:advecPhi"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The test case resembles the case study (Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Test-case"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
-).
- The model is initially fully saturated with fluid 
-\begin_inset Formula $w$
-\end_inset
-
-, with the exception of the channel through which fluid 
-\begin_inset Formula $o$
-\end_inset
-
- is injected.
- We test either the 
-\begin_inset Formula $\phi=0.5$
-\end_inset
-
- contour is an appropriate definition for the fluid-fluid interface and
- in what extent the value of the initialization parameter 
-\begin_inset Formula $\psi$
-\end_inset
-
- can change the interface position.
- In Fig.
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Interface-position"
-plural "false"
-caps "true"
-noprefix "false"
-
-\end_inset
-
- we present the half-part of the model and the interface between the fluids
- at time 
-\begin_inset Formula $t=2.5$
-\end_inset
-
-, for an aspect ratio 
-\begin_inset Formula $h/L$
-\end_inset
-
-, where 
-\begin_inset Formula $L$
-\end_inset
-
- is the width of the fluid 
-\begin_inset Formula $o$
-\end_inset
-
- inlet channel.
- We present three different interfaces obtained with the LS method, depending
- on the initialization parameter value.
- This parameter is normalized with respect to the inlet velocity of fluid
- 
-\begin_inset Formula $o$
-\end_inset
-
-, which is three times greater than the fluid 
-\begin_inset Formula $w$
-\end_inset
-
- inlet velocity.
- One can clearly observe that the interface position obtained with the LS
- method is almost identical to that obtained with the BEM, regardless of
- value of 
-\begin_inset Formula $\psi$
-\end_inset
-
-.
- However, the best results, especially regarding the interface tip position,
- is obtained for 
-\begin_inset Formula $\psi=U_{o}^{\mathrm{inlet}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/APPENDIX_compare_model_BEM.pdf
-	lyxscale 150
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Test case for comparison between Level Set and Boundary Element methods.
- The flow is cocurrent from left to right and the viscosity is the same
- for both fluids.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Test-case"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figures/pdf/APPENDIX_interface_BEMvsLS.pdf
-	lyxscale 150
-	scale 75
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Interface position at time 
-\begin_inset Formula $t=2.5\:\mathrm{s}$
-\end_inset
-
- obtained for an aspect ratio 
-\begin_inset Formula $h/L=0.25$
-\end_inset
-
- with a Boundary Element method and the Level Set method for different values
- of the dimensionless initialization parameter 
-\begin_inset Formula $\psi^{*}=\psi/U_{o}^{\mathrm{inlet}}$
-\end_inset
-
-.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Interface-position"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \end_inset
 
