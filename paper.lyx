@@ -11,7 +11,7 @@
 \usepackage{unicode-math}
 \usepackage{hyperref}
 \hypersetup{
-    citecolor = red,
+    citecolor = blue,
 }
 \setmathfont{STIX2Math}[
 Extension={.otf},
@@ -102,11 +102,12 @@ fixltx2e
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1030020954 "Maxime"
 \end_header
 
 \begin_body
@@ -138,7 +139,8 @@ Hossein Davarzani
 status open
 
 \begin_layout Plain Layout
-Corresponding author:
+
+Corresponding author: 
 \end_layout
 
 \end_inset
@@ -187,20 +189,24 @@ The macroscopic description of two-phase flows in porous media requires
  Two-phase flows in highly permeable porous media, however, are often characteri
 zed by a larger area of the interface between the two fluids and the development
  of thin films.
- In such cases, the fluid-fluid interaction is not necessarily negligible
- and may play an important role in the momentum transport equations.
+ In such cases, the fluid-fluid drag is not necessarily negligible and may
+ play an important role in the momentum transport equations.
  Here, we use computational methods to study two-phase flows in a microfluidic
  device made of an array of cylinders squeezed between two plates in a Hele-Shaw
  flow cell.
- The idea is to keep the geometry in the cell plane unmodified whereas the
- aperture 
+ The distinguishing feature of this work is to solve an amalgam Stokes-Darcy
+ equations.
+ Tangential stresses are handled by the Stokesian part whereas the confinement
+ in the out-of-plane direction is controlled by the Darcean term.
+ Thus, we explore different ranges of permeability by changing the gap 
 \begin_inset Formula $h$
 \end_inset
 
- between the plates is changed to explore different ranges of permeability.
- This is done by solving depth-averaged flow equations, taking advantage
- of the quasi-planar nature of the flow.
- 
+ between the plates whereas the geometry in the cell plane is unmodified.
+ The key question adressed in this article is the importance of the fluid-fluid
+ drag forces in the overall pressure loss during two-phase flows for which
+ both fluis are coinjected and how the flow confinement and the capillary
+ number affect the repartition of the drag forces.
 \end_layout
 
 \begin_layout Section
@@ -355,10 +361,10 @@ noprefix "false"
  In both cases, the surface area between the fluids is large and the drag
  forces between the fluids are not negligible compared with the solid-fluids
  drag forces.
- This is in strong contrast with capillarity-dominated flow and it is important
- because, as discussed in the following, modelling of the drag forces is
- the basis of any attempt to establish continuous relationships on a macroscopic
- scale starting from the pore scale.
+ This is in strong contrast with capillarity-dominated flow and it is of
+ major importance since, as discussed in the following, modelling of the
+ drag forces is the basis of any attempt to establish continuous relationships
+ on a macroscopic scale starting from the pore scale.
 \end_layout
 
 \begin_layout Standard
@@ -760,10 +766,10 @@ noprefix "false"
  shows Rothman's results along with some of the previously mentioned results
  on relative coupling permeabilities.
  Hele-Shaw cells are one of the simplest example of micromodels as they
- consist of two parallel plates in between which the fluids flow.
- Governing equations for the flow in such cells are similar to Darcy's equation,
- and thus the permeability can be easily modified by increasing or decreasing
- the aperture between the plates 
+ consist of two parallel plates which form a thin gap in which the fluids
+ can flow.
+ A large body of work has focused either on the displacement of a bubbles
+ and drops in Hele-Shaw cells 
 \begin_inset ERT
 status open
 
@@ -771,14 +777,30 @@ status open
 
 
 \backslash
-citep{saffman1958penetration}
+citep{maxworthy1986bubble,maruvada1996retarded,kopf1988bubble}
+\end_layout
+
+\end_inset
+
+ on the stability of the fluid front during the displacement of a fluid
+ by another less viscous fluid 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{saffman1958penetration,bensimon1986stability,meiburg1988nonlinear,jackson2
+017stability,cueto2014phase}
 \end_layout
 
 \end_inset
 
 .
- Recently, this characteristic has been used to investigate the flow paths
- of a two-phases flow as a function of the micromodel thickness 
+ The governing flow equations in Hele-Shaw cells are analoguous to Darcy's
+ equation, therefore several studies used Hele-Shaw cells to gain insight
+ about two-phase flow in porous media 
 \begin_inset ERT
 status open
 
@@ -786,21 +808,7 @@ status open
 
 
 \backslash
-citep{liu2019preferential}
-\end_layout
-
-\end_inset
-
- or to study the stability of an immiscible two-phases displacements in
- a Hele-Shaw cell with a spatially varying thickness 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-citep{jackson2017stability}
+citep{stokes1986interfacial,liu2019preferential,homsy1987viscous}
 \end_layout
 
 \end_inset
@@ -808,10 +816,10 @@ citep{jackson2017stability}
 .
  Here, we study the influence of micromodel's absolute permeability on the
  fluid-fluid drag and solid-fluids drag for different capillary numbers.
- The original idea of the article is to solve the appropriate depth-averaged
- equations for two-phase flows in a Hele-Shaw cell to study the effect of
- the varying absolute permeability on the drag forces without having to
- change the in-plane geometry.
+ The distinguishing feature of the article is to solve an amalgam Stokes-Darcy
+ equations for two-phase flows in a Hele-Shaw cell with wedge to study the
+ effect of the varying absolute permeability on the drag forces without
+ having to change the in-plane geometry.
 \end_layout
 
 \begin_layout Standard
@@ -892,7 +900,7 @@ name "fig:comparison_Kr_litterature"
 \end_layout
 
 \begin_layout Section
-Pore-scale, depth-averaged and surface-averaged flow equations
+Pore-scale, depth-averaged and volume-averaged flow equations
 \end_layout
 
 \begin_layout Standard
@@ -925,7 +933,7 @@ noprefix "false"
 \begin_inset Formula $h$
 \end_inset
 
- is the length of the aperture between the plates.
+ is the length of the gap between the plates.
 \end_layout
 
 \begin_layout Standard
@@ -963,7 +971,7 @@ Schematic view of a cocurrent two-phase flow in a Hele-Shaw cell parallel
 \begin_inset Formula $h$
 \end_inset
 
- stands for the aperture between the plates.
+ stands for the gap between the plates.
  The boundary between the wetting-fluid 
 \begin_inset Formula $w$
 \end_inset
@@ -1057,7 +1065,20 @@ noprefix "false"
 \begin_inset Formula $z$
 \end_inset
 
--component of the velocity can be neglected and
+-component of the velocity can be neglected 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{guyon1994hydrodynamique}
+\end_layout
+
+\end_inset
+
+ and the velocity field 
 \end_layout
 
 \begin_layout Standard
@@ -1735,7 +1756,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Drag of
+Drag of...
 \end_layout
 
 \end_inset
@@ -1746,7 +1767,7 @@ Drag of
 \begin_inset Text
 
 \begin_layout Plain Layout
-upon
+upon...
 \end_layout
 
 \end_inset
@@ -1835,7 +1856,7 @@ Plates
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Sigma=\mathbf{d}_{s}$
+\begin_inset Formula $\vert\Sigma\vert=d_{s}$
 \end_inset
 
 
@@ -1924,7 +1945,7 @@ Fluid
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\Sigma=\mathbf{d}_{f}$
+\begin_inset Formula $\vert\Sigma\vert=d_{f}$
 \end_inset
 
 
@@ -2392,7 +2413,7 @@ noprefix "false"
 
 ).
  As a reference, we conducted numerical simulations of one-phase flows and
- found that the range of aperture corresponds to a range absolute permeabilities
+ found that the range of gap corresponds to a range absolute permeabilities
  between 
 \begin_inset Formula $1.5\times10^{4}$
 \end_inset
@@ -2984,9 +3005,8 @@ Results and discussion
 \end_layout
 
 \begin_layout Standard
-Before presenting the results for drag force terms, we briefly discuss the
- two-phase flow regime observed along with the variation of the saturation
- with time.
+Before we discuss the results for the drag force terms, we present the two-phase
+ flow regime observed along with the variation of the saturation with time.
  The flow regime is fundamental as it drives the extent of the interfacial
  surface area between the fluids.
 \end_layout
@@ -2997,9 +3017,9 @@ Flow regimes and fluids saturation
 
 \begin_layout Standard
 We observe that the two fluids remain continuous at all times and for the
- entire range of tested capillary numbers and aperture.
- The interface between the fluids becomes stationary and a stationary state
- is reached for every capillary number and aperture values.
+ entire range of tested capillary numbers and gap thickness.
+ The interface between the fluids becomes stationary and steady-state is
+ reached for every capillary number and values of gap.
  Fig.
 \begin_inset space ~
 \end_inset
@@ -3023,16 +3043,42 @@ noprefix "false"
 \begin_inset Formula $h^{*}=1/8.$
 \end_inset
 
- At steady-state, the fluid-fluid interface is periodic on the five central
- unit cells whereas the interface is slightly deformed at the inlet and
+ The fluid-fluid interface is periodic on the five central unit cells at
+ steady-sate whereas the interface is slightly deformed at the inlet and
  outlet cells, under the influence of boundary conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+The penetration of the non-wetting fluid shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fluid-repartion-along"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ does not result from an instable displacement, i.e.
+ viscous fingering, since both fluids have the same viscosity.
+ Here, non-wetting phase break-up could have occured either by snap-off
+ phenomenon or beacause of the shear exerted by the wetting fluid.
+ However, the pore throat is large and the fractional flow is low, which
+ favours the continuity of the non-wetting fluid phase.
+ The flow-regime observed is therefore a film-flow regime within the limit
+ of the paramaters chosen for this study.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3092,10 +3138,68 @@ name "fig:Fluid-repartion-along"
 \end_layout
 
 \begin_layout Standard
+Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:wettingFluidSaturation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the wetting fluid saturation as a function of the dimensionless gap
+ between the plates and for different capillary numbers.
+ Wetting fluid saturation at steady-state decreases, in average, from 0.6
+ to 0.4 as the aperture between the plates decreases from 5 to 1/20.
+ The results for the larger gap are identical to the pure 2d results.
+ The saturation fields insets in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:wettingFluidSaturation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ indicate that the fluid-fluid interface is almost identical if the gap
+ thickness is large whereas they largely differ for the largest gap tickness.
+ This last point explains the different saturation we observed.
+ Indeed, for low capillary number the interface is flatter than for high
+ capillary numbers, as shown in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-of-int"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The fluid-fluid interfaces do not depend on the capillary number for the
+ narrowest gap investigated whereas the interface is flattened for larger
+ gaps and small capillary numbers.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3113,9 +3217,9 @@ status collapsed
 
 \begin_layout Plain Layout
 Fluid saturation at steady-state in UC4 as a function of the dimensionless
- aperture and for different capillary numbers.
+ gap and for different capillary numbers.
  Fields of the level-set function at steady-state in UC4 are given for the
- selected value of the dimensionless aperture and 
+ selected value of the dimensionless gap and 
 \begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
@@ -3124,14 +3228,250 @@ Fluid saturation at steady-state in UC4 as a function of the dimensionless
 \end_inset
 
 .
- As the aperture increases the interface flattens and the wetting fluid
- saturation increases.
+ As the gap increases the interface flattens and the wetting fluid saturation
+ increases.
  A decrease in the capillary number acts in the same way, albeit less strongly.
  The 2D limit case is given with plain black markers.
  
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:wettingFluidSaturation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_interfacePosition.pdf
+	scale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of the fluid-fluid interface at steady-state in UC4 for different
+ dimensionless gaps between the plates.
+ The interfaces are almost symmetric for (a) interface 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
+
+ and (b) 
+\begin_inset Formula $Ca=1.25\times10^{-1}$
+\end_inset
+
+.
+ The inferfaces are flatten for larger gaps for (c) 
+\begin_inset Formula $Ca=2.5\times10^{-2}$
+\end_inset
+
+ and (d) 
+\begin_inset Formula $Ca=5\times10^{-3}$
+\end_inset
+
+ (results in UC4 after steady-state was reached for 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M=1).$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison-of-int"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Drag forces
+\end_layout
+
+\begin_layout Standard
+We compute the fluid-fluid drag according to Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:averagedFull"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+ The viscous part is obtained through the velocity gradient available at
+ the 
+\begin_inset Formula $\phi=0.5$
+\end_inset
+
+-contour and the pressure part is obtained by application of the divergence
+ theorem.
+ In the following, we are interested in the drag force component in the
+ 
+\begin_inset Formula $x$
+\end_inset
+
+-direction, i.e., the main flow direction.
+ 
+\end_layout
+
+\begin_layout Standard
+Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-of-each-drag"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows all the drag force terms for each fluid as a function of the dimensionles
+s gap and for different capillary numbers.
+ The drag forces increase for a narrowing gap between the plates.
+ This was expected since the inlet velocity and the outlet pressure are
+ constant while we explore different values of gap thickness.
+ Thus, the pressure drop across the cell increases as the gap thickness
+ decreases.
+ 
+\change_inserted -1030020954 1594640538
+
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1030020954 1594640629
+la force de trainée exercée sur les plaques par les fluides évoluent en
+ 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+et est négligeable pour des ouvertures supérieures à 1 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1030020954 1594640739
+la force de trainée exercée sur la cale par le fluide mouillant est supérieure
+ à la trainée sur le fluide o par le fluide w.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted -1030020954 1594640947
+la trainée entre les fluides est globalement non négligeable, elle domine
+ naturellement en ce qui concerne le fluide o pour des ouvertures grandes,
+ puisque ce fluide n'est pas en contact avec d'autre solide que les plaques.
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+The small discrepancy between the drag exerted by the fluids upon each other
+ arises from the pressure jump across the interface.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_global.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of each drag force term (
+\begin_inset Formula $x$
+\end_inset
+
+-component) as a function of the dimensionless gap between the plates for
+ (a) 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
+
+, (b) 
+\begin_inset Formula $Ca=1.25\times10^{-1}$
+\end_inset
+
+, (c) 
+\begin_inset Formula $Ca=2.5\times10^{-2}$
+\end_inset
+
+ and (d) 
+\begin_inset Formula $Ca=5\times10^{-3}$
+\end_inset
+
+ (results in UC4 after steady-state was reached for
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M=1).$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison-of-each-drag"
 
 \end_inset
 
@@ -3150,6 +3490,130 @@ name "fig:wettingFluidSaturation"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ratios-of-fluid-fluid"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the ratio of the fluid-fluid drag over the solid-fluid drag.
+ We sum the contribution of both fluids here and our results show that the
+ fluid-fluid drag is not negligible and is more important for larger gap
+ thickness and high capillary number.
+ Indeed, it reaches 80% of the solid-solid drag value for 
+\begin_inset Formula $Ca=0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $h^{*}=5$
+\end_inset
+
+.
+ The ratio does not change between the largest gap investigated and the
+ 2d-results.
+ This indicates that the drag between the plates is already negligible for
+ the widest gap 
+\begin_inset Formula $h^{*}=5$
+\end_inset
+
+.
+ For a narrowing gap thickness the ratio 
+\begin_inset Formula $d_{f}/d_{s}$
+\end_inset
+
+ decreases for all capillary numbers.
+ For 
+\begin_inset Formula $h^{*}<1/2$
+\end_inset
+
+, two configurations exist depending on the value of the capillary number.
+ Either 
+\begin_inset Formula $Ca\geq1.25\times10^{-1}$
+\end_inset
+
+and the ratio barely change with the gap or 
+\begin_inset Formula $Ca<1.25\times10^{-1}$
+\end_inset
+
+ and the ratio increases, i.e.
+ the fluid-fluid drag increases compared to the solid-fluid drag, for a
+ narrowing gap.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_dragRatio.pdf
+	scale 150
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ratios of fluid-fluid drag force over solid-fluid drag force as a function
+ of the dimensionless gap between the plates and for different capillary
+ numbers.
+ Results for the pure 2d-simulations are given with solid black markers
+ (
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M=1).$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ratios-of-fluid-fluid"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Limit case: very large gap hickeness
+\end_layout
+
+\begin_layout Subsubsection
+LImit case: very small gap thickeness
+\end_layout
+
+\begin_layout Subsubsection
+Transition
 \end_layout
 
 \begin_layout Section
@@ -3178,6 +3642,418 @@ LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "biblio"
 options "elsarticle-harv"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Approximation made on the drag force when considering a fluid-fluid flat
+ interface
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Approximation-made"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We conduct three-dimensional one-phase flow simulations into a microchannel
+ to determine the approximation made on the drag calculation when considering
+ that the fluid-fluid contour can be translated along the 
+\begin_inset Formula $z$
+\end_inset
+
+-direction.
+\end_layout
+
+\begin_layout Standard
+One side of the microchannel is a half-circle wall to mimic a fluid-fluid
+ interface whereas the opposite side is a flat wall (Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microchannel"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+).
+ We obtain the curved side by extruding a cylinder; thus a special treatment
+ is done to correctly meshed the very thin part left, and we build very
+ small chamfers (Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Microchannel"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+).
+ We compute the drag force per unit surface area on each sidewall of the
+ microchannel and plot in Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Drag-force-exerted"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ the drag force exerted upon the curved side normalized with respect to
+ the flat wall.
+ The drag per unit surface area exerted upon the curved wall is roughly
+ 70% of the drag per unit surface area upon the flat wall.
+ Giving the greater extent of surface area for the curved wall, the difference
+ regarding the drag value is negligible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/APPENDIX_microchannel.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Microchannel with one side is a half-circle wall and the opposite side is
+ a flat wall with 
+\begin_inset Formula $h/L=1/16$
+\end_inset
+
+ (left) and mesh detail at the small chamfer build after the cylinder extrusion
+ (right).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Microchannel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/APPENDIX_test_half_circle.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Drag force and drag force per unit surface area exerted upon the curved
+ wall of the microchannel normalized with respect to the drag force exerted
+ upon the flat wall.
+ The drag exerted upon the curved solid wall is almost equal to the drag
+ exerted upon the flat wall, since the smaller drag per unite surface area
+ is almost fully compensated by the greater surface area.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Drag-force-exerted"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Comparison with a Boundary Element Method
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Comparison-with-BEM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we validate the Level Set (LS) code by comparison with a Boundary-Element
+ Method (BEM) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+citep{nagel2015boundary}
+\end_layout
+
+\end_inset
+
+, which relies on a surface discretization of the interface and a pseudo-analyti
+cal formulation in the bulk of the phases.
+ This allows us to precisely locate the interface, even in the case of very
+ thin film flow, and to carefully analyze the choice of parameters in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:advecPhi"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The test case resembles the case study (Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-case"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+).
+ The model is initially fully saturated with fluid 
+\begin_inset Formula $w$
+\end_inset
+
+, with the exception of the channel through which fluid 
+\begin_inset Formula $o$
+\end_inset
+
+ is injected.
+ We test either the 
+\begin_inset Formula $\phi=0.5$
+\end_inset
+
+ contour is an appropriate definition for the fluid-fluid interface and
+ in what extent the value of the initialization parameter 
+\begin_inset Formula $\psi$
+\end_inset
+
+ can change the interface position.
+ In Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interface-position"
+plural "false"
+caps "true"
+noprefix "false"
+
+\end_inset
+
+ we present the half-part of the model and the interface between the fluids
+ at time 
+\begin_inset Formula $t=2.5$
+\end_inset
+
+, for an aspect ratio 
+\begin_inset Formula $h/L$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the width of the fluid 
+\begin_inset Formula $o$
+\end_inset
+
+ inlet channel.
+ We present three different interfaces obtained with the LS method, depending
+ on the initialization parameter value.
+ This parameter is normalized with respect to the inlet velocity of fluid
+ 
+\begin_inset Formula $o$
+\end_inset
+
+, which is three times greater than the fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ inlet velocity.
+ The interface position obtained with the LS method is almost identical
+ to that obtained with the BEM, regardless of value of 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ However, the best results, especially regarding the interface tip position,
+ is obtained for 
+\begin_inset Formula $\psi=U_{o}^{\mathrm{inlet}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/APPENDIX_compare_model_BEM.pdf
+	lyxscale 150
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test case for comparison between Level Set and Boundary Element methods.
+ The flow is cocurrent from left to right and the viscosity is the same
+ for both fluids.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Test-case"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/APPENDIX_interface_BEMvsLS.pdf
+	lyxscale 150
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interface position at time 
+\begin_inset Formula $t=2.5\:\mathrm{s}$
+\end_inset
+
+ obtained for an aspect ratio 
+\begin_inset Formula $h/L=0.25$
+\end_inset
+
+ with a Boundary Element method and the Level Set method for different values
+ of the dimensionless initialization parameter 
+\begin_inset Formula $\psi^{*}=\psi/U_{o}^{\mathrm{inlet}}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interface-position"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
