@@ -8246,31 +8246,44 @@ arr = np.array(intff,float)
 arr1 = np.array(incyl,float)
 
 #fig size
-fig=plt.figure(figsize=(5.5,3))
+fig=plt.figure(figsize=(5.5,5))
 
 plt.subplot(2,2,1)
-plt.plot(arr[:,0]/5e-4,-arr[:,1]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr[:,0]/5e-4,-arr[:,2]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,1]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,2]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,1]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$d_{wc,p}$')
+plt.plot(arr[:,0]/5e-4,-arr[:,2]/(5e-4*1e-3),'o--',mec='k',lw=1,label=r'$d_{wc,v}$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,2]/(5e-4*1e-3),'s--',mec='k',lw=1,label=r'$d_{ow,p}$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,1]/(5e-4*1e-3),'^--',mec='k',lw=1,label=r'$d_{ow,v}$')
+plt.xscale('log')
+plt.yscale('log')
+plt.ylabel(r'$d_{ow,i},\:d_{wc,i} \: \: (\mathrm{N/m^3})$')
+plt.legend(fontsize=7)
 
 plt.subplot(2,2,2)
 plt.plot(arr[:,0]/5e-4,-arr[:,3]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr[:,0]/5e-4,-arr[:,4]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,3]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,4]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,4]/(5e-4*1e-3),'o--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,4]/(5e-4*1e-3),'s--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,3]/(5e-4*1e-3),'^--',mec='k',lw=1,label=r'$Ca$')
+plt.xscale('log')
+plt.yscale('log')
 
 plt.subplot(2,2,3)
 plt.plot(arr[:,0]/5e-4,-arr[:,5]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr[:,0]/5e-4,-arr[:,6]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,5]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,6]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,6]/(5e-4*1e-3),'o--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,6]/(5e-4*1e-3),'s--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,5]/(5e-4*1e-3),'^--',mec='k',lw=1,label=r'$Ca$')
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel(r'$h^*$')
+plt.ylabel(r'$d_{ow,i},\:d_{wc,i} \: \: (\mathrm{N/m^3})$')
 
 plt.subplot(2,2,4)
 plt.plot(arr[:,0]/5e-4,-arr[:,7]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr[:,0]/5e-4,-arr[:,8]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,7]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
-plt.plot(arr1[:,0]/5e-4,-arr1[:,8]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,8]/(5e-4*1e-3),'o--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,abs(arr1[:,8])/(5e-4*1e-3),'s--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,abs(arr1[:,7])/(5e-4*1e-3),'^--',mec='k',lw=1,label=r'$Ca$')
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel(r'$h^*$')
 
 fig.tight_layout()
 
@@ -8279,4 +8292,4 @@ return 'RESULTS_pressAndviscous.pdf' # return filename to org-mode
 #+end_src
 
 #+RESULTS:
-[[file:]]
+[[file:RESULTS_pressAndviscous.pdf]]
