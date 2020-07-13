@@ -8140,8 +8140,8 @@ plt.text(3,0.2,r'(a)',fontsize=14)
 plt.ylabel(r'$d_{fi}/d_{si}$',fontsize=14)
 plt.yscale('log')
 plt.xscale('log')
-plt.xlabel(r'$x/L$',fontsize=14)
-plt.legend(fontsize=7)
+plt.xlabel(r'$h^*$',fontsize=14)
+plt.legend(fontsize=8)
 
 plt.subplot(1,2,2)
 plt.plot(arr[1:,0]/5e-4,arr[1:,11],'v--',mec='k',lw=1,label=r'$w$')
@@ -8151,7 +8151,7 @@ plt.plot(arr1[1:,0]/5e-4,arr3[1:,11],'^--',mec='k',lw=1,label=r'$w$')
 plt.text(3,0.06,r'(b)',fontsize=14)
 #plt.yscale('log')
 plt.xscale('log')
-plt.xlabel(r'$x/L$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 
 fig.tight_layout()
 
@@ -8207,3 +8207,76 @@ fig.tight_layout()
 plt.savefig('RESULTS_global.pdf')
 return 'RESULTS_global.pdf' # return filename to org-mode
 #+end_src
+*** plot pressure and viscous
+
+#+NAME: interface
+|        h |   Ca0.5 t |  Ca 0.5 p | Ca 0.125 t | Ca 0.125 p | Ca 0.025 t | Ca 0.025 p | Ca 0005 t | Ca 0.005 p |
+|----------+-----------+-----------+------------+------------+------------+------------+-----------+------------|
+| 2.50E-03 | -6.39E-06 | -1.24E-05 |  -6.39E-06 |  -1.31E-05 |  -6.38E-06 |  -1.73E-05 | -6.51E-06 |  -2.04E-05 |
+| 1.00E-03 | -6.69E-06 | -1.45E-05 |  -6.69E-06 |  -1.53E-05 |  -6.72E-06 |  -1.99E-05 | -7.04E-06 |  -2.45E-05 |
+| 5.00E-04 | -7.61E-06 | -2.18E-05 |  -7.65E-06 |  -2.27E-05 |  -7.82E-06 |  -2.87E-05 | -8.28E-06 |  -3.50E-05 |
+| 2.50E-04 | -1.04E-05 | -4.96E-05 |  -1.05E-05 |  -5.06E-05 |  -1.10E-05 |  -5.97E-05 | -1.17E-05 |  -7.08E-05 |
+| 1.25E-04 | -1.72E-05 | -1.53E-04 |  -1.72E-05 |  -1.53E-04 |  -1.79E-05 |  -1.63E-04 | -2.03E-05 |  -2.05E-04 |
+| 6.25E-05 | -3.11E-05 | -5.41E-04 |  -3.11E-05 |  -5.41E-04 |  -3.14E-05 |  -5.46E-04 | -3.43E-05 |  -6.09E-04 |
+| 2.50E-05 | -6.86E-05 | -3.09E-03 |  -6.86E-05 |  -3.09E-03 |  -6.86E-05 |  -3.09E-03 | -6.89E-05 |  -3.10E-03 |
+
+
+#+NAME: cylInt
+|        h |             |              |             |              |             |              |           |              |
+|----------+-------------+--------------+-------------+--------------+-------------+--------------+-----------+--------------|
+| 2.50E-03 | -9.6134E-06 | -2.79992E-06 | -1.0087E-05 | -2.18882E-06 | -1.2166E-05 | -6.01414E-07 | -1.30E-05 |  2.61043E-07 |
+| 1.00E-03 | -9.3404E-06 | -3.50157E-06 | -9.8113E-06 | -2.69026E-06 | -1.1932E-05 | -7.97882E-07 | -1.26E-05 |   1.7865E-06 |
+| 5.00E-04 | -8.5844E-06 | -6.31819E-06 | -9.0243E-06 |    -4.90E-06 | -1.1199E-05 | -1.70415E-06 | -1.22E-05 |  4.82753E-06 |
+| 2.50E-04 | -6.8670E-06 | -1.84683E-05 | -7.1831E-06 | -1.55546E-05 | -9.2012E-06 | -7.42865E-06 | -1.13E-05 |  -2.2041E-06 |
+| 1.25E-04 | -4.3134E-06 | -6.71033E-05 | -4.4324E-06 | -6.23706E-05 | -5.6044E-06 | -5.21212E-05 | -8.99E-06 |  -1.0284E-05 |
+| 6.25E-05 | -1.5742E-06 |  -0.00024422 | -1.5890E-06 | -0.000238699 | -1.9039E-06 | -0.000214716 | -3.97E-06 | -0.000141352 |
+| 2.50E-05 | -3.0522E-08 | -0.001242253 | -5.1841E-08 | -0.001229431 | -1.5408E-07 | -0.001251055 | -8.16E-07 | -0.001349265 |
+
+#+begin_src python :results file :exports none :var intff=interface incyl=cylInt
+import matplotlib
+import numpy as np
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib import rc
+matplotlib.rcParams['mathtext.fontset'] = 'stix'
+matplotlib.rcParams['font.family'] = 'STIXGeneral'
+
+#extract data
+arr = np.array(intff,float)
+arr1 = np.array(incyl,float)
+
+#fig size
+fig=plt.figure(figsize=(5.5,3))
+
+plt.subplot(2,2,1)
+plt.plot(arr[:,0]/5e-4,-arr[:,1]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,2]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,1]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,2]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+
+plt.subplot(2,2,2)
+plt.plot(arr[:,0]/5e-4,-arr[:,3]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,4]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,3]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,4]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+
+plt.subplot(2,2,3)
+plt.plot(arr[:,0]/5e-4,-arr[:,5]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,6]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,5]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,6]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+
+plt.subplot(2,2,4)
+plt.plot(arr[:,0]/5e-4,-arr[:,7]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr[:,0]/5e-4,-arr[:,8]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,7]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+plt.plot(arr1[:,0]/5e-4,-arr1[:,8]/(5e-4*1e-3),'v--',mec='k',lw=1,label=r'$Ca$')
+
+fig.tight_layout()
+
+plt.savefig('RESULTS_pressAndviscous.pdf')
+return 'RESULTS_pressAndviscous.pdf' # return filename to org-mode
+#+end_src
+
+#+RESULTS:
+[[file:]]
