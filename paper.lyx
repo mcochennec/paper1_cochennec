@@ -107,7 +107,6 @@ fixltx2e
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1030020954 "Maxime"
 \end_header
 
 \begin_body
@@ -143,10 +142,6 @@ status open
 \begin_layout Plain Layout
 
 Corresponding author:
-\change_deleted -1030020954 1594668731
- 
-\change_unchanged
-
 \end_layout
 
 \end_inset
@@ -1085,10 +1080,6 @@ citep{guyon1994hydrodynamique}
 \end_inset
 
  and the velocity field
-\change_deleted -1030020954 1594668731
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -3124,11 +3115,6 @@ noprefix "false"
  The fluid-fluid interface is periodic on the five central unit cells at
  steady-sate whereas the interface is slightly deformed at the inlet and
  outlet cells, under the influence of boundary conditions.
-
-\change_deleted -1030020954 1594668731
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -3445,8 +3431,6 @@ noprefix "false"
 \begin_inset Formula $Ca=2.5\times10^{-2}.$
 \end_inset
 
-
-\change_inserted -1030020954 1594669164
  Fig.
 \begin_inset space ~
 \end_inset
@@ -3464,9 +3448,24 @@ noprefix "false"
  shows the velocity field normailzed with respect to the reference velocity
  for the same selected parameters than for the pressure fields.
  We plot also the corresponding streamlines and the position of the fluid-fluid
- interface.
-\change_unchanged
+ interface and we distinguish three cases.
+ For the thinnest gap (
+\begin_inset Formula $h^{*}=1/20$
+\end_inset
 
+), the velocity fields are identical regardless of the capillary number.
+ In this case the maximum velocity is reached in the center of the pore
+ throat and between the fluid-fluid interface and the wedge boundary.
+ In contrast the velocity field depends on the capillary number for the
+ thickest gap.
+ Either the capillary number is high and the maximul velocity is reached
+ precisely in the center of the pore throat or the capillary number is lower
+ and the maximum velocity is slightly offset from the centre to directly
+ overhang the fluid interface where it forms a narrower constriction.
+ In this case we also notice the appearance of recirculation cells in the
+ wetting fluid.
+ In the following we study the drag force terms and the effect of flow confinmen
+t, which is the key ingredient of this study.
 \end_layout
 
 \begin_layout Standard
@@ -3592,16 +3591,12 @@ Comparison of the velocity field for two capillary numbers
 \end_inset
 
 
-\change_inserted -1030020954 1594668999
-
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-velocity-field"
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 
@@ -4059,14 +4054,62 @@ Second regime: thin gap regime
 \end_layout
 
 \begin_layout Standard
-For thinner gaps (
+The thin gap regime (
 \begin_inset Formula $h^{*}<1/2$
 \end_inset
 
-), we note
-\change_deleted -1030020954 1594668731
- 
-\change_unchanged
+) is characterized by a scaling in 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+ of the drag forces.
+ This regime is marked by the predominance of the pressure contribution
+ in the drag forces, which is directly related to the 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+ increasing of the pressure gradient induced by the Darcean terms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_pressAndviscous.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of the pressure and viscous part of the fluid-fluid drag 
+\begin_inset Formula $d_{ow}$
+\end_inset
+
+ and the fluid-wedge drag 
+\begin_inset Formula $d_{wc}$
+\end_inset
+
+ as a function of the dimensionless gap thickness and for different capillary
+ numbers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4098,11 +4141,6 @@ In this study we conducted direct simulations of depth-averaged two-phases
  whereas the fluid-fluid drag, as well as the fluid-wedge drag, barely increase
  at this stage.
  (ii) The thin gap regime which depend on the capillary number.
- In this last regime the fluid-fluid drag
-\change_deleted -1030020954 1594668731
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard

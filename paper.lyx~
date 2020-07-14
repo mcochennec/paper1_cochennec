@@ -113,7 +113,9 @@ fixltx2e
 \begin_body
 
 \begin_layout Title
-Numerical simulations of two-phase flows in high-permeability porous media
+Numerical simulations of two-phase flows in high-permeability porous media:
+ Effect of the permeability on the drag force between fluids and fluid-solid
+ phases
 \end_layout
 
 \begin_layout Author
@@ -140,7 +142,7 @@ status open
 
 \begin_layout Plain Layout
 
-Corresponding author: 
+Corresponding author:
 \end_layout
 
 \end_inset
@@ -1078,7 +1080,7 @@ citep{guyon1994hydrodynamique}
 
 \end_inset
 
- and the velocity field 
+ and the velocity field
 \end_layout
 
 \begin_layout Standard
@@ -3032,6 +3034,18 @@ noprefix "false"
  drag.
  The saturation and the fluid-fluid interface is also presented as a function
  of the gap thickness and capillary numbers.
+ In §
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:Pressure-and-velocity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we discuss the effect of the flow confinement, i.e.
+ the permeability, on the velocity and pressure fields.
  Then we calculate in §
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3102,7 +3116,6 @@ noprefix "false"
  The fluid-fluid interface is periodic on the five central unit cells at
  steady-sate whereas the interface is slightly deformed at the inlet and
  outlet cells, under the influence of boundary conditions.
- 
 \end_layout
 
 \begin_layout Standard
@@ -3381,6 +3394,224 @@ name "fig:Comparison-of-int"
 \end_layout
 
 \begin_layout Subsection
+Pressure and velocity fields
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Pressure-and-velocity"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-pressure-field"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the pressure field for selected values of capillary number and gap
+ thickness.
+ The main point here is that the pressure jump across the fluid-fluid interface
+ is indistinguishable for the higher capillary number 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
+
+.
+ In contrast, the pressure jump is clearly visible for the lower capillary
+ number 
+\begin_inset Formula $Ca=2.5\times10^{-2}.$
+\end_inset
+
+ Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-velocity-field"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the velocity field normailzed with respect to the reference velocity
+ for the same selected parameters than for the pressure fields.
+ We plot also the corresponding streamlines and the position of the fluid-fluid
+ interface and we distinguish three cases.
+ For the thinnest gap (
+\begin_inset Formula $h^{*}=1/20$
+\end_inset
+
+), the velocity fields are identical regardless of the capillary number.
+ In this case the maximum velocity is reached in the center of the pore
+ throat and between the fluid-fluid interface and the wedge boundary.
+ In contrast the velocity field depends on the capillary number for the
+ thickest gap.
+ Either the capillary number is high and the maximul velocity is reached
+ precisely in the center of the pore throat or the capillary number is lower
+ and the maximum velocity is slightly offset from the centre to directly
+ overhang the fluid interface where it forms a narrower constriction.
+ In this case we also notice the appearance of recirculation cells in the
+ wetting fluid.
+ In the following we study the drag force terms and the effect of flow confinmen
+t, which is the key ingredient of this study.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/pressureField.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of the pressure field for two capillary numbers 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
+
+ (top row), 
+\begin_inset Formula $Ca=2.5\times10^{-2}$
+\end_inset
+
+ (bottom row) and two dimensionless gap thickness, with 
+\begin_inset Formula $h^{*}=5$
+\end_inset
+
+ (left column) and 
+\begin_inset Formula $h^{*}=1/20$
+\end_inset
+
+ (right column).
+ The solid black line denotes the fluid-fluid interface given by the contour
+ 
+\begin_inset Formula $\phi=0.5$
+\end_inset
+
+.
+ Results obtained in UC4 at steady-state for 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M=1.$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison-pressure-field"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/pdf/velocityField.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparison of the velocity field for two capillary numbers 
+\begin_inset Formula $Ca=5\times10^{-1}$
+\end_inset
+
+ (top row), 
+\begin_inset Formula $Ca=2.5\times10^{-2}$
+\end_inset
+
+ (bottom row) and two dimensionless gap thickness, with 
+\begin_inset Formula $h^{*}=5$
+\end_inset
+
+ (left column) and 
+\begin_inset Formula $h^{*}=1/20$
+\end_inset
+
+ (right column).
+ The solid green line denotes the fluid-fluid interface given by the contour
+ 
+\begin_inset Formula $\phi=0.5$
+\end_inset
+
+.
+ Results obtained in UC4 at steady-state for 
+\begin_inset Formula $f_{f}=0.25$
+\end_inset
+
+ and 
+\begin_inset Formula $M=1.$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison-velocity-field"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Drag forces
 \begin_inset CommandInset label
 LatexCommand label
@@ -3550,7 +3781,7 @@ Comparison of each drag force term (
 .
  The small discrepancy between the drag exerted by the fluids upon each
  other arises from the pressure jump across the interface (results in UC4
- after steady-state was reached for
+ after steady-state was reached for 
 \begin_inset Formula $f_{f}=0.25$
 \end_inset
 
@@ -3570,10 +3801,6 @@ name "fig:Comparison-of-each-drag"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3722,7 +3949,7 @@ We now turn to the study of the first regime (
 \begin_inset Formula $h^{*}\geq1/2)$
 \end_inset
 
- for which the fluid-fluid is decreasing compared to the solid-drag.
+ for which the fluid-fluid drag is decreasing compared to the solid-drag.
  For very wide gap the drag between the plates is insignificant and the
  only drag remaining are between the fluids and upon the wedge.
  As shown in Fig.
@@ -3746,8 +3973,8 @@ noprefix "false"
  is a very good approximation of the purely 2d-case in this regard.
  From there, the introduction of the perpendicular confinement drastically
  decreases the fluid-fluid drag value compared to the solid-drag value,
- ans especially for the non-wetting fluid which is initially in contact
- solely with the other fluid (Fig.
+ especially for the non-wetting fluid which is initially in contact solely
+ with the other fluid (Fig.
 \begin_inset space ~
 \end_inset
 
@@ -3828,7 +4055,85 @@ Second regime: thin gap regime
 \end_layout
 
 \begin_layout Standard
-For thinner gaps the
+The thin gap regime (
+\begin_inset Formula $h^{*}<1/2$
+\end_inset
+
+) is characterized by a scaling in 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+ of the drag forces.
+ This regime is marked by the predominance of the pressure contribution
+ in the drag forces, which is directly related to the 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+ increasing of the pressure gradient induced by the Darcean terms.
+\change_inserted -1030020954 1594674583
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1030020954 1594674588
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\change_inserted -1030020954 1594674604
+\begin_inset Graphics
+	filename figures/pdf/RESULTS_pressAndviscous.pdf
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -1030020954 1594674588
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -1030020954 1594674706
+Comparison of the pressure and viscous part of the fluid-fluid drag 
+\begin_inset Formula $d_{ow}$
+\end_inset
+
+ and the fluid-wedge drag 
+\begin_inset Formula $d_{wc}$
+\end_inset
+
+ as a function of the dimensionless gap thickness and for different capillary
+ numbers.
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
@@ -3859,11 +4164,6 @@ In this study we conducted direct simulations of depth-averaged two-phases
  whereas the fluid-fluid drag, as well as the fluid-wedge drag, barely increase
  at this stage.
  (ii) The thin gap regime which depend on the capillary number.
- In this last regime the fluid-fluid drag 
-\change_deleted -1030020954 1594655086
- 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
