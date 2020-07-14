@@ -107,7 +107,6 @@ fixltx2e
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1030020954 "Maxime"
 \end_header
 
 \begin_body
@@ -4070,13 +4069,9 @@ The thin gap regime (
 \end_inset
 
  increasing of the pressure gradient induced by the Darcean terms.
-\change_inserted -1030020954 1594674583
-
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -1030020954 1594674588
 \begin_inset Float figure
 wide false
 sideways false
@@ -4084,26 +4079,18 @@ status open
 
 \begin_layout Plain Layout
 \align center
-
-\change_inserted -1030020954 1594674604
 \begin_inset Graphics
 	filename figures/pdf/RESULTS_pressAndviscous.pdf
 
 \end_inset
 
 
-\change_unchanged
-
 \end_layout
 
 \begin_layout Plain Layout
-
-\change_inserted -1030020954 1594674588
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1030020954 1594674706
 Comparison of the pressure and viscous part of the fluid-fluid drag 
 \begin_inset Formula $d_{ow}$
 \end_inset
@@ -4114,25 +4101,15 @@ Comparison of the pressure and viscous part of the fluid-fluid drag
 
  as a function of the dimensionless gap thickness and for different capillary
  numbers.
-\change_unchanged
-
 \end_layout
 
 \end_inset
 
 
-\change_unchanged
-
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
 
-
-\change_unchanged
 
 \end_layout
 

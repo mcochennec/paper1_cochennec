@@ -107,6 +107,7 @@ fixltx2e
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1030020954 "Maxime"
 \end_header
 
 \begin_body
@@ -135,13 +136,20 @@ Hossein Davarzani
 \end_layout
 
 \begin_layout Author Email
-
 \begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
 
 Corresponding author:
+\change_inserted -1030020954 1594709314
+
+\backslash
+
+\backslash
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -3088,7 +3096,7 @@ name "par:Flow-regimes-and"
 We observe that the two fluids remain continuous at all times and for the
  entire range of tested capillary numbers and gap thickness.
  The interface between the fluids becomes stationary and steady-state is
- reached for every capillary number and values of gap.
+ reached for every capillary number and values of gap thickness.
  Fig.
 \begin_inset space ~
 \end_inset
@@ -3239,8 +3247,8 @@ noprefix "false"
 
 \end_inset
 
- indicate that the fluid-fluid interface is almost identical if the gap
- thickness is large whereas they largely differ for the largest gap tickness.
+ indicate that the fluid-fluid interfaces are very similar for the thinnest
+ gap whereas they largely differ for thinner gaps.
  This last point explains the different saturation we observed.
  Indeed, for low capillary number the interface is flatter than for high
  capillary numbers, as shown in Fig.
@@ -3258,13 +3266,14 @@ noprefix "false"
 \end_inset
 
 .
- The fluid-fluid interfaces are very similar for the thinnest gap for all
- capillary numbers.
- Then two configurations are possible, either the capillary number is high
- and the fluid-fluid interface is mostly translated toward the pore throat
- as the gap increases, or the capillary number is low enough that the fluid-flui
-d interface is deformed (flattened) and also pushed towards the pore throat
+ Two configurations are possible, either the capillary number is high and
+ the fluid-fluid interface is mostly translated toward the pore throat as
+ the gap increases, or the capillary number is low enough that the fluid-fluid
+ interface is deformed (flattened) and also pushed towards the pore throat
  for an increasing gap thickness.
+ These different fluid configurations might involved substantials differences
+ in the velocity and pressure fields, for example by forming narrow channel
+ with high local velocity, which ultimately may impact the amount of drag.
 \end_layout
 
 \begin_layout Standard
@@ -3421,16 +3430,29 @@ noprefix "false"
  shows the pressure field for selected values of capillary number and gap
  thickness.
  The main point here is that the pressure jump across the fluid-fluid interface
- is indistinguishable for the higher capillary number 
+ is very difficult to distinguish for the higher capillary number 
 \begin_inset Formula $Ca=5\times10^{-1}$
 \end_inset
 
-.
+, and especially for the thinnest gap, for which the pressure is uniform
+ across the interface.
+ That was to be expectes since the main pressure contribution to the pressure
+ jump arises from the out-of-plane curvature and thus scales as 
+\begin_inset Formula $h^{-1}$
+\end_inset
+
+, whereas the pressure gradient across the cell scales as 
+\begin_inset Formula $h^{-2}$
+\end_inset
+
+ for very thin gap, for which the Darcean terms are expected to be domiannt.
  In contrast, the pressure jump is clearly visible for the lower capillary
  number 
 \begin_inset Formula $Ca=2.5\times10^{-2}.$
 \end_inset
 
+ In this last case we see that the pressure is higher in the non-wetting
+ fluid, which is in agreeement with the out-of-plane meniscus.
  Fig.
 \begin_inset space ~
 \end_inset
@@ -4058,20 +4080,68 @@ The thin gap regime (
 \begin_inset Formula $h^{*}<1/2$
 \end_inset
 
-) is characterized by a scaling in 
-\begin_inset Formula $h^{-2}$
-\end_inset
-
- of the drag forces.
- This regime is marked by the predominance of the pressure contribution
- in the drag forces, which is directly related to the 
+) is characterized by the predominance of the pressure contribution in the
+ drag forces, which is related to the 
 \begin_inset Formula $h^{-2}$
 \end_inset
 
  increasing of the pressure gradient induced by the Darcean terms.
-\end_layout
+ Here we denote the pressure part of the drag force 
+\begin_inset Formula $d_{ij}$
+\end_inset
 
-\begin_layout Standard
+ as 
+\begin_inset Formula $d_{ij,p}$
+\end_inset
+
+ (
+\begin_inset Formula $d_{ij,p}=\frac{1}{S}\int_{\Gamma_{ij}}-p_{i}n_{ij}^{x}\:\mathrm{d}\Gamma$
+\end_inset
+
+) and the viscous part as 
+\begin_inset Formula $d_{ij,v}$
+\end_inset
+
+ (
+\begin_inset Formula $d_{ij,v}=\frac{1}{S}\int\mu_{i}\left(2\partial_{x}un_{ij}^{x}+(\partial_{y}u+\partial_{x}v)n_{ij}^{y}\right)$
+\end_inset
+
+).
+ Fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-of-tpress-visc"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ compares the pressure and viscous part of the drag forces exerted upon
+ fluid 
+\begin_inset Formula $o$
+\end_inset
+
+ by fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ and the drag exerted by fluid 
+\begin_inset Formula $w$
+\end_inset
+
+ upon the wedge.
+ For 
+\begin_inset Formula $h^{*}<1/2$
+\end_inset
+
+ the pressure part largely dominates over the viscous part.
+ This last sligthly increases for the viscous part of the drag upon the
+ wedge whereas it decreases for the fluid-fluid drag.
 \begin_inset Float figure
 wide false
 sideways false
@@ -4092,7 +4162,7 @@ status open
 
 \begin_layout Plain Layout
 Comparison of the pressure and viscous part of the fluid-fluid drag 
-\begin_inset Formula $d_{ow}$
+\begin_inset Formula $d_{wo}$
 \end_inset
 
  and the fluid-wedge drag 
@@ -4101,6 +4171,13 @@ Comparison of the pressure and viscous part of the fluid-fluid drag
 
  as a function of the dimensionless gap thickness and for different capillary
  numbers.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparison-of-tpress-visc"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
