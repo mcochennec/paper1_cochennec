@@ -373,14 +373,14 @@ In the following we are interested in the x-component of the drag
 #+NAME: viscousInt
 |       h/L |     Ca=0.5 |    Ca=0.125 |   Ca=0.025 | Ca=0.008 |     Ca=0.005 |
 |-----------+------------+-------------+------------+----------+--------------|
-| 3.000e-02 | -4.8506e-6 |   -5.162e-6 |  -6.239e-6 |          | -6.836460e-6 |
-| 2.500e-03 | -4.8067e-6 |  -5.0435e-6 |  -6.083e-6 |          |   -6.5054e-6 |
-| 1.000e-03 | -4.6702e-6 | -4.90565e-6 |  -5.966e-6 |          |  -6.31275e-6 |
-| 5.000e-04 | -4.2922e-6 | -4.51215e-6 | -5.5995e-6 |          |   -6.0911e-6 |
-| 2.500e-04 | -3.4335e-6 | -3.59155e-6 | -4.6006e-6 |          |  -5.65845e-6 |
-| 1.250e-04 | -2.1567e-6 |  -2.2162e-6 | -2.8022e-6 |          |  -4.49417e-6 |
-| 6.250e-05 |  -7.871e-7 |   -7.945e-7 | -9.5195e-7 |          | -1.984845e-6 |
-| 2.500e-05 | -1.5261e-8 | -2.59205e-8 |  -7.704e-8 |          | -4.082095e-7 |
+| 3.000e-02 | -4.8506e-6 |   -5.162e-6 |  -6.239e-6 |        0 | -6.836460e-6 |
+| 2.500e-03 | -4.8067e-6 |  -5.0435e-6 |  -6.083e-6 |        0 |   -6.5054e-6 |
+| 1.000e-03 | -4.6702e-6 | -4.90565e-6 |  -5.966e-6 |        0 |  -6.31275e-6 |
+| 5.000e-04 | -4.2922e-6 | -4.51215e-6 | -5.5995e-6 |        0 |   -6.0911e-6 |
+| 2.500e-04 | -3.4335e-6 | -3.59155e-6 | -4.6006e-6 |        0 |  -5.65845e-6 |
+| 1.250e-04 | -2.1567e-6 |  -2.2162e-6 | -2.8022e-6 |        0 |  -4.49417e-6 |
+| 6.250e-05 |  -7.871e-7 |   -7.945e-7 | -9.5195e-7 |        0 | -1.984845e-6 |
+| 2.500e-05 | -1.5261e-8 | -2.59205e-8 |  -7.704e-8 |        0 | -4.082095e-7 |
 #+TBLFM: $1=remote(saturation,@@#$1);%0.3e
 
 #+NAME: dfTotalo
@@ -7768,7 +7768,7 @@ plt.text(0.06,50,r'(a)',fontsize=14)
 plt.ylabel(r'$\epsilon_i \nabla^x \langle p_i \rangle^i \quad (\mathrm{Pa/m})$',fontsize=14)
 plt.yscale('log')
 plt.xscale('log')
-plt.xlabel(r'$x/L$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 
 plt.subplot(1,2,2)
 plt.plot(arr[1:,0]/5e-4,arr[1:,5],'v--',ms=5,mec='k',lw=1,label=r'$o$')
@@ -7776,7 +7776,7 @@ plt.plot(arr[1:,0]/5e-4,arr[1:,6],'o--',ms=5,mec='k',lw=1,label=r'$w$')
 plt.text(0.06,50,r'(b)',fontsize=14)
 plt.yscale('log')
 plt.xscale('log')
-plt.xlabel(r'$x/L$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 plt.legend(fontsize=10)
 fig.tight_layout()
 
@@ -7937,7 +7937,7 @@ plt.plot(dc[1:,0]/5e-4,-dc[1:,1]/(5e-4*1e-3),'o--',ms=5,mec='k',lw=0.5,label=r'$
 plt.plot(dow[1:,0]/5e-4,-dow[1:,1],'<',ms=6,mfc='w',mec='k',lw=0.5,label=r'$d_{ow}$')
 plt.plot(dwo[1:,0]/5e-4,-dwo[1:,1],'*--',ms=5,mec='k',lw=0.5,label=r'$d_{wo}$')
 plt.legend()
-plt.xlabel(r'$S_w$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 plt.text(3,2e3,r'(a)',fontsize=14)
 plt.xscale('log')
 plt.yscale('log')
@@ -7952,7 +7952,7 @@ plt.plot(dwo[1:,0]/5e-4,-dwo[1:,3],'*--',ms=5,mec='k',lw=0.5,label=r'$d_{wo}$')
 plt.text(3,2e3,r'(b)',fontsize=14)
 plt.xscale('log')
 plt.yscale('log')
-plt.xlabel(r'$S_w$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 
 
 fig.tight_layout()
@@ -7988,7 +7988,7 @@ plt.subplot(1,2,1)
 plt.plot(dow[1:,0]/5e-4,dow[1:,1]/dpo[1:,1],'*--',ms=7,mec='k',lw=0.5,label=r'$d_{ow}$')
 plt.plot(dwo[1:,0]/5e-4,dwo[1:,1]/(dpw[1:,1]+dc[1:,1]/(5e-4*1e-3)),'s--',ms=5,mec='k',lw=0.5,label=r'$d_{wo}$')
 plt.legend()
-plt.xlabel(r'$S_w$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 plt.text(0.5,20,r'(a)',fontsize=14)
 plt.xscale('log')
 plt.yscale('log')
@@ -7999,7 +7999,7 @@ plt.subplot(1,2,2)
 plt.plot(dow[1:,0]/5e-4,dow[1:,3]/dpo[1:,3],'*--',ms=7,mec='k',lw=0.5,label=r'$d_{ow}$')
 plt.plot(dwo[1:,0]/5e-4,dwo[1:,3]/(dpw[1:,3]+dc[1:,3]/(5e-4*1e-3)),'s--',ms=5,mec='k',lw=0.5,label=r'$d_{wo}$')
 plt.legend()
-plt.xlabel(r'$S_w$',fontsize=14)
+plt.xlabel(r'$h^*$',fontsize=14)
 plt.text(0.5,20,r'(b)',fontsize=14)
 plt.xscale('log')
 plt.yscale('log')
@@ -8035,21 +8035,21 @@ p2 = np.array(data1,float)
 p3 = np.array(data2,float)
 visc = np.array(data3,float)
 #fig size
-fig=plt.figure(figsize=(5.5,3))
+fig=plt.figure(figsize=(4,3))
 
-plt.plot(visc[1:,0]/5e-4,visc[1:,1]/p1[1:,6],'*--',ms=7,mec='k',lw=0.5,label=r'$Ca=0.5$')
-plt.plot(visc[1:,0]/5e-4,vvisc[1:,2]/p2[1:,6],'s--',ms=5,mec='k',lw=0.5,label=r'$d_{wo}$')
-plt.legend()
-plt.xlabel(r'$S_w$',fontsize=14)
-plt.text(0.5,20,r'(a)',fontsize=14)
+plt.plot(visc[1:,0]/5e-4,visc[1:,1]/p1[1:,5],'*--',ms=7,mec='k',lw=0.5,label=r'$Ca=5 \times 10^{-1}$')
+plt.plot(visc[1:,0]/5e-4,visc[1:,2]/p2[1:,5],'s--',ms=5,mec='k',lw=0.5,label=r'$Ca=1.25 \times 10^{-1}$')
+plt.plot(visc[1:,0]/5e-4,visc[1:,3]/p3[1:,5],'o--',ms=5,mec='k',lw=0.5,label=r'$Ca=2.5 \times 10^{-2}$')
+plt.legend(loc='best')
+plt.xlabel(r'$h^*$',fontsize=14)
 plt.xscale('log')
+plt.ylabel(r'$d_{wo}^{\mu}/d_{wo}^p$',fontsize=12)
 plt.yscale('log')
-plt.ylabel(r'$d_{ij}/d_{s,i}$',fontsize=12)
-plt.ylim(0.1,30)
-
-
 fig.tight_layout()
 
 plt.savefig('RESULTS_viscAndPress.pdf')
 return 'RESULTS_viscAndPress.pdf' # return filename to org-mode
    #+end_src
+
+   #+RESULTS:
+   [[file:RESULTS_viscAndPress.pdf]]
