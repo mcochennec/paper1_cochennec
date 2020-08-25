@@ -108,6 +108,7 @@ fixltx2e
 \html_css_as_file 0
 \html_be_strict false
 \author -1030020954 "Maxime"
+\author -267026771 "quintard"
 \end_header
 
 \begin_body
@@ -136,6 +137,7 @@ Hossein Davarzani
 \end_layout
 
 \begin_layout Author Email
+
 \begin_inset Argument 1
 status open
 
@@ -471,7 +473,11 @@ citep{dullien2012porous,blunt2017multiphase}
 
 .
  As a consequence, it is commonly assumed that the relative permeability
- for a given couple of fluids only depends on the saturation 
+ 
+\change_inserted -267026771 1596182910
+for a given couple of fluids 
+\change_unchanged
+only depends on the saturation 
 \begin_inset ERT
 status open
 
@@ -511,7 +517,13 @@ citep{Avraam1995}
 
 \end_inset
 
- besides the dependence on the viscosity ratio 
+ 
+\change_deleted -267026771 1596182819
+or
+\change_inserted -267026771 1596182888
+besides the dependence on
+\change_unchanged
+ the viscosity ratio 
 \begin_inset ERT
 status open
 
@@ -524,19 +536,10 @@ citep{yuster1951theoretical,ehrlich1993viscous,Yiotis2007}
 
 \end_inset
 
- and other fluid properties such as wettability 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-citep{morrow1973displacement,anderson1987wettability,Li2005}
-\end_layout
-
-\end_inset
-
+\change_inserted -267026771 1596183264
+ and other fluid properties (MQ: rajouter refs sur wettability?)
+\change_unchanged
 .
  Since the early 1980s, numerous works have aimed at improving the generalized
  Darcy equations on a sound physical basis.
@@ -550,7 +553,7 @@ status open
 
 
 \backslash
-citep{MARLE1982643,auriault1986remarques,Whitaker1986a,Lasseux1996}
+citep{MARLE1982643,Whitaker1986a,auriault1986remarques,Lasseux1996}
 \end_layout
 
 \end_inset
@@ -842,9 +845,23 @@ citep{stokes1986interfacial,liu2019preferential,homsy1987viscous}
  Here, we study the influence of micromodel's absolute permeability on the
  fluid-fluid drag and solid-fluids drag for different capillary numbers.
  The distinguishing feature of the article is to solve an amalgam Stokes-Darcy
- equations for two-phase flows in a Hele-Shaw cell with obstacles to study
- the effect of the varying absolute permeability on the drag forces without
- having to change the in-plane geometry.
+ equations for two-phase flows in a Hele-Shaw cell with 
+\change_deleted -267026771 1596184029
+wedge
+\change_inserted -267026771 1596184055
+obstacle (MQ: wedge ne me parait pas approprié= coin, cale....
+ plutot 
+\begin_inset Quotes eld
+\end_inset
+
+obstacle
+\begin_inset Quotes erd
+\end_inset
+
+?
+\change_unchanged
+ to study the effect of the varying absolute permeability on the drag forces
+ without having to change the in-plane geometry.
 \end_layout
 
 \begin_layout Standard
@@ -930,8 +947,11 @@ Pore-scale, depth-averaged and volume-averaged flow equations
 
 \begin_layout Standard
 In this section, we present the derivation of the averaged flow equations
- for two-phases flows in a Hele-Shaw cell, starting from the three-dimensional
- Stokes equations.
+ for two-phase
+\change_deleted -267026771 1596183174
+s
+\change_unchanged
+ flows in a Hele-Shaw cell, starting from the three-dimensional Stokes equations.
  Then, we average the momentum equations spatially to derive the unclosed
  form of the macroscopic momentum transport equations.
  The system under consideration is depicted in Fig.
@@ -949,7 +969,13 @@ noprefix "false"
 \end_inset
 
  which represents a quasi-planar cocurrent two-phase flow between two parallel
- plates with an obstacle of circular cross-section as a solid obstacle.
+ plates with a
+\change_deleted -267026771 1596183565
+ wedge
+\change_inserted -267026771 1596183571
+n obstacle
+\change_unchanged
+ of circular cross-section as a solid obstacle.
  The transverse dimension of the cell is noted 
 \begin_inset Formula $L$
 \end_inset
@@ -987,7 +1013,13 @@ Schematic view of a cocurrent two-phase flow in a Hele-Shaw cell parallel
 \begin_inset Formula $x-y$
 \end_inset
 
- plane with an obstacle of circular cross-section as a solid obstacle.
+ plane with a
+\change_inserted -267026771 1596183588
+n obstacle
+\change_deleted -267026771 1596183591
+ wedge
+\change_unchanged
+ of circular cross-section as a solid obstacle.
  The transverse dimension of the cell is noted 
 \begin_inset Formula $L$
 \end_inset
@@ -1085,8 +1117,11 @@ noprefix "false"
 \begin_inset Formula $h$
 \end_inset
 
- is very small compared to the transverse length of the cell, at least at
- a certain distance from the obstacle.
+ is very small compared to the transverse length of the cell
+\change_inserted -267026771 1596183612
+, at least at a certain distance from the obstacle
+\change_unchanged
+.
  It follows that the 
 \begin_inset Formula $z$
 \end_inset
@@ -1242,7 +1277,11 @@ citep{park1984two}
 \end_inset
 
 .
- These conditions are expressed as
+ These conditions are expressed
+\change_inserted -267026771 1596188077
+ as
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -1376,8 +1415,21 @@ literal "false"
 \end_inset
 
  which scaled non-linearly with the capillary number.
- We rather considered a non-zero contact angle, which minimizes the dynamic
- film left behind the meniscus.
+ We rather considered a non-zero contact angle, 
+\change_inserted -267026771 1596185129
+which minimizes the dynamic film left behind the meniscus
+\change_deleted -267026771 1596185134
+and consequently, the absence of such thin films
+\change_unchanged
+.
+
+\change_inserted -267026771 1596185212
+ MQ: non-zero n'est pas suffisant, c'est d'ailleurs assez compliqué, voir
+ par exemple Teletzke, G.F., Davis, H.T., Scriven, L.E., 1988.
+ Wetting hydrodynamics.
+ Revue de Physique Appliquée 23, 989–1007!
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -1648,7 +1700,13 @@ noprefix "false"
 \begin_inset Formula $w$
 \end_inset
 
- is in contact with the obstacle, a more compact form of Eq.
+ is in contact with the 
+\change_deleted -267026771 1596183625
+wedge
+\change_inserted -267026771 1596183627
+obstacle
+\change_unchanged
+, a more compact form of Eq.
 \begin_inset space ~
 \end_inset
 
@@ -1881,7 +1939,13 @@ Plates
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\change_deleted -267026771 1596183639
+Wedge
+\change_inserted -267026771 1596183640
 Obstacle
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -2019,7 +2083,12 @@ Direct numerical simulations
 \begin_layout Standard
 In this section, we introduce the standard Level Set method to capture the
  moving free interface between the fluids, along with the flow equations,
- both solved with the Finite Element solver Comsol Multyphisics.
+ both solved with a Finite Element solver.
+
+\change_inserted -267026771 1596185770
+ (MQ: en principe on doit mentionner COMSOL qqpart?)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
@@ -2299,10 +2368,21 @@ Geometry, boundary conditions and simulation parameters
 \end_layout
 
 \begin_layout Standard
-Our macroscopic model is a Hele-Shaw cell with obstacles of cylindrical
- cross-section.
+Our macroscopic model is a Hele-Shaw cell with 
+\change_deleted -267026771 1596183652
+wedge
+\change_inserted -267026771 1596183653
+obstacle
+\change_unchanged
+s of cylindrical cross-section.
  This system is subdivided into seven unit-cell (UC) subdomains encompassing
- one obstacle, as depicted in Fig.
+ one 
+\change_deleted -267026771 1596183919
+wedge
+\change_inserted -267026771 1596183923
+obstacle
+\change_unchanged
+, as depicted in Fig.
 \begin_inset space ~
 \end_inset
 
@@ -2351,7 +2431,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-f_{f}=\frac{u_{w}}{U_{t}},\quad u_{o}=1-f_{f},\quad\textrm{with}\quad U_{t}=u_{w}+u_{o}.
+f_{f}=\frac{u_{w}}{U_{t}},\quad u_{o}=1-f_{f},\quad\textrm{with}\quad U_{t}=u_{w}+u_{o}=U_{r}.
 \end{equation}
 
 \end_inset
@@ -2362,7 +2442,11 @@ f_{f}=\frac{u_{w}}{U_{t}},\quad u_{o}=1-f_{f},\quad\textrm{with}\quad U_{t}=u_{w
 \begin_layout Standard
 \noindent
 The non-wetting viscosity is taken as the reference viscosity and the respective
- value of each dimensionless parameters is given in Tab.
+ value of each dimensionless parameters is 
+\change_inserted -267026771 1596186011
+given 
+\change_unchanged
+in Tab.
 \begin_inset space ~
 \end_inset
 
@@ -2426,7 +2510,12 @@ status open
 
 \begin_layout Plain Layout
 Schematics of the geometry and initial condition.
- We consider the superior half of an array of five cylindrical obstacles
+ We consider the superior half of an array of five cylindrical 
+\change_deleted -267026771 1596183932
+wedges
+\change_inserted -267026771 1596183933
+obstacles
+\change_unchanged
  inside five cuboids where both fluids are injected from left to right.
  Initially, the model is saturated with wetting fluid (red), and the width
  
@@ -2439,7 +2528,13 @@ Schematics of the geometry and initial condition.
 
  m.
  Symmetry boundary conditions are used on both length sides and the no-flow
- boundary condition is imposed at the obstacle boundary.
+ boundary condition is imposed at the 
+\change_deleted -267026771 1596183940
+wedge
+\change_inserted -267026771 1596183945
+obstacle
+\change_unchanged
+ boundary.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2738,7 +2833,7 @@ from
 \end_inset
 
  to 
-\begin_inset Formula $8\times10^{-3}$
+\begin_inset Formula $5\times10^{-3}$
 \end_inset
 
 
@@ -2929,8 +3024,13 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mesh convergence study of (a) drag force exerted upon the obstacle (blue),
- drag force exerted upon the fluid-fluid boundary (orange) and intrinsic
+Mesh convergence study of (a) drag force exerted upon the 
+\change_deleted -267026771 1596183956
+wedge
+\change_inserted -267026771 1596183958
+obstacle
+\change_unchanged
+ (blue), drag force exerted upon the fluid-fluid boundary (orange) and intrinsic
  average velocity of fluid 
 \begin_inset Formula $o$
 \end_inset
@@ -3136,9 +3236,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Fluids distribution along the superior half-row at (a) the initial time,
- (b) for an intermediate time and (c) final time (steady-state reached)
- for 
+Fluids 
+\change_deleted -267026771 1596186265
+repartion
+\change_inserted -267026771 1596186268
+distribution
+\change_unchanged
+ along the superior half-row at (a) the initial time, (b) for an intermediate
+ time and (c) final time (steady-state reached) for 
 \begin_inset Formula $Ca=1.25\times10^{-1}$
 \end_inset
 
@@ -3236,9 +3341,13 @@ noprefix "false"
  the gap increases, or the capillary number is low enough that the fluid-fluid
  interface is deformed (flattened) and also pushed towards the pore throat
  for an increasing gap thickness.
- These different fluid configurations might involved substantial differences
- in the velocity and pressure fields, for example by forming narrow channel
- with high local velocity, which ultimately may impact the amount of drag.
+ These different fluid configurations might involve
+\change_deleted -267026771 1596186432
+d
+\change_unchanged
+ substantial differences in the velocity and pressure fields, for example
+ by forming narrow channel with high local velocity, which ultimately may
+ impact the amount of drag.
 \end_layout
 
 \begin_layout Standard
@@ -3440,7 +3549,13 @@ noprefix "false"
 
 ), the velocity fields are identical regardless of the capillary number.
  In this case the maximum velocity is reached in the center of the pore
- throat and between the fluid-fluid interface and the obstacle boundary.
+ throat and between the fluid-fluid interface and the 
+\change_deleted -267026771 1596183963
+wedge
+\change_inserted -267026771 1596183971
+obstacle
+\change_unchanged
+ boundary.
  In contrast the velocity field depends on the capillary number for the
  thickest gap.
  Either the capillary number is high and the maximal velocity is reached
@@ -3686,8 +3801,14 @@ noprefix "false"
  The first point is intelligible only in the framework of momentum exchange
  between the fluids.
  Indeed, it shows that a significant part of the drag exerted by the wetting
- fluid upon the solids (obstacle and plates) is compensated by the interfacial
- momentum exchange from the core fluid to the wetting fluid.
+ fluid upon the solids (
+\change_deleted -267026771 1596183982
+wedge
+\change_inserted -267026771 1596183984
+obstacle
+\change_unchanged
+ and plates) is compensated by the interfacial momentum exchange from the
+ core fluid to the wetting fluid.
  In another hand, the two regimes were expected since the pressure drop
  is dominated either by the Darcean term which scales as 
 \begin_inset Formula $h^{-2}$
@@ -3713,7 +3834,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /home/maxime/Documents/paper1_cochennec/figures/pdf/RESULTS_meanGradP.pdf
+	filename figures/pdf/RESULTS_meanGradP.pdf
 
 \end_inset
 
@@ -3752,8 +3873,13 @@ Comparison of the pressure drop across the cell for each fluid weigthed
 \begin_inset Formula $o$
 \end_inset
 
- despite the drag upon the plates and the obstacle, which indicates an interfaci
-al momentum transfer between the fluids.
+ despite the drag upon the plates and the 
+\change_deleted -267026771 1596183990
+wedge
+\change_inserted -267026771 1596183991
+obstacle
+\change_unchanged
+, which indicates an interfacial momentum transfer between the fluids.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3776,6 +3902,30 @@ name "fig:Comparison-of-dP"
 
 \begin_layout Subsubsection
 Drag forces between phases
+\change_inserted -267026771 1596188268
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1596188539
+MQ: on devrait rajouter un paragraphe expliquant pourquoi 
+\begin_inset Formula $\left.d_{ow}\right|_{x}=\left.d_{wo}\right|$
+\end_inset
+
+, i.e., commenter l'intégrale du terme 
+\begin_inset Formula $\gamma\left(\frac{\pi}{4}\kappa_{\parallel}+\frac{2}{h}\cos\theta\right)\mathbf{n}_{ow}.\mathbf{e}_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -267026771 1596188803
+as-tu les limites, i.e., cas 2D?
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -3839,11 +3989,23 @@ noprefix "false"
 \begin_inset Formula $w$
 \end_inset
 
- upon the obstacle.
+ upon the 
+\change_deleted -267026771 1596183996
+wedge
+\change_inserted -267026771 1596183997
+obstacle
+\change_unchanged
+.
  The capillary number has a strong impact on the interfacial drag.
  Indeed, the interfacial drag force tends to behave similarly to the drag
- upon the obstacle for high capillary number, whereas it has a more distinct
- constant behavior for thick gaps if the capillary number is lower.
+ upon the 
+\change_deleted -267026771 1596184014
+wedge
+\change_inserted -267026771 1596184014
+obstacle
+\change_unchanged
+ for high capillary number, whereas it has a more distinct constant behavior
+ for thick gaps if the capillary number is lower.
  From there, we can distinguish two different regimes, either the gap between
  the plates is thick enough (
 \begin_inset Formula $h^{*}\geqslant1/2$
@@ -3906,8 +4068,13 @@ Comparison of the drag forces as a function of the dimensionless gap between
 \end_inset
 
  whereas the drag upon the plates is insignificant and the gap has little
- impact on the interfacial drag force and drag upon the obstacle for thick
- gaps.
+ impact on the interfacial drag force and drag upon the 
+\change_deleted -267026771 1596184015
+wedge
+\change_inserted -267026771 1596184015
+obstacle
+\change_unchanged
+ for thick gaps.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-of-the-drag"
@@ -3952,8 +4119,12 @@ noprefix "false"
 \end_inset
 
  shows how the interfacial drag compared to the solid-fluid drag for both
- fluids as a function of the gap's thickness and for two capillary numbers.The
- interfacial drag logically prevails for the core fluid 
+ fluids as a function of the gap's thickness and for two capillary numbers.
+
+\change_inserted -267026771 1596188836
+ 
+\change_unchanged
+The interfacial drag logically prevails for the core fluid 
 \begin_inset Formula $o$
 \end_inset
 
@@ -3969,8 +4140,13 @@ noprefix "false"
 \begin_inset Formula $w,$
 \end_inset
 
-since the drag upon the obstacle is higher that the interfacial drag, regardless
- the gap thickness.
+since the drag upon the 
+\change_deleted -267026771 1596184016
+wedge
+\change_inserted -267026771 1596184016
+obstacle
+\change_unchanged
+ is higher that the interfacial drag, regardless the gap thickness.
  Thus, the normalized interfacial drag is insensitive to a variation in
  the gap thickness, at least for high capillary number.
  In contrast, for low capillary number, we see in Fig.
@@ -3988,8 +4164,13 @@ noprefix "false"
 \end_inset
 
  (b) that the interfacial drag does not follow the same behavior as the
- drag upon the obstacle, which lead to a growing discrepancy between the
- two for thick gaps 
+ drag upon the 
+\change_deleted -267026771 1596184017
+wedge
+\change_inserted -267026771 1596184017
+obstacle
+\change_unchanged
+, which lead to a growing discrepancy between the two for thick gaps 
 \begin_inset Formula $h^{*}\geq1/2$
 \end_inset
 
@@ -4025,7 +4206,13 @@ Comparison of the interfacial drag forces normalized by the drag upon the
 \begin_inset Formula $o$
 \end_inset
 
- and cell's plates + obstacle for fluid 
+ and cell's plates + 
+\change_deleted -267026771 1596184018
+wedge
+\change_inserted -267026771 1596184018
+obstacle
+\change_unchanged
+ for fluid 
 \begin_inset Formula $w$
 \end_inset
 
@@ -4087,7 +4274,7 @@ The limit case for the thin-gap regime is given by the Darcy's law.
 \end_inset
 
  and the viscous drag as 
-\begin_inset Formula $d_{ij}^{\mu}=\frac{1}{S}\int\mu_{i}\nabla\langle u_{i}\rangle\cdot n\:\mathrm{d}\Gamma$
+\begin_inset Formula $d_{ij}^{\mu}=\left(\frac{1}{S}\int\mu_{i}\nabla\langle u_{i}\rangle\cdot\mathbf{n}\:\mathrm{d}\Gamma\right)\cdot\mathbf{e}_{1}$
 \end_inset
 
 .
@@ -4105,8 +4292,16 @@ The limit case for the thin-gap regime is given by the Darcy's law.
 \begin_inset Formula $L/h\gg1$
 \end_inset
 
-, thus the viscous drag is negligible in front of the pressure drag.
- Now, the pressure component is applied on a contour of length 
+, thus the viscous drag is negligible 
+\change_inserted -267026771 1596189026
+in 
+\change_unchanged
+front of the pressure drag.
+ Now, 
+\change_deleted -267026771 1596189032
+the 
+\change_unchanged
+the pressure component is applied on a contour of length 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4190,8 +4385,14 @@ The limit case for the thick-gap regime is given by the purely-2d results.
  is a good approximation of the 2d-results.
  We see that the interfacial drag depends on the capillary number.
  In this regard, the main feature of the thick-gap regime is that the interfacia
-l drag can not be compared to the drag upon the obstacle since the former
- depends on the capillary number whereas the later does not.
+l drag can not be compared to the drag upon the 
+\change_deleted -267026771 1596184020
+wedge
+\change_inserted -267026771 1596184020
+obstacle
+\change_unchanged
+, since the former depends on the capillary number whereas the later does
+ not.
  Fig.
 \begin_inset space ~
 \end_inset
@@ -4245,7 +4446,7 @@ In this study we conducted direct numerical simulations of two-phases flows
  This is a clear sign of a momentum transfer from the core fluid to the
  film fluid.
 
-\change_deleted -1030020954 1597305722
+\change_inserted -1030020954 1595667935
  
 \change_unchanged
 
