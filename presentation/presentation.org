@@ -2438,7 +2438,7 @@ return 'RESULTS_dragSepare.pdf' # return filename to org-mode
 #+end_src
 
 #+RESULTS:
-[[file:RESULTS_dragSepare.pdf]]
+[[file:]]
 
 \begin{figure}
 \centering

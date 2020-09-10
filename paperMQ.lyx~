@@ -137,6 +137,7 @@ Hossein Davarzani
 \end_layout
 
 \begin_layout Author Email
+
 \begin_inset Argument 1
 status open
 
@@ -2509,32 +2510,15 @@ status open
 
 \begin_layout Plain Layout
 Schematics of the geometry and initial condition.
- We consider the superior half of an array of 
-\change_deleted -1030020954 1598430709
-five
-\change_inserted -1030020954 1598430710
-seven
-\change_unchanged
- cylindrical 
+ We consider the superior half of an array of five cylindrical 
 \change_deleted -267026771 1596183932
 wedges
 \change_inserted -267026771 1596183933
 obstacles
 \change_unchanged
- inside 
-\change_deleted -1030020954 1598430716
-five
-\change_inserted -1030020954 1598430717
-seven
-\change_unchanged
- cuboids where both fluids are injected from left to right.
- Initially, the model is saturated with wetting fluid (
-\change_inserted -1030020954 1598430726
-yellow
-\change_deleted -1030020954 1598430724
-red
-\change_unchanged
-), and the width 
+ inside five cuboids where both fluids are injected from left to right.
+ Initially, the model is saturated with wetting fluid (red), and the width
+ 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3387,15 +3371,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\change_inserted -1030020954 1598453013
-Wetting 
-\change_deleted -1030020954 1598453015
-F
-\change_inserted -1030020954 1598453016
-f
-\change_unchanged
-luid saturation at steady-state in UC4 as a function of the dimensionless
+Fluid saturation at steady-state in UC4 as a function of the dimensionless
  gap and for different capillary numbers.
  Fields of the level-set function at steady-state in UC4 are given for the
  selected value of the dimensionless gap and 
@@ -4294,7 +4270,7 @@ The limit case for the thin-gap regime is given by the Darcy's law.
  not negligible compared to the drag arising from the perpendicular confinement
  of the flow, as long as the pressure part of the drag forces is not neglected.
  We denote the pressure drag as 
-\begin_inset Formula $d_{ij}^{p}=-\frac{1}{S}\int p_{i}\mathbf{n}\cdot\mathbf{e}_{x}\:\mathrm{d}\Gamma$
+\begin_inset Formula $d_{ij}^{p}=-\frac{1}{S}\int p_{i}n^{x}\:\mathrm{d}\Gamma$
 \end_inset
 
  and the viscous drag as 
@@ -4401,11 +4377,7 @@ Thick-gap regime
 
 \begin_layout Standard
 The limit case for the thick-gap regime is given by the purely-2d results.
- The perpendicular confinement is introduced starting from a pure 2
-\change_deleted -1030020954 1598441784
-–
-\change_unchanged
-d situations.
+ The perpendicular confinement is introduced starting from a pure 2–d situations.
  The thickest gap 
 \begin_inset Formula $h^{*}=5$
 \end_inset
