@@ -2106,7 +2106,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\langle\nabla\bar{\omega}_{i}\rangle=\nabla\langle\bar{\omega}_{i}\rangle+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\bar{\omega}_{i}\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\bar{\omega}_{i}\:\mathrm{d}\Gamma,
+\langle\nabla\bar{\omega}_{i}\rangle=\nabla\langle\bar{\omega}_{i}\rangle+\frac{1}{S}\int_{\Gamma_{is}}\mathbf{n}_{is}\bar{\omega}_{i}\:\mathrm{d}\Gamma+\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\bar{\omega}_{i}\:\mathrm{d}\Gamma,
 \end{equation}
 
 \end_inset
@@ -2211,7 +2211,7 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline}
-\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{ic}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\\
+\frac{1}{S}\int_{\Gamma_{ic}}\mathbf{n}_{is}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma+\\
 +\frac{1}{S}\int_{\Gamma_{ij}}\mathbf{n}_{ij}\cdot\left(-p_{i}\mathbf{I}+\mu_{i}\left(\nabla\bar{\mathbf{u}}_{i}+\left(\nabla\bar{\mathbf{u}}_{i}\right)^{T}\right)\right)\:\mathrm{d}\Gamma-\\
 -\mu_{i}k^{2}\langle\bar{\mathbf{u}}_{i}\rangle=\varepsilon_{i}\nabla\langle p_{i}\rangle^{i}+\langle p_{i}\rangle^{i}\nabla\varepsilon_{i},\quad i,j=o,w,\:i\neq j,\label{eq:averagedFull}
 \end{multline}
@@ -2268,8 +2268,13 @@ where
 \end_inset
 
 .
- The first integral is the drag force exerted upon the cylinders boundary
- by fluid 
+ The first integral is the drag force exerted upon the 
+\change_deleted -1030020954 1600438903
+cylinders
+\change_inserted -1030020954 1600438906
+obstacle
+\change_unchanged
+ boundary by fluid 
 \begin_inset Formula $i$
 \end_inset
 

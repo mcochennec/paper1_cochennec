@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-09 mer. 17:16 -->
+<!-- 2020-09-10 jeu. 10:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vérification calcul pressure drag</title>
@@ -275,13 +275,13 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6ca5d2f">1. Problème</a></li>
+<li><a href="#org3408a13">1. Problème</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org6ca5d2f" class="outline-2">
-<h2 id="org6ca5d2f"><span class="section-number-2">1</span> Problème</h2>
+<div id="outline-container-org3408a13" class="outline-2">
+<h2 id="org3408a13"><span class="section-number-2">1</span> Problème</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 On cherche à calculer l'intégrale 
@@ -292,12 +292,15 @@ On cherche à calculer l'intégrale
 <p>
 afin de discuter la différence entre les forcets de trainées \(\mathbf{d}_{ow}-\mathbf{d}_{wo}\).
 </p>
+<p alt="cat/spider image" title="Action!" align="righ">
+<a href="http:github.com/mcochennec/paper1_cochennec/tree/master/validation_pressureDrag/kappa.pdf?raw=true" alt="cat/spider image" title="Action!" align="righ">http:github.com/mcochennec/paper1_cochennec/tree/master/validation_pressureDrag/kappa.pdf?raw=true</a>
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Maxime Cochennec</p>
-<p class="date">Created: 2020-09-09 mer. 17:16</p>
+<p class="date">Created: 2020-09-10 jeu. 10:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

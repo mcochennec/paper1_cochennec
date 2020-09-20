@@ -3358,7 +3358,7 @@ résultats sont donnés dans les Tables [[ca05]] et [[ca0025]].
 
 \noindent Les résultats de l'intégrale \ref{eq:int} sont très petits
 au regard de la force de trainée calculée dans le papier. Ces
-résultats confirment le résultat du papier $d_{ow} \vert_x \approx
+résultats confirment le résultat du papier, c-à-d, $d_{ow} \vert_x \approx
 d_{wo}\vert_x$.
 
   

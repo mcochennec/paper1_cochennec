@@ -3855,8 +3855,9 @@ noprefix "false"
 \begin_inset Formula $d_{s,i}$
 \end_inset
 
-) for both fluids as a function of the gap thickness and for two capillary
- numbers.The interfacial drag prevails for the non-wetting fluid 
+) for both fluids as a function of the gap thickness and for different values
+ of the capillary number.The interfacial drag prevails for the non-wetting
+ fluid 
 \begin_inset Formula $o$
 \end_inset
 
@@ -3926,12 +3927,12 @@ Comparison of the interfacial drag forces normalized by the drag upon the
 \end_inset
 
 ) as a function of the dimensionless gap thickness.
- (a) 
-\begin_inset Formula $Ca=5\times10^{-1}$
+ (a) non-wetting fluid 
+\begin_inset Formula $o$
 \end_inset
 
- and (b) 
-\begin_inset Formula $Ca=2.5\times10^{-2}$
+ and (b) wetting fluid 
+\begin_inset Formula $w$
 \end_inset
 
 .

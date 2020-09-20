@@ -155,7 +155,6 @@ Hossein Davarzani
 \end_layout
 
 \begin_layout Author Email
-
 \begin_inset Argument 1
 status open
 
@@ -4319,7 +4318,7 @@ Comparison of the fluid-fluid interface at steady-state in UC4 for different
 \end_inset
 
  and (d) 
-\begin_inset Formula $Ca=5\times10^{-3}$
+\begin_inset Formula $Ca=8\times10^{-3}$
 \end_inset
 
  (results in UC4 after steady-state was reached for 
